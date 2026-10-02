@@ -1,0 +1,217 @@
+{
+ "run_id": "q01-r03-20260930T204051",
+ "kind": "replay",
+ "case_id": "c01",
+ "condition": "B",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "309fe05200ace06755637e50f8712d53077716475959f68146885813e3dc53f4",
+ "report_chars": 19936,
+ "report_words": 2439,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 16,
+  "urls_in_retrieved_evidence": 15,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/aclanthology/2025.findings-acl.20/main/figures/tree-rag-hierarchy.png"
+  ],
+  "provenance_rate": 0.9375
+ },
+ "numeric_items": 0,
+ "numeric_items_not_in_evidence": [],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "TreeRAG, Contextual RAG, and G-MemLLM represent distinct architectural paradigms: hierarchical chunking, context-aware retrieval, and memory-augmented reasoning.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Methodology | Accuracy (Factual Consistency & Relevance) | Latency (Response Time) | Operational Cost (Per Token/Inference) | Key Strengths | Key Limitations",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "As of 2025, no single long-context RAG methodology dominates all performance dimensions.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "Fragmented benchmarks: No unified framework evaluates accuracy, latency, and cost across architectures.",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "This layered approach enables organizations to tailor RAG systems to specific use cases while balancing accuracy, latency, and cost.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.625,
+  "score_lenient": 0.625
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 8,
+  "claims": [
+   {
+    "report_quote": "TreeRAG outperforms baseline methods in domains such as finance, law, and medical documentation—where domain-specific knowledge and precise factual grounding are critical.",
+    "claim": "TreeRAG achieves higher accuracy than baseline RAG methods in finance, law, and medical domains due to its superior factual grounding.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "TreeRAG’s bidirectional traversal reduces redundant queries, improving retrieval efficiency and reducing response time.",
+    "claim": "TreeRAG’s bidirectional traversal cuts redundant queries, leading to faster retrieval and lower response times.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "BGE‑m3 offers a favorable balance between accuracy and affordability.",
+    "claim": "The BGE‑m3 embedding model balances high accuracy with low cost, making it cost‑effective for RAG systems.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "G‑MemLLM excels in long‑term reasoning but lacks efficiency and cost advantages, making it less suitable for latency‑sensitive or cost‑constrained applications.",
+    "claim": "G‑MemLLM provides strong long‑term reasoning capabilities but suffers from high latency and cost, limiting its use in latency‑sensitive scenarios.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "LLM‑as‑a‑judge frameworks provide a more meaningful and accurate assessment of factual consistency and relevance than traditional IR metrics.",
+    "claim": "LLM‑as‑a‑judge evaluation methods give a more accurate measure of factual consistency and relevance than traditional IR metrics.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Contextual RAG enhances retrieval relevance by grounding each chunk in the document’s overall structure.",
+    "claim": "Contextual RAG improves retrieval relevance by embedding each chunk with its document‑level context.",
+    "label": "SUPPORTED",
+    "evidence_id": "E10",
+    "evidence_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+    "quote": "provides concise, chunk‑specific context that explains the chunk using the context of the overall document.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "G‑MemLLM demonstrates superior performance in long‑form reasoning tasks due to its ability to maintain a consistent, evolving understanding of the conversation.",
+    "claim": "G‑MemLLM excels at long‑form reasoning tasks by maintaining a consistent, evolving conversation context.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Hierarchical chunking and bidirectional traversal (e.g., in TreeRAG) significantly improve semantic coherence and factual consistency in long‑context document retrieval.",
+    "claim": "Hierarchical chunking combined with bidirectional traversal in TreeRAG markedly enhances semantic coherence and factual consistency in long‑context document retrieval.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 1,
+  "contradicted": 0,
+  "unsupported": 7,
+  "score": 0.125
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4594,
+   "completion_tokens": 2017,
+   "wall_s": 62.4100980758667,
+   "thinking_chars": 7571
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4290,
+   "completion_tokens": 3380,
+   "wall_s": 101.18033003807068,
+   "thinking_chars": 14483
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 3732,
+   "completion_tokens": 1657,
+   "wall_s": 55.635135889053345,
+   "thinking_chars": 6872
+  }
+ ],
+ "eval_wall_s": 219.3663649559021
+}

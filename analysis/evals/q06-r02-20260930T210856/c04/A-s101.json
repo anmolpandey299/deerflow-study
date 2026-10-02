@@ -1,0 +1,231 @@
+{
+ "run_id": "q06-r02-20260930T210856",
+ "kind": "replay",
+ "case_id": "c04",
+ "condition": "A",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "6910dffcda308177a413a1b1d1b9ccb29a08d24e7b19e2edc8768b5b4e0395af",
+ "report_chars": 14979,
+ "report_words": 2000,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 6,
+  "urls_in_retrieved_evidence": 1,
+  "fabricated_urls": [
+   "microsoft.com/en-us/research/publication/accuracy-of-retrieval-augmented-generation",
+   "microsoft.com/en-us/research/case-study-enterprise-rag-knowledge-management",
+   "gartner.com/en/articles/rag-in-customer-service-bots",
+   "arxiv.org/abs/2603.12345",
+   "ibm.com/ai/rag-audit-report-2026"
+  ],
+  "provenance_rate": 0.16666666666666666
+ },
+ "numeric_items": 1,
+ "numeric_items_not_in_evidence": [
+  "60%"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "over 60% of responses to such complex questions contained hallucinations due to insufficient retrieval coverage or lack of integration with external reasoning modules.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "Retrieval failure and irrelevant document retrieval are among the most common causes of hallucinations in RAG systems.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "PARTIAL",
+    "quote": "RAG systems struggle with ambiguous, open-ended, or complex queries, often generating plausible but hallucinated answers due to poor query understanding and insufficient retrieval coverage.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "lack of standardization in evaluation metrics—there is no consensus on how to measure hallucination reduction (e.g., faithfulness, coherence, or factual accuracy).",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "The absence of real-world validation in high-stakes domains and the lack of standardized evaluation metrics represent significant gaps in current research.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.6666666666666666,
+  "score_lenient": 0.6666666666666666
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "A 2026 study published in *Nature Machine Intelligence* demonstrates that even with state-of-the-art retrieval models, RAG systems frequently return outdated or irrelevant documents, particularly when context shifts over time or when the query contains subtle semantic variations.",
+    "claim": "A 2026 *Nature Machine Intelligence* study found that RAG systems often retrieve outdated or irrelevant documents even with state‑of‑the‑art retrieval models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Microsoft’s technical report emphasizes that RAG systems propagate the inaccuracies of their source databases.",
+    "claim": "Microsoft’s technical report states that RAG systems inherit and propagate inaccuracies present in their source databases.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "The enterprise RAG case study identifies schema inconsistencies as a major contributor to hallucinations in internal knowledge systems.",
+    "claim": "An enterprise RAG case study identifies schema inconsistencies as a major cause of hallucinations in internal knowledge systems.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Industry evaluations of customer service bots using RAG show that ambiguous queries lead to a high rate of hallucinated responses.",
+    "claim": "Industry evaluations of customer‑service bots using RAG report that ambiguous queries result in a high rate of hallucinated responses.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "A 2026 benchmark study on RAG performance found that over 60% of responses to such complex questions contained hallucinations due to insufficient retrieval coverage or lack of integration with external reasoning modules.",
+    "claim": "A 2026 benchmark study found that more than 60% of RAG responses to complex questions contained hallucinations because of insufficient retrieval coverage or lack of external reasoning integration.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "An IBM audit of AI support systems with RAG found that systems without feedback loops exhibited increasing error rates over time.",
+    "claim": "An IBM audit of AI support systems with RAG discovered that systems lacking feedback loops showed increasing error rates over time.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "In high‑stakes domains like healthcare and finance, where guidelines evolve rapidly, this limitation is particularly dangerous.",
+    "claim": "In high‑stakes domains such as healthcare and finance, the inability of RAG systems to update sources in real time is particularly dangerous.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG systems struggle with ambiguous, open‑ended, or complex queries, often generating plausible but hallucinated answers due to poor query understanding and insufficient retrieval coverage.",
+    "claim": "RAG systems often generate hallucinated answers for ambiguous, open‑ended, or complex queries because of poor query understanding and insufficient retrieval coverage.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Most RAG implementations lack feedback loops, leading to a compounding effect where incorrect responses are repeated over time, creating a 'hallucination cascade.'",
+    "claim": "Most RAG implementations lack feedback loops, causing incorrect responses to be repeated over time and creating a hallucination cascade.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "While RAG improves factual grounding over standalone LLMs, it does not eliminate hallucinations—hallucinations are instead shifted from internal model generation to retrieval and interpretation errors.",
+    "claim": "RAG improves factual grounding compared to standalone LLMs but does not eliminate hallucinations; instead, hallucinations shift from model generation to retrieval and interpretation errors.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3285,
+   "completion_tokens": 1790,
+   "wall_s": 50.96344590187073,
+   "thinking_chars": 7716
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3086,
+   "completion_tokens": 1607,
+   "wall_s": 46.47360610961914,
+   "thinking_chars": 5210
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 1608,
+   "completion_tokens": 1398,
+   "wall_s": 39.46565508842468,
+   "thinking_chars": 5705
+  }
+ ],
+ "eval_wall_s": 136.97260999679565
+}

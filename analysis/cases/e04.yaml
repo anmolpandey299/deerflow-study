@@ -1,0 +1,10 @@
+case_id: e04
+kind: E
+label: EXPLORATORY (amendments A7/A8)
+run_id: q05-r02-20260930T205952
+target_step: 1
+control_step: 2
+rationale: 'researcher step WITH search that still introduced 4 ungrounded report
+  numbers (40%, 10, 15%, 40x); first eligible remaining batch run per A8. Note: only
+  2 items are unique to the target (10, 15%), so the primary metric is coarse.'
+primary_metric: unique_ungrounded_items

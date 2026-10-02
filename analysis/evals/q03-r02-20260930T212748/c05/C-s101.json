@@ -1,0 +1,236 @@
+{
+ "run_id": "q03-r02-20260930T212748",
+ "kind": "replay",
+ "case_id": "c05",
+ "condition": "C",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "0fe0530314a8c72a20c70d3f1b90b816275e7c95b79ee54ffa67f26c35ab9708",
+ "report_chars": 18339,
+ "report_words": 2316,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 8,
+  "urls_in_retrieved_evidence": 5,
+  "fabricated_urls": [
+   "github.com/treeai-lab/awesome-kv-cache-management",
+   "raw.githubusercontent.com/treeai-lab/awesome-kv-cache-management/main/images/overview.png",
+   "arxiv.org/abs/2502.14065"
+  ],
+  "provenance_rate": 0.625
+ },
+ "numeric_items": 10,
+ "numeric_items_not_in_evidence": [
+  "5%",
+  "5×"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Quantization reduces the bit-width of KV cache activations (e.g., from 32‑bit float to 8‑bit or 4‑bit integers), significantly shrinking memory usage.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "PARTIAL",
+    "quote": "INT8 quantization achieves up to **4× memory reduction** in KV cache size.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "PARTIAL",
+    "quote": "Maintains **minimal accuracy loss (≤1%)** in long‑context inference (100K+ tokens).",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "Throughput improvement: **High**, due to reduced attention computation volume.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Comparative Evaluation Table: Memory Savings | Accuracy Impact | Throughput Impact | Key Limitations.",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Permanent eviction may lead to information loss in multi‑turn or context‑dependent tasks.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "Lack of Direct Benchmarking: No study directly compares the same method across diverse tasks.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.7857142857142857,
+  "score_lenient": 0.7857142857142857
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "INT8 Quantization: Achieves up to 4× memory reduction in KV cache size.",
+    "claim": "INT8 quantization can reduce KV cache memory usage by up to four times.",
+    "label": "SUPPORTED",
+    "evidence_id": "E15",
+    "evidence_url": "https://arxiv.org/abs/2601.04719",
+    "quote": "achieving 4 × memory reduction with minimal accuracy degradation.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "INT4 Quantization: Theoretically capable of up to 8× memory reduction.",
+    "claim": "INT4 quantization is theoretically able to reduce KV cache memory usage by up to eight times.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory savings: 2–5×, depending on sparsity pattern.",
+    "claim": "Sparse attention can reduce memory usage by two to five times, depending on the sparsity pattern.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Token-Level Pruning: Achieves 2–6× memory savings, depending on input semantics and relevance scoring.",
+    "claim": "Token-level pruning can reduce KV cache memory usage by two to six times, depending on input semantics.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Rank Reduction: Achieves 3–5× memory savings with moderate accuracy degradation.",
+    "claim": "Rank reduction can shrink KV cache memory by three to five times while causing moderate accuracy loss.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "DynamicKV: Achieves 3–6× memory savings with low to moderate accuracy loss.",
+    "claim": "DynamicKV can reduce KV cache memory by three to six times with only low to moderate accuracy loss.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "ChunkKV: Achieves 4–8× memory savings with low accuracy degradation.",
+    "claim": "ChunkKV can cut KV cache memory usage by four to eight times while keeping accuracy loss low.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "INT8 quantization is the most mature, with strong integration into frameworks like Hugging Face and PyTorch.",
+    "claim": "INT8 quantization is the most mature KV cache compression method, fully supported by Hugging Face and PyTorch.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "No study directly compares the same method across diverse tasks (e.g., summarization, reasoning) or hardware platforms.",
+    "claim": "There is currently no study that directly compares a single KV cache compression method across different tasks or hardware platforms.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Develop standardized evaluation suites (e.g., LongBench, GSM8K, Needle-In-A-HayStack) to compare methods across diverse input types and tasks.",
+    "claim": "Standardized evaluation suites such as LongBench, GSM8K, and Needle-In-A-HayStack should be developed to compare KV cache compression methods across varied inputs and tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 1,
+  "contradicted": 0,
+  "unsupported": 9,
+  "score": 0.1
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4203,
+   "completion_tokens": 1212,
+   "wall_s": 32.758925914764404,
+   "thinking_chars": 4423
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4000,
+   "completion_tokens": 2423,
+   "wall_s": 59.041908979415894,
+   "thinking_chars": 8531
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4940,
+   "completion_tokens": 1125,
+   "wall_s": 32.43630313873291,
+   "thinking_chars": 4045
+  }
+ ],
+ "eval_wall_s": 124.43207788467407
+}

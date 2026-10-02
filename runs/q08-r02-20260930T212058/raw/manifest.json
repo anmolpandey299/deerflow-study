@@ -1,0 +1,213 @@
+{
+ "manifest_version": 1,
+ "experiment_id": "part1-boundary-v1",
+ "run_id": "q08-r02-20260930T212058",
+ "query_id": "q08",
+ "query_text": "How do vector databases such as Milvus, Qdrant, Weaviate, and pgvector compare in query latency, scalability, and operational cost for RAG workloads?",
+ "status": "completed",
+ "error": null,
+ "started_utc": "2026-09-30T20:20:58.238408+00:00",
+ "wall_s": 407.9256000518799,
+ "frozen_prompt_time": "Wed Sep 30 2026 21:20:58 ",
+ "retrieval_snapshot_id": "0f982f181f766b4b232d7bfebde89eae22b132bb2b44963b205048df44268890",
+ "search_provider": "duckduckgo",
+ "crawler": "jina",
+ "summary": {
+  "llm_by_role": {
+   "coordinator": {
+    "calls": 1.0,
+    "prompt_tokens": 1638.0,
+    "completion_tokens": 64.0,
+    "model_wall_s": 5.793079137802124,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 1638
+   },
+   "planner": {
+    "calls": 1.0,
+    "prompt_tokens": 3510.0,
+    "completion_tokens": 692.0,
+    "model_wall_s": 32.79965114593506,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 3510
+   },
+   "researcher": {
+    "calls": 8.0,
+    "prompt_tokens": 44343.0,
+    "completion_tokens": 1556.0,
+    "model_wall_s": 124.20396828651428,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 10542
+   },
+   "analyst": {
+    "calls": 1.0,
+    "prompt_tokens": 1859.0,
+    "completion_tokens": 2739.0,
+    "model_wall_s": 95.19070529937744,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 1859
+   },
+   "reporter": {
+    "calls": 1.0,
+    "prompt_tokens": 6383.0,
+    "completion_tokens": 2965.0,
+    "model_wall_s": 138.17245388031006,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 6383
+   }
+  },
+  "tools_by_name": {
+   "web_search": {
+    "calls": 3.0,
+    "errors": 0.0,
+    "wall_s": 4.682296514511108
+   },
+   "crawl_tool": {
+    "calls": 4.0,
+    "errors": 0.0,
+    "wall_s": 6.866969585418701
+   }
+  },
+  "llm_calls": 12,
+  "tool_calls": 7,
+  "prompt_tokens": 57733,
+  "completion_tokens": 8016,
+  "peak_context_tokens": 10582,
+  "near_ctx_limit": false
+ },
+ "files_sha256": {
+  "crawl_fulltext.jsonl": "20dfe8b941e2e727dce9d3752c6bc4eb5c7487b96bfcd57414b5faf245237540",
+  "deerflow.log": "301c6f6ebbd75ec85c56bfb36f7ac6a8c3a7c88ea05b2c29cc3216df9494a0ce",
+  "final_state.json": "9beb04e5f48c4d26533f07eb5e272b019b72c6526f6ccffe89a421359d07fe94",
+  "llm_calls.jsonl": "ed7b65318b62138ab89f70f52a5050949a5d3fe8a25953566807b6717857ddea",
+  "report.md": "2ca84fe368795ee121c17153fe36fedec119c8f0be8303231ecab73882e4e1a2",
+  "state_snapshots.jsonl": "55cf20131a0ff72cd182383e00da5f3071c91cd020749941699296b80994d929",
+  "tool_calls.jsonl": "0f982f181f766b4b232d7bfebde89eae22b132bb2b44963b205048df44268890"
+ },
+ "deerflow": {
+  "repo": "https://github.com/bytedance/deer-flow",
+  "branch": "main-1.x",
+  "commit": "2ab28765803d4d9582aaa8f2f3355137d154e273",
+  "git_status_porcelain": "",
+  "prompt_sha256": {
+   "coordinator": "6ba6063f0adeea0d026475516530d009ab9b2e93dd2b2f156e41410436eab037",
+   "planner": "8d151855e52ea77c6e223af652453b2eb08ff3796b49d176d0ca1b7aa07c5d2d",
+   "researcher": "4562bbc3f36e984aff6c6743ef9b7c892308afc52d83f732a66018716b2faddf",
+   "analyst": "e57e9dd9a5bbd49e5eb3a3800fb8ecfa4b78e0cc90465f31f5c83818068ca9c8",
+   "coder": "a558d02d42d380db1c9e701e0279e0c1022713116fc3ef5303623dd36e08fa9c",
+   "reporter": "7495d7a947c1863f44bb4c98c2442391bb85c979e527014ca939220eeaf2313d",
+   "recursion_fallback": "1c1b0f86d55adf6cd3e0addd45f94fe70d9c6bb1e970cb789a338b00a114b1e9"
+  },
+  "graph_sha256": {
+   "builder.py": "b5410dff160ebfd0c95ac1b4085e085025010d009f4922d77010049f1ca6a74e",
+   "nodes.py": "21f3383b1b04621625b0d9cf48ae902dafe2c47e70ea5b5d947df0a1deea7f44"
+  }
+ },
+ "config": {
+  "experiment_id": "part1-boundary-v1",
+  "deerflow": {
+   "repo": "https://github.com/bytedance/deer-flow",
+   "branch": "main-1.x",
+   "commit": "2ab28765803d4d9582aaa8f2f3355137d154e273",
+   "path": "vendor/deer-flow-1x"
+  },
+  "graph": {
+   "max_plan_iterations": 1,
+   "max_step_num": 3,
+   "max_search_results": 3,
+   "report_style": "academic",
+   "enable_background_investigation": true,
+   "auto_accepted_plan": true,
+   "enable_clarification": false,
+   "locale": "en-US",
+   "outer_recursion_limit": 100
+  },
+  "tools": {
+   "search_api": "duckduckgo",
+   "crawler": "jina"
+  },
+  "model": {
+   "provider": "ollama-openai-compatible",
+   "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+   "served_tag": "dfprobe-qwen3-4b-ctx40k",
+   "num_ctx": 40960,
+   "base_url": "http://localhost:11434/v1",
+   "temperature": 0.7,
+   "top_p": 0.8,
+   "seed": 7,
+   "max_tokens": 8192,
+   "token_limit": 32000
+  },
+  "replay": {
+   "seeds": [
+    101,
+    102,
+    103
+   ]
+  },
+  "judge": {
+   "name": "P3-proxy-v1",
+   "provider": "ollama-native",
+   "model": "gpt-oss:20b",
+   "fallback_model": "dfprobe-qwen3-4b-ctx40k",
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768,
+   "think": "low",
+   "max_claims": 10
+  }
+ },
+ "deerflow_conf_yaml": "BASIC_MODEL:\n  api_key: ollama\n  base_url: http://localhost:11434/v1\n  max_tokens: 8192\n  model: dfprobe-qwen3-4b-ctx40k\n  seed: 7\n  temperature: 0.7\n  token_limit: 32000\n  top_p: 0.8\n",
+ "model": {
+  "ollama_version": "0.14.2",
+  "tag": "dfprobe-qwen3-4b-ctx40k",
+  "digest": "cabd5246e16ccc06c30c0b5a20408a6b3f4b67b6789efecf8687794ffe9f4bcc",
+  "parameters": "num_ctx                        40960\nnum_predict                    8192\nrepeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+  "details": {
+   "parent_model": "qwen3:4b-instruct-2507-q4_K_M",
+   "format": "gguf",
+   "family": "qwen3",
+   "families": [
+    "qwen3"
+   ],
+   "parameter_size": "4.0B",
+   "quantization_level": "Q4_K_M"
+  },
+  "modelfile_sha256": "897d20ca4eb4e8ff406541744f8bb60626148c2123925d3d2b6db50b4c53f2f9"
+ },
+ "packages": {
+  "langchain": "1.1.0",
+  "langchain-core": "1.2.5",
+  "langchain-openai": "1.1.0",
+  "langchain-community": "0.4.1",
+  "langgraph": "1.0.4",
+  "openai": "2.8.1",
+  "ddgs": "9.9.1",
+  "duckduckgo-search": "8.0.0",
+  "httpx": "0.28.1"
+ },
+ "python": "3.13.2",
+ "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "audit.py": "d28922fdfe06af7cee153d5fec3523460530739aa86897d9d6ad638e2a06ee88",
+  "boundary.py": "5e1a152004afb01193044c55d47346806b793f6cac81b2738c65497eca6d82e8",
+  "candidates.py": "5cc29dad9658d47d7225112921c82d4e3c308643d3dbad7dca7a9d3335f6dae5",
+  "cassette.py": "8962c6343094289e5c832adaeaaa6d51302c7e58383531273bd438e603b65c68",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "af2a45e2606bec6c3e8b93ac2217d3e6a75baf5a5487b58feb32e159a68a45db",
+  "evidence.py": "bd1f62c52d7739e89d7f2bd10e454319f3ec4bdd736acdaf013482f4c9dd6320",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_analysis.py": "753b8bf2f647704e1110bb15f602429f0319608d427513c21c02e01b05aaf63a",
+  "replay_reporter.py": "e02458ae1e9eb6429d4fe17f412877f7929ec282b08476c772294b6a7f09b4d3",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c",
+  "tables.py": "3b112118a856a1ff19841b0e62a8d9e12c45da251c24f3cfdf30593e7e3b28ce"
+ }
+}

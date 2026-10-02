@@ -1,0 +1,178 @@
+{
+ "run_id": "q04-r02-20260930T205216",
+ "funnel": {
+  "researcher_segments": 12,
+  "items": {
+   "in_tool_outputs": 17,
+   "in_observations": 10,
+   "in_reporter_input": 11,
+   "in_report": 10
+  },
+  "urls": {
+   "in_tool_outputs": 8,
+   "in_observations": 3,
+   "in_reporter_input": 3,
+   "in_report": 3
+  },
+  "report_items_total": 29,
+  "report_items_not_in_any_tool_output": [
+   "60%",
+   "47B",
+   "7B",
+   "1.3",
+   "1.8",
+   "0.8",
+   "1.2",
+   "25%",
+   "15",
+   "0.9",
+   "78%",
+   "80%",
+   "65%",
+   "48%",
+   "52%",
+   "12%",
+   "15%",
+   "10%"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": [
+   "0.4B",
+   "1.3B",
+   "100",
+   "11.3B",
+   "12",
+   "12.6",
+   "12.9B",
+   "13B",
+   "140",
+   "14336",
+   "15",
+   "176M",
+   "17B",
+   "18%",
+   "1x",
+   "25",
+   "28%",
+   "2x",
+   "3.1",
+   "30",
+   "32",
+   "33B",
+   "35",
+   "3x",
+   "40",
+   "40%",
+   "400B",
+   "405B",
+   "4096",
+   "45B",
+   "46.7B",
+   "47B",
+   "48",
+   "55%",
+   "5x",
+   "60",
+   "65",
+   "66%",
+   "69%",
+   "70.6%",
+   "71%",
+   "72%",
+   "74%",
+   "80",
+   "82",
+   "83%",
+   "85",
+   "8B",
+   "93"
+  ]
+ },
+ "candidates": [
+  {
+   "run_id": "q04-r02-20260930T205216",
+   "tool_idx": 2,
+   "tool_seq": 2,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "MoE vs dense transformer training efficiency memory usage hardware requirements 7B 13B 70B models studies reports"
+   },
+   "seg_id": "2.0",
+   "url": "https://wandb.ai/zaiinn440/hybridMoe/reports/MoE-vs-Dense-vs-Hybrid-LLM-architectures--Vmlldzo3NzYwNzAw",
+   "title": "MoE vs Dense vs Hybrid LLM architectures | hybridMoe – Weights...",
+   "text": "Train 600M MoE , Dense , Hybrid large langage model architectures. Made by Dave Davies using Weights & Biases.Also combining a dense transformer model allows good training efficiency , significantly reducing the communication overhead.",
+   "items": [
+    "600M"
+   ],
+   "missing_from_step_observation": [
+    "600M"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q04-r02-20260930T205216",
+   "tool_idx": 2,
+   "tool_seq": 2,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "MoE vs dense transformer training efficiency memory usage hardware requirements 7B 13B 70B models studies reports"
+   },
+   "seg_id": "2.2",
+   "url": "https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b",
+   "title": "MoE vs Dense at Equal Compute: Mixtral 8x 7 B vs Llama 70 B",
+   "text": "When comparing MoE and dense models , \"equal compute\" has two possible meanings and they point in different directions. Total parameters ( memory footprint): Mixtral 8x 7 B has ~46. 7 B total parameters, Llama 70 B has ~ 70 B .",
+   "items": [
+    "8x",
+    "46",
+    "70"
+   ],
+   "missing_from_step_observation": [
+    "46"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q04-r02-20260930T205216",
+   "tool_idx": 6,
+   "tool_seq": 6,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://arxiv.org/html/2604.09048v1"
+   },
+   "seg_id": "6.0",
+   "url": "https://arxiv.org/html/2604.09048v1",
+   "title": "Non-HTML Content",
+   "text": "# Non-HTML Content\n\nThis URL returned content that cannot be parsed as HTML. Raw content: Error: Jina API returned status 403: {\"data\":null,\"code\":403,\"name\":\"AbuseAlleviationError\",\"status\":40305,\"message\":\"Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 20:29:51 GMT+0000 (Coordinated Universal Time) due to previous abuse found on https://arxiv.org/html/2309.03501v2: DDoS attack suspected: Too many requests\",\"readableMessage\":\"AbuseAlleviationError: Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 20:29:51 GMT+0000 (Coordinated Universal Time)...",
+   "items": [
+    "403",
+    "40305",
+    "30",
+    "20",
+    "29",
+    "51",
+    "0000"
+   ],
+   "missing_from_step_observation": [
+    "403",
+    "40305",
+    "30",
+    "20",
+    "29",
+    "51",
+    "0000"
+   ],
+   "missing_items_in_report": [
+    "30",
+    "20"
+   ],
+   "url_in_step_observation": true
+  }
+ ]
+}

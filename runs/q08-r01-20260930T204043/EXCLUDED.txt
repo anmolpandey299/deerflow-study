@@ -1,0 +1,1 @@
+Excluded from boundary analysis: environment error (network outage ~20:40 local; background search connection refused). Retained as tool-failure data. See protocol amendment A5.

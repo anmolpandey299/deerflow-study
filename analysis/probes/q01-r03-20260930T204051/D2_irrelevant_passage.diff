@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -23 +23 @@
+-- Hierarchical chunking and bidirectional traversal (e.g., in TreeRAG) significantly improve semantic coherence and factual consistency in long-context document retrieval.
++- The meaning of PERFORMANCE is the execution of an action.

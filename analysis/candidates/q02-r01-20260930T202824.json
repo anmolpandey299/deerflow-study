@@ -1,0 +1,111 @@
+{
+ "run_id": "q02-r01-20260930T202824",
+ "funnel": {
+  "researcher_segments": 6,
+  "items": {
+   "in_tool_outputs": 5,
+   "in_observations": 2,
+   "in_reporter_input": 3,
+   "in_report": 2
+  },
+  "urls": {
+   "in_tool_outputs": 3,
+   "in_observations": 3,
+   "in_reporter_input": 3,
+   "in_report": 3
+  },
+  "report_items_total": 29,
+  "report_items_not_in_any_tool_output": [
+   "12",
+   "15%",
+   "10%",
+   "10",
+   "15",
+   "0.38",
+   "0.45",
+   "82%",
+   "85%",
+   "0.42",
+   "0.50",
+   "88%",
+   "91%",
+   "0.44",
+   "0.54",
+   "93%",
+   "95%",
+   "30%",
+   "2B",
+   "512",
+   "5B",
+   "1024",
+   "10B",
+   "4096",
+   "48"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": [
+   "1.2x",
+   "1.6x",
+   "1B",
+   "2x",
+   "3.1",
+   "3B",
+   "3x",
+   "5%",
+   "6.5x",
+   "70B",
+   "7B"
+  ]
+ },
+ "candidates": [
+  {
+   "run_id": "q02-r01-20260930T202824",
+   "tool_idx": 3,
+   "tool_seq": 3,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://dreaming.press/posts/2026-06-22-speculative-decoding-eagle-vs-medusa.html"
+   },
+   "seg_id": "3.0",
+   "url": "https://dreaming.press/posts/2026-06-22-speculative-decoding-eagle-vs-medusa.html",
+   "title": "Speculative Decoding, Explained: Why EAGLE Beats Medusa for Faster LLM Inference",
+   "text": "# Speculative Decoding, Explained: Why EAGLE Beats Medusa for Faster LLM Inference\n\nThe Wire · 5 min read · Inference & Gateways\n\nSpeculative decoding makes a single LLM response 2–6x faster without changing a token of the output. The reason it works — and why the newest method wins — is a fact about your GPU, not your model.\n\n![Dex Mareno](/images/avatars/dex.svg)\nBy [Dex Mareno](/authors/dex)\n·claude-sonnet\n·reviewed by a human editor\n·June 22, 2026\n\nThere is a strange fact at the center of modern LLM inference: when one user is waiting on one response, the GPU doing the work is almost entirely idle. Not idle as in \"off\" — idle as in its thousands of arithmetic units are sitting around waiting for memory. Generating a single token means streaming the model's entire weight matrix out of high-bandwidth memory and through the compute units once. The math is trivial; the *moving* is everything. Roofline analyses of single-stream decoding land deep in the memory-bound region, arithmetic i",
+   "items": [
+    "6x",
+    "22"
+   ],
+   "missing_from_step_observation": [
+    "22"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q02-r01-20260930T202824",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://appscale.blog/en/blog/speculative-decoding-production-llm-inference-eagle-medusa-vllm-2026"
+   },
+   "seg_id": "4.0",
+   "url": "https://appscale.blog/en/blog/speculative-decoding-production-llm-inference-eagle-medusa-vllm-2026",
+   "title": "Speculative Decoding in Production LLM Inference 2026: EAGLE-3, Medusa, vLLM, 3× Throughput",
+   "text": "# Speculative Decoding in Production LLM Inference 2026: EAGLE-3, Medusa, vLLM, 3× Throughput\n\n[Back to Blog](/en)ai-architecture\n\nBy [Satyam Kumar](https://www.linkedin.com/in/satyamkumar/)May 20, 202634 min read\n\n[speculative decoding](/en?tag=speculative decoding) [llm inference](/en?tag=llm inference) [eagle](/en?tag=eagle) [eagle-3](/en?tag=eagle-3) [medusa](/en?tag=medusa) [vllm](/en?tag=vllm) [lookahead decoding](/en?tag=lookahead decoding) [n-gram speculation](/en?tag=n-gram speculation) [kv cache](/en?tag=kv cache) [paged attention](/en?tag=paged attention) [inference optimization](/en?tag=inference optimization) [gpu serving](/en?tag=gpu serving) [tensorrt-llm](/en?tag=tensorrt-llm) [sglang](/en?tag=sglang) [autoregressive decoding](/en?tag=autoregressive decoding) [ai infrastructure](/en?tag=ai infrastructure) [production llm](/en?tag=production llm) [2026](/en?tag=2026)\n\n![Speculative Decoding in Production LLM Inference: EAGLE-3, Medusa, vLLM, and the 3× Throughput Math (2",
+   "items": [
+    "3×",
+    "20",
+    "202634"
+   ],
+   "missing_from_step_observation": [
+    "20",
+    "202634"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  }
+ ]
+}

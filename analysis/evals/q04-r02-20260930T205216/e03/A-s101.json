@@ -1,0 +1,257 @@
+{
+ "run_id": "q04-r02-20260930T205216",
+ "kind": "replay",
+ "case_id": "e03",
+ "condition": "A",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "19bece7b8bfa4b083076af2db9ce0c1cf9919443297a36c698c123fe410de60b",
+ "report_chars": 17189,
+ "report_words": 2133,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 8,
+  "urls_in_retrieved_evidence": 3,
+  "fabricated_urls": [
+   "wandb.ai/zaiinn440/hybridmoe/reports/inference-performance-mixtral-8x7b-vs-llama-3-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-inference-efficiency",
+   "research.google.com/pubs/pub47774.html",
+   "wandb.ai/zaiinn440/hybridmoe/reports/benchmark-performance-mixtral-8x7b-vs-llama-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-generalization"
+  ],
+  "provenance_rate": 0.375
+ },
+ "numeric_items": 33,
+ "numeric_items_not_in_evidence": [
+  "60%",
+  "1.3",
+  "1.8",
+  "0.8",
+  "1.2",
+  "78%",
+  "65%",
+  "1.0×",
+  "5.4×",
+  "7B",
+  "100%",
+  "0.9",
+  "25%",
+  "15",
+  "80%",
+  "5%",
+  "48%",
+  "52%",
+  "12%",
+  "15%",
+  "10%"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Mixture-of-Experts (MoE) models activate only a fraction of their total parameters per token, reducing memory footprint and active compute usage by up to 60% compared to dense models.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "MoE models use 1.6 times more FLOPs per token than dense models under top-2 routing due to expert routing overhead and redundant parameter computation.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "MoE models exhibit slightly higher per-token latency due to routing and expert selection overhead.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "Benchmark Performance on Standard Sets: Mixtral 8x7B 78% on MMLU, 65% on GSM8K, 48% on HumanEval vs Llama 70B 80%, 70%, 52%.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Mixtral 8x7B (MoE) and Llama 70B (dense).",
+    "quote_verified": false
+   },
+   {
+    "id": "R6",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "MoE models are more adaptable to diverse hardware platforms, especially in edge and distributed environments.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.7142857142857143,
+  "score_lenient": 0.8571428571428571
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "Mixture-of-Experts (MoE) models activate only a fraction of their total parameters per token, reducing memory footprint and active compute usage by up to 60% compared to dense models.",
+    "claim": "MoE models activate only a fraction of their parameters per token, cutting memory footprint and active compute usage by up to 60% compared to dense models.",
+    "label": "CONTRADICTED",
+    "evidence_id": "E1",
+    "evidence_url": "https://rruc.org/moe-vs-dense-llms-analyzing-cost-and-quality-tradeoffs-in-mixture-of-experts",
+    "quote": "sparse activation saves compute costs while increasing memory demands.",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Inference latency in MoE models is slightly higher (1.3–1.8 ms/token) than in dense models (0.8–1.2 ms/token), but overall throughput is up to 30% higher due to reduced memory bottlenecks and better parallelization.",
+    "claim": "MoE models have slightly higher per-token latency (1.3–1.8 ms) than dense models (0.8–1.2 ms) but achieve up to 30% higher throughput.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "MoE models achieve strong performance on standard benchmarks (e.g., 78% on MMLU, 65% on GSM8K), with notable advantages in domain-specific tasks and robustness against adversarial inputs.",
+    "claim": "MoE models score 78% on MMLU and 65% on GSM8K, demonstrating strong benchmark performance and robustness to adversarial inputs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Mixtral 8x7B | ~47B | ~13B | ~13B (active) |\n| Llama 70B | 70B | 70B | 70B (full) |",
+    "claim": "Mixtral 8x7B has ~47 B total parameters but only ~13 B active per token, whereas Llama 70B activates all 70 B parameters.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b",
+    "quote": "Mixtral activates roughly 13 billion parameters per token while keeping 47 billion in memory. Llama 70B activates all 70 billion parameters per token and needs all 70 billion in memory.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "MoE models use 1.6 times more FLOPs per token than dense models under top-2 routing due to expert routing overhead and redundant parameter computation.",
+    "claim": "MoE models consume 1.6× the FLOPs per token of dense models when using top‑2 routing.",
+    "label": "SUPPORTED",
+    "evidence_id": "E7",
+    "evidence_url": "https://mbrenndoerfer.com/writing/efficiency-frontiers-architectures-hardware-codesign-inference",
+    "quote": "MoE uses 1.6x the FLOPs of dense for this seq_len, but has ~4x more total FF parameters with top-2 routing.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "| Mixtral 8x7B | 1.3–1.8 ms | Routing, expert selection |\n| Llama 3 70B | 0.8–1.2 ms | Direct parameter access |",
+    "claim": "Mixtral 8x7B processes tokens in 1.3–1.8 ms, while Llama 3 70B does so in 0.8–1.2 ms.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Mixtral 8x7B | ~13B active parameters | 60% lower |\n| Llama 70B | 70B active parameters | 100% full load |",
+    "claim": "MoE models lower memory bandwidth usage by up to 60% relative to dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| 8x A100 GPUs | Mixtral 8x7B 1.2 tokens/sec/GPU | Llama 3 70B 0.9 tokens/sec/GPU | +30% |",
+    "claim": "On 8 A100 GPUs, Mixtral 8x7B achieves 1.2 tokens/sec per GPU versus 0.9 for Llama 3 70B, a 30% throughput improvement.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Benchmark | Mixtral 8x7B | Llama 70B | Performance Gap |\n| MMLU | 78% | 80% | -2% |\n| GSM8K | 65% | 70% | -5% |\n| HumanEval | 48% | 52% | -4% |",
+    "claim": "Mixtral 8x7B scores 78% on MMLU, 65% on GSM8K, and 48% on HumanEval, slightly below Llama 70B’s 80%, 70%, and 52% respectively.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Prompt injection attacks: Mixtral 8x7B resists 15% more effectively than Llama 70B due to routing that avoids harmful expert paths.",
+    "claim": "Mixtral 8x7B resists prompt injection attacks 15% more effectively than Llama 70B due to routing that avoids harmful expert paths.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 2,
+  "contradicted": 1,
+  "unsupported": 8,
+  "score": 0.2
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4553,
+   "completion_tokens": 1915,
+   "wall_s": 49.76250696182251,
+   "thinking_chars": 6614
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4355,
+   "completion_tokens": 5345,
+   "wall_s": 127.87569832801819,
+   "thinking_chars": 15317
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2191,
+   "completion_tokens": 2243,
+   "wall_s": 52.995381116867065,
+   "thinking_chars": 7566
+  }
+ ],
+ "eval_wall_s": 230.72198796272278
+}

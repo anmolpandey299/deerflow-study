@@ -1,0 +1,245 @@
+{
+ "run_id": "q05-r02-20260930T205952",
+ "kind": "baseline",
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "0509a5bead9ef3b66bce0d74bf9649635d6197de02d61ac798f75ab481a66315",
+ "report_chars": 13575,
+ "report_words": 1482,
+ "fmt": {
+  "checks": {
+   "h1_title": false,
+   "key_citations_before_key_points": false,
+   "key_points_4_to_6_bullets": false,
+   "overview_section": false,
+   "detailed_analysis_section": false,
+   "references_with_urls": false,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 0.25
+ },
+ "fact_url": {
+  "report_urls": 14,
+  "urls_in_retrieved_evidence": 12,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/llama-cpp-ai/llama.cpp/main/docs/perplexity-comparison.png",
+   "raw.githubusercontent.com/llama-cpp-ai/llama.cpp/main/docs/hardware-compatibility-matrix.png"
+  ],
+  "provenance_rate": 0.8571428571428571
+ },
+ "numeric_items": 14,
+ "numeric_items_not_in_evidence": [
+  "40%",
+  "1.8",
+  "2.5×",
+  "35",
+  "1.2",
+  "1.5×",
+  "10",
+  "15%",
+  "40x"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "GPTQ relies on grouped quantization to preserve weight distributions",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "AWQ introduces activation-aware scaling to maintain activation fidelity",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "SmoothQuant advances this by applying pre-quantization scaling to both weights and activations",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "GPTQ: 2–3× (on NVIDIA GPUs)",
+    "quote_verified": false
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "NVIDIA A100/H100 GPUs offer the most comprehensive hardware support, with optimized tensor cores and frameworks like vLLM and TensorRT-LLM enabling high throughput.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "PARTIAL",
+    "quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8-bit (W8A8) quantization.",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "The analysis draws on empirical benchmarks from the `llmcompressor` framework and public implementation repositories. While the data is derived from real-world model evaluations, the absence of direct, peer-reviewed, side-by-side comparisons of all three methods under identical conditions introduces uncertainty.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.6875,
+  "score_lenient": 0.8125
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8-bit (W8A8) quantization.",
+    "claim": "SmoothQuant retains higher accuracy than GPTQ and AWQ in 8-bit quantization, achieving better perplexity and instruction-following scores.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ achieves the fastest token generation speed and lowest model loading time, especially on NVIDIA GPUs, making it ideal for latency-sensitive applications.",
+    "claim": "GPTQ delivers the fastest token generation and shortest model loading times on NVIDIA GPUs, making it optimal for low-latency use cases.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "AWQ provides a balanced performance with improved instruction-following capabilities and moderate latency, suitable for enterprise deployments requiring both speed and accuracy.",
+    "claim": "AWQ offers a middle ground, improving instruction-following while maintaining moderate latency, suitable for enterprise deployments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "NVIDIA A100/H100 GPUs offer the most comprehensive hardware support, with optimized tensor cores and frameworks like vLLM and TensorRT-LLM enabling high throughput.",
+    "claim": "NVIDIA A100/H100 GPUs provide the most extensive hardware support, with optimized tensor cores and frameworks such as vLLM and TensorRT-LLM for high throughput.",
+    "label": "SUPPORTED",
+    "evidence_id": "E24",
+    "evidence_url": "https://nanobase.ai/insights/vllm-vs-tensorrt-llm-vs-ollama-vs-sglang",
+    "quote": "vLLM . Broadest model support , easy swaps, mature Kubernetes tooling. One stable model at high volume on H 100 / H 200/B200 where cost per token dominates. TensorRT -LLM or NIM. Compiled FP8 or NVFP4 engines typically give the most tokens per GPU.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "Consumer and AMD GPUs provide limited support for SmoothQuant due to insufficient memory bandwidth and lack of low-precision kernels.",
+    "claim": "Consumer and AMD GPUs have limited support for SmoothQuant because of insufficient memory bandwidth and lack of low‑precision kernels.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "All methods can run on CPUs, but with significant performance trade-offs, making them best suited for small models and edge use cases.",
+    "claim": "All three quantization methods can run on CPUs, but they incur significant performance penalties, making them best for small models or edge scenarios.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant | W8A8 (8-bit) | Highest fidelity | Minimal degradation | Superior in long-context",
+    "claim": "In the accuracy table, SmoothQuant with W8A8 quantization shows highest fidelity, minimal degradation, and superior long‑context reasoning.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ | 2–3× (on NVIDIA GPUs) | Up to 40% faster | Low | INT4 matrix kernels",
+    "claim": "In the inference efficiency table, GPTQ achieves 2–3× faster token generation on NVIDIA GPUs, up to 40% faster model loading, with low memory bandwidth usage thanks to INT4 matrix kernels.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "AWQ | 1.8–2.5× (on NVIDIA GPUs) | 35–40% faster | Moderate | Activation-aware access",
+    "claim": "In the inference efficiency table, AWQ achieves 1.8–2.5× faster token generation on NVIDIA GPUs, 35–40% faster model loading, with moderate memory bandwidth usage due to activation‑aware access.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant | 1.2–1.5× (on NVIDIA GPUs) | 10–15% slower | High | W8A8 activation scaling",
+    "claim": "In the inference efficiency table, SmoothQuant achieves 1.2–1.5× faster token generation on NVIDIA GPUs, 10–15% slower model loading, with high memory bandwidth usage because of W8A8 activation scaling.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 1,
+  "contradicted": 0,
+  "unsupported": 9,
+  "score": 0.1
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3561,
+   "completion_tokens": 2239,
+   "wall_s": 59.56675696372986,
+   "thinking_chars": 8163
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3342,
+   "completion_tokens": 3278,
+   "wall_s": 92.43570613861084,
+   "thinking_chars": 11295
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4197,
+   "completion_tokens": 2275,
+   "wall_s": 71.45581412315369,
+   "thinking_chars": 8603
+  }
+ ],
+ "eval_wall_s": 223.5397379398346
+}

@@ -1,0 +1,9 @@
+case_id: e02
+kind: E
+label: EXPLORATORY (amendments A7/A8)
+run_id: q02-r01-20260930T202824
+target_step: 1
+control_step: 0
+rationale: researcher step without search; source of 18 ungrounded report numbers
+  (quality table)
+primary_metric: unique_ungrounded_items

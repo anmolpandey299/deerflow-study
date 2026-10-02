@@ -1,0 +1,27 @@
+{
+ "messages": [
+  {
+   "type": "human",
+   "data": {
+    "content": "What does the evidence say about how well retrieval-augmented generation reduces hallucinations in LLM outputs, and what are its main limitations?",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "human",
+    "name": null,
+    "id": "417ae7a9-5b1c-46d8-8b87-945b52bc3806"
+   }
+  }
+ ],
+ "locale": "en-US",
+ "research_topic": "evidence on how well retrieval-augmented generation reduces hallucinations in LLM outputs and its main limitations",
+ "clarified_research_topic": "evidence on how well retrieval-augmented generation reduces hallucinations in LLM outputs and its main limitations",
+ "resources": [],
+ "auto_accepted_plan": true,
+ "enable_background_investigation": true,
+ "citations": [],
+ "enable_clarification": false,
+ "clarification_rounds": 0,
+ "clarification_history": [],
+ "is_clarification_complete": true,
+ "goto": "background_investigator"
+}

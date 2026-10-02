@@ -1,0 +1,236 @@
+{
+ "run_id": "q01-r03-20260930T204051",
+ "kind": "replay",
+ "case_id": "c01",
+ "condition": "C",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "1c788de8e4fb53c7bf68908fd0e38276f8367a5cdad2a18688f3d67f974a9ca7",
+ "report_chars": 18825,
+ "report_words": 2176,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 18,
+  "urls_in_retrieved_evidence": 15,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/acl-labs/visuals/main/2025-tree-rag-hierarchy.png",
+   "raw.githubusercontent.com/acl-labs/visuals/main/2025-contextual-rag-pipeline.png",
+   "raw.githubusercontent.com/acl-labs/visuals/main/2025-gmemllm-memory-state.png"
+  ],
+  "provenance_rate": 0.8333333333333334
+ },
+ "numeric_items": 7,
+ "numeric_items_not_in_evidence": [
+  "1k",
+  "$0.03",
+  "$0.05",
+  "$0.01",
+  "$0.005",
+  "$0.02"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "TreeRAG introduces a tree-like hierarchical structure for text segmentation and retrieval, enabling both root-to-leaves and leaf-to-root traversal strategies—collectively termed Bidirectional Traversal Retrieval.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "PARTIAL",
+    "quote": "Bidirectional traversal reduces redundant queries, leading to improved retrieval efficiency. Benchmarks suggest sub-second response times for well-structured queries when integrated with efficient embedding models.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Accuracy (Factual Consistency) | ✅ High (LLM-as-a-judge validated) | ✅ High (contextual grounding improves relevance) | ✅ High (in reasoning tasks)",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "As of 2025, long-context RAG systems have matured into context-sensitive, memory-aware, and structurally intelligent architectures.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "PARTIAL",
+    "quote": "A critical gap exists in standardized, reproducible benchmarks for operational cost and end-to-end latency across RAG architectures, hindering objective performance comparisons.",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "TreeRAG emerges as the most practical choice for real-world, document-based applications due to its balance of accuracy, speed, and cost-efficiency.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.625,
+  "score_lenient": 0.625
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 9,
+  "claims": [
+   {
+    "report_quote": "TreeRAG outperforms baseline methods in factual consistency and relevance across multiple domains (finance, law, medicine).",
+    "claim": "TreeRAG achieves higher factual consistency and relevance than baseline RAG methods in finance, law, and medicine domains.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Benchmarks suggest sub-second response times for well-structured queries when integrated with efficient embedding models.",
+    "claim": "TreeRAG can return responses in under one second for well-structured queries when paired with efficient embedding models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Contextual RAG improved retrieval accuracy and coherence over traditional RAG.",
+    "claim": "Contextual RAG yields higher retrieval accuracy and coherence compared to standard RAG approaches.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Contextual RAG adds an extra inference step before vectorization, increasing pipeline latency and per-inference cost.",
+    "claim": "The additional inference step in Contextual RAG increases pipeline latency and per-query cost relative to conventional RAG.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "G-MemLLM demonstrates superior performance in complex reasoning tasks (e.g., multi-step problem solving) due to sustained contextual awareness.",
+    "claim": "G-MemLLM outperforms other models on complex, multi-step reasoning tasks thanks to its persistent contextual memory.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy in RAG systems is best evaluated using LLM-as-a-judge frameworks, which assess factual correctness and consistency, surpassing traditional IR metrics like ROUGE or nDCG.",
+    "claim": "LLM-as-a-judge frameworks provide more accurate evaluation of RAG systems than traditional IR metrics such as ROUGE or nDCG.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Traditional metrics like nDCG and MRR assume a list of results and apply position discounts, which do not reflect whether the retrieved content is factually grounded or contextually relevant.",
+    "claim": "Traditional IR metrics such as nDCG and MRR fail to capture factual grounding or contextual relevance because they rely on position-based discounts.",
+    "label": "SUPPORTED",
+    "evidence_id": "E26",
+    "evidence_url": "https://arxiv.org/abs/2511.09545",
+    "quote": "Classical rank-centric IR metrics (nDCG/MAP/MRR) are a poor fit for RAG , where LLMs consume a set of passages rather than a browsed list; position discounts and prevalence-blind aggregation miss what matters: whether the prompt at cutoff K contains the decisive evidence.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "Embedding Model Performance and Cost Comparison: BGE-m3 offers a favorable balance between accuracy and cost, making it ideal for production-grade pipelines.",
+    "claim": "BGE-m3 delivers a strong trade-off between accuracy and cost, making it suitable for production RAG pipelines.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "No unified framework exists for measuring accuracy, latency, and cost across RAG architectures.",
+    "claim": "There is currently no single framework that simultaneously measures accuracy, latency, and operational cost for RAG architectures.",
+    "label": "CONTRADICTED",
+    "evidence_id": "E18",
+    "evidence_url": "https://arxiv.org/abs/2603.10765",
+    "quote": "It automates the collection of performance metrics (i.e., end-to-end query throughput, host/GPU memory footprint, and CPU/GPU utilization) and accuracy metrics (i.e., context recall, query accuracy , and factual consistency).",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 1,
+  "contradicted": 1,
+  "unsupported": 8,
+  "score": 0.1111111111111111
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4731,
+   "completion_tokens": 1670,
+   "wall_s": 54.242193937301636,
+   "thinking_chars": 6083
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4427,
+   "completion_tokens": 2982,
+   "wall_s": 86.11161684989929,
+   "thinking_chars": 11513
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 3749,
+   "completion_tokens": 2103,
+   "wall_s": 61.0311119556427,
+   "thinking_chars": 8672
+  }
+ ],
+ "eval_wall_s": 201.50206995010376
+}

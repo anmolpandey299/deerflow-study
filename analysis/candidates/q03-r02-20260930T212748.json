@@ -1,0 +1,352 @@
+{
+ "run_id": "q03-r02-20260930T212748",
+ "funnel": {
+  "researcher_segments": 27,
+  "items": {
+   "in_tool_outputs": 17,
+   "in_observations": 5,
+   "in_reporter_input": 6,
+   "in_report": 4
+  },
+  "urls": {
+   "in_tool_outputs": 24,
+   "in_observations": 7,
+   "in_reporter_input": 8,
+   "in_report": 4
+  },
+  "report_items_total": 12,
+  "report_items_not_in_any_tool_output": [
+   "5%",
+   "5×",
+   "6×",
+   "1024",
+   "256"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": []
+ },
+ "candidates": [
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "comprehensive survey of KV-cache compression techniques for long-context LLM inference arXiv Google AI Meta AI NVIDIA Hugging Face"
+   },
+   "seg_id": "1.0",
+   "url": "https://arxiv.org/abs/2407.01527",
+   "title": "[2407.01527] KV Cache Compression, But What Must We Give in ... [2412.19442] A Survey on Large Language Model Acceleration ... A Survey on Large Language Model Acceleration based on KV ... Key, Value, Compress: A Systematic Exploration of KV Cache ... GitHub - SPAI-Labs/Cach-and-LLM_Compression: A ... Breaking the Memory Wall in LLM Inference Serving: A Survey ... GitHub - TreeAI-Lab/Awesome-KV-Cache-Management: This ...",
+   "text": "Jul 1, 2024 · Our work reveals numerous previously unknown phenomena and offers insights - as well as a friendly workbench - for the future development of long context - capable LLMs . Dec 27, 2024 · This survey provides a comprehensive overview of KV cache management strategies for LLM acceleration, categorizing them into token-level, model-level, and system-level optimizations. May 19, 2025 · This survey provides a comprehensive overview of KV cache management strategies for LLM acceleration, categorizing them into token-level, model-level, and system-level optimizations. Abstract KV cache compression strategies are analyzed for their impact on performance and inference latency in large language models, identifying trade-offs and improving efficiency for long - context scenarios. A comprehensive curated collection of research papers, tools, and resources on KV Cache Management, KV Cache Compression , and LLM Compression techniques for efficient Large Language Model inference . May 28, 2026 · Large language model ( LLM ) inference at scale is increasingly bounded by the key–value ( KV ) cache , which dominates GPU memory at long contexts and high concurrency and turns decoding... This repository is dedicated to recording KV Cache Management papers for LLM acceleration. The survey will be updated regularly. If you find this survey helpful for your work, please consider citing it.",
+   "items": [
+    "27",
+    "19",
+    "28"
+   ],
+   "missing_from_step_observation": [
+    "27",
+    "19",
+    "28"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "comprehensive survey of KV-cache compression techniques for long-context LLM inference arXiv Google AI Meta AI NVIDIA Hugging Face"
+   },
+   "seg_id": "1.1",
+   "url": "https://arxiv.org/abs/2412.19442",
+   "title": "[2412.19442] A Survey on Large Language Model Acceleration ... A Survey on Large Language Model Acceleration based on KV ... Key, Value, Compress: A Systematic Exploration of KV Cache ... GitHub - SPAI-Labs/Cach-and-LLM_Compression: A ... Breaking the Memory Wall in LLM Inference Serving: A Survey ... GitHub - TreeAI-Lab/Awesome-KV-Cache-Management: This ...",
+   "text": "Dec 27, 2024 · This survey provides a comprehensive overview of KV cache management strategies for LLM acceleration, categorizing them into token-level, model-level, and system-level optimizations. May 19, 2025 · This survey provides a comprehensive overview of KV cache management strategies for LLM acceleration, categorizing them into token-level, model-level, and system-level optimizations. Abstract KV cache compression strategies are analyzed for their impact on performance and inference latency in large language models, identifying trade-offs and improving efficiency for long - context scenarios. A comprehensive curated collection of research papers, tools, and resources on KV Cache Management, KV Cache Compression , and LLM Compression techniques for efficient Large Language Model inference . May 28, 2026 · Large language model ( LLM ) inference at scale is increasingly bounded by the key–value ( KV ) cache , which dominates GPU memory at long contexts and high concurrency and turns decoding... This repository is dedicated to recording KV Cache Management papers for LLM acceleration. The survey will be updated regularly. If you find this survey helpful for your work, please consider citing it.",
+   "items": [
+    "27",
+    "19",
+    "28"
+   ],
+   "missing_from_step_observation": [
+    "27",
+    "19",
+    "28"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "comprehensive survey of KV-cache compression techniques for long-context LLM inference arXiv Google AI Meta AI NVIDIA Hugging Face"
+   },
+   "seg_id": "1.2",
+   "url": "https://openreview.net/forum?id=z3JZzu9EA3",
+   "title": "A Survey on Large Language Model Acceleration based on KV ...",
+   "text": "May 19, 2025 · This survey provides a comprehensive overview of KV cache management strategies for LLM acceleration, categorizing them into token-level, model-level, and system-level optimizations.",
+   "items": [
+    "19"
+   ],
+   "missing_from_step_observation": [
+    "19"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "key papers on KV-cache compression for long-context LLMs arXiv 2024 2025 2026 Google AI Meta AI NVIDIA Hugging Face"
+   },
+   "seg_id": "4.0",
+   "url": "https://arxiv.org/abs/2508.06297",
+   "title": "KV Cache Compression for Inference Efficiency in LLMs: A Review [2502.14051] RocketKV: Accelerating Long-Context LLM ... DynamicKV: Task-Aware Adaptive KV Cache Compression for Long ... DynamicKV: Task-Aware Adaptive KV Cache Compression for Long ... ChunkKV: Semantic-Preserving KV Cache Compression for ... ChunkKV: Semantic-Preserving KV Cache Compression for ... ZigZagkv: Dynamic KV Cache Compression for Long-context ...",
+   "text": "Aug 8, 2025 · This review systematically examines current KV cache optimization techniques, including compression strategies such as selective token strategies, quantization, and attention compression . Feb 19, 2025 · To address this challenge, we present RocketKV, a training-free KV cache compression strategy containing two consecutive stages. In the first stage, it performs coarse-grain permanent KV cache eviction on the input sequence tokens. 1 day ago · In this paper , we introduce a novel Task-Aware KV cache mechanism that dynamically adjusts the KV cache size across different layers based on the characteristics of the tasks. Abstract Efficient KV cache management in LLMs is crucial for long - context tasks like RAG and summarization. Existing KV cache compres - sion methods enforce a fixed pattern, neglecting task-specific characteristics and reducing the retention of essential information. Sep 28, 2024 · This technique not only improves compression efficiency, but also provides insight into the similarities between layers within LLMs . We evaluated ChunkKV on long - context benchmarks including LongBench and Needle-In-A-HayStack, as well as the GSM8K in-context learning benchmark. Sep 18, 2025 · The paper introduces ChunkKV, a novel approach for compressing the Key-Value ( KV ) cache in Large Language Models ( LLMs ) to enable efficient inference with long - context inputs. Building on this observation, this paper proposes a simple yet effective KV cache compression method that leverages layer uncertainty to allocate budget size for each layer.",
+   "items": [
+    "19",
+    "28",
+    "18"
+   ],
+   "missing_from_step_observation": [
+    "19",
+    "28",
+    "18"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "key papers on KV-cache compression for long-context LLMs arXiv 2024 2025 2026 Google AI Meta AI NVIDIA Hugging Face"
+   },
+   "seg_id": "4.1",
+   "url": "https://arxiv.org/abs/2502.14051",
+   "title": "[2502.14051] RocketKV: Accelerating Long-Context LLM ... DynamicKV: Task-Aware Adaptive KV Cache Compression for Long ... DynamicKV: Task-Aware Adaptive KV Cache Compression for Long ... ChunkKV: Semantic-Preserving KV Cache Compression for ... ChunkKV: Semantic-Preserving KV Cache Compression for ... ZigZagkv: Dynamic KV Cache Compression for Long-context ...",
+   "text": "Feb 19, 2025 · To address this challenge, we present RocketKV, a training-free KV cache compression strategy containing two consecutive stages. In the first stage, it performs coarse-grain permanent KV cache eviction on the input sequence tokens. 1 day ago · In this paper , we introduce a novel Task-Aware KV cache mechanism that dynamically adjusts the KV cache size across different layers based on the characteristics of the tasks. Abstract Efficient KV cache management in LLMs is crucial for long - context tasks like RAG and summarization. Existing KV cache compres - sion methods enforce a fixed pattern, neglecting task-specific characteristics and reducing the retention of essential information. Sep 28, 2024 · This technique not only improves compression efficiency, but also provides insight into the similarities between layers within LLMs . We evaluated ChunkKV on long - context benchmarks including LongBench and Needle-In-A-HayStack, as well as the GSM8K in-context learning benchmark. Sep 18, 2025 · The paper introduces ChunkKV, a novel approach for compressing the Key-Value ( KV ) cache in Large Language Models ( LLMs ) to enable efficient inference with long - context inputs. Building on this observation, this paper proposes a simple yet effective KV cache compression method that leverages layer uncertainty to allocate budget size for each layer.",
+   "items": [
+    "19",
+    "28",
+    "18"
+   ],
+   "missing_from_step_observation": [
+    "19",
+    "28",
+    "18"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 5,
+   "tool_seq": 5,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "KV-cache compression quantization INT4 INT8 sparse attention pruning structured methods reconstruction techniques key papers arXiv 2024-2026"
+   },
+   "seg_id": "5.0",
+   "url": "https://arxiv.org/abs/2601.04719",
+   "title": "[2601.04719] GPU-Accelerated INT8 Quantization for KV Cache ... GPU-Accelerated INT8 Quantization for KV Cache Compression in ... GitHub - SqueezeAILab/KVQuant: [NeurIPS 2024] KVQuant ... GitHub - October2001/Awesome-KV-Cache-Compression: Must ... Key, Value, Compress: A Systematic Exploration of KV Cache ... 2026-01-08 GPU-Accelerated INT8 KV Cache Compression Quantization Dominates Rank Reduction for KV-Cache Compression",
+   "text": "Jan 8, 2026 · We implement and evaluate GPU-accelerated INT8 quantization for KV cache compression , achieving 4 × memory reduction with minimal accuracy degradation. We develop four CUDA kernel variants -- naive, tiled, coarsened, and vectorized -- and benchmark them across realistic workload sizes up to 1 billion elements. Jan 8, 2026 · In this project, we implement and evaluate INT8 quantization and dequantization for KV cache compression . We use per-channel quantization, where each dimension of the key vectors gets its own scale factor, allowing us to preserve precision across dimensions with different value ranges. KVQuant is a methodology for efficient KV cache quantization that incorporates several innovations to acheive accurate low-precision quantization , thereby enabling efficient long context length inference. This repository implements multiple KV cache pruning methods and benchmarks using 🤗 transformers. KVCache-Factory. Unified KV Cache Compression Methods for Auto-Regressive Models. KV Cache Store. Hosted KV - cache artifact registry plus an open-source Rust CLI. Mar 14, 2025 · This paper presents an analysis of various Key -Value ( KV ) cache compression strategies, offering a comprehensive taxonomy that categorizes these methods by their underlying principles and... Jan 13, 2026 · For long-context inference (100K+ tokens), KV cache becomes the dominant memory bottleneck—limiting batch sizes, context lengths, and deployment feasibility. Quantizing the KV cache to INT8 offers 4× memory reduction. We compare two strategies for compressing the KV cache in transformer inference: rank reduction (discard dimensions) and quantization (keep all dimensions, reduce precision).",
+   "items": [
+    "14",
+    "13",
+    "100K",
+    "4×"
+   ],
+   "missing_from_step_observation": [
+    "14",
+    "13"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 5,
+   "tool_seq": 5,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "KV-cache compression quantization INT4 INT8 sparse attention pruning structured methods reconstruction techniques key papers arXiv 2024-2026"
+   },
+   "seg_id": "5.1",
+   "url": "https://arxiv.org/html/2601.04719v1",
+   "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in ... GitHub - SqueezeAILab/KVQuant: [NeurIPS 2024] KVQuant ... GitHub - October2001/Awesome-KV-Cache-Compression: Must ... Key, Value, Compress: A Systematic Exploration of KV Cache ... 2026-01-08 GPU-Accelerated INT8 KV Cache Compression Quantization Dominates Rank Reduction for KV-Cache Compression",
+   "text": "Jan 8, 2026 · In this project, we implement and evaluate INT8 quantization and dequantization for KV cache compression . We use per-channel quantization, where each dimension of the key vectors gets its own scale factor, allowing us to preserve precision across dimensions with different value ranges. KVQuant is a methodology for efficient KV cache quantization that incorporates several innovations to acheive accurate low-precision quantization , thereby enabling efficient long context length inference. This repository implements multiple KV cache pruning methods and benchmarks using 🤗 transformers. KVCache-Factory. Unified KV Cache Compression Methods for Auto-Regressive Models. KV Cache Store. Hosted KV - cache artifact registry plus an open-source Rust CLI. Mar 14, 2025 · This paper presents an analysis of various Key -Value ( KV ) cache compression strategies, offering a comprehensive taxonomy that categorizes these methods by their underlying principles and... Jan 13, 2026 · For long-context inference (100K+ tokens), KV cache becomes the dominant memory bottleneck—limiting batch sizes, context lengths, and deployment feasibility. Quantizing the KV cache to INT8 offers 4× memory reduction. We compare two strategies for compressing the KV cache in transformer inference: rank reduction (discard dimensions) and quantization (keep all dimensions, reduce precision).",
+   "items": [
+    "14",
+    "13",
+    "100K",
+    "4×"
+   ],
+   "missing_from_step_observation": [
+    "14",
+    "13"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 6,
+   "tool_seq": 6,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 1,
+   "args": {
+    "query": "quantitative analysis of KV-cache compression memory savings accuracy degradation throughput in long-context LLM inference 2023-2026"
+   },
+   "seg_id": "6.1",
+   "url": "https://www.linkedin.com/posts/shashi-kush-6940546k_google-just-figured-out-how-to-run-llms-on-activity-7444262186480492544-pcal",
+   "title": "Google just figured out how to run LLMs on 6x less memory .",
+   "text": "It compresses KV caches down to 3 bits per value. Standard inference runs at 16 or 32 bits. The gap between those numbers is where the bottleneck lives, and TurboQuant closes it without touching the model.",
+   "items": [
+    "16",
+    "32"
+   ],
+   "missing_from_step_observation": [
+    "16",
+    "32"
+   ],
+   "missing_items_in_report": [
+    "32"
+   ],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 9,
+   "tool_seq": 9,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 1,
+   "args": {
+    "url": "https://arxiv.org/html/2607.01237"
+   },
+   "seg_id": "9.0",
+   "url": "https://arxiv.org/html/2607.01237",
+   "title": "Non-HTML Content",
+   "text": "# Non-HTML Content\n\nThis URL returned content that cannot be parsed as HTML. Raw content: Error: Jina API returned status 403: {\"data\":null,\"code\":403,\"name\":\"AbuseAlleviationError\",\"status\":40305,\"message\":\"Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 21:22:17 GMT+0000 (Coordinated Universal Time) due to previous abuse found on https://arxiv.org/html/2603.08621v1: DDoS attack suspected: Too many requests\",\"readableMessage\":\"AbuseAlleviationError: Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 21:22:17 GMT+0000 (Coordinated Universal Time)...",
+   "items": [
+    "403",
+    "40305",
+    "30",
+    "21",
+    "22",
+    "17",
+    "0000"
+   ],
+   "missing_from_step_observation": [
+    "403",
+    "40305",
+    "30",
+    "21",
+    "22",
+    "17",
+    "0000"
+   ],
+   "missing_items_in_report": [
+    "403"
+   ],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 10,
+   "tool_seq": 10,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 1,
+   "args": {
+    "url": "https://arxiv.org/abs/2601.04719"
+   },
+   "seg_id": "10.0",
+   "url": "https://arxiv.org/abs/2601.04719",
+   "title": "Non-HTML Content",
+   "text": "# Non-HTML Content\n\nThis URL returned content that cannot be parsed as HTML. Raw content: Error: Jina API returned status 403: {\"data\":null,\"code\":403,\"name\":\"AbuseAlleviationError\",\"status\":40305,\"message\":\"Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 21:22:17 GMT+0000 (Coordinated Universal Time) due to previous abuse found on https://arxiv.org/html/2603.08621v1: DDoS attack suspected: Too many requests\",\"readableMessage\":\"AbuseAlleviationError: Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 21:22:17 GMT+0000 (Coordinated Universal Time)...",
+   "items": [
+    "403",
+    "40305",
+    "30",
+    "21",
+    "22",
+    "17",
+    "0000"
+   ],
+   "missing_from_step_observation": [
+    "403",
+    "40305",
+    "30",
+    "21",
+    "22",
+    "17",
+    "0000"
+   ],
+   "missing_items_in_report": [
+    "403"
+   ],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q03-r02-20260930T212748",
+   "tool_idx": 11,
+   "tool_seq": 11,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 1,
+   "args": {
+    "url": "https://arxiv.org/abs/2502.14051"
+   },
+   "seg_id": "11.0",
+   "url": "https://arxiv.org/abs/2502.14051",
+   "title": "Non-HTML Content",
+   "text": "# Non-HTML Content\n\nThis URL returned content that cannot be parsed as HTML. Raw content: Error: Jina API returned status 403: {\"data\":null,\"code\":403,\"name\":\"AbuseAlleviationError\",\"status\":40305,\"message\":\"Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 21:22:17 GMT+0000 (Coordinated Universal Time) due to previous abuse found on https://arxiv.org/html/2603.08621v1: DDoS attack suspected: Too many requests\",\"readableMessage\":\"AbuseAlleviationError: Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 21:22:17 GMT+0000 (Coordinated Universal Time)...",
+   "items": [
+    "403",
+    "40305",
+    "30",
+    "21",
+    "22",
+    "17",
+    "0000"
+   ],
+   "missing_from_step_observation": [
+    "403",
+    "40305",
+    "30",
+    "21",
+    "22",
+    "17",
+    "0000"
+   ],
+   "missing_items_in_report": [
+    "403"
+   ],
+   "url_in_step_observation": false
+  }
+ ]
+}

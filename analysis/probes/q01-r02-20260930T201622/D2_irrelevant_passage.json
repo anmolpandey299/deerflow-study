@@ -1,0 +1,269 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q01-r02-20260930T201622",
+ "variant": "D2_irrelevant_passage",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "93fad2cb7a3548ed3f8b159a4dc966471dac3ba2a7afa27318409301371f89a9",
+  "report_chars": 16980,
+  "report_words": 2096,
+  "fmt": {
+   "checks": {
+    "h1_title": true,
+    "key_citations_before_key_points": true,
+    "key_points_4_to_6_bullets": true,
+    "overview_section": true,
+    "detailed_analysis_section": true,
+    "references_with_urls": true,
+    "markdown_table": true,
+    "no_wrapping_code_fence": true
+   },
+   "score": 1.0
+  },
+  "fact_url": {
+   "report_urls": 6,
+   "urls_in_retrieved_evidence": 6,
+   "fabricated_urls": [],
+   "provenance_rate": 1.0
+  },
+  "numeric_items": 0,
+  "numeric_items_not_in_evidence": [],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "Hierarchical Retrieval organizes information into multiple levels of abstraction—e.g., topic → subtopic → paragraph—enabling focused and layered retrieval.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "FULL",
+     "quote": "The following table summarizes comparative performance trends based on academic benchmarks and commercial guidance.",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "FULL",
+     "quote": "MiA-RAG introduced in 2025, the first framework to model retrieval and generation as a unified conditioning process grounded in human cognitive architecture.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "FULL",
+     "quote": "The most impactful progress will come from architectures that reason, remember, and understand— not just retrieve and respond.",
+     "quote_verified": true
+    }
+   ],
+   "score": 0.5,
+   "score_lenient": 0.5
+  },
+  "fact_claims": {
+   "claims_extracted": 10,
+   "claims_checked": 10,
+   "claims": [
+    {
+     "report_quote": "| **Hybrid BM25 + Dense Retrieval** | High (best retrieval precision) | Medium to High | Medium | Robust to sparse queries; widely deployable; strong retrieval accuracy | Limited semantic depth; still underperforms Oracle Context; high memory overhead in long contexts |",
+     "claim": "Hybrid BM25 + Dense Retrieval achieves high accuracy (best retrieval precision), medium to high latency, and medium cost, with strengths in robustness to sparse queries and weaknesses in limited semantic depth and high memory overhead in long contexts.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| **Mindscape-Aware RAG (MiA-RAG)** | High (coherence and reasoning) | High | High | Simulates human cognition; enables structured reasoning; excellent for complex document analysis | Computationally intensive; requires large-scale training; limited real-world deployment data |",
+     "claim": "Mindscape-Aware RAG (MiA-RAG) achieves high accuracy (coherence and reasoning), high latency, and high cost, with strengths in simulating human cognition and structured reasoning, but is computationally intensive and requires large-scale training.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| **Hierarchical Retrieval** | Moderate to High | Medium | Medium | Supports multi-level abstraction; improves retrieval focus | Performance degrades with unstructured or inconsistent hierarchies |",
+     "claim": "Hierarchical Retrieval achieves moderate to high accuracy, medium latency, and medium cost, improving retrieval focus but degrading performance when documents lack clear hierarchical structure.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| **Memory-Augmented Models** | Moderate | High | High | Enables persistent context and dialogue continuity | Risk of memory drift; high resource consumption; potential hallucination |",
+     "claim": "Memory-Augmented Models achieve moderate accuracy, high latency, and high cost, enabling persistent context and dialogue continuity while risking memory drift, high resource consumption, and hallucination.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| **Context-Aware Encoding** | Moderate to High | Medium | Medium | Aligns retrieval with human reading patterns; improves integration of dispersed facts | Performance sensitive to document structure; requires fine-tuning |",
+     "claim": "Context-Aware Encoding achieves moderate to high accuracy, medium latency, and medium cost, aligning retrieval with human reading patterns but requiring fine-tuning and being sensitive to document structure.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "There is a clear performance trade-off curve where increasing accuracy and coherence directly correlates with higher latency and operational cost.",
+     "claim": "Increasing accuracy and coherence in RAG systems directly correlates with higher latency and operational cost.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "MiA-RAG demonstrates superior performance on tasks requiring long-context reasoning, such as legal document analysis or scientific literature synthesis.",
+     "claim": "MiA-RAG demonstrates superior performance on long-context reasoning tasks like legal document analysis and scientific literature synthesis.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "RAG systems still underperform relative to the Oracle Context, indicating a persistent gap in long-context reasoning.",
+     "claim": "RAG systems still underperform relative to the Oracle Context, highlighting a persistent gap in long-context reasoning.",
+     "label": "SUPPORTED",
+     "evidence_id": "E10",
+     "evidence_url": "https://arxiv.org/html/2511.04696v1",
+     "quote": "RAG still underperforms compared to the Oracle Context, while Hybrid BM25 consistently achieves the best results across all four datasets.",
+     "quote_verified": false,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "No single RAG architecture dominates across all performance dimensions; selection must be guided by use case constraints such as latency, cost, and data structure.",
+     "claim": "No single RAG architecture dominates across all performance dimensions; architecture choice must be guided by use case constraints such as latency, cost, and data structure.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Performance trade-offs exist: high-accuracy models exhibit elevated latency and operational cost, making them unsuitable for real-time or edge applications without optimization.",
+     "claim": "High-accuracy RAG models exhibit elevated latency and operational cost, making them unsuitable for real-time or edge applications without optimization.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    }
+   ],
+   "supported": 0,
+   "contradicted": 0,
+   "unsupported": 10,
+   "score": 0.0
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3813,
+    "completion_tokens": 1340,
+    "wall_s": 42.10352396965027,
+    "thinking_chars": 5573
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 3509,
+    "completion_tokens": 3187,
+    "wall_s": 89.98274827003479,
+    "thinking_chars": 12821
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 2724,
+    "completion_tokens": 2289,
+    "wall_s": 64.47728514671326,
+    "thinking_chars": 10171
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 7,
+   "completeness": 8,
+   "coherence": 9,
+   "relevance": 9,
+   "citation_quality": 7,
+   "writing_quality": 8
+  },
+  "overall_score": 8,
+  "weighted_score": 8.0,
+  "strengths": [
+   "Comprehensive coverage of architectural innovations and performance trade‑offs",
+   "Logical, well‑structured organization with clear sections and tables",
+   "Up‑to‑date citations from peer‑reviewed papers and industry documentation",
+   "Practical use‑case mapping that directly addresses the research question"
+  ],
+  "weaknesses": [
+   "Several claims (e.g., the MOST time standard) are irrelevant or unsupported by citations",
+   "Lack of concrete quantitative data (exact latency, cost figures, accuracy percentages)",
+   "Limited direct side‑by‑side benchmark comparisons across architectures",
+   "Some citations do not directly support the specific claims made"
+  ],
+  "suggestions": [
+   "Add precise metrics (e.g., milliseconds, dollars per inference) from benchmark studies to substantiate accuracy, latency, and cost claims",
+   "Remove or relocate unrelated content such as the MOST time standard to maintain focus",
+   "Include direct comparative results from RAGPerf or EncouRAGe where available, or clearly state when comparisons are inferred",
+   "Expand the citation set to cover additional key works (e.g., RAG‑Index, LlamaIndex, commercial deployments) for broader credibility",
+   "Consider adding a brief discussion of real‑world deployment case studies to illustrate practical feasibility"
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 5
+}

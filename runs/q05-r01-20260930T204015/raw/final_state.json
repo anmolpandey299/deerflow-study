@@ -1,0 +1,27 @@
+{
+ "messages": [
+  {
+   "type": "human",
+   "data": {
+    "content": "How do post-training quantization methods for LLMs such as GPTQ, AWQ, and SmoothQuant compare in accuracy retention, speedup, and hardware support?",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "human",
+    "name": null,
+    "id": "c8fead46-1f83-4cba-a164-631d3396aeef"
+   }
+  }
+ ],
+ "locale": "en-US",
+ "research_topic": "comparison of post-training quantization methods for LLMs such as GPTQ, AWQ, and SmoothQuant in accuracy retention, speedup, and hardware support",
+ "clarified_research_topic": "comparison of post-training quantization methods for LLMs such as GPTQ, AWQ, and SmoothQuant in accuracy retention, speedup, and hardware support",
+ "resources": [],
+ "auto_accepted_plan": true,
+ "enable_background_investigation": true,
+ "citations": [],
+ "enable_clarification": false,
+ "clarification_rounds": 0,
+ "clarification_history": [],
+ "is_clarification_complete": true,
+ "goto": "background_investigator"
+}

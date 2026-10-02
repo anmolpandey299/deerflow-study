@@ -1,0 +1,239 @@
+{
+ "run_id": "q05-r02-20260930T205952",
+ "kind": "replay",
+ "case_id": "e04",
+ "condition": "D",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "c7660386051d0bb45869f830414880daadfbd593199aa5ea5bc38c33ad484f73",
+ "report_chars": 13723,
+ "report_words": 1744,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 5,
+  "urls_in_retrieved_evidence": 4,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/llama-cpp-ai/llama.cpp/main/docs/images/quantization-comparison-diagram.png"
+  ],
+  "provenance_rate": 0.8
+ },
+ "numeric_items": 4,
+ "numeric_items_not_in_evidence": [
+  "40x"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "GPTQ employs grouped quantization to preserve weight distribution by dividing weights into groups and applying quantization per group.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "AWQ introduces activation-aware scaling, adjusting weights based on activation values to maintain dynamic range.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "SmoothQuant uses a pre-scaling step before quantization, effectively transforming weights to a distribution that is more amenable to low-precision representation.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "NVIDIA A100/H100 GPUs provide the most comprehensive hardware support, with native optimization for all three methods, especially benefiting from tensor cores and FP8/NVFP4 engines.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "PARTIAL",
+    "quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8-bit (W8A8) quantization scenarios.",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "The original arXiv paper does not provide a direct side-by-side comparison of GPTQ and AWQ in perplexity or downstream tasks. The available data is limited to qualitative observations and indirect comparisons.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.6875,
+  "score_lenient": 0.6875
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8-bit (W8A8) quantization scenarios.",
+    "claim": "SmoothQuant retains higher accuracy than GPTQ and AWQ when quantizing to 8-bit weights and activations (W8A8), especially in perplexity and instruction-following tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ and AWQ are effective for 4-bit quantization, with GPTQ showing a slight advantage in instruction-following tasks due to group-level weight distribution, though both exhibit higher degradation in complex reasoning.",
+    "claim": "GPTQ and AWQ achieve effective 4-bit quantization, with GPTQ slightly outperforming AWQ on instruction-following benchmarks due to its group-level weight distribution, but both suffer more degradation on complex reasoning tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "NVIDIA A100/H100 GPUs provide the most comprehensive hardware support, with native optimization for all three methods, especially benefiting from tensor cores and FP8/NVFP4 engines.",
+    "claim": "NVIDIA A100/H100 GPUs offer native, optimized support for GPTQ, AWQ, and SmoothQuant, leveraging tensor cores and FP8/NVFP4 engines for maximum performance.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Consumer GPUs (RTX 30xx/40xx) support GPTQ and AWQ with moderate performance, while SmoothQuant is poorly supported due to high memory bandwidth and activation handling demands.",
+    "claim": "Consumer GPUs such as RTX 30xx and RTX 40xx provide moderate support for GPTQ and AWQ, but lack adequate memory bandwidth and activation handling for efficient SmoothQuant deployment.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "CPU-based inference is feasible for all methods but results in significant latency; llama.cpp supports GPTQ and AWQ, but not SmoothQuant.",
+    "claim": "CPU inference is possible for all three quantization methods, yet incurs high latency; llama.cpp supports GPTQ and AWQ but does not implement SmoothQuant.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "TPU platforms offer strong performance for all methods, especially in cloud environments, though access is restricted to Google Cloud.",
+    "claim": "TPU hardware delivers strong performance for GPTQ, AWQ, and SmoothQuant, particularly in cloud settings, though usage is limited to Google Cloud.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant | W8A8 (8-bit weights, 8-bit activations) | Highest retention; minimal degradation | Consistent across diverse tasks | Superior performance in long-context reasoning",
+    "claim": "In the accuracy table, SmoothQuant with W8A8 achieves the highest retention and minimal degradation, maintains consistent performance across tasks, and excels in long-context reasoning.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ | 4-bit weights | Moderate retention; degrades in complex tasks | Slight edge over AWQ in specific benchmarks | Moderate degradation in multi-step reasoning",
+    "claim": "In the accuracy table, GPTQ with 4-bit weights shows moderate retention, degrades on complex tasks, slightly edges AWQ on instruction-following benchmarks, and moderately degrades multi-step reasoning.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "AWQ | 4-bit weights with activation-aware scaling | Moderate retention | Comparable to GPTQ | Slight degradation in complex reasoning",
+    "claim": "In the accuracy table, AWQ with 4-bit weights and activation-aware scaling shows moderate retention, comparable to GPTQ, and slightly degrades complex reasoning.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "NVIDIA A100/H100 | ✅ Native | ✅ Native | ✅ Native (W8A8 optimized) | Requires FP8/NVFP4 engine; high memory bandwidth",
+    "claim": "In the hardware support table, NVIDIA A100/H100 provides native support for GPTQ, AWQ, and SmoothQuant (optimized for W8A8), but requires FP8/NVFP4 engines and high memory bandwidth.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3284,
+   "completion_tokens": 2039,
+   "wall_s": 50.39779210090637,
+   "thinking_chars": 8089
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3065,
+   "completion_tokens": 3786,
+   "wall_s": 89.47277617454529,
+   "thinking_chars": 13642
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4240,
+   "completion_tokens": 3843,
+   "wall_s": 93.37109184265137,
+   "thinking_chars": 15392
+  }
+ ],
+ "eval_wall_s": 233.29213190078735
+}

@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -13 +13 @@
+-- EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.
++- Medusa delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.

@@ -1,0 +1,247 @@
+{
+ "run_id": "q08-r02-20260930T212058",
+ "kind": "baseline",
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "2ca84fe368795ee121c17153fe36fedec119c8f0be8303231ecab73882e4e1a2",
+ "report_chars": 13112,
+ "report_words": 1623,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 4,
+  "urls_in_retrieved_evidence": 4,
+  "fabricated_urls": [],
+  "provenance_rate": 1.0
+ },
+ "numeric_items": 19,
+ "numeric_items_not_in_evidence": [
+  "50",
+  "10",
+  "20",
+  "100",
+  "5×",
+  "10,000",
+  "15,000",
+  "5,000",
+  "1,000",
+  "50M",
+  "100K",
+  "4.5",
+  "4.8",
+  "10k"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Milvus offers superior distributed scalability and high-throughput search, making it ideal for enterprise-grade, large-scale RAG systems with mission-critical requirements.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "Qdrant delivers the lowest query latency and minimal memory overhead, positioning it as the optimal choice for real-time, low-latency RAG applications such as live chatbots and interactive QA systems.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "Weaviate excels in hybrid search and schema modeling, enabling richer retrieval in complex RAG pipelines that require both semantic and keyword-based context, though with increased metadata overhead.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "pgvector lacks native distributed capabilities, has poor scalability under load, and no support for high availability or multi-tenancy—making it unsuitable for production RAG deployments beyond small-scale, embedded use cases.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "PARTIAL",
+    "quote": "The Qdrant vs pgvector benchmark at https://markaicode.com/benchmarks/qdrant-vs-pgvector-performance/ reports a clear performance gap, with Qdrant achieving 3–5× higher throughput and lower latency under synthetic loads.",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Milvus supports native horizontal scaling via distributed clusters, enabling 100M+ vectors; Qdrant supports scalable clusters up to 50M+; Weaviate supports distributed scaling with schema-based node-level partitioning; pgvector is single-node limited to <100K.",
+    "quote_verified": false
+   },
+   {
+    "id": "R7",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "The benchmark does not specify RAG workload conditions or real-world query patterns, and no peer‑reviewed or independently validated studies exist on real‑world RAG performance of these databases.",
+    "quote_verified": false
+   }
+  ],
+  "score": 0.5625,
+  "score_lenient": 0.8125
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "Milvus | < 50 ms (distributed) | Distributed indexing and high-throughput design imply competitive latency at scale",
+    "claim": "Milvus’s estimated 99th‑percentile query latency is less than 50 milliseconds in distributed deployments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Qdrant | < 10 ms (real-time) | Compact indexing and minimal memory footprint suggest sub‑10ms p99 in real‑time scenarios",
+    "claim": "Qdrant’s estimated 99th‑percentile query latency is less than 10 milliseconds in real‑time scenarios.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "pgvector | > 100 ms (under load) | Performance degrades significantly with dataset size; no scalability beyond single node",
+    "claim": "pgvector’s estimated 99th‑percentile query latency exceeds 100 milliseconds under load.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Milvus | 10,000+ (distributed) | High throughput due to distributed storage and indexing",
+    "claim": "Milvus can process over 10,000 queries per second in distributed configurations.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Qdrant | 15,000+ (lightweight) | Optimized for low‑latency, high‑frequency queries",
+    "claim": "Qdrant can handle more than 15,000 queries per second in lightweight deployments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "pgvector | 1,000–2,000 | Bounded by single‑node architecture and memory limits",
+    "claim": "pgvector can process between 1,000 and 2,000 queries per second due to single‑node constraints.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Milvus | Excellent (native) | Dynamic, per‑node | 100M+ (enterprise‑scale)",
+    "claim": "Milvus supports storing over 100 million vectors in enterprise‑scale deployments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Qdrant | Good (scalable clusters) | Dynamic, user‑defined | 50M+ (mid‑scale)",
+    "claim": "Qdrant can store more than 50 million vectors in scalable cluster configurations.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "pgvector | Poor (single‑node) | None (no partitioning) | < 100K (practical limit)",
+    "claim": "pgvector can practically store fewer than 100,000 vectors due to single‑node limitations.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "The Qdrant vs pgvector benchmark at markaicode.com reports a clear performance gap, with Qdrant achieving 3–5× higher throughput and lower latency under synthetic loads.",
+    "claim": "According to the benchmark, Qdrant achieves three to five times higher throughput and lower latency than pgvector under synthetic load conditions.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3293,
+   "completion_tokens": 1539,
+   "wall_s": 38.49721884727478,
+   "thinking_chars": 5002
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3114,
+   "completion_tokens": 4624,
+   "wall_s": 107.08399271965027,
+   "thinking_chars": 18135
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2262,
+   "completion_tokens": 1214,
+   "wall_s": 29.485047101974487,
+   "thinking_chars": 4153
+  }
+ ],
+ "eval_wall_s": 175.16077589988708
+}

@@ -1,0 +1,9 @@
+case_id: e03
+kind: E
+label: EXPLORATORY (amendments A7/A8)
+run_id: q04-r02-20260930T205216
+target_step: 1
+control_step: 0
+rationale: researcher step without search; source of 10 ungrounded report numbers
+  and 3 unretrieved URLs
+primary_metric: unique_ungrounded_items

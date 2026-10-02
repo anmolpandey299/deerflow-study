@@ -1,0 +1,165 @@
+{
+ "run_id": "q05-r02-20260930T205952",
+ "funnel": {
+  "researcher_segments": 26,
+  "items": {
+   "in_tool_outputs": 16,
+   "in_observations": 6,
+   "in_reporter_input": 8,
+   "in_report": 6
+  },
+  "urls": {
+   "in_tool_outputs": 20,
+   "in_observations": 12,
+   "in_reporter_input": 13,
+   "in_report": 12
+  },
+  "report_items_total": 16,
+  "report_items_not_in_any_tool_output": [
+   "3.8",
+   "40%",
+   "1.8",
+   "2.5×",
+   "35",
+   "1.2",
+   "1.5×",
+   "10",
+   "15%",
+   "40x"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": [
+   "10",
+   "140",
+   "141",
+   "15",
+   "20",
+   "200",
+   "24",
+   "29",
+   "3.3",
+   "32768",
+   "404",
+   "405",
+   "405B",
+   "429",
+   "50%",
+   "70",
+   "70B",
+   "80",
+   "8000",
+   "90"
+  ]
+ },
+ "candidates": [
+  {
+   "run_id": "q05-r02-20260930T205952",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "peer-reviewed studies benchmark reports accuracy retention GPTQ AWQ SmoothQuant LLaMA Mistral Qwen 4-bit 8-bit perplexity BLEU instruction-following performance"
+   },
+   "seg_id": "1.2",
+   "url": "https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/",
+   "title": "LLM Quantization Review | Bitter Lesson",
+   "text": "For example, using 8 - bit integers (INT8) can nearly double the throughput of matrix multiplications compared to using 16- bit floating-point numbers (FP16). SmoothQuant (diagram c) scales the weights prior to quantization. AWQ aims to minimize the following loss function",
+   "items": [
+    "16"
+   ],
+   "missing_from_step_observation": [
+    "16"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q05-r02-20260930T205952",
+   "tool_idx": 3,
+   "tool_seq": 3,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "empirical evaluation of GPTQ AWQ SmoothQuant accuracy retention in LLaMA Mistral Qwen 4-bit 8-bit perplexity instruction-following performance academic papers"
+   },
+   "seg_id": "3.2",
+   "url": "https://arxiv.org/abs/2211.10438",
+   "title": "[2211.10438] SmoothQuant: Accurate and Efficient Post ... SmoothQuant: Accurate and Efficient Post-Training ... GitHub - mit-han-lab/smoothquant: [ICML 2023] SmoothQuant ... Comparison: GPTQ vs AWQ vs SmoothQuant - apxml.com GPTQ vs AWQ for 4-bit Model Compression | In-Depth Comparison",
+   "text": "Nov 18, 2022 · We propose SmoothQuant , a training-free, accuracy -preserving, and general-purpose post-training quantization ( PTQ ) solution to enable 8 - bit weight, 8 - bit activation (W8A8) quantization for LLMs . Apr 24, 2023 · We propose SmoothQuant , a training-free, accuracy -preserving, and general-purpose post-training quantization ( PTQ ) solution to enable 8 - bit weight, 8 - bit activation (W8A8) quantization for LLMs . We provide an evaluation script to evaluate the language modeling perplexity of OPT, BLoom, Llama, Falcon, Mistral , and Mixtral models with W8A8 simulated quantization . Comparing these methods directly reveals their different strengths. Choosing the right method depends on your specific goals, the model architecture, and the trade-offs you're willing to make between accuracy , quantization time, and potential inference overhead. A data-driven comparison of GPTQ and AWQ , the two leading post-training quantization algorithms for compressing large language models to 4 - bit precision, focusing on the accuracy -speed trade-off for enterprise deployment.",
+   "items": [
+    "18",
+    "24"
+   ],
+   "missing_from_step_observation": [
+    "18",
+    "24"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q05-r02-20260930T205952",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://arxiv.org/abs/2211.10438"
+   },
+   "seg_id": "4.0",
+   "url": "https://arxiv.org/abs/2211.10438",
+   "title": "Non-HTML Content",
+   "text": "# Non-HTML Content\n\nThis URL returned content that cannot be parsed as HTML. Raw content: Error: Jina API returned status 403: {\"data\":null,\"code\":403,\"name\":\"AbuseAlleviationError\",\"status\":40305,\"message\":\"Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 20:29:51 GMT+0000 (Coordinated Universal Time) due to previous abuse found on https://arxiv.org/html/2309.03501v2: DDoS attack suspected: Too many requests\",\"readableMessage\":\"AbuseAlleviationError: Anonymous access to domain arxiv.org blocked until Wed Sep 30 2026 20:29:51 GMT+0000 (Coordinated Universal Time)...",
+   "items": [
+    "403",
+    "40305",
+    "30",
+    "20",
+    "29",
+    "51",
+    "0000"
+   ],
+   "missing_from_step_observation": [
+    "403",
+    "40305",
+    "30",
+    "20",
+    "29",
+    "51",
+    "0000"
+   ],
+   "missing_items_in_report": [
+    "403",
+    "30"
+   ],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q05-r02-20260930T205952",
+   "tool_idx": 9,
+   "tool_seq": 9,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 2,
+   "args": {
+    "query": "hardware support and implementation compatibility GPTQ AWQ SmoothQuant NVIDIA A100 H100 consumer GPUs TPUs llama.cpp vLLM TensorRT"
+   },
+   "seg_id": "9.1",
+   "url": "https://nanobase.ai/insights/vllm-vs-tensorrt-llm-vs-ollama-vs-sglang",
+   "title": "vLLM vs TensorRT -LLM vs Ollama vs SGLang: which should you run?",
+   "text": "vLLM . Broadest model support , easy swaps, mature Kubernetes tooling. One stable model at high volume on H 100 / H 200/B200 where cost per token dominates. TensorRT -LLM or NIM. Compiled FP8 or NVFP4 engines typically give the most tokens per GPU .",
+   "items": [
+    "100",
+    "200"
+   ],
+   "missing_from_step_observation": [
+    "100"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  }
+ ]
+}

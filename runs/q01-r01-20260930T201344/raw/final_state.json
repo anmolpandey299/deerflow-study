@@ -1,0 +1,27 @@
+{
+ "messages": [
+  {
+   "type": "human",
+   "data": {
+    "content": "What are the most promising approaches for long-context retrieval-augmented generation in 2025, and how do they compare in terms of accuracy, latency, and cost?",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "human",
+    "name": null,
+    "id": "0d8d8949-e4be-4c12-ac63-659ae38660f2"
+   }
+  }
+ ],
+ "locale": "en-US",
+ "research_topic": "most promising approaches for long-context retrieval-augmented generation in 2025, and how do they compare in terms of accuracy, latency, and cost",
+ "clarified_research_topic": "most promising approaches for long-context retrieval-augmented generation in 2025, and how do they compare in terms of accuracy, latency, and cost",
+ "resources": [],
+ "auto_accepted_plan": true,
+ "enable_background_investigation": true,
+ "citations": [],
+ "enable_clarification": false,
+ "clarification_rounds": 0,
+ "clarification_history": [],
+ "is_clarification_complete": true,
+ "goto": "background_investigator"
+}

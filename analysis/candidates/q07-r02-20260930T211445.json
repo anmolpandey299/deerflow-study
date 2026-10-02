@@ -1,0 +1,176 @@
+{
+ "run_id": "q07-r02-20260930T211445",
+ "funnel": {
+  "researcher_segments": 15,
+  "items": {
+   "in_tool_outputs": 11,
+   "in_observations": 5,
+   "in_reporter_input": 6,
+   "in_report": 4
+  },
+  "urls": {
+   "in_tool_outputs": 12,
+   "in_observations": 5,
+   "in_reporter_input": 5,
+   "in_report": 5
+  },
+  "report_items_total": 14,
+  "report_items_not_in_any_tool_output": [
+   "78%",
+   "72%",
+   "128K",
+   "2.0",
+   "120B",
+   "20B",
+   "745B",
+   "7B",
+   "78.2%",
+   "71.8%"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": []
+ },
+ "candidates": [
+  {
+   "run_id": "q07-r02-20260930T211445",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "open-weight language models under 10B parameters released in 2025"
+   },
+   "seg_id": "1.2",
+   "url": "https://www.theopen.com/",
+   "title": "The Open | Golf's Original Championship",
+   "text": "Get the latest news and videos from The Open Championship, golf's original major. The 155th Open will take place at St Andrews …",
+   "items": [
+    "155"
+   ],
+   "missing_from_step_observation": [
+    "155"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q07-r02-20260930T211445",
+   "tool_idx": 2,
+   "tool_seq": 2,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "publicly available open-weight language models under 10 billion parameters released in 2025 developers official announcements"
+   },
+   "seg_id": "2.0",
+   "url": "https://zhidao.baidu.com/question/1780829424034580020.html",
+   "title": "怎样注册hotmail - 百度知道",
+   "text": "Oct 17, 2025 · 怎样注册hotmail注册Hotmail（现Outlook）账户需通过浏览器访问微软官方页面完成，以下是具体步骤：1. 准备工具与 …",
+   "items": [
+    "17"
+   ],
+   "missing_from_step_observation": [
+    "17"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q07-r02-20260930T211445",
+   "tool_idx": 2,
+   "tool_seq": 2,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "publicly available open-weight language models under 10 billion parameters released in 2025 developers official announcements"
+   },
+   "seg_id": "2.1",
+   "url": "https://zhidao.baidu.com/question/402916655883659605.html",
+   "title": "hotmail邮箱怎么登录？_百度知道",
+   "text": "Feb 21, 2024 · 登录后缀@hotmail.com的邮箱一共有三种方法，具体如下： 方法一：官方登陆入口 首先我们想到的一定是官网登陆， …",
+   "items": [
+    "21"
+   ],
+   "missing_from_step_observation": [
+    "21"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q07-r02-20260930T211445",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "open-weight language models under 10B parameters 2025 official documentation repositories active community"
+   },
+   "seg_id": "4.0",
+   "url": "https://en.wikipedia.org/wiki/DeepSeek",
+   "title": "DeepSeek - Wikipedia",
+   "text": "DeepSeek's models are open - weight , meaning that the exact parameters are openly shared, but the training data is not openly licensed.[10][11] Since January 2025 , DeepSeek has released its models under free and open-source software licenses.[12]...",
+   "items": [
+    "10",
+    "11",
+    "12"
+   ],
+   "missing_from_step_observation": [
+    "11",
+    "12"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q07-r02-20260930T211445",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "open-weight language models under 10B parameters 2025 official documentation repositories active community"
+   },
+   "seg_id": "4.2",
+   "url": "https://glm5.net/",
+   "title": "Zhipu AI's Next-Generation Large Language Model (745 B Parameters )",
+   "text": "GLM-5: Next-Generation Large Language Model . 745 billion parameters . 44 billion active . Built from the ground up for agentic intelligence, advanced reasoning, and frontier-level performance.",
+   "items": [
+    "745",
+    "44"
+   ],
+   "missing_from_step_observation": [
+    "44"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q07-r02-20260930T211445",
+   "tool_idx": 5,
+   "tool_seq": 5,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "open-source language models under 10 billion parameters released in 2025 official release date developer documentation"
+   },
+   "seg_id": "5.2",
+   "url": "https://www.theopen.com/",
+   "title": "The Open | Golf's Original Championship",
+   "text": "Get the latest news and videos from The Open Championship, golf's original major. The 155th Open will take place at St Andrews …",
+   "items": [
+    "155"
+   ],
+   "missing_from_step_observation": [
+    "155"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  }
+ ]
+}

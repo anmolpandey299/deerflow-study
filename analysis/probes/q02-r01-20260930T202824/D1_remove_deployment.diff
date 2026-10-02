@@ -1,0 +1,36 @@
+--- 
++++ 
+@@ -11 +10,0 @@
+-- Draft-Model Sampling offers moderate speedup (2–3×) with low output fidelity, high hallucination rates (12–15%), and minimal deployment complexity, making it suitable only for early-stage or edge-level prototyping.
+@@ -13,2 +11,0 @@
+-- EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.
+-- All three methods are supported by vLLM, but EAGLE requires advanced GPU memory configurations (10–15 GB VRAM) and enterprise-grade infrastructure for effective operation.
+@@ -20 +16,0 @@
+-Speculative decoding represents a transformative advancement in large language model (LLM) inference, enabling significant reductions in response latency by allowing parallel computation during token generation. This methodology operates by generating a "draft" token sequence ahead of the main model’s autoregressive decoding, followed by verification to ensure correctness. The three primary implementations—Draft-Model Sampling, Medusa, and EAGLE—differ in architectural design, verification mechanisms, and system-level performance, leading to distinct trade-offs in speed, output quality, and deployment feasibility.
+@@ -22 +17,0 @@
+-While all three methods achieve substantial improvements over traditional autoregressive decoding, their relative performance is not uniformly established in peer-reviewed literature. The available research—drawn from technical blogs and production benchmarks—provides a data-driven, albeit non-empirical, comparative framework. These sources highlight that performance gains are not merely additive but are deeply intertwined with GPU memory utilization, verification fidelity, and architectural sophistication. This report synthesizes findings from three authoritative sources to deliver a structured, evidence-based comparison across the three dimensions: speedup, output quality, and deployment complexity.
+@@ -70 +64,0 @@
+-The deployment of speculative decoding methods varies significantly in technical setup, hardware demands, and operational workflows.
+@@ -72,5 +66,5 @@
+-| Method | Model Size | Context Length | GPU Memory | Hardware Requirements | Framework Support | Setup Complexity | Scalability |
+-|--------|-----------|---------------|------------|------------------------|-------------------|------------------|-------------|
+-| Draft-Model Sampling | 1–2B params | 512 tokens | ≈1–3 GB | Low-end GPU or edge device | vLLM (basic module) | Minimal | Low-traffic environments |
+-| Medusa | 3–5B params | 1024–2048 tokens | 6–8 GB | High-end GPU (e.g., A100) | vLLM (dedicated plugin) | Moderate | Moderate load; memory bottlenecks at high QPS |
+-| EAGLE | 5–10B params | Up to 4096 tokens | 10–15 GB | HBM, 48 GB+ VRAM (e.g., H100/A100) | vLLM (native extension) | High | High-throughput, distributed environments |
++| Method | Model Size | Context Length | GPU Memory | Hardware Requirements | Framework Support | Scalability |
++|--------|-----------|---------------|------------|------------------------|-------------------|-------------|
++| Draft-Model Sampling | 1–2B params | 512 tokens | ≈1–3 GB | Low-end GPU or edge device | vLLM (basic module) | Low-traffic environments |
++| Medusa | 3–5B params | 1024–2048 tokens | 6–8 GB | High-end GPU (e.g., A100) | vLLM (dedicated plugin) | Moderate load; memory bottlenecks at high QPS |
++| EAGLE | 5–10B params | Up to 4096 tokens | 10–15 GB | HBM, 48 GB+ VRAM (e.g., H100/A100) | vLLM (native extension) | High-throughput, distributed environments |
+@@ -85 +78,0 @@
+-- Medusa’s memory usage increases with lookahead window size and intermediate token buffers, limiting deployment to high-end servers.  
+@@ -89 +81,0 @@
+-All three methods are supported by vLLM, a leading open-source inference framework. However, configuration complexity increases with method sophistication:
+@@ -92 +83,0 @@
+-- EAGLE requires a comprehensive YAML file with advanced parameters (`dynamic_k`, `confidence_threshold`, `memory_strategy`) and often relies on custom Docker images for deployment.
+@@ -117 +107,0 @@
+-| **Deployment Complexity** | Minimal | Moderate | High |
+@@ -119 +108,0 @@
+-| **Best Use Case** | Prototyping, edge AI | Mid-scale deployments | Production-grade, high-throughput systems |
+@@ -134 +122,0 @@
+-Additionally, the deployment data reflects only the current state of vLLM-based implementations and does not account for emerging frameworks or hybrid architectures. The reported hardware requirements may also be optimistic, as actual deployment costs and power consumption are not included.

@@ -1,0 +1,11 @@
+run_id,grounded_in_observations,grounded_in_report,ungrounded_in_warned_step_in_observations,ungrounded_in_warned_step_in_report,ungrounded_other_in_observations,ungrounded_other_in_report,warned_observations
+q01-r02-20260930T201622,2,0,0,0,4,0,0
+q01-r03-20260930T204051,1,1,0,0,4,0,0
+q02-r01-20260930T202824,5,5,31,25,0,0,2
+q03-r01-20260930T203551,1,0,0,0,16,14,0
+q03-r02-20260930T212748,9,6,0,0,3,2,0
+q04-r02-20260930T205216,8,8,17,17,0,0,2
+q05-r02-20260930T205952,5,4,0,0,4,4,0
+q06-r02-20260930T210856,1,0,1,1,4,0,1
+q07-r02-20260930T211445,6,6,7,7,0,0,2
+q08-r02-20260930T212058,4,3,0,0,5,5,1

@@ -1,0 +1,225 @@
+{
+ "run_id": "q03-r02-20260930T212748",
+ "kind": "replay",
+ "case_id": "c05",
+ "condition": "B",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "3d64756d6a1722dc49a2b3c6a718df6713e22dd0aee3f9470f2c3ff5f7831caf",
+ "report_chars": 16990,
+ "report_words": 2122,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 6,
+  "urls_in_retrieved_evidence": 5,
+  "fabricated_urls": [
+   "github.com/treeai-lab/awesome-kv-cache-management"
+  ],
+  "provenance_rate": 0.8333333333333334
+ },
+ "numeric_items": 10,
+ "numeric_items_not_in_evidence": [
+  "5%",
+  "10",
+  "5×"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Quantization (INT4, INT8), Sparse Attention, Pruning (Token-Level)",
+    "quote_verified": false
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "INT8 Quantization: Achieves up to **4× reduction** in KV cache size [2601.04719]",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "ChunkKV ... tested on LongBench, Needle-In-A-HayStack, and GSM8K, showing improved performance in summarization and reasoning tasks",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "INT8 Quantization: ... moderate improvement due to reduced memory bandwidth; performance gains are most noticeable in high-throughput, batched inference",
+    "quote_verified": false
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "No single method dominates across all dimensions; optimal performance depends on use case, accuracy requirements, and hardware constraints",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Permanent eviction risks information loss; performance degrades if early tokens are critical",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "Missing Benchmarks: No standardized, cross-task evaluation exists to compare methods under diverse input types",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.7142857142857143,
+  "score_lenient": 0.9285714285714286
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 9,
+  "claims": [
+   {
+    "report_quote": "Memory Savings: Achieves up to **4× reduction** in KV cache size [2601.04719].",
+    "claim": "INT8 quantization can reduce KV cache memory usage by up to four times.",
+    "label": "SUPPORTED",
+    "evidence_id": "E15",
+    "evidence_url": "https://arxiv.org/abs/2601.04719",
+    "quote": "achieving 4 × memory reduction with minimal accuracy degradation.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "Accuracy Impact: Minimal degradation (≤1%) in most tasks, especially in long-context settings (100K+ tokens), due to careful scaling and GPU-accelerated execution.",
+    "claim": "INT8 quantization causes less than or equal to one percent accuracy loss on most tasks, especially for sequences longer than 100,000 tokens.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: Theoretical potential for up to **8× reduction**.",
+    "claim": "INT4 quantization could theoretically reduce KV cache memory usage by up to eight times.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Impact: Significant degradation (≥3–5%) observed in reasoning and fine-grained tasks due to sub-4-bit precision limitations.",
+    "claim": "INT4 quantization typically results in a three to five percent drop in accuracy on reasoning and fine-grained tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: Typically 2–5× reduction, depending on sparsity pattern and sequence structure.",
+    "claim": "Sparse attention can cut KV cache memory usage by two to five times, depending on the sparsity pattern and sequence structure.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 2–6× reduction, depending on input structure and pruning strategy.",
+    "claim": "Token-level pruning can reduce KV cache memory usage by two to six times, depending on the input structure and pruning strategy.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 3–6× reduction, with adaptive compression per layer and task.",
+    "claim": "DynamicKV reconstruction-based compression can reduce KV cache memory usage by three to six times, adapting compression per layer and task.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 4–8× reduction, depending on chunk boundary accuracy.",
+    "claim": "ChunkKV semantic chunking can reduce KV cache memory usage by four to eight times, depending on chunk boundary accuracy.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Critical Limitation: Despite claims of '6x memory reduction with zero accuracy loss' from Google’s TurboQuant, this assertion is not independently verified in the provided sources.",
+    "claim": "The claim that Google’s TurboQuant achieves sixfold memory reduction with zero accuracy loss has not been independently verified.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 1,
+  "contradicted": 0,
+  "unsupported": 8,
+  "score": 0.1111111111111111
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3928,
+   "completion_tokens": 1858,
+   "wall_s": 46.72796416282654,
+   "thinking_chars": 6501
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3725,
+   "completion_tokens": 1882,
+   "wall_s": 48.30684995651245,
+   "thinking_chars": 6132
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4930,
+   "completion_tokens": 907,
+   "wall_s": 27.547313928604126,
+   "thinking_chars": 3117
+  }
+ ],
+ "eval_wall_s": 122.75736999511719
+}

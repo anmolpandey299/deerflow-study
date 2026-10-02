@@ -1,0 +1,235 @@
+{
+ "run_id": "q05-r02-20260930T205952",
+ "kind": "replay",
+ "case_id": "c03",
+ "condition": "C",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "7ed7aa6b2b3b539206a788b1a363d1dc5aa17e18b347d01d2e2804af578b27cd",
+ "report_chars": 14959,
+ "report_words": 1696,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 14,
+  "urls_in_retrieved_evidence": 12,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/llama-cpp-ai/llama.cpp/main/docs/perplexity-comparison.png",
+   "raw.githubusercontent.com/vllm-project/vllm/main/docs/hardware-support-matrix.png"
+  ],
+  "provenance_rate": 0.8571428571428571
+ },
+ "numeric_items": 11,
+ "numeric_items_not_in_evidence": [
+  "40%",
+  "1.5",
+  "2.5×",
+  "10",
+  "15%",
+  "40x"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "GPTQ applies grouped quantization to weights, minimizing quantization error by preserving the statistical distribution of weight groups.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "AWQ introduces activation-aware scaling during weight quantization, reducing activation distortion and improving instruction-following performance.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "SmoothQuant uses a training-free scaling approach that applies pre-quantization scaling to both weights and activations, enabling W8A8 quantization with minimal fidelity loss.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "The study indicates that SmoothQuant maintains the highest perplexity scores, especially in 8-bit weight and activation (W8A8) quantization, enabling high-fidelity performance with minimal degradation in downstream tasks.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "GPTQ achieves 2–3× faster than FP32 and reduces memory bandwidth due to its weight-only (W4A16) design, leveraging optimized INT4 matrix multiplication kernels in NVIDIA GPU drivers.",
+    "quote_verified": false
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Hardware compatibility varies significantly across platforms, influencing deployment feasibility and performance.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "GPTQ achieves significant reductions in memory bandwidth due to its weight-only (W4A16) design, while SmoothQuant incurs higher computational overhead due to its W8A8 scheme.",
+    "quote_verified": false
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "The report acknowledges limitations, noting that the arXiv paper (arXiv:2211.10438) is inaccessible, preventing full verification of its claims and making comparisons inferential rather than fully empirical.",
+    "quote_verified": false
+   }
+  ],
+  "score": 0.5625,
+  "score_lenient": 0.9375
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 9,
+  "claims": [
+   {
+    "report_quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8-bit (W8A8) quantization.",
+    "claim": "SmoothQuant achieves higher accuracy retention than GPTQ and AWQ when using 8-bit weight and activation quantization (W8A8).",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ achieves the fastest token generation speed and lowest model loading time, especially on NVIDIA GPUs, making it ideal for latency-sensitive applications.",
+    "claim": "GPTQ provides the fastest token generation speed and lowest model loading time among the three methods, especially on NVIDIA GPUs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Hardware support is most robust on NVIDIA A100/H100 GPUs, with limited or no support for SmoothQuant on consumer or AMD GPUs due to higher memory bandwidth and activation handling requirements.",
+    "claim": "NVIDIA A100/H100 GPUs offer the most robust hardware support for GPTQ, AWQ, and SmoothQuant, while consumer and AMD GPUs have limited or no support for SmoothQuant.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "All three methods are implementable on CPUs, but with significant performance trade-offs, primarily suited for small models and edge use cases.",
+    "claim": "GPTQ, AWQ, and SmoothQuant can all be run on CPUs, but they incur significant performance trade-offs that make them suitable mainly for small models and edge deployments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant maintains the highest perplexity scores, especially in 8-bit weight and activation (W8A8) quantization, enabling high-fidelity performance with minimal degradation in downstream tasks.",
+    "claim": "SmoothQuant achieves the lowest perplexity among the three methods when using W8A8 quantization, resulting in minimal degradation on downstream tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ achieves significant reductions in memory bandwidth due to its weight-only (W4A16) design, leveraging optimized INT4 matrix multiplication kernels in NVIDIA GPU drivers.",
+    "claim": "GPTQ reduces memory bandwidth usage by using a weight-only W4A16 design and optimized INT4 kernels on NVIDIA GPUs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "AWQ shows a balanced performance with improved instruction-following capabilities, making it suitable for enterprise deployments where both speed and accuracy are critical.",
+    "claim": "AWQ offers a balanced trade-off between speed and instruction-following accuracy, making it appropriate for enterprise deployments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant, while maintaining superior semantic quality and stability in long-context reasoning, incurs higher computational overhead due to its W8A8 scheme, which requires more frequent memory reads and writes during activation handling.",
+    "claim": "SmoothQuant incurs higher computational overhead than GPTQ and AWQ because its W8A8 scheme requires more frequent memory reads and writes during activation handling.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "AWQ introduces activation-aware scaling during weight quantization, reducing activation distortion and improving instruction-following performance.",
+    "claim": "AWQ improves instruction-following performance by applying activation-aware scaling during weight quantization.",
+    "label": "CONTRADICTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/",
+    "quote": "AWQ closely resembles SmoothQuant , with the key difference being that AWQ focuses solely on weight quantization.",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 1,
+  "unsupported": 9,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3838,
+   "completion_tokens": 1859,
+   "wall_s": 59.350443840026855,
+   "thinking_chars": 6743
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3619,
+   "completion_tokens": 2789,
+   "wall_s": 80.59225869178772,
+   "thinking_chars": 10355
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4116,
+   "completion_tokens": 2197,
+   "wall_s": 67.85238885879517,
+   "thinking_chars": 8862
+  }
+ ],
+ "eval_wall_s": 208.59031891822815
+}

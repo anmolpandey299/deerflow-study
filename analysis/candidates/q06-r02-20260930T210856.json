@@ -1,0 +1,119 @@
+{
+ "run_id": "q06-r02-20260930T210856",
+ "funnel": {
+  "researcher_segments": 12,
+  "items": {
+   "in_tool_outputs": 5,
+   "in_observations": 1,
+   "in_reporter_input": 1,
+   "in_report": 0
+  },
+  "urls": {
+   "in_tool_outputs": 9,
+   "in_observations": 1,
+   "in_reporter_input": 4,
+   "in_report": 2
+  },
+  "report_items_total": 1,
+  "report_items_not_in_any_tool_output": [
+   "60%"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": []
+ },
+ "candidates": [
+  {
+   "run_id": "q06-r02-20260930T210856",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "empirical studies on retrieval-augmented generation effectiveness in reducing hallucinations in LLMs 2020-2026 controlled experiments accuracy metrics"
+   },
+   "seg_id": "1.1",
+   "url": "https://devopslearning.medium.com/can-we-reduce-hallucinations-in-llms-through-prompt-engineering-df7d275d9cfa",
+   "title": "Can we reduce Hallucinations in LLMs through prompt... | Medium",
+   "text": "Reduces hallucinations by 30–50% in controlled studies . Significantly improves safety in high-stakes domains. Retrieval Augmented Generation (RAG). Provide the model with source documents or retrieved context. Instruct it to answer ONLY based on provided information.",
+   "items": [
+    "30",
+    "50%"
+   ],
+   "missing_from_step_observation": [
+    "30",
+    "50%"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q06-r02-20260930T210856",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "technical reports on RAG performance metrics hallucination reduction accuracy improvement 2021-2026"
+   },
+   "seg_id": "4.0",
+   "url": "https://dl.acm.org/doi/10.1145/3774904.3792598",
+   "title": "SeaRAG: Reducing Hallucination in Retrieval-Augmented ...",
+   "text": "Apr 12, 2026 · In this work, we analyze adaptive RAG methods through probing uncertainty to explore real-time entity- and statement-level verification, finding that such information can serve as training-free signals for hallucination detection, and the entropy probes can also guide principled document ranking.",
+   "items": [
+    "12"
+   ],
+   "missing_from_step_observation": [
+    "12"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q06-r02-20260930T210856",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "technical reports on RAG performance metrics hallucination reduction accuracy improvement 2021-2026"
+   },
+   "seg_id": "4.2",
+   "url": "https://www.nature.com/articles/s41467-026-71411-1",
+   "title": "Hyper-RAG: combating LLM hallucinations using hypergraph ...",
+   "text": "Apr 27, 2026 · These results confirm Hyper- RAG ’s effectiveness in enhancing LLM reliability and reducing hallucinations , making it a robust solution for high-stakes applications like medical diagnostics.",
+   "items": [
+    "27"
+   ],
+   "missing_from_step_observation": [
+    "27"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q06-r02-20260930T210856",
+   "tool_idx": 6,
+   "tool_seq": 6,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://www.sciencedirect.com/science/article/pii/S074756322600049X"
+   },
+   "seg_id": "6.0",
+   "url": "https://www.sciencedirect.com/science/article/pii/S074756322600049X",
+   "title": "ScienceDirect",
+   "text": "# ScienceDirect\n\nAre you a robot?\n----------------\n\nPlease confirm you are a human by completing the captcha challenge below.\n\n* **Reference number:** a435deffbfcc3ebd\n* **IP Address:** 34.96.49.58",
+   "items": [
+    "34.96"
+   ],
+   "missing_from_step_observation": [
+    "34.96"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  }
+ ]
+}

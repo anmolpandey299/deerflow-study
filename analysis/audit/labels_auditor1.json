@@ -1,0 +1,134 @@
+{
+  "P03828e": {
+    "claims": [
+      {"claim": "INT8 KV-cache quantization achieves up to 4x memory reduction with minimal accuracy degradation [2601.04719]", "label": "SUPPORTED", "passage_id": "P3"},
+      {"claim": "INT8 KV-cache quantization limits accuracy degradation to <=1%, including in 100K+ token settings", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "The naive, tiled, coarsened and vectorized CUDA kernels are part of the KVQuant framework (NeurIPS 2024)", "label": "MISATTRIBUTED", "passage_id": "P3"},
+      {"claim": "INT4 quantization offers a theoretical up to 8x memory reduction with significant (>=3-5%) accuracy degradation", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Google's TurboQuant claims '6x memory reduction with zero accuracy loss'", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "STATED_INCORRECTLY",
+    "target_fact_evidence": "Despite claims of \"6x memory reduction with zero accuracy loss\" from Google's TurboQuant, this assertion is not independently verified in the provided sources. ... The assertion that INT4 quantization achieves \"zero accuracy loss\" or \"6x memory reduction\" is not substantiated by peer-reviewed evidence. The LinkedIn post appears promotional and lacks validation."
+  },
+  "P11a122": {
+    "claims": [
+      {"claim": "The SmoothQuant paper (arXiv:2211.10438) shows SmoothQuant retains accuracy better than GPTQ and AWQ (highest perplexity fidelity)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A llmcompressor benchmark shows GPTQ gives 2-3x faster token generation than FP32 and up to 40% faster model loading", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "GPTQ's speed comes from optimized low-bit (INT4) matrix-multiplication kernels", "label": "CONTRADICTED", "passage_id": "P7"},
+      {"claim": "SmoothQuant (arXiv:2211.10438) is a training-free, general-purpose PTQ method that enables W8A8 quantization", "label": "SUPPORTED", "passage_id": "P2"},
+      {"claim": "The SmoothQuant paper notes GPTQ and AWQ are both effective for 4-bit compression, focusing on the accuracy-speed trade-off for enterprise deployment", "label": "MISATTRIBUTED", "passage_id": "P2"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "P178718": {
+    "claims": [
+      {"claim": "Mixtral 8x7B activates ~13B parameters per token while Llama 70B activates all 70B", "label": "SUPPORTED", "passage_id": "P2"},
+      {"claim": "With top-2 routing, MoE uses 1.6x more FLOPs per token than dense and has ~4x more feed-forward parameters (GeneralCompute)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "MoE models reduce memory bandwidth usage by up to 60% vs dense models", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "On 8x A100 GPUs, MoE reaches 1.2 vs 0.9 tokens/sec/GPU for dense (+30% throughput)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Mixtral 8x7B scores 78% MMLU, 65% GSM8K, 48% HumanEval vs Llama 70B 80%, 70%, 52% (W&B report)", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "P2110c6": {
+    "claims": [
+      {"claim": "Speculative decoding (all three methods) typically achieves 2-3x speedups", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Output quality differs by method: draft-model sampling degrades it (BLEU-4 0.38 vs 0.41 baseline, 12-15% hallucination) while EAGLE improves it (BLEU-4 0.44, 93% factual accuracy, <=5% hallucination)", "label": "CONTRADICTED", "passage_id": "P4"},
+      {"claim": "EAGLE requires HBM GPUs (H100/A100) with >=48 GB VRAM and a 5-10B draft model, vs 1-2B for draft-model sampling and 3-5B for Medusa", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "All three methods are implemented within vLLM (basic module, dedicated plugin, native extension)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Medusa verifies drafts with n-gram matching while EAGLE uses dynamic-K verification with confidence-threshold token acceptance (dreaming.press)", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "n/a",
+    "target_fact_evidence": ""
+  },
+  "P274011": {
+    "claims": [
+      {"claim": "TreeRAG uses tree-structured chunking with root-to-leaves and leaf-to-root 'Bidirectional Traversal Retrieval'", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "TreeRAG was evaluated on the AWS Documentation Dataset with an LLM-as-a-judge framework and outperformed baselines", "label": "MISATTRIBUTED", "passage_id": "P2"},
+      {"claim": "TreeRAG achieves sub-second response times with optimized pipelines", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "BGE-m3 offers the best accuracy/cost balance at $0.005-$0.01 per 1k tokens vs $0.03-$0.05 for OpenAI and $0.01-$0.03 for Cohere", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Contextual RAG, shown in a YouTube implementation, improves over traditional RAG by adding a layer that contextualizes chunks before vectorization", "label": "SUPPORTED", "passage_id": "P14"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "P337ad0": {
+    "claims": [
+      {"claim": "Draft-model sampling gives a 2-3x speedup and Medusa a 3-5x latency reduction (appscale.blog)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "EAGLE achieves a 2-6x speedup/latency reduction (table sourced to appscale.blog)", "label": "MISATTRIBUTED", "passage_id": "P4"},
+      {"claim": "EAGLE needs GPUs with >=48 GB VRAM and custom Docker images, with a 5-10B draft model using 10-15 GB per instance (oh-bug.com)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "All three methods require vLLM support and are compatible with standard LLM APIs", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Autoregressive decoding is memory-bound: each token requires streaming the full model weights from high-bandwidth memory to the compute units", "label": "SUPPORTED", "passage_id": "P4"}
+    ],
+    "target_fact": "n/a",
+    "target_fact_evidence": ""
+  },
+  "P4ac4e4": {
+    "claims": [
+      {"claim": "Mixtral 8x7B has ~47B total parameters and activates ~13B per token, while Llama 70B activates all 70B", "label": "SUPPORTED", "passage_id": "P5"},
+      {"claim": "Mixtral 8x7B's memory footprint is only ~13B (active) parameters, about 19% of its total parameters", "label": "CONTRADICTED", "passage_id": "P5"},
+      {"claim": "MoE has ~4x more FF parameters, 1.6x more FLOPs per token with top-2 routing, and ~1.3x lower active FLOPs than dense (GeneralCompute)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Mixtral takes 1.3-1.8 ms/token vs 0.8-1.2 ms/token for Llama 3 70B but has up to 30% higher throughput (1.2 vs 0.9 tokens/s/GPU) (W&B)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Mixtral 8x7B scores 78% MMLU, 65% GSM8K, 48% HumanEval vs Llama 70B 80%, 70%, 52% (W&B)", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "P54379a": {
+    "claims": [
+      {"claim": "INT8 KV-cache quantization achieves up to 4x memory reduction with minimal accuracy loss [2601.04719]", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "INT8 keeps accuracy loss at <=1% in long-context (100K+ token) inference", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "RocketKV includes a coarse-grain permanent eviction stage that removes input tokens", "label": "SUPPORTED", "passage_id": "P2"},
+      {"claim": "ChunkKV achieves 4-8x memory savings with low accuracy degradation", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "ChunkKV leverages layer uncertainty to allocate per-layer compression budgets", "label": "MISATTRIBUTED", "passage_id": "P1"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "P5c431c": {
+    "claims": [
+      {"claim": "Mixtral 8x7B activates ~13B parameters per token with a ~47B memory footprint, while Llama 70B activates and stores all 70B", "label": "SUPPORTED", "passage_id": "P5"},
+      {"claim": "At equal active FLOPs, MoE models deliver better quality than dense models", "label": "SUPPORTED", "passage_id": "P2"},
+      {"claim": "MoE cuts memory bandwidth consumption by up to 60% vs dense models", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "MoE has ~30% higher throughput: Mixtral 1.2 vs Llama 3 70B 0.9 tokens/s/GPU", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Mixtral 8x7B scores ~78% MMLU, ~65% GSM8K, ~48% HumanEval vs Llama 70B ~80%, ~70%, ~52%", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "n/a",
+    "target_fact_evidence": ""
+  },
+  "P67bd65": {
+    "claims": [
+      {"claim": "A 2026 Nature Machine Intelligence study (DOI 10.1038/s41467-026-71411-1) shows retrieval models frequently fail to capture context-specific nuances", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Microsoft Research documented that enterprise RAG systems inherit database limitations (no version control, metadata tagging or real-time updates)", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A benchmark study (arXiv:2603.12345) found over 60% of responses to complex queries contained hallucinations", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "An IBM 2026 audit found AI support systems without feedback loops show a 'hallucination cascade' of rising error rates", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Industry evaluations show well-designed prompts can cut hallucination rates by up to 40%", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "STATED_INCORRECTLY",
+    "target_fact_evidence": "A 2026 study published in Nature Machine Intelligence (DOI: 10.1038/s41467-026-71411-1) demonstrates that retrieval models frequently fail to capture context-specific nuances, especially when the query involves domain-specific jargon or evolving concepts."
+  },
+  "P7c728a": {
+    "claims": [
+      {"claim": "TreeRAG builds a tree-based chunking structure with root-to-leaves and leaf-to-root (bidirectional) retrieval", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "TreeRAG's evaluation on the AWS Documentation Dataset with an LLM-as-a-judge setup shows gains across multiple embedding models (e.g., BGE-m3, Sentence-BERT)", "label": "MISATTRIBUTED", "passage_id": "P2"},
+      {"claim": "The EncouRAGe (2025) study establishes that LLM-as-a-judge frameworks give a more meaningful evaluation of factual correctness and relevance", "label": "MISATTRIBUTED", "passage_id": "P15"},
+      {"claim": "The RAGPerf framework confirms optimized RAG pipelines achieve sub-second response times", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "The 'Best Embedding Models for RAG' report finds BGE-m3 beats OpenAI and Cohere on cost-efficiency", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "n/a",
+    "target_fact_evidence": ""
+  },
+  "P89afd1": {
+    "claims": [
+      {"claim": "TreeRAG uses hierarchical tree chunking with root-to-leaf and leaf-to-root Bidirectional Traversal Retrieval", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "TreeRAG was evaluated on the AWS Documentation Dataset with an LLM-as-a-judge setup, improving results across two embedding models", "label": "MISATTRIBUTED", "passage_id": "P2"},
+      {"claim": "The EncouRAGe (2025) study validates that LLM-as-a-judge frameworks are superior for evaluating factual consistency and relevance", "label": "MISATTRIBUTED", "passage_id": "P15"},
+      {"claim": "RAGPerf provides evidence that optimized RAG pipelines achieve sub-second response times", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "BGE-m3 outperforms OpenAI and Cohere embeddings in cost-efficiency without sacrificing retrieval quality", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  }
+}

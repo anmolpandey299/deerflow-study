@@ -1,0 +1,17 @@
+run_id,query,status,wall_s,llm_calls,calls_planner,calls_researcher,calls_analyst,calls_reporter,prompt_tokens,completion_tokens,reporter_completion_tokens,peak_context,search_calls,crawl_calls,tool_errors,step_kinds,report_chars,excluded,outage_flag
+q01-r01-20260930T201344,q01,error,8.6,1,0,0,0,0,0,0,0,0,0,0,0,,0,True,False
+q01-r02-20260930T201622,q01,completed,414.3,12,1,8,1,1,49590,8453,3375,9871,3,6,0,"researcher, searched; researcher, searched; analyst (no tools)",17044,False,False
+q01-r03-20260930T204051,q01,completed,542.1,14,1,10,1,1,69502,9781,4114,10646,9,0,0,"researcher, searched; researcher, searched; analyst (no tools)",19029,False,False
+q02-r01-20260930T202824,q02,completed,444.7,10,1,7,0,1,43329,8980,3322,10480,2,3,0,"researcher, searched; researcher, no search; researcher, no search",14751,False,False
+q03-r01-20260930T203551,q03,completed,254.5,9,1,5,1,1,27227,6419,3403,7748,4,2,2,error; error; analyst (no tools),15904,False,True
+q03-r02-20260930T212748,q03,completed,572.8,17,1,13,1,1,105123,9168,4045,12681,9,3,0,"researcher, searched; researcher, summary = unparsed tool call; analyst (no tools)",19493,False,False
+q04-r01-20260930T204008,q04,error,4.6,1,0,0,0,0,1625,52,0,1677,1,0,1,,0,True,False
+q04-r02-20260930T205216,q04,completed,453.2,12,1,9,0,1,60583,9108,4037,11600,4,3,0,"researcher, searched; researcher, no search; researcher, no search",16922,False,False
+q05-r01-20260930T204015,q05,error,5.3,1,0,0,0,0,1636,63,0,1699,1,0,1,,0,True,False
+q05-r02-20260930T205952,q05,completed,540.9,18,1,15,0,1,100705,8491,3206,11824,8,5,0,"researcher, searched; researcher, searched; researcher, searched",13575,False,False
+q06-r01-20260930T204023,q06,error,5.4,1,0,0,0,0,1629,51,0,1680,1,0,1,,0,True,False
+q06-r02-20260930T210856,q06,completed,346.8,12,1,8,1,1,55865,7267,2630,10035,4,3,0,"researcher, summary = unparsed tool call; researcher, no search; analyst (no tools)",13127,False,False
+q07-r01-20260930T204030,q07,error,10.2,1,0,0,0,0,1640,59,0,1699,1,0,1,,0,True,False
+q07-r02-20260930T211445,q07,completed,369.9,11,1,8,0,1,48393,7481,3209,9929,6,0,0,"researcher, searched; researcher, no search; researcher, no search",14385,False,False
+q08-r01-20260930T204043,q08,error,5.9,1,0,0,0,0,1638,64,0,1702,1,0,1,,0,True,False
+q08-r02-20260930T212058,q08,completed,407.9,12,1,8,1,1,57733,8016,2965,10582,3,4,0,"researcher, summary = unparsed tool call; researcher, no search; analyst (no tools)",13112,False,False

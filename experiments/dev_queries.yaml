@@ -1,0 +1,121 @@
+# Development-set queries with PRE-REGISTERED requirement checklists.
+#
+# Written 2026-09-30, before any DeerFlow run, plan, or report existed in this
+# workspace. The SHA-256 of this file is recorded in docs/part1_protocol.md.
+# These requirement lists are the experimenter's independent reading of what
+# each query explicitly or implicitly demands. They are used by the proxy
+# Completeness check and by the omission-selection rule. They are NOT derived
+# from any benchmark; none of these queries is known to be in the held-out set.
+# q01 is the example query printed in the take-home brief; whether a similar
+# query exists in the held-out benchmark is unknown. Nothing is trained on here.
+#
+# kind: explicit = stated in the query; implicit = needed for a sound answer.
+
+queries:
+  - id: q01
+    text: >-
+      What are the most promising approaches for long-context retrieval-augmented
+      generation in 2025, and how do they compare in terms of accuracy, latency, and cost?
+    requirements:
+      - {id: R1, kind: explicit, text: "Names and describes at least three distinct approaches relevant to long-context RAG (e.g. long-context LLM without retrieval, long retrieval units, RAG/long-context hybrid routing, context compression or pruning, iterative/agentic retrieval, memory/KV-based methods)."}
+      - {id: R2, kind: explicit, text: "Gives accuracy evidence: at least one specific quantitative result (benchmark and number) attributed to a source."}
+      - {id: R3, kind: explicit, text: "Gives latency evidence: a specific measurement or a source-attributed comparison of latency or speed."}
+      - {id: R4, kind: explicit, text: "Gives cost evidence: a specific measurement or a source-attributed comparison of cost (tokens, money, or compute)."}
+      - {id: R5, kind: explicit, text: "Compares the approaches against each other on accuracy, latency and cost (comparison table or explicit pairwise statements)."}
+      - {id: R6, kind: explicit, text: "Addresses the 2025 time frame: identifies which approaches are current or promising as of 2025, using dated sources."}
+      - {id: R7, kind: implicit, text: "States comparability caveats: numbers from different papers use different benchmarks, models, hardware or settings and are not directly comparable."}
+      - {id: R8, kind: implicit, text: "Gives a justified judgement of which approaches are most promising and under what conditions."}
+
+  - id: q02
+    text: >-
+      How do speculative decoding methods for LLM inference, such as draft-model
+      speculative sampling, Medusa, and EAGLE, compare in speedup, output quality,
+      and deployment complexity?
+    requirements:
+      - {id: R1, kind: explicit, text: "Explains the basic mechanism of speculative decoding (a cheap proposer drafts tokens, the target model verifies them)."}
+      - {id: R2, kind: explicit, text: "Covers draft-model speculative sampling specifically."}
+      - {id: R3, kind: explicit, text: "Covers Medusa specifically."}
+      - {id: R4, kind: explicit, text: "Covers EAGLE (any version) specifically."}
+      - {id: R5, kind: explicit, text: "Gives speedup numbers attributed to sources, with the conditions (model, hardware, batch size or task)."}
+      - {id: R6, kind: explicit, text: "Addresses output quality (e.g. lossless under exact verification versus approximate or typical acceptance)."}
+      - {id: R7, kind: explicit, text: "Addresses deployment complexity (training extra heads or draft models, memory, serving-framework support, batching)."}
+      - {id: R8, kind: implicit, text: "Notes that speedups depend on conditions (acceptance rate, batch size, task), so cross-paper comparisons are approximate."}
+
+  - id: q03
+    text: >-
+      What are the main approaches to KV-cache compression for long-context LLM
+      inference, and how do they trade off memory savings, accuracy, and throughput?
+    requirements:
+      - {id: R1, kind: explicit, text: "Identifies at least three approach families (e.g. token eviction/selection, KV quantization, low-rank or architectural sharing such as GQA/MLA, offloading/paging)."}
+      - {id: R2, kind: explicit, text: "Gives memory-savings figures attributed to sources."}
+      - {id: R3, kind: explicit, text: "Gives accuracy-impact results with specific benchmarks attributed to sources."}
+      - {id: R4, kind: explicit, text: "Gives throughput or latency impact with specifics attributed to sources."}
+      - {id: R5, kind: explicit, text: "Explicitly compares the trade-offs across the families."}
+      - {id: R6, kind: implicit, text: "Describes failure modes or limitations (e.g. eviction losing tokens needed later in retrieval-heavy tasks)."}
+      - {id: R7, kind: implicit, text: "States comparability caveats across papers."}
+
+  - id: q04
+    text: >-
+      How do mixture-of-experts and dense transformer LLMs compare in training cost,
+      inference efficiency, and model quality?
+    requirements:
+      - {id: R1, kind: explicit, text: "Explains the MoE mechanism (sparse activation, routing, total versus active parameters)."}
+      - {id: R2, kind: explicit, text: "Compares training cost with specifics (FLOPs, GPU-hours, or concrete examples) attributed to sources."}
+      - {id: R3, kind: explicit, text: "Compares inference efficiency: active parameters versus memory footprint, throughput or latency specifics, communication overhead."}
+      - {id: R4, kind: explicit, text: "Compares quality with concrete models and benchmark results attributed to sources."}
+      - {id: R5, kind: explicit, text: "Names specific example models of each kind."}
+      - {id: R6, kind: implicit, text: "Describes MoE-specific challenges (load balancing, memory footprint, training or fine-tuning instability)."}
+      - {id: R7, kind: implicit, text: "States conditions under which each architecture is preferable."}
+
+  - id: q05
+    text: >-
+      How do post-training quantization methods for LLMs such as GPTQ, AWQ, and
+      SmoothQuant compare in accuracy retention, speedup, and hardware support?
+    requirements:
+      - {id: R1, kind: explicit, text: "Covers GPTQ: mechanism and characteristics."}
+      - {id: R2, kind: explicit, text: "Covers AWQ: mechanism and characteristics."}
+      - {id: R3, kind: explicit, text: "Covers SmoothQuant: mechanism and characteristics."}
+      - {id: R4, kind: explicit, text: "Gives accuracy-retention numbers (perplexity or benchmarks at stated bit-widths) attributed to sources."}
+      - {id: R5, kind: explicit, text: "Gives speedup or memory numbers with conditions, attributed to sources."}
+      - {id: R6, kind: explicit, text: "Describes hardware and software support (kernels, GPU generations, serving frameworks)."}
+      - {id: R7, kind: implicit, text: "Distinguishes weight-only (e.g. W4A16) from weight-and-activation (e.g. W8A8) quantization and why it matters."}
+      - {id: R8, kind: implicit, text: "States comparability caveats across papers."}
+
+  - id: q06
+    text: >-
+      What does the evidence say about how well retrieval-augmented generation
+      reduces hallucinations in LLM outputs, and what are its main limitations?
+    requirements:
+      - {id: R1, kind: explicit, text: "Presents empirical evidence (named studies or benchmarks with numbers) on whether RAG reduces hallucination or improves factuality."}
+      - {id: R2, kind: explicit, text: "Identifies conditions where RAG fails (retrieval errors, irrelevant or noisy context, conflicting knowledge)."}
+      - {id: R3, kind: explicit, text: "Discusses limitations such as the model ignoring or misusing retrieved context, or inaccurate citations."}
+      - {id: R4, kind: implicit, text: "Explains how hallucination is measured and the caveats of those measurements."}
+      - {id: R5, kind: implicit, text: "Mentions mitigations beyond vanilla RAG (reranking, self-reflective or corrective RAG, citation verification)."}
+      - {id: R6, kind: implicit, text: "Reaches a balanced conclusion that states uncertainty."}
+
+  - id: q07
+    text: >-
+      Which small open-weight language models (under 10B parameters) released in 2025
+      are strongest, and how do they compare in reasoning benchmarks, context length,
+      and licensing?
+    requirements:
+      - {id: R1, kind: explicit, text: "Names at least three open-weight models under 10B parameters released in 2025, with release timing."}
+      - {id: R2, kind: explicit, text: "Gives reasoning-benchmark results with specific numbers attributed to sources."}
+      - {id: R3, kind: explicit, text: "Gives the context length of each named model."}
+      - {id: R4, kind: explicit, text: "Gives the license of each named model."}
+      - {id: R5, kind: explicit, text: "Compares the models explicitly (table or pairwise statements)."}
+      - {id: R6, kind: implicit, text: "Distinguishes vendor-reported from independent evaluations."}
+
+  - id: q08
+    text: >-
+      How do vector databases such as Milvus, Qdrant, Weaviate, and pgvector compare
+      in query latency, scalability, and operational cost for RAG workloads?
+    requirements:
+      - {id: R1, kind: explicit, text: "Covers Milvus specifically."}
+      - {id: R2, kind: explicit, text: "Covers Qdrant specifically."}
+      - {id: R3, kind: explicit, text: "Covers Weaviate specifically."}
+      - {id: R4, kind: explicit, text: "Covers pgvector specifically."}
+      - {id: R5, kind: explicit, text: "Gives latency or throughput numbers with the benchmark source and conditions."}
+      - {id: R6, kind: explicit, text: "Compares scalability (sharding or distribution, dataset-size limits)."}
+      - {id: R7, kind: explicit, text: "Compares operational cost (managed versus self-hosted, resource footprint)."}
+      - {id: R8, kind: implicit, text: "States benchmark caveats (vendor-run benchmarks, index type, recall settings)."}

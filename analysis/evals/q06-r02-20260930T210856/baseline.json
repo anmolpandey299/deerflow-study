@@ -1,0 +1,229 @@
+{
+ "run_id": "q06-r02-20260930T210856",
+ "kind": "baseline",
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "893203fe7814cdf975825bf87f69739c782fb92b22d9a250461ebc072eb0664e",
+ "report_chars": 13127,
+ "report_words": 1672,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 8,
+  "urls_in_retrieved_evidence": 2,
+  "fabricated_urls": [
+   "microsoft.com/en-us/research/publication/accuracy-of-retrieval-augmented-generation",
+   "microsoft.com/en-us/research/case-study-enterprise-rag-knowledge-management",
+   "gartner.com/en/articles/rag-in-customer-service-bots",
+   "arxiv.org/abs/2603.12345",
+   "ibm.com/ai/rag-audit-report-2026",
+   "nature.com/articles/s41467-026-71411-1/figures/1"
+  ],
+  "provenance_rate": 0.25
+ },
+ "numeric_items": 1,
+ "numeric_items_not_in_evidence": [
+  "60%"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "over 60% of responses to such queries contained hallucinations due to insufficient retrieval coverage or lack of integration with external reasoning modules.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "RAG systems frequently suffer from retrieval failure, leading to hallucinations due to the use of non-existent or irrelevant documents.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "PARTIAL",
+    "quote": "RAG systems frequently suffer from retrieval failure, leading to hallucinations due to the use of non-existent or irrelevant documents.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "over 60% of responses to such queries contained hallucinations due to insufficient retrieval coverage or lack of integration with external reasoning modules.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "RAG must be viewed not as a standalone solution, but as a component within a broader, hybrid system that integrates validation, feedback, and domain-specific adaptation.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.6666666666666666,
+  "score_lenient": 0.6666666666666666
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "A 2026 study published in *Nature Communications* demonstrates that even with advanced retrieval architectures, RAG systems frequently return outdated or irrelevant documents—particularly when semantic drift or context shifts occur over time.",
+    "claim": "The 2026 Nature Communications study shows that RAG systems often retrieve outdated or irrelevant documents even with advanced retrieval architectures.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Microsoft Research has highlighted that RAG inherits the limitations of its underlying databases—such as the absence of version control or real-time updates—thereby propagating outdated content into responses.",
+    "claim": "Microsoft Research reports that RAG systems inherit database limitations such as lack of version control, causing outdated content to be included in responses.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Healthcare | 2022 treatment protocol for a rare disease | Inaccurate medical advice, risk of patient harm |",
+    "claim": "In healthcare, using a 2022 treatment protocol for a rare disease can lead to inaccurate medical advice and risk patient harm.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Finance | 2023 regulatory guidance on compliance | Non-compliant business decisions |",
+    "claim": "In finance, relying on 2023 regulatory guidance on compliance can result in non-compliant business decisions.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "A 2026 benchmark study found that over 60% of responses to such queries contained hallucinations due to insufficient retrieval coverage or lack of integration with external reasoning modules.",
+    "claim": "The 2026 benchmark study found that more than 60% of responses to complex queries contained hallucinations due to insufficient retrieval coverage or lack of external reasoning integration.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "An industry audit of AI support systems by IBM found that systems without feedback loops exhibited increasing error rates over time.",
+    "claim": "IBM's audit of AI support systems revealed that systems without feedback loops show increasing error rates over time.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Most RAG implementations lack feedback loops, allowing incorrect responses to propagate and create a compounding 'hallucination cascade' over time.",
+    "claim": "The absence of feedback loops in most RAG implementations allows incorrect responses to propagate, creating a compounding hallucination cascade.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG systems frequently suffer from retrieval failure, leading to hallucinations due to the use of non-existent or irrelevant documents.",
+    "claim": "Retrieval failure in RAG systems causes hallucinations by incorporating non-existent or irrelevant documents into responses.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG struggles with ambiguous, complex, or open-ended queries, often generating plausible but unsupported answers that appear factual but are hallucinated.",
+    "claim": "RAG systems struggle with ambiguous, complex, or open-ended queries, producing plausible but unsupported answers that appear factual.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG does not resolve the root causes of hallucinations; instead, it shifts them into the retrieval pipeline.",
+    "claim": "RAG does not eliminate hallucinations but merely relocates them to the retrieval pipeline.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 2992,
+   "completion_tokens": 1668,
+   "wall_s": 45.08315396308899,
+   "thinking_chars": 6967
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 2793,
+   "completion_tokens": 2301,
+   "wall_s": 53.74608898162842,
+   "thinking_chars": 8908
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 1574,
+   "completion_tokens": 1161,
+   "wall_s": 27.125651836395264,
+   "thinking_chars": 4599
+  }
+ ],
+ "eval_wall_s": 126.0306499004364
+}

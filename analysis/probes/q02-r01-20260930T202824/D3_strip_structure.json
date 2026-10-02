@@ -1,0 +1,293 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q02-r01-20260930T202824",
+ "variant": "D3_strip_structure",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "3f422d9bc35f4e0a7d6e7b8c75ea40939b5202b82aee2ef4dd9490ac05524a70",
+  "report_chars": 13872,
+  "report_words": 1684,
+  "fmt": {
+   "checks": {
+    "h1_title": false,
+    "key_citations_before_key_points": false,
+    "key_points_4_to_6_bullets": false,
+    "overview_section": false,
+    "detailed_analysis_section": false,
+    "references_with_urls": false,
+    "markdown_table": false,
+    "no_wrapping_code_fence": true
+   },
+   "score": 0.125
+  },
+  "fact_url": {
+   "report_urls": 3,
+   "urls_in_retrieved_evidence": 3,
+   "fabricated_urls": [],
+   "provenance_rate": 1.0
+  },
+  "numeric_items": 29,
+  "numeric_items_not_in_evidence": [
+   "12",
+   "15%",
+   "10%",
+   "10",
+   "15",
+   "0.38",
+   "0.45",
+   "82%",
+   "85%",
+   "0.42",
+   "0.50",
+   "88%",
+   "91%",
+   "0.44",
+   "0.54",
+   "93%",
+   "95%",
+   "30%",
+   "2B",
+   "512",
+   "5B",
+   "1024",
+   "10B",
+   "4096",
+   "48"
+  ],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "Speculative decoding ... generating a 'draft' token sequence ahead of the main model’s autoregressive decoding, followed by verification to ensure correctness.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "FULL",
+     "quote": "Draft-Model Sampling offers moderate speedup (2–3×) with low output fidelity, high hallucination rates (12–15%), and minimal deployment complexity, making it suitable only for early-stage or edge-level prototyping.",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "FULL",
+     "quote": "Medusa achieves 3–5× latency reduction through lookahead drafting and n-gram verification, with improved coherence and reduced hallucinations (8–10%), but is constrained by memory access patterns and scalability under high QPS.",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "FULL",
+     "quote": "EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "FULL",
+     "quote": "Draft-Model Sampling; 2–3×; Medusa; 3–5×; EAGLE; 2–6×; Source: [Speculative Decoding in Production LLM Inference 2026: EAGLE-3, Medusa, vLLM, 3× Throughput]",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "FULL",
+     "quote": "Output quality is a critical dimension that must be evaluated independently of speed, as speculative decoding introduces new risks of hallucination and inconsistency. The following table summarizes the performance metrics across the three methods.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "FULL",
+     "quote": "Deployment Complexity and Implementation Requirements ... Draft-Model Sampling requires a minimal YAML configuration (`draft_model_name`, `main_model_name`). Medusa needs a JSON configuration with parameters like `lookahead_window` and `n_gram_size`. EAGLE requires a comprehensive YAML file with advanced parameters (`dynamic_k`, `confidence_threshold`, `memory_strategy`).",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "FULL",
+     "quote": "The speedup is not derived from model architecture but from the efficiency of GPU memory access and compute scheduling. ... The comparison assumes that all methods are implemented under identical conditions, which is not always the case in practice.",
+     "quote_verified": true
+    }
+   ],
+   "score": 1.0,
+   "score_lenient": 1.0
+  },
+  "fact_claims": {
+   "claims_extracted": 10,
+   "claims_checked": 10,
+   "claims": [
+    {
+     "report_quote": "Draft-Model Sampling offers moderate speedup (2–3×) with low output fidelity, high hallucination rates (12–15%), and minimal deployment complexity, making it suitable only for early-stage or edge-level prototyping.",
+     "claim": "Draft-Model Sampling provides a 2–3× speedup, but its output fidelity is low, hallucination rates are 12–15%, and deployment complexity is minimal, making it suitable only for early-stage or edge-level prototyping.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Medusa achieves 3–5× latency reduction through lookahead drafting and n-gram verification, with improved coherence and reduced hallucinations (8–10%), but is constrained by memory access patterns and scalability under high QPS.",
+     "claim": "Medusa reduces latency by 3–5× through lookahead drafting and n-gram verification, improves coherence, and lowers hallucinations to 8–10%, though it faces memory access and scalability limits at high QPS.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.",
+     "claim": "EAGLE achieves up to 6× faster response times and 3× higher throughput than baseline methods, maintains hallucination rates below 5%, and offers superior output consistency, but requires high hardware demands and complex deployment.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "All three methods are supported by vLLM, but EAGLE requires advanced GPU memory configurations (10–15 GB VRAM) and enterprise-grade infrastructure for effective operation.",
+     "claim": "While all three methods are supported by vLLM, EAGLE needs advanced GPU memory configurations of 10–15 GB VRAM and enterprise-grade infrastructure for effective operation.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Draft-Model Sampling; 2–3×; Moderate; 2–3×; Basic draft generation with simple acceptance/rollback",
+     "claim": "Draft-Model Sampling achieves a 2–3× speedup with moderate throughput improvement, using basic draft generation and simple acceptance/rollback.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Medusa; 3–5×; High; 3–5×; Lookahead draft with n-gram-based verification",
+     "claim": "Medusa achieves a 3–5× speedup with high throughput improvement, using lookahead drafting and n-gram-based verification.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "EAGLE; 2–6×; 3× baseline; 2–6×; Dynamic K verification and GPU-optimized KV cache management",
+     "claim": "EAGLE achieves a 2–6× speedup with 3× baseline throughput improvement, using dynamic K verification and GPU-optimized KV cache management.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Draft-Model Sampling; 0.38; 0.45; 82%; 85%; 12–15%; Subtle, context-dependent hallucinations",
+     "claim": "Draft-Model Sampling scores a BLEU-4 of 0.38, ROUGE-L of 0.45, factual accuracy of 82%, coherence of 85%, and hallucination rate of 12–15%, with subtle, context-dependent hallucinations.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Medusa; 0.42; 0.50; 88%; 91%; 8–10%; Repetition, fragmentation in long-form responses",
+     "claim": "Medusa scores a BLEU-4 of 0.42, ROUGE-L of 0.50, factual accuracy of 88%, coherence of 91%, and hallucination rate of 8–10%, with repetition and fragmentation in long-form responses.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "EAGLE; 0.44; 0.54; 93%; 95%; ≤5%; Logical inconsistencies, factual errors",
+     "claim": "EAGLE scores a BLEU-4 of 0.44, ROUGE-L of 0.54, factual accuracy of 93%, coherence of 95%, and hallucination rate of ≤5%, with logical inconsistencies and factual errors.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    }
+   ],
+   "supported": 0,
+   "contradicted": 0,
+   "unsupported": 10,
+   "score": 0.0
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3472,
+    "completion_tokens": 1488,
+    "wall_s": 47.31987714767456,
+    "thinking_chars": 4460
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 3242,
+    "completion_tokens": 4722,
+    "wall_s": 128.9092481136322,
+    "thinking_chars": 14872
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 2324,
+    "completion_tokens": 2491,
+    "wall_s": 71.4165518283844,
+    "thinking_chars": 9421
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 6,
+   "completeness": 8,
+   "coherence": 8,
+   "relevance": 9,
+   "citation_quality": 5,
+   "writing_quality": 8
+  },
+  "overall_score": 8,
+  "weighted_score": 7.35,
+  "strengths": [
+   "Comprehensive coverage of speedup, output quality, and deployment complexity with detailed tables and side‑by‑side comparisons.",
+   "Logical structure that guides the reader from overview to methodology, results, and future research.",
+   "Transparent discussion of limitations and potential biases, which adds credibility."
+  ],
+  "weaknesses": [
+   "Heavy reliance on technical blogs and production posts rather than peer‑reviewed literature, limiting factual certainty.",
+   "Lack of independent, controlled experiments or empirical data to validate the reported metrics.",
+   "Citation diversity is low; all sources are from the same ecosystem (vLLM and associated blogs)."
+  ],
+  "suggestions": [
+   "Incorporate peer‑reviewed studies or benchmark papers that evaluate speculative decoding methods under standardized test sets.",
+   "Provide or reference controlled experimental results (e.g., MMLU, TruthfulQA) to substantiate speedup and hallucination figures.",
+   "Expand the citation pool to include academic conferences, open‑source benchmark repositories, and independent performance analyses.",
+   "Add a cost‑per‑token or energy‑efficiency analysis to complement the hardware‑requirement discussion.",
+   "Clarify assumptions about model sizes, tokenization, and hardware configurations to aid reproducibility."
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 196
+}

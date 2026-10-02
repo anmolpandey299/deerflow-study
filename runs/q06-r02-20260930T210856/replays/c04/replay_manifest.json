@@ -1,0 +1,84 @@
+{
+ "case_file": "analysis/cases/c04.yaml",
+ "case": {
+  "case_id": "c04",
+  "kind": "H1",
+  "run_id": "q06-r02-20260930T210856",
+  "query_id": "q06",
+  "step": 0,
+  "repair": {
+   "seg_id": "4.2",
+   "tool_seq": 4,
+   "tool": "web_search",
+   "title": "Hyper-RAG: combating LLM hallucinations using hypergraph ...",
+   "url": "https://www.nature.com/articles/s41467-026-71411-1",
+   "passage": "Apr 27, 2026 · These results confirm Hyper- RAG ’s effectiveness in enhancing LLM reliability and reducing hallucinations , making it a robust solution for high-stakes applications like medical diagnostics.",
+   "requirement_ids": [
+    "R5",
+    "R1"
+   ],
+   "omission_type": "lost: the researcher exhausted its tool budget (recursion limit 25); DeerFlow's recursion-limit fallback (nodes.py:1007-1077) re-called the model with all tools stripped, the model replied with a tool call written as plain text, and DeerFlow accepted that 122-char string as the step's summary",
+   "usage_detect": {
+    "anchor": "Hyper",
+    "any_of": [
+     "hallucinat",
+     "reliab"
+    ]
+   }
+  },
+  "control": {
+   "seg_id": "6.0",
+   "tool_seq": 6,
+   "tool": "crawl_tool",
+   "title": "ScienceDirect",
+   "url": "https://www.sciencedirect.com/science/article/pii/S074756322600049X",
+   "passage": "# ScienceDirect\n\nAre you a robot?\n----------------\n\nPlease confirm you are a human by completing the captcha challenge below.\n\n* **Reference number:** a435deffbfcc3ebd\n* **IP Address:** 34.96.49.58",
+   "rationale": "real crawl output received in this step (a CAPTCHA page); meets no q06 requirement; 197 vs 206 chars; the only off-requirement segment within +-25% (dictionary segments are 98-135 chars)"
+  },
+  "selection_notes": [
+   "Requirement with lowest baseline coverage (experimenter reading): R5 - report mentions only 'external verification' vaguely; no reranking/self-RAG/CRAG/SeaRAG/Hyper-RAG.",
+   "R5 candidates: 4.0 SeaRAG (named method, functional finding but no comparison) and 4.2 Hyper-RAG (named method with comparative claim: reduces hallucinations). 4.2 chosen as the one clearly meeting criterion (ii).",
+   "Also lost in the same step (not chosen): 4.1 RAG vs non-RAG 2x2 factorial user study (R1); 1.0/1.2 generic 'RAG lessens hallucinations' (R1, no specific item); 1.1 '30-50%' (subject of the figure ambiguous in the snippet)."
+  ]
+ },
+ "base_request_hash": "0eb1d7cf201a42c684aa04a195cf0f3d2ee157367467943671691599d5a0d517",
+ "declared_changes": {
+  "A": {},
+  "B": {
+   "2": "es/s41467-026-71411-1\"}}\n</tool_call>\n\n### Additional retrieved passage\n\n> Apr 27, 2026 · These results confirm Hyper- RAG ’s effectiveness in enhancing LLM reliability and reducing hallucinations , making it a robust solution for high-stakes applications like medical diagnostics.\n\n- [Hyper-RAG: combating LLM hallucinations using hypergraph ...](https://www.nature.com/articles/s41467-026-71411-1)\n"
+  },
+  "C": {
+   "2": "ps://www.nature.com/articles/s41467-026-71411-1\"}}\n</tool_call>\n\n### Additional retrieved passage\n\n> # ScienceDirect\n>\n> Are you a robot?\n> ----------------\n>\n> Please confirm you are a human by completing the captcha challenge below.\n>\n> * **Reference number:** a435deffbfcc3ebd\n> * **IP Address:** 34.96.49.58\n\n- [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S074756322600049X)\n"
+  }
+ },
+ "model": {
+  "provider": "ollama-openai-compatible",
+  "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "served_tag": "dfprobe-qwen3-4b-ctx40k",
+  "num_ctx": 40960,
+  "base_url": "http://localhost:11434/v1",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "seed": 7,
+  "max_tokens": 8192,
+  "token_limit": 32000
+ },
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "audit.py": "86296de277670f6610f46d0926b3cc50733400c6b0c9a6d7dda16272fafed5b9",
+  "boundary.py": "5e1a152004afb01193044c55d47346806b793f6cac81b2738c65497eca6d82e8",
+  "candidates.py": "3cbd9c83703a757823b7f87867ef84e6c5d7b57da3eaea65c5d7a34225fa2fad",
+  "cassette.py": "639e60beeb17e764e061e8304e995bb4d8a56e2e5747080bb2a367f34fbcb52f",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "734b58b68e78cb424c7d47f6f71826de53d51ad8942e2b2b77c74da03bceb8d3",
+  "evidence.py": "71232c176506278dbeb0cb5e44e3218765290437da7064b76f03a59737aa6b25",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_analysis.py": "020db3df9641dbf536d7caafe430b400ad0b0bf0b9550c84a2a3a50162211526",
+  "replay_reporter.py": "e02458ae1e9eb6429d4fe17f412877f7929ec282b08476c772294b6a7f09b4d3",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c",
+  "tables.py": "cde52c9462406f470fe8683ed06aace573a028142a53874c12e7dc5d1dbafca5"
+ }
+}

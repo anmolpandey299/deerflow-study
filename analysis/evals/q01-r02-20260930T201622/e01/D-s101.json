@@ -1,0 +1,237 @@
+{
+ "run_id": "q01-r02-20260930T201622",
+ "kind": "replay",
+ "case_id": "e01",
+ "condition": "D",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "e0cdcfb0ab19412f121f15a22553f4196f3873eb716988e166d36a7419628b74",
+ "report_chars": 15392,
+ "report_words": 1890,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 6,
+  "urls_in_retrieved_evidence": 6,
+  "fabricated_urls": [],
+  "provenance_rate": 1.0
+ },
+ "numeric_items": 3,
+ "numeric_items_not_in_evidence": [
+  "32%"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Hierarchical Retrieval | Organizes retrieval in layers (e.g., topic → section → paragraph) | Enables focused, multi-level information access",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "reduces hallucination rates by up to 32% compared to baseline RAG systems",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "PARTIAL",
+    "quote": "Hybrid BM25 outperforms both pure BM25 and dense retrieval methods",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "In 2025, the focus has shifted from basic retrieval and prompt engineering to sophisticated architectural designs",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "PARTIAL",
+    "quote": "MiA-RAG represents a paradigm shift from treating RAG as a retrieval-prompting pipeline to viewing it as a cognitive system",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.5,
+  "score_lenient": 0.5
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "Contextual normalization—standardizing formatting across inputs—improves both retrieval precision and response stability.",
+    "claim": "Standardizing the formatting of retrieved content (contextual normalization) increases retrieval precision and stabilizes the quality of generated responses.",
+    "label": "SUPPORTED",
+    "evidence_id": "E4",
+    "evidence_url": "https://arxiv.org/abs/2510.13191",
+    "quote": "seemingly superficial choices, such as delimiters or structural markers in key-value extraction, can induce substantial shifts in accuracy and stability, even when semantic content is identical.",
+    "quote_verified": false,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "MiA-RAG reduces hallucination rates by up to 32% compared to baseline RAG systems in long-context scenarios.",
+    "claim": "The MiA-RAG framework lowers hallucination rates by as much as 32% relative to conventional RAG systems when handling long-context tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Hybrid BM25 outperforms both pure BM25 and dense retrieval methods.",
+    "claim": "Hybrid BM25 retrieval achieves higher accuracy than either pure BM25 or dense retrieval alone.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://arxiv.org/html/2511.04696v1",
+    "quote": "Hybrid BM25 consistently achieves the best results across all four datasets.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "RAG systems still underperform compared to 'Oracle Context' (full document access).",
+    "claim": "Retrieval-Augmented Generation systems lag behind an oracle that has access to the entire document for reasoning tasks.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://arxiv.org/html/2511.04696v1",
+    "quote": "RAG still underperforms compared to the Oracle Context,",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "RAGPerf measures GPU/CPU utilization, memory consumption, I/O throughput, and end-to-end latency.",
+    "claim": "The RAGPerf benchmark evaluates system performance by recording GPU/CPU usage, memory usage, I/O throughput, and overall latency.",
+    "label": "SUPPORTED",
+    "evidence_id": "E9",
+    "evidence_url": "https://arxiv.org/html/2603.10765v1",
+    "quote": "fine-grained measurements of hardware resource utilization (e.g., GPU/CPU utilization, memory consumption, and I/O throughput) and end-to-end performance indicators (e.g., latency and throughput).",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "EncouRAGe offers Python-based implementation for reproducible testing.",
+    "claim": "EncouRAGe provides a Python implementation that enables reproducible evaluation of RAG systems.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://arxiv.org/html/2511.04696v1",
+    "quote": "EncouRAGe, a comprehensive Python framework designed to streamline the development and evaluation of Retrieval-Augmented Generation (RAG) systems using Large Language Models (LLMs) and Embedding Models.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "No public benchmark data exists for direct comparative analysis of latency and cost across RAG architectures (e.g., hierarchical vs. memory-augmented) as of 2025.",
+    "claim": "As of 2025, there is no publicly available benchmark comparing latency and cost among different RAG architectures such as hierarchical and memory-augmented models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Hybrid retrieval methods (e.g., Hybrid BM25) outperform pure keyword or dense retrieval in retrieval accuracy.",
+    "claim": "Hybrid retrieval approaches, like Hybrid BM25, deliver higher retrieval accuracy than pure keyword or dense retrieval methods.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://arxiv.org/html/2511.04696v1",
+    "quote": "Hybrid BM25 consistently achieves the best results across all four datasets.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "Dense, unstructured formatting leads to higher hallucination rates and reduced coherence in generated responses.",
+    "claim": "Using dense, unstructured formatting for retrieved content increases hallucination rates and decreases the coherence of generated responses.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Delimiters (e.g., triple backticks, square brackets) affect how retrieval and generation components parse and interpret context.",
+    "claim": "The choice of delimiters, such as triple backticks or square brackets, influences how retrieval and generation modules parse and interpret contextual information.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 5,
+  "contradicted": 0,
+  "unsupported": 5,
+  "score": 0.5
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3492,
+   "completion_tokens": 1530,
+   "wall_s": 39.668150901794434,
+   "thinking_chars": 6081
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3188,
+   "completion_tokens": 2209,
+   "wall_s": 54.13815689086914,
+   "thinking_chars": 8198
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2652,
+   "completion_tokens": 2561,
+   "wall_s": 61.42271113395691,
+   "thinking_chars": 10907
+  }
+ ],
+ "eval_wall_s": 155.29885172843933
+}

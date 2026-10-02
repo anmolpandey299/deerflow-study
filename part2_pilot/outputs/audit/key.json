@@ -1,0 +1,182 @@
+{
+ "Pce8567": {
+  "case_id": "c05",
+  "arm": "C",
+  "seed": 101,
+  "source": "part1"
+ },
+ "P8c9e51": {
+  "case_id": "c03",
+  "arm": "A",
+  "seed": 101,
+  "source": "part2"
+ },
+ "P3f98f1": {
+  "case_id": "c03",
+  "arm": "L",
+  "seed": 103,
+  "source": "part2"
+ },
+ "Pbf9b44": {
+  "case_id": "c05",
+  "arm": "L",
+  "seed": 102,
+  "source": "part2"
+ },
+ "P43562f": {
+  "case_id": "c03",
+  "arm": "A",
+  "seed": 102,
+  "source": "part1"
+ },
+ "P7ad934": {
+  "case_id": "c03",
+  "arm": "C",
+  "seed": 103,
+  "source": "part1"
+ },
+ "P73df01": {
+  "case_id": "c03",
+  "arm": "L",
+  "seed": 102,
+  "source": "part2"
+ },
+ "P2f634f": {
+  "case_id": "c05",
+  "arm": "A",
+  "seed": 101,
+  "source": "part1"
+ },
+ "P5c31d4": {
+  "case_id": "c05",
+  "arm": "L",
+  "seed": 103,
+  "source": "part2"
+ },
+ "P63628f": {
+  "case_id": "c03",
+  "arm": "B",
+  "seed": 103,
+  "source": "part1"
+ },
+ "P80f91e": {
+  "case_id": "c05",
+  "arm": "C",
+  "seed": 103,
+  "source": "part1"
+ },
+ "Pb2133a": {
+  "case_id": "c05",
+  "arm": "A",
+  "seed": 103,
+  "source": "part1"
+ },
+ "Pd1d37c": {
+  "case_id": "c05",
+  "arm": "LC",
+  "seed": 101,
+  "source": "part2"
+ },
+ "Pbad1f7": {
+  "case_id": "c05",
+  "arm": "B",
+  "seed": 102,
+  "source": "part2"
+ },
+ "P0e8779": {
+  "case_id": "c03",
+  "arm": "A",
+  "seed": 101,
+  "source": "part1"
+ },
+ "P73144f": {
+  "case_id": "c05",
+  "arm": "B",
+  "seed": 101,
+  "source": "part2"
+ },
+ "P63b259": {
+  "case_id": "c03",
+  "arm": "A",
+  "seed": 103,
+  "source": "part1"
+ },
+ "P978027": {
+  "case_id": "c03",
+  "arm": "C",
+  "seed": 101,
+  "source": "part1"
+ },
+ "Pa43847": {
+  "case_id": "c03",
+  "arm": "B",
+  "seed": 102,
+  "source": "part1"
+ },
+ "P7cdd48": {
+  "case_id": "c05",
+  "arm": "B",
+  "seed": 102,
+  "source": "part1"
+ },
+ "P1f4915": {
+  "case_id": "c03",
+  "arm": "B",
+  "seed": 101,
+  "source": "part1"
+ },
+ "P1b91e6": {
+  "case_id": "c03",
+  "arm": "L",
+  "seed": 101,
+  "source": "part2"
+ },
+ "Pd437df": {
+  "case_id": "c05",
+  "arm": "B",
+  "seed": 103,
+  "source": "part1"
+ },
+ "Pad4f23": {
+  "case_id": "c05",
+  "arm": "C",
+  "seed": 102,
+  "source": "part1"
+ },
+ "Pea26f0": {
+  "case_id": "c05",
+  "arm": "B",
+  "seed": 101,
+  "source": "part1"
+ },
+ "P7e70b1": {
+  "case_id": "c05",
+  "arm": "A",
+  "seed": 102,
+  "source": "part1"
+ },
+ "P61ad5f": {
+  "case_id": "c05",
+  "arm": "L",
+  "seed": 101,
+  "source": "part2"
+ },
+ "Pffc83d": {
+  "case_id": "c03",
+  "arm": "B",
+  "seed": 102,
+  "source": "part2"
+ },
+ "P2d0a05": {
+  "case_id": "c03",
+  "arm": "B",
+  "seed": 101,
+  "source": "part2"
+ },
+ "P6c5fe7": {
+  "case_id": "c03",
+  "arm": "C",
+  "seed": 102,
+  "source": "part1"
+ }
+}

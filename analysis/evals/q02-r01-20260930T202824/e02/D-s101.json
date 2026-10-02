@@ -1,0 +1,245 @@
+{
+ "run_id": "q02-r01-20260930T202824",
+ "kind": "replay",
+ "case_id": "e02",
+ "condition": "D",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "808530c36cfde3c9d4498596f933fa942fb63e1917efa686259ac4ff82b5f6c0",
+ "report_chars": 15450,
+ "report_words": 1973,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 4,
+  "urls_in_retrieved_evidence": 3,
+  "fabricated_urls": [
+   "oh-bug.com/images/speculative-decoding-comparison-chart.png"
+  ],
+  "provenance_rate": 0.75
+ },
+ "numeric_items": 11,
+ "numeric_items_not_in_evidence": [
+  "2B",
+  "5B",
+  "4090",
+  "10B",
+  "10",
+  "15",
+  "48"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Speculative decoding enables faster response times by generating draft tokens in parallel and verifying them against the main model to ensure correctness.",
+    "quote_verified": false
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "Draft-Model Sampling introduces a basic speculative mechanism where a lightweight draft model generates a single token, which is then verified against the main model.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "Medusa improves upon this by using a lookahead draft mechanism that generates multiple tokens ahead of the current position, with verification based on n-gram or token-level consistency.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "EAGLE achieves superior performance through dynamic K verification and optimized GPU memory access, allowing it to maintain high throughput even under sustained workloads.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Draft-Model Sampling offers moderate speedup (2–3x) ... Medusa achieves 3–5x ... EAGLE delivers up to 6x faster response times.",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "PARTIAL",
+    "quote": "Draft-Model Sampling: No data on output quality is available. Medusa: Verification via n-gram or draft consistency provides a basic level of quality control.",
+    "quote_verified": false
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "Draft-Model Sampling is the most accessible method, requiring only a lightweight draft model and minimal configuration. It is suitable for edge devices or low-resource environments where speed and simplicity are prioritized over accuracy.",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.625,
+  "score_lenient": 0.8125
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "Draft-Model Sampling offers moderate speedup (2–3x) with minimal hardware requirements and simple deployment, making it ideal for early-stage prototyping.",
+    "claim": "Draft-Model Sampling achieves a moderate speedup of 2–3× while requiring minimal hardware and simple deployment, making it suitable for early-stage prototyping.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Medusa achieves 3–5x latency reduction through lookahead draft mechanisms but is constrained by GPU memory access and performance under high QPS.",
+    "claim": "Medusa reduces latency by 3–5× through lookahead draft mechanisms, though its performance is limited by GPU memory access and high QPS conditions.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "EAGLE delivers up to 6x faster response times and 3× throughput improvement due to optimized GPU memory usage and dynamic KV cache management.",
+    "claim": "EAGLE provides up to 6× faster response times and a 3× improvement in throughput thanks to optimized GPU memory usage and dynamic KV cache management.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "All three methods require support from vLLM and are compatible with standard LLM APIs, enabling integration into existing workflows.",
+    "claim": "All three speculative decoding methods—Draft-Model Sampling, Medusa, and EAGLE—require vLLM support and are compatible with standard LLM APIs, enabling integration into existing workflows.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Deployment complexity increases with method sophistication: Draft-Model Sampling is simplest, Medusa is balanced, and EAGLE demands high-end hardware and advanced configuration.",
+    "claim": "Deployment complexity rises with method sophistication: Draft-Model Sampling is the simplest, Medusa offers a balanced profile, and EAGLE demands high-end hardware and advanced configuration.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Draft-Model Sampling | 2–3x | Moderate | 2–3x |",
+    "claim": "Draft-Model Sampling delivers a speedup factor of 2–3× with moderate throughput improvement, as shown in the comparative table.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Medusa | 3–5x | High | 3–5x |",
+    "claim": "Medusa achieves a speedup factor of 3–5× with high throughput improvement, as shown in the comparative table.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| EAGLE | 2–6x | 3× baseline | 2–6x |",
+    "claim": "EAGLE attains a speedup factor of 2–6× and a throughput improvement of 3× baseline, as shown in the comparative table.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Draft-Model Sampling requires only a lightweight draft model and minimal configuration, suitable for edge devices or low-resource environments.",
+    "claim": "Draft-Model Sampling requires only a lightweight draft model and minimal configuration, making it suitable for edge devices or low-resource environments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "EAGLE demands the highest infrastructure investment, requiring GPUs with at least 48 GB VRAM and optimized memory management.",
+    "claim": "EAGLE requires GPUs with at least 48 GB VRAM and optimized memory management, representing the highest infrastructure investment among the three methods.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3594,
+   "completion_tokens": 2992,
+   "wall_s": 72.24980187416077,
+   "thinking_chars": 12538
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3364,
+   "completion_tokens": 3550,
+   "wall_s": 85.60813689231873,
+   "thinking_chars": 12785
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2210,
+   "completion_tokens": 2209,
+   "wall_s": 52.80315113067627,
+   "thinking_chars": 8359
+  }
+ ],
+ "eval_wall_s": 210.74609303474426
+}

@@ -1,0 +1,64 @@
+# Evaluator-validity probes (protocol §7.3). SYNTHETIC defects applied to real baseline reports.
+# Written 2026-09-30 ~20:15 UTC, before any probe variant was scored. Each `old` must occur
+# exactly once (probes.replace_once enforces it). Expected directions are stated per defect.
+#   D1  facet removal        -> COMP down (named requirements), FACT/FMT roughly flat
+#   D2  irrelevant passage   -> pre-registered expectation "FACT-b down"; note that the
+#                               inserted sentence is itself verbatim-supported by the evidence
+#                               pool, so a pool-level support check may NOT fall (a known
+#                               limitation this probe is designed to expose)
+#   D2b attribution swap     -> FACT-b down if the checker verifies attribution
+#   D3  structure removal    -> FMT down, COMP/FACT roughly flat
+reports:
+  - run_id: q01-r02-20260930T201622
+    defects:
+      - name: D1_remove_cost
+        kind: D1
+        pattern: "\\bcosts?\\b|expens|afford"
+        affects: [R4, R5]
+      - name: D2_irrelevant_passage
+        kind: D2
+        old: "- Hybrid retrieval strategies (e.g., BM25 + dense) achieve superior retrieval precision compared to pure keyword or dense methods, though they still fall short of the ideal \"Oracle Context.\""
+        new: "- The MOST (Maynard Operation Sequence Technique) time standard method is a predetermined motion time system used in industry."
+        note: "replacement adapted from background segment 0.2 (off-topic, recorded in this run)"
+      - name: D2b_attribution_swap
+        kind: D2b
+        old: "- Mindscape-Aware RAG (MiA-RAG) introduces a novel cognitive modeling paradigm"
+        new: "- RAGPerf (the end-to-end RAG benchmarking framework) introduces a novel cognitive modeling paradigm"
+      - name: D3_strip_structure
+        kind: D3
+
+  - run_id: q01-r03-20260930T204051
+    defects:
+      - name: D1_remove_latency
+        kind: D1
+        pattern: "latenc|response time|sub-second"
+        affects: [R3, R5]
+      - name: D2_irrelevant_passage
+        kind: D2
+        old: "- Hierarchical chunking and bidirectional traversal (e.g., in TreeRAG) significantly improve semantic coherence and factual consistency in long-context document retrieval."
+        new: "- The meaning of PERFORMANCE is the execution of an action."
+        note: "verbatim sentence from segment 5.2 (Merriam-Webster), recorded in this run"
+      - name: D2b_attribution_swap
+        kind: D2b
+        old: "(e.g., in TreeRAG) significantly improve"
+        new: "(e.g., in LaRA) significantly improve"
+      - name: D3_strip_structure
+        kind: D3
+
+  - run_id: q02-r01-20260930T202824
+    defects:
+      - name: D1_remove_deployment
+        kind: D1
+        pattern: "deploy|VRAM|infrastructure|complexit"
+        affects: [R7]
+      - name: D2_irrelevant_passage
+        kind: D2
+        old: "The core performance advantage of EAGLE over Medusa lies in its optimized use of GPU compute resources."
+        new: "Large model online inference typically has two phases: prefill and decode."
+        note: "adapted from segment 2.0 (oh-bug.com), recorded in this run; the paragraph's Source line is kept"
+      - name: D2b_attribution_swap
+        kind: D2b
+        old: "- EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods"
+        new: "- Medusa delivers up to 6× faster response times and 3× higher throughput than baseline methods"
+      - name: D3_strip_structure
+        kind: D3

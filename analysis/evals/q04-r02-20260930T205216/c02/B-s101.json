@@ -1,0 +1,226 @@
+{
+ "run_id": "q04-r02-20260930T205216",
+ "kind": "replay",
+ "case_id": "c02",
+ "condition": "B",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "13af54c6c1b47b4bb8142f0d018ba79109688dc8a08374db36b7fe95d025da71",
+ "report_chars": 18291,
+ "report_words": 2328,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 10,
+  "urls_in_retrieved_evidence": 3,
+  "fabricated_urls": [
+   "wandb.ai/zaiinn440/hybridmoe/reports/inference-performance-mixtral-8x7b-vs-llama-3-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-inference-efficiency",
+   "research.google.com/pubs/pub47774.html",
+   "wandb.ai/zaiinn440/hybridmoe/reports/benchmark-performance-mixtral-8x7b-vs-llama-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-generalization",
+   "wandb.ai/zaiinn440/hybridmoe/reports/inference-performance-mixtral-8x7b-vs-llama-3-70b--vmlldzo3nzywnzaw/assets/123456789",
+   "wandb.ai/zaiinn446/hybridmoe/reports/inference-performance-mixtral-8x7b-vs-llama-3-70b--vmlldzo3nzywnzaw"
+  ],
+  "provenance_rate": 0.3
+ },
+ "numeric_items": 26,
+ "numeric_items_not_in_evidence": [
+  "60%",
+  "1.3",
+  "1.8",
+  "0.8",
+  "1.2",
+  "78%",
+  "80%",
+  "65%",
+  "48%",
+  "52%",
+  "12%",
+  "15%",
+  "19%",
+  "0.9",
+  "10%",
+  "7B",
+  "100B",
+  "1T"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Mixture-of-Experts (MoE) models activate only a fraction of their total parameters per token, reducing memory footprint and active compute usage by up to 60% compared to dense models.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "PARTIAL",
+    "quote": "FLOPs per Token (top-2 routing) 1.6× dense model",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "Per-Token Latency | 1.3–1.8 ms | 0.8–1.2 ms | MoE has higher per-token latency due to routing and expert selection.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "MMLU (Massive Multitask) | 78% | 80% | MoE matches dense model performance in general knowledge.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Mixtral 8x7B (an MoE model) and Llama 70B (a dense model).",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "MoE models offer significant advantages in memory efficiency, hardware scalability, and real-world robustness—particularly in domain-specific and edge-deployment contexts—despite a small increase in per-token latency.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.7857142857142857,
+  "score_lenient": 0.7857142857142857
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 7,
+  "claims": [
+   {
+    "report_quote": "MoE activates only ~19% of total parameters; reduces memory load significantly.",
+    "claim": "MoE models activate only about 19% of their total parameters per token, significantly reducing memory load.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Total Memory Footprint: ~47 billion parameters vs ~70 billion parameters",
+    "claim": "MoE models have a total memory footprint of approximately 47 billion parameters, compared to 70 billion for dense models.",
+    "label": "SUPPORTED",
+    "evidence_id": "E8",
+    "evidence_url": "https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b",
+    "quote": "Mixtral 8x7B has ~46.7 B total parameters, Llama 70B has ~ 70 B.",
+    "quote_verified": false,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Per-Token Latency: 1.3–1.8 ms vs 0.8–1.2 ms",
+    "claim": "MoE models exhibit per‑token latency of 1.3–1.8 ms, versus 0.8–1.2 ms for dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Throughput (per GPU): 1.2 tokens/sec vs 0.9 tokens/sec",
+    "claim": "On an 8×A100 cluster, MoE models achieve 1.2 tokens/sec per GPU, 30% higher than the 0.9 tokens/sec of dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Domain-Specific Accuracy (e.g., Medical): +12% improvement over dense model",
+    "claim": "In domain‑specific tasks such as medical reasoning, MoE models outperform dense models by 12% in accuracy.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Prompt Injection Resistance: 15% higher than dense models",
+    "claim": "MoE models exhibit 15% greater resistance to prompt‑injection attacks than dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "MoE achieves 30% higher throughput on 8x A100 systems.",
+    "claim": "MoE models achieve 30% higher throughput on 8‑GPU A100 systems due to reduced memory bottlenecks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 7,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4530,
+   "completion_tokens": 2286,
+   "wall_s": 67.09182095527649,
+   "thinking_chars": 7564
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4332,
+   "completion_tokens": 1252,
+   "wall_s": 41.61725997924805,
+   "thinking_chars": 2563
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2017,
+   "completion_tokens": 953,
+   "wall_s": 27.423362970352173,
+   "thinking_chars": 2798
+  }
+ ],
+ "eval_wall_s": 136.26824808120728
+}

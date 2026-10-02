@@ -1,0 +1,265 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q01-r02-20260930T201622",
+ "variant": "D1s_remove_cost",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "9178139260f58505f9a1514e508e5efc4f5a50498f0fc2b041cf79aebd86f34c",
+  "report_chars": 14350,
+  "report_words": 1763,
+  "fmt": {
+   "checks": {
+    "h1_title": true,
+    "key_citations_before_key_points": true,
+    "key_points_4_to_6_bullets": false,
+    "overview_section": true,
+    "detailed_analysis_section": true,
+    "references_with_urls": true,
+    "markdown_table": true,
+    "no_wrapping_code_fence": true
+   },
+   "score": 0.875
+  },
+  "fact_url": {
+   "report_urls": 6,
+   "urls_in_retrieved_evidence": 6,
+   "fabricated_urls": [],
+   "provenance_rate": 1.0
+  },
+  "numeric_items": 0,
+  "numeric_items_not_in_evidence": [],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "Hierarchical Retrieval organizes information into multiple levels of abstraction—e.g., topic → subtopic → paragraph—enabling focused and layered retrieval.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "PARTIAL",
+     "quote": "The following table summarizes comparative performance trends based on academic benchmarks and commercial guidance.",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "FULL",
+     "quote": "Introduced in 2025, MiA‑RAG is the first framework to model retrieval and generation as a unified conditioning process grounded in human cognitive architecture.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "FULL",
+     "quote": "The lack of direct, side‑by‑side performance data across architectures was explicitly noted, with the conclusion that most comparisons are inferential rather than empirical.",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "FULL",
+     "quote": "For Document Analysis (e.g., legal, financial reports) – Mindscape‑Aware RAG (MiA‑RAG) – Best supports long‑context reasoning and coherence; mimics human cognitive processes for interpreting complex, dispersed evidence.",
+     "quote_verified": true
+    }
+   ],
+   "score": 0.5625,
+   "score_lenient": 0.5625
+  },
+  "fact_claims": {
+   "claims_extracted": 10,
+   "claims_checked": 10,
+   "claims": [
+    {
+     "report_quote": "Hybrid retrieval strategies (e.g., BM25 + dense) achieve superior retrieval precision compared to pure keyword or dense methods, though they still fall short of the ideal 'Oracle Context'.",
+     "claim": "Hybrid BM25 + Dense Retrieval achieves superior retrieval precision compared to pure keyword or dense methods, but still falls short of the ideal Oracle Context.",
+     "label": "SUPPORTED",
+     "evidence_id": "E13",
+     "evidence_url": "https://arxiv.org/html/2511.04696v1",
+     "quote": "Hybrid BM25 consistently achieves the best results across all four datasets. RAG still underperforms compared to the Oracle Context.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "Mindscape-Aware RAG (MiA-RAG) introduces a novel cognitive modeling paradigm that mimics human reading patterns, enabling better coherence and reasoning over long, complex documents.",
+     "claim": "Mindscape-Aware RAG (MiA-RAG) introduces a cognitive modeling paradigm that mimics human reading patterns, improving coherence and reasoning over long, complex documents.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Context formatting—such as delimiters and structural markers—significantly impacts RAG accuracy and stability, even with identical semantic content, highlighting the importance of context normalization.",
+     "claim": "Context formatting with delimiters and structural markers significantly affects RAG accuracy and stability, even when semantic content is unchanged.",
+     "label": "SUPPORTED",
+     "evidence_id": "E4",
+     "evidence_url": "https://arxiv.org/abs/2510.13191",
+     "quote": "seemingly superficial choices, such as delimiters or structural markers in key-value extraction, can induce substantial shifts in accuracy and stability, even when semantic content is identical.",
+     "quote_verified": false,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "**Hybrid BM25 + Dense Retrieval** | High (best retrieval precision) | Medium to High | Robust to sparse queries; widely deployable; strong retrieval accuracy | Limited semantic depth; still underperforms Oracle Context; high memory overhead in long contexts",
+     "claim": "Hybrid BM25 + Dense Retrieval has high retrieval precision, medium to high latency, and strong retrieval accuracy, but its limitations include limited semantic depth, underperformance relative to Oracle Context, and high memory overhead in long contexts.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "**Mindscape-Aware RAG (MiA-RAG)** | High (coherence and reasoning) | High | Simulates human cognition; enables structured reasoning; excellent for complex document analysis | Computationally intensive; requires large-scale training; limited real-world deployment data",
+     "claim": "Mindscape-Aware RAG (MiA-RAG) delivers high coherence and reasoning, but is computationally intensive, requires large-scale training, and has limited real-world deployment data.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "**Hierarchical Retrieval** | Moderate to High | Medium | Supports multi-level abstraction; improves retrieval focus | Performance degrades with unstructured or inconsistent hierarchies",
+     "claim": "Hierarchical Retrieval supports multi-level abstraction and improves retrieval focus, yet its performance degrades when documents lack clear hierarchical structure or contain inconsistent metadata.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "**Memory-Augmented Models** | Moderate | High | Enables persistent context and dialogue continuity | Risk of memory drift; high resource consumption; potential hallucination",
+     "claim": "Memory-Augmented Models enable persistent context and dialogue continuity, but they risk memory drift, consume high resources, and may hallucinate.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "**Context-Aware Encoding** | Moderate to High | Medium | Aligns retrieval with human reading patterns; improves integration of dispersed facts | Performance sensitive to document structure; requires fine-tuning",
+     "claim": "Context-Aware Encoding aligns retrieval with human reading patterns and enhances integration of dispersed facts, but its performance is sensitive to document structure and requires fine-tuning.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "RAG systems still underperform relative to the Oracle Context—retrieved content is often fragmented and poorly integrated, and models struggle to reason over long, complex texts without explicit structural guidance.",
+     "claim": "RAG systems still underperform relative to the Oracle Context because retrieved content is fragmented, poorly integrated, and models struggle to reason over long, complex texts without explicit structural guidance.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Benchmarks like RAGPerf and EncouRAGe provide standardized evaluation tools, but direct comparative data across architectures remains limited.",
+     "claim": "Benchmarks such as RAGPerf and EncouRAGe provide standardized evaluation tools, but direct comparative data across architectures remains limited.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    }
+   ],
+   "supported": 1,
+   "contradicted": 0,
+   "unsupported": 9,
+   "score": 0.1
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3331,
+    "completion_tokens": 1943,
+    "wall_s": 47.463298082351685,
+    "thinking_chars": 7616
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 3027,
+    "completion_tokens": 2894,
+    "wall_s": 68.13079977035522,
+    "thinking_chars": 11025
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 2730,
+    "completion_tokens": 3960,
+    "wall_s": 91.63857984542847,
+    "thinking_chars": 18500
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 7,
+   "completeness": 8,
+   "coherence": 8,
+   "relevance": 9,
+   "citation_quality": 7,
+   "writing_quality": 8
+  },
+  "overall_score": 8,
+  "weighted_score": 7.8,
+  "strengths": [
+   "Comprehensive coverage of architectural innovations and use‑case mapping",
+   "Logical, well‑structured presentation with clear tables and sections",
+   "Balanced discussion that acknowledges limitations and future research needs"
+  ],
+  "weaknesses": [
+   "Limited direct empirical comparisons; many claims are inferential",
+   "Repetitive citation list and occasional informal phrasing",
+   "Sparse quantitative cost analysis and lack of real‑world deployment data"
+  ],
+  "suggestions": [
+   "Incorporate side‑by‑side benchmark results or synthetic experiments to substantiate performance claims",
+   "Add a dedicated cost‑vs‑performance subsection with concrete figures (e.g., GPU hours, memory usage, cloud pricing)",
+   "Streamline the citation section to avoid repetition and include a broader mix of peer‑reviewed journals and industry reports"
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 46
+}

@@ -1,0 +1,28 @@
+# A17: corrected facet removal (D1, strict). SYNTHETIC defects on the same three real
+# baseline reports. Same patterns and affected requirements as the registered D1 in
+# spec.yaml; strict mode also blanks table cells that mention the facet and drops facet
+# headings (not the title). Written before any strict variant was scored.
+reports:
+  - run_id: q01-r02-20260930T201622
+    defects:
+      - name: D1s_remove_cost
+        kind: D1
+        strict: true
+        pattern: "\\bcosts?\\b|expens|afford"
+        affects: [R4, R5]
+  - run_id: q01-r03-20260930T204051
+    defects:
+      - name: D1s_remove_latency
+        kind: D1
+        strict: true
+        pattern: "latenc|response time|sub-second"
+        affects: [R3, R5]
+  - run_id: q02-r01-20260930T202824
+    defects:
+      - name: D1s_remove_deployment
+        kind: D1
+        strict: true
+        # widened to R7's listed sub-facets (memory, serving-framework support, batching);
+        # the registered pattern left "10–15 GB" and "vLLM" in place. Removes 46% of the report.
+        pattern: "deploy|VRAM|infrastructure|complexit|memory|\\bGB\\b|vLLM|TensorRT|serving|batch"
+        affects: [R7]

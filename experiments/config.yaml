@@ -1,0 +1,55 @@
+# Pinned configuration for the Part 1 boundary diagnostic.
+# Copied verbatim into every run manifest. Changing any value requires a new
+# experiment_id and an entry in docs/part1_protocol.md §11 (Amendments).
+experiment_id: part1-boundary-v1
+
+deerflow:
+  repo: https://github.com/bytedance/deer-flow
+  branch: main-1.x
+  commit: 2ab28765803d4d9582aaa8f2f3355137d154e273
+  path: vendor/deer-flow-1x
+
+# Graph settings passed via RunnableConfig["configurable"] (pinned-code defaults
+# unless marked). No MCP servers.
+graph:
+  max_plan_iterations: 1
+  max_step_num: 3
+  max_search_results: 3
+  report_style: academic
+  enable_background_investigation: true
+  auto_accepted_plan: true
+  enable_clarification: false
+  locale: en-US
+  outer_recursion_limit: 100      # value used by src/workflow.py
+  # researcher ReAct recursion limit: DeerFlow default 25 (AGENT_RECURSION_LIMIT unset)
+
+tools:
+  search_api: duckduckgo          # keyless; DeerFlow SearchEngine.DUCKDUCKGO
+  crawler: jina                   # keyless Jina reader (DeerFlow default engine)
+
+model:
+  provider: ollama-openai-compatible
+  base_tag: qwen3:4b-instruct-2507-q4_K_M
+  served_tag: dfprobe-qwen3-4b-ctx40k   # derived tag: base + PARAMETER num_ctx
+  num_ctx: 40960
+  base_url: http://localhost:11434/v1
+  temperature: 0.7                # Qwen3-Instruct-2507 recommended
+  top_p: 0.8                      # Qwen3-Instruct-2507 recommended
+  seed: 7
+  max_tokens: 8192                # guard; finish_reason=length is logged as an error state
+  token_limit: 32000              # DeerFlow ContextManager limit, kept below num_ctx
+
+replay:
+  seeds: [101, 102, 103]
+
+judge:                            # P3-proxy v1 (not the benchmark judge)
+  name: P3-proxy-v1
+  provider: ollama-native
+  model: gpt-oss:20b
+  fallback_model: dfprobe-qwen3-4b-ctx40k   # used only if the primary cannot run; flagged self-judged
+  temperature: 0
+  seed: 1
+  num_ctx: 32768
+  think: medium                   # A9: 'low' skipped reasoning on some reports
+  structured_output: false        # A9: grammar-constrained 'format' suppressed reasoning (all-ABSENT labels)
+  max_claims: 10

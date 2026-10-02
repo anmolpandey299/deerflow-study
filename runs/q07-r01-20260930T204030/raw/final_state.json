@@ -1,0 +1,27 @@
+{
+ "messages": [
+  {
+   "type": "human",
+   "data": {
+    "content": "Which small open-weight language models (under 10B parameters) released in 2025 are strongest, and how do they compare in reasoning benchmarks, context length, and licensing?",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "human",
+    "name": null,
+    "id": "d7506933-8e1d-48e7-893e-47627338d36c"
+   }
+  }
+ ],
+ "locale": "en-US",
+ "research_topic": "small open-weight language models under 10B parameters released in 2025, strongest in reasoning benchmarks, context length, and licensing",
+ "clarified_research_topic": "small open-weight language models under 10B parameters released in 2025, strongest in reasoning benchmarks, context length, and licensing",
+ "resources": [],
+ "auto_accepted_plan": true,
+ "enable_background_investigation": true,
+ "citations": [],
+ "enable_clarification": false,
+ "clarification_rounds": 0,
+ "clarification_history": [],
+ "is_clarification_complete": true,
+ "goto": "background_investigator"
+}

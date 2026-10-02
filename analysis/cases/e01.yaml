@@ -1,0 +1,9 @@
+case_id: e01
+kind: E
+label: EXPLORATORY (amendments A7/A8)
+run_id: q01-r02-20260930T201622
+target_step: 2
+control_step: 1
+rationale: analyst (no tools) observation is the source of the 15-cell ratings table
+  copied into the report
+primary_metric: rating_cells

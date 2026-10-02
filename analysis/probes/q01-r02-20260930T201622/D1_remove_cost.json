@@ -1,0 +1,247 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q01-r02-20260930T201622",
+ "variant": "D1_remove_cost",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "d3330933497e0872c53bb0ed20b100652a29a3b43d7add6609ab790b2970f995",
+  "report_chars": 14204,
+  "report_words": 1738,
+  "fmt": {
+   "checks": {
+    "h1_title": true,
+    "key_citations_before_key_points": true,
+    "key_points_4_to_6_bullets": false,
+    "overview_section": true,
+    "detailed_analysis_section": true,
+    "references_with_urls": true,
+    "markdown_table": true,
+    "no_wrapping_code_fence": true
+   },
+   "score": 0.875
+  },
+  "fact_url": {
+   "report_urls": 6,
+   "urls_in_retrieved_evidence": 6,
+   "fabricated_urls": [],
+   "provenance_rate": 1.0
+  },
+  "numeric_items": 0,
+  "numeric_items_not_in_evidence": [],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "Hierarchical retrieval organizes information into multiple levels of abstraction—e.g., topic → subtopic → paragraph—enabling focused and layered retrieval.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "FULL",
+     "quote": "The following table summarizes comparative performance trends based on academic benchmarks and commercial guidance.",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "FULL",
+     "quote": "MiA‑RAG introduced in 2025, MiA‑RAG is the first framework to model retrieval and generation as a unified conditioning process grounded in human cognitive architecture.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "PARTIAL",
+     "quote": "The absence of direct, side‑by‑side performance data across architectures was explicitly noted, with the conclusion that most comparisons are inferential rather than empirical.",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "FULL",
+     "quote": "For Document Analysis (e.g., legal, financial reports) | Mindscape‑Aware RAG (MiA‑RAG) | Best supports long‑context reasoning and coherence; mimics human cognitive processes for interpreting complex, dispersed evidence.",
+     "quote_verified": true
+    }
+   ],
+   "score": 0.5625,
+   "score_lenient": 0.5625
+  },
+  "fact_claims": {
+   "claims_extracted": 10,
+   "claims_checked": 8,
+   "claims": [
+    {
+     "report_quote": "Context formatting—such as delimiters and structural markers—significantly impacts RAG accuracy and stability, even with identical semantic content, highlighting the importance of context normalization.",
+     "claim": "Context formatting with delimiters and structural markers significantly improves RAG accuracy and stability even when the semantic content is unchanged.",
+     "label": "SUPPORTED",
+     "evidence_id": "E7",
+     "evidence_url": "https://arxiv.org/abs/2510.13191",
+     "quote": "seemingly superficial choices, such as delimiters or structural markers in key-value extraction, can induce substantial shifts in accuracy and stability, even when semantic content is identical.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "Hybrid retrieval strategies (e.g., BM25 + dense) achieve superior retrieval precision compared to pure keyword or dense methods, though they still fall short of the ideal \"Oracle Context\".",
+     "claim": "Hybrid BM25 + dense retrieval strategies provide higher retrieval precision than pure keyword or dense methods, yet they do not reach the performance of an ideal Oracle Context.",
+     "label": "SUPPORTED",
+     "evidence_id": "E13",
+     "evidence_url": "https://arxiv.org/html/2511.04696v1",
+     "quote": "Hybrid BM25 consistently achieves the best results across all four datasets. Our results show that RAG still underperforms compared to the Oracle Context.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "| **Hybrid BM25 + Dense Retrieval** | High (best retrieval precision) | Medium to High | Robust to sparse queries; widely deployable; strong retrieval accuracy | Limited semantic depth; still underperforms Oracle Context; high memory overhead in long contexts |",
+     "claim": "Hybrid BM25 + Dense Retrieval achieves high retrieval precision, medium to high latency, is robust to sparse queries, but suffers from limited semantic depth, underperformance relative to Oracle Context, and high memory overhead in long contexts.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Mindscape-Aware RAG (MiA-RAG) introduces a novel cognitive modeling paradigm that mimics human reading patterns, enabling better coherence and reasoning over long, complex documents.",
+     "claim": "MiA-RAG uses a cognitive modeling paradigm that mimics human reading patterns to improve coherence and reasoning in long, complex documents.",
+     "label": "SUPPORTED",
+     "evidence_id": "E8",
+     "evidence_url": "https://arxiv.org/abs/2512.17220",
+     "quote": "MiA-RAG uses a cognitive modeling paradigm that mimics human reading patterns to improve coherence and reasoning in long, complex documents.",
+     "quote_verified": false,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "MiA-RAG demonstrates superior performance on tasks requiring long-context reasoning, such as legal document analysis or scientific literature synthesis.",
+     "claim": "MiA-RAG outperforms other architectures on long-context reasoning tasks, including legal document analysis and scientific literature synthesis.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "The persistent gap in long-context reasoning: RAG systems still underperform relative to the Oracle Context.",
+     "claim": "RAG systems continue to underperform compared to an Oracle Context in long-context reasoning scenarios.",
+     "label": "SUPPORTED",
+     "evidence_id": "E13",
+     "evidence_url": "https://arxiv.org/html/2511.04696v1",
+     "quote": "RAG still underperforms compared to the Oracle Context.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "RAGPerf and EncouRAGe provide standardized evaluation tools, but direct comparative data across architectures remains limited.",
+     "claim": "While RAGPerf and EncouRAGe offer standardized evaluation frameworks, there is a lack of direct comparative performance data across different RAG architectures.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Context-Aware Encoding aligns retrieval with human reading patterns; improves integration of dispersed facts.",
+     "claim": "Context-aware encoding aligns retrieval processes with human reading patterns, thereby improving the integration of dispersed facts.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    }
+   ],
+   "supported": 3,
+   "contradicted": 0,
+   "unsupported": 5,
+   "score": 0.375
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3299,
+    "completion_tokens": 2288,
+    "wall_s": 67.14364910125732,
+    "thinking_chars": 8777
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 2995,
+    "completion_tokens": 2163,
+    "wall_s": 61.99748110771179,
+    "thinking_chars": 7814
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 2628,
+    "completion_tokens": 2531,
+    "wall_s": 70.57324409484863,
+    "thinking_chars": 10078
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 7,
+   "completeness": 8,
+   "coherence": 9,
+   "relevance": 9,
+   "citation_quality": 7,
+   "writing_quality": 8
+  },
+  "overall_score": 8,
+  "weighted_score": 8.0,
+  "strengths": [
+   "Comprehensive coverage of architectural innovations and use‑case recommendations",
+   "Logical, well‑structured layout with clear tables and bullet points",
+   "Forward‑looking discussion of future research directions and practical implications"
+  ],
+  "weaknesses": [
+   "Limited quantitative evidence and direct citation linking claims to sources",
+   "Repetitive content (e.g., repeated citation list) that could be streamlined",
+   "Sparse discussion of cost metrics and real‑world deployment economics"
+  ],
+  "suggestions": [
+   "Integrate specific benchmark numbers (e.g., BLEU, ROUGE, latency in ms) and reference the exact studies that report them",
+   "Add inline citations or footnotes to tie each claim to a particular source",
+   "Condense repeated sections (e.g., citation list) and focus on unique content",
+   "Include a dedicated cost analysis table comparing compute, storage, and inference expenses for each architecture",
+   "Broaden the source pool to include industry whitepapers or commercial case studies for practical validation"
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 42
+}

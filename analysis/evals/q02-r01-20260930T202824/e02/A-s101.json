@@ -1,0 +1,266 @@
+{
+ "run_id": "q02-r01-20260930T202824",
+ "kind": "replay",
+ "case_id": "e02",
+ "condition": "A",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "d69ac17b7eaa76a3af60ef61980964913a194ebab866d0d22d81012b80097519",
+ "report_chars": 13820,
+ "report_words": 1748,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 4,
+  "urls_in_retrieved_evidence": 3,
+  "fabricated_urls": [
+   "appscale.blog/en/images/latency-comparison-eagle-medusa-draft.png"
+  ],
+  "provenance_rate": 0.75
+ },
+ "numeric_items": 33,
+ "numeric_items_not_in_evidence": [
+  "30%",
+  "95%",
+  "12",
+  "15%",
+  "0.38",
+  "0.45",
+  "82%",
+  "85%",
+  "0.42",
+  "0.50",
+  "88%",
+  "91%",
+  "10%",
+  "0.44",
+  "0.54",
+  "93%",
+  "200",
+  "2B",
+  "5B",
+  "10B",
+  "512",
+  "1024",
+  "4096",
+  "10",
+  "15",
+  "4090",
+  "48",
+  "100"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Speculative decoding represents a paradigm shift in large language model (LLM) inference by enabling parallel token generation through the use of draft models and selective verification.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "Draft-Model Sampling provides moderate speedup (2–3x) with low output fidelity due to minimal validation, making it suitable only for early-stage or edge deployments.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "Medusa achieves 3–5x latency reduction via lookahead drafts and n-gram verification, offering improved coherence but limited by memory access and GPU idle time.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "EAGLE delivers up to 6x faster response times and 3× throughput improvement through optimized GPU memory usage and dynamic verification, with error rates reduced by up to 30% and human-rated coherence exceeding 95%.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "PARTIAL",
+    "quote": "The methods achieve a 2–6x reduction in response time compared to baseline autoregressive decoding, though the actual speedup depends on workload characteristics and hardware configuration.",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "PARTIAL",
+    "quote": "Draft-Model Sampling suffers from the highest hallucination rate due to minimal validation and reliance on simple rollback logic.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "Draft-Model Sampling offers the simplest deployment path with minimal configuration and low memory footprint. It is ideal for prototyping, edge devices, or low-traffic applications where speed is secondary to accuracy.",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "PARTIAL",
+    "quote": "The methods achieve a 2–6x reduction in response time compared to baseline autoregressive decoding, though the actual speedup depends on workload characteristics and hardware configuration.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.8125,
+  "score_lenient": 0.8125
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "Draft-Model Sampling provides moderate speedup (2–3x) with low output fidelity due to minimal validation, making it suitable only for early-stage or edge deployments.",
+    "claim": "Draft‑Model Sampling achieves a 2–3× speedup but suffers from low output fidelity because it uses minimal validation, making it best suited for early‑stage or edge deployments.",
+    "label": "CONTRADICTED",
+    "evidence_id": "E2",
+    "evidence_url": "https://www.morphllm.com/speculative-decoding",
+    "quote": "Speculative decoding makes LLM inference 2-3x faster with identical output.",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Medusa achieves 3–5x latency reduction via lookahead drafts and n-gram verification, offering improved coherence but limited by memory access and GPU idle time.",
+    "claim": "Medusa reduces latency by 3–5× through lookahead drafts and n‑gram verification, improving coherence while being constrained by memory access and GPU idle time.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "EAGLE delivers up to 6x faster response times and 3× throughput improvement through optimized GPU memory usage and dynamic verification, with error rates reduced by up to 30% and human-rated coherence exceeding 95%.",
+    "claim": "EAGLE achieves up to 6× faster response times and a 3× throughput increase, while cutting error rates by up to 30% and achieving over 95% human‑rated coherence.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Output quality degrades in Draft-Model Sampling (12–15% hallucination rate), while EAGLE maintains near-baseline accuracy and consistency in both factual and logical aspects.",
+    "claim": "Draft‑Model Sampling has a 12–15% hallucination rate, whereas EAGLE maintains near‑baseline factual and logical accuracy.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Draft-Model Sampling | 0.38 | 0.45 | 82% | 85% | 12–15% |",
+    "claim": "Draft‑Model Sampling scores 0.38 BLEU‑4, 0.45 ROUGE‑L, 82% factual accuracy, 85% coherence, and a 12–15% hallucination rate.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Medusa | 0.42 | 0.50 | 88% | 91% | 8–10% |",
+    "claim": "Medusa scores 0.42 BLEU‑4, 0.50 ROUGE‑L, 88% factual accuracy, 91% coherence, and an 8–10% hallucination rate.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| EAGLE | 0.44 | 0.54 | 93% | 95% | ≤5% |",
+    "claim": "EAGLE scores 0.44 BLEU‑4, 0.54 ROUGE‑L, 93% factual accuracy, 95% coherence, and a hallucination rate of 5% or less.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Draft-Model Sampling | 2–3x | Moderate | Basic draft generation and simple acceptance/rollback |",
+    "claim": "Draft‑Model Sampling achieves a 2–3× latency reduction with moderate throughput, using basic draft generation and simple acceptance/rollback.",
+    "label": "SUPPORTED",
+    "evidence_id": "E2",
+    "evidence_url": "https://www.morphllm.com/speculative-decoding",
+    "quote": "Speculative decoding makes LLM inference 2-3x faster with identical output.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "| Medusa | 3–5x | High | Lookahead draft with n-gram-based verification |",
+    "claim": "Medusa achieves a 3–5× latency reduction with high throughput, employing lookahead drafts and n‑gram‑based verification.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| EAGLE | 2–6x | 3× baseline | Advanced draft with dynamic K and GPU-optimized verification |",
+    "claim": "EAGLE achieves a 2–6× latency reduction and a 3× throughput improvement over baseline, using advanced drafts with dynamic K and GPU‑optimized verification.",
+    "label": "SUPPORTED",
+    "evidence_id": "E4",
+    "evidence_url": "https://dreaming.press/posts/2026-06-22-speculative-decoding-eagle-vs-medusa.html",
+    "quote": "Speculative decoding makes a single LLM response 2–6x faster without changing a token of the output.",
+    "quote_verified": true,
+    "counted_supported": true
+   }
+  ],
+  "supported": 2,
+  "contradicted": 1,
+  "unsupported": 8,
+  "score": 0.2
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3340,
+   "completion_tokens": 3467,
+   "wall_s": 83.39241290092468,
+   "thinking_chars": 11782
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3110,
+   "completion_tokens": 2449,
+   "wall_s": 60.8245849609375,
+   "thinking_chars": 6808
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2264,
+   "completion_tokens": 2189,
+   "wall_s": 52.39834499359131,
+   "thinking_chars": 7813
+  }
+ ],
+ "eval_wall_s": 196.68415999412537
+}

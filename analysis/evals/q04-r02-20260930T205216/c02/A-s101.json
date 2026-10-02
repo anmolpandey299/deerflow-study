@@ -1,0 +1,210 @@
+{
+ "run_id": "q04-r02-20260930T205216",
+ "kind": "replay",
+ "case_id": "c02",
+ "condition": "A",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "d2309844586e05f8b33cebfb8df047eb738065ac69ab3e8e5af96edb692b188b",
+ "report_chars": 18305,
+ "report_words": 2393,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 8,
+  "urls_in_retrieved_evidence": 3,
+  "fabricated_urls": [
+   "wandb.ai/zaiinn440/hybridmoe/reports/inference-performance-mixtral-8x7b-vs-llama-3-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-inference-efficiency",
+   "research.google.com/pubs/pub47774.html",
+   "wandb.ai/zaiinn440/hybridmoe/reports/benchmark-performance-mixtral-8x7b-vs-llama-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-generalization"
+  ],
+  "provenance_rate": 0.375
+ },
+ "numeric_items": 37,
+ "numeric_items_not_in_evidence": [
+  "60%",
+  "1.3",
+  "1.8",
+  "0.8",
+  "1.2",
+  "78%",
+  "65%",
+  "19%",
+  "1.3×",
+  "7B",
+  "40%",
+  "100%",
+  "15",
+  "25%",
+  "0.9",
+  "80%",
+  "5%",
+  "48%",
+  "52%",
+  "12%",
+  "10%",
+  "15%",
+  "10",
+  "11"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Mixture-of-Experts (MoE) models activate only a fraction of their total parameters per token, reducing memory footprint and active compute usage by up to 60% compared to dense models.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "Despite higher total FLOPs due to routing overhead, the effective compute cost per token—defined as active FLOPs—is significantly lower.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "MoE models reduce memory bandwidth consumption by up to 60% compared to dense models.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "Benchmark Performance on Standard Evaluation Sets | Mixtral 8x7B (MoE) | Llama 70B (Dense) | Gap | 78% | 80% | +2%.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Mixtral 8x7B (MoE) | Llama 70B (Dense).",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "PARTIAL",
+    "quote": "MoE models reduce training cost by activating only a subset of parameters per token, thereby minimizing memory bandwidth and active compute load.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "MoE models are particularly effective in low-resource environments due to reduced memory and compute demands.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.9285714285714286,
+  "score_lenient": 0.9285714285714286
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 5,
+  "claims": [
+   {
+    "report_quote": "Mixture-of-Experts (MoE) models activate only a fraction of their total parameters per token, reducing memory footprint and active compute usage by up to 60% compared to dense models.",
+    "claim": "MoE models reduce memory footprint and active compute usage by up to 60% compared to dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Inference latency in MoE models is slightly higher (1.3–1.8 ms/token) than in dense models (0.8–1.2 ms/token), but overall throughput is up to 30% higher due to reduced memory bottlenecks and better parallelization.",
+    "claim": "MoE models have slightly higher inference latency (1.3–1.8 ms/token vs 0.8–1.2 ms/token) but achieve up to 30% higher throughput than dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "MoE models achieve strong performance on standard benchmarks (e.g., 78% on MMLU, 65% on GSM8K), with notable advantages in domain-specific tasks and robustness against adversarial inputs.",
+    "claim": "MoE models score 78% on MMLU and 65% on GSM8K, outperforming dense models in domain‑specific tasks and robustness.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "The data indicates that Mixtral 8x7B activates only about 13 billion parameters per token—approximately 19% of its total parameter space—while Llama 70B activates all 70 billion parameters.",
+    "claim": "Mixtral 8x7B activates only about 13 billion parameters per token (≈19% of its 47 billion total), whereas Llama 70B activates all 70 billion parameters.",
+    "label": "SUPPORTED",
+    "evidence_id": "E10",
+    "evidence_url": "https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b",
+    "quote": "Mixtral 8x7B activates ~ 13B parameters per token while Llama 70B activates 70B.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "MoE models reduce memory bandwidth usage by 60% compared to dense models.",
+    "claim": "MoE models consume 60% less memory bandwidth than dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 1,
+  "contradicted": 0,
+  "unsupported": 4,
+  "score": 0.2
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4658,
+   "completion_tokens": 2362,
+   "wall_s": 69.59555792808533,
+   "thinking_chars": 7952
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4460,
+   "completion_tokens": 3087,
+   "wall_s": 95.6768410205841,
+   "thinking_chars": 8820
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 1980,
+   "completion_tokens": 1864,
+   "wall_s": 50.682703733444214,
+   "thinking_chars": 7400
+  }
+ ],
+ "eval_wall_s": 216.09077405929565
+}

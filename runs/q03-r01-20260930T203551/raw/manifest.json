@@ -1,0 +1,210 @@
+{
+ "manifest_version": 1,
+ "experiment_id": "part1-boundary-v1",
+ "run_id": "q03-r01-20260930T203551",
+ "query_id": "q03",
+ "query_text": "What are the main approaches to KV-cache compression for long-context LLM inference, and how do they trade off memory savings, accuracy, and throughput?",
+ "status": "completed",
+ "error": null,
+ "started_utc": "2026-09-30T19:35:51.838972+00:00",
+ "wall_s": 254.4502718448639,
+ "frozen_prompt_time": "Wed Sep 30 2026 20:35:51 ",
+ "retrieval_snapshot_id": "edf59a6cb4855257b13cbf45c58b31762017829cfdf487199968dff84b7e8f30",
+ "search_provider": "duckduckgo",
+ "crawler": "jina",
+ "summary": {
+  "llm_by_role": {
+   "coordinator": {
+    "calls": 1.0,
+    "prompt_tokens": 1631.0,
+    "completion_tokens": 54.0,
+    "model_wall_s": 5.010030746459961,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 1631
+   },
+   "planner": {
+    "calls": 1.0,
+    "prompt_tokens": 3484.0,
+    "completion_tokens": 600.0,
+    "model_wall_s": 29.624472856521606,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 3484
+   },
+   "researcher": {
+    "calls": 5.0,
+    "prompt_tokens": 16847.0,
+    "completion_tokens": 196.0,
+    "model_wall_s": 30.770662307739258,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 5872
+   },
+   "analyst": {
+    "calls": 1.0,
+    "prompt_tokens": 920.0,
+    "completion_tokens": 2166.0,
+    "model_wall_s": 61.09751224517822,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 920
+   },
+   "reporter": {
+    "calls": 1.0,
+    "prompt_tokens": 4345.0,
+    "completion_tokens": 3403.0,
+    "model_wall_s": 118.96945524215698,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 4345
+   }
+  },
+  "tools_by_name": {
+   "web_search": {
+    "calls": 4.0,
+    "errors": 2.0,
+    "wall_s": 6.106862545013428
+   },
+   "crawl_tool": {
+    "calls": 2.0,
+    "errors": 0.0,
+    "wall_s": 2.7380030155181885
+   }
+  },
+  "llm_calls": 9,
+  "tool_calls": 6,
+  "prompt_tokens": 27227,
+  "completion_tokens": 6419,
+  "peak_context_tokens": 7748,
+  "near_ctx_limit": false
+ },
+ "files_sha256": {
+  "crawl_fulltext.jsonl": "9fbfcce2cf56ea9d1f9ca40fad24d1c631e8b790b0b7847e3864b7482c14d006",
+  "deerflow.log": "80366b7ddcfba7f9089c6c87de4d1f9d02acc53545f59df67e21b358fc31f1a6",
+  "final_state.json": "f671abad10fb184f7dd26d02d04cfb5dec4d3bd44150728b85d7c4939ae04318",
+  "llm_calls.jsonl": "07e1fbab34b617add726b3032907539169a8ba9b7470c8b771b071f2a3133ccc",
+  "report.md": "defc6f7fe80c667afbee8f94fb1a24c29016b8623ce0a10b5de25d792f69ca90",
+  "state_snapshots.jsonl": "c36621a6d7ee038ec5303d4569ebc16f6a51a1103da48988ee123b95ca5d659e",
+  "tool_calls.jsonl": "edf59a6cb4855257b13cbf45c58b31762017829cfdf487199968dff84b7e8f30"
+ },
+ "deerflow": {
+  "repo": "https://github.com/bytedance/deer-flow",
+  "branch": "main-1.x",
+  "commit": "2ab28765803d4d9582aaa8f2f3355137d154e273",
+  "git_status_porcelain": "",
+  "prompt_sha256": {
+   "coordinator": "6ba6063f0adeea0d026475516530d009ab9b2e93dd2b2f156e41410436eab037",
+   "planner": "8d151855e52ea77c6e223af652453b2eb08ff3796b49d176d0ca1b7aa07c5d2d",
+   "researcher": "4562bbc3f36e984aff6c6743ef9b7c892308afc52d83f732a66018716b2faddf",
+   "analyst": "e57e9dd9a5bbd49e5eb3a3800fb8ecfa4b78e0cc90465f31f5c83818068ca9c8",
+   "coder": "a558d02d42d380db1c9e701e0279e0c1022713116fc3ef5303623dd36e08fa9c",
+   "reporter": "7495d7a947c1863f44bb4c98c2442391bb85c979e527014ca939220eeaf2313d",
+   "recursion_fallback": "1c1b0f86d55adf6cd3e0addd45f94fe70d9c6bb1e970cb789a338b00a114b1e9"
+  },
+  "graph_sha256": {
+   "builder.py": "b5410dff160ebfd0c95ac1b4085e085025010d009f4922d77010049f1ca6a74e",
+   "nodes.py": "21f3383b1b04621625b0d9cf48ae902dafe2c47e70ea5b5d947df0a1deea7f44"
+  }
+ },
+ "config": {
+  "experiment_id": "part1-boundary-v1",
+  "deerflow": {
+   "repo": "https://github.com/bytedance/deer-flow",
+   "branch": "main-1.x",
+   "commit": "2ab28765803d4d9582aaa8f2f3355137d154e273",
+   "path": "vendor/deer-flow-1x"
+  },
+  "graph": {
+   "max_plan_iterations": 1,
+   "max_step_num": 3,
+   "max_search_results": 3,
+   "report_style": "academic",
+   "enable_background_investigation": true,
+   "auto_accepted_plan": true,
+   "enable_clarification": false,
+   "locale": "en-US",
+   "outer_recursion_limit": 100
+  },
+  "tools": {
+   "search_api": "duckduckgo",
+   "crawler": "jina"
+  },
+  "model": {
+   "provider": "ollama-openai-compatible",
+   "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+   "served_tag": "dfprobe-qwen3-4b-ctx40k",
+   "num_ctx": 40960,
+   "base_url": "http://localhost:11434/v1",
+   "temperature": 0.7,
+   "top_p": 0.8,
+   "seed": 7,
+   "max_tokens": 8192,
+   "token_limit": 32000
+  },
+  "replay": {
+   "seeds": [
+    101,
+    102,
+    103
+   ]
+  },
+  "judge": {
+   "name": "P3-proxy-v1",
+   "provider": "ollama-native",
+   "model": "gpt-oss:20b",
+   "fallback_model": "dfprobe-qwen3-4b-ctx40k",
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768,
+   "think": "low",
+   "max_claims": 10
+  }
+ },
+ "deerflow_conf_yaml": "BASIC_MODEL:\n  api_key: ollama\n  base_url: http://localhost:11434/v1\n  max_tokens: 8192\n  model: dfprobe-qwen3-4b-ctx40k\n  seed: 7\n  temperature: 0.7\n  token_limit: 32000\n  top_p: 0.8\n",
+ "model": {
+  "ollama_version": "0.14.2",
+  "tag": "dfprobe-qwen3-4b-ctx40k",
+  "digest": "cabd5246e16ccc06c30c0b5a20408a6b3f4b67b6789efecf8687794ffe9f4bcc",
+  "parameters": "num_ctx                        40960\nnum_predict                    8192\nrepeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+  "details": {
+   "parent_model": "qwen3:4b-instruct-2507-q4_K_M",
+   "format": "gguf",
+   "family": "qwen3",
+   "families": [
+    "qwen3"
+   ],
+   "parameter_size": "4.0B",
+   "quantization_level": "Q4_K_M"
+  },
+  "modelfile_sha256": "46d09bdb8d08be4a33bef19d719ae9b8fedad5be7f98e009514d96fd916e862b"
+ },
+ "packages": {
+  "langchain": "1.1.0",
+  "langchain-core": "1.2.5",
+  "langchain-openai": "1.1.0",
+  "langchain-community": "0.4.1",
+  "langgraph": "1.0.4",
+  "openai": "2.8.1",
+  "ddgs": "9.9.1",
+  "duckduckgo-search": "8.0.0",
+  "httpx": "0.28.1"
+ },
+ "python": "3.13.2",
+ "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "boundary.py": "c0c5760e6d4213a2477baf702d87e972a8d07baa0dad11b662a1c3431f468512",
+  "candidates.py": "a5085e6c18548a1b31bd174614fd7b77a18009b156d12fddf9ebc95dde7b4b1d",
+  "cassette.py": "8962c6343094289e5c832adaeaaa6d51302c7e58383531273bd438e603b65c68",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "677895dfbd6eea80f4f505fab8e49d0a251520ced4f49ba0b00c2528f012ae71",
+  "evidence.py": "bd1f62c52d7739e89d7f2bd10e454319f3ec4bdd736acdaf013482f4c9dd6320",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_reporter.py": "54a7ea8a753e6de6c02971f60d5f4170c91c503c8d3c3790f6a8191a634a3b13",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c"
+ }
+}

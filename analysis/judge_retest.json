@@ -1,0 +1,86 @@
+[
+ {
+  "run_id": "q01-r02-20260930T201622",
+  "comparable": true,
+  "fmt": [
+   1.0,
+   1.0
+  ],
+  "comp": [
+   0.625,
+   0.625
+  ],
+  "comp_labels_agree": 8,
+  "comp_labels_n": 8,
+  "comp_label_changes": {},
+  "fact_b": [
+   0.3333333333333333,
+   0.3333333333333333
+  ],
+  "fact_b_counts": [
+   "2/6",
+   "2/6"
+  ],
+  "checked_claims_in_common": 6,
+  "checked_claims": [
+   6,
+   6
+  ]
+ },
+ {
+  "run_id": "q01-r03-20260930T204051",
+  "comparable": true,
+  "fmt": [
+   1.0,
+   1.0
+  ],
+  "comp": [
+   0.6875,
+   0.6875
+  ],
+  "comp_labels_agree": 8,
+  "comp_labels_n": 8,
+  "comp_label_changes": {},
+  "fact_b": [
+   0.5,
+   0.5
+  ],
+  "fact_b_counts": [
+   "5/10",
+   "5/10"
+  ],
+  "checked_claims_in_common": 10,
+  "checked_claims": [
+   10,
+   10
+  ]
+ },
+ {
+  "run_id": "q02-r01-20260930T202824",
+  "comparable": true,
+  "fmt": [
+   1.0,
+   1.0
+  ],
+  "comp": [
+   0.75,
+   0.75
+  ],
+  "comp_labels_agree": 8,
+  "comp_labels_n": 8,
+  "comp_label_changes": {},
+  "fact_b": [
+   0.0,
+   0.0
+  ],
+  "fact_b_counts": [
+   "0/10",
+   "0/10"
+  ],
+  "checked_claims_in_common": 10,
+  "checked_claims": [
+   10,
+   10
+  ]
+ }
+]

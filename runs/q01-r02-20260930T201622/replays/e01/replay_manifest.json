@@ -1,0 +1,53 @@
+{
+ "case_file": "analysis/cases/e01.yaml",
+ "case": {
+  "case_id": "e01",
+  "kind": "E",
+  "label": "EXPLORATORY (amendments A7/A8)",
+  "run_id": "q01-r02-20260930T201622",
+  "target_step": 2,
+  "control_step": 1,
+  "rationale": "analyst (no tools) observation is the source of the 15-cell ratings table copied into the report",
+  "primary_metric": "rating_cells"
+ },
+ "base_request_hash": "d68b5f61df3331e0a89332538b189289888fa79e21464326ec7ffae56f5592fe",
+ "declared_changes": {
+  "A": {},
+  "D": {
+   "4": "Below are some observations for the research task:\n\n[No source-backed findings were produced for this step.]"
+  },
+  "G": {
+   "3": "Below are some observations for the research task:\n\n[No source-backed findings were produced for this step.]"
+  }
+ },
+ "model": {
+  "provider": "ollama-openai-compatible",
+  "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "served_tag": "dfprobe-qwen3-4b-ctx40k",
+  "num_ctx": 40960,
+  "base_url": "http://localhost:11434/v1",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "seed": 7,
+  "max_tokens": 8192,
+  "token_limit": 32000
+ },
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "audit.py": "86296de277670f6610f46d0926b3cc50733400c6b0c9a6d7dda16272fafed5b9",
+  "boundary.py": "5e1a152004afb01193044c55d47346806b793f6cac81b2738c65497eca6d82e8",
+  "candidates.py": "3cbd9c83703a757823b7f87867ef84e6c5d7b57da3eaea65c5d7a34225fa2fad",
+  "cassette.py": "639e60beeb17e764e061e8304e995bb4d8a56e2e5747080bb2a367f34fbcb52f",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "734b58b68e78cb424c7d47f6f71826de53d51ad8942e2b2b77c74da03bceb8d3",
+  "evidence.py": "71232c176506278dbeb0cb5e44e3218765290437da7064b76f03a59737aa6b25",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_analysis.py": "020db3df9641dbf536d7caafe430b400ad0b0bf0b9550c84a2a3a50162211526",
+  "replay_reporter.py": "e02458ae1e9eb6429d4fe17f412877f7929ec282b08476c772294b6a7f09b4d3",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c",
+  "tables.py": "cde52c9462406f470fe8683ed06aace573a028142a53874c12e7dc5d1dbafca5"
+ }
+}

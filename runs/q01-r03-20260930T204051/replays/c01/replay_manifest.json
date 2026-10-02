@@ -1,0 +1,88 @@
+{
+ "case_file": "analysis/cases/c01.yaml",
+ "case": {
+  "case_id": "c01",
+  "kind": "H1",
+  "run_id": "q01-r03-20260930T204051",
+  "query_id": "q01",
+  "step": 0,
+  "repair": {
+   "seg_id": "1.2",
+   "tool_seq": 1,
+   "tool": "web_search",
+   "title": "LaRA: Benchmarking Retrieval - Augmented Generation and...",
+   "url": "https://pure.psu.edu/en/publications/lara-benchmarking-retrieval-augmented-generation-and-long-context/",
+   "passage": "Existing RAG vs. long - context (LC) LLM comparisons are often inconclusive due to benchmark limitations. We introduce LaRA, a novel benchmark with 2326 test cases across four QA tasks and three long context types, for rigorous evaluation.",
+   "requirement_ids": [
+    "R7",
+    "R1"
+   ],
+   "omission_type": "omitted (step-0 summary keeps only the bare reference; content absent)",
+   "usage_rule": "a body sentence (not a citation-list line) mentions LaRA together with 'inconclusive', '2326' or 'benchmark limitation'",
+   "usage_detect": {
+    "anchor": "LaRA",
+    "any_of": [
+     "inconclusive",
+     "2326",
+     "benchmark limitation"
+    ]
+   }
+  },
+  "control": {
+   "seg_id": "1.0",
+   "tool_seq": 1,
+   "tool": "web_search",
+   "title": "Retrieval - augmented generation - Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+   "passage": "Retrieval - augmented generation is a technique that enables large language models to retrieve and incorporate new information from external data sources. With RAG, LLMs first refer to a specified set of documents, then respond to user queries.",
+   "rationale": "real segment from this run; generic RAG definition meets no q01 requirement; 244 vs 239 chars; closest-length eligible segment (rule: within +-25%, closest, then earliest)"
+  },
+  "selection_notes": [
+   "Found by manual review (review sheet coverage 0.33 for the key sentence); automatic numeric listing flagged only '2326'.",
+   "Baseline report cites LaRA only as a bare link in the two citation lists; no body text uses its finding.",
+   "Baseline R7 coverage (experimenter reading): PARTIAL - one generic sentence on missing standardized benchmarks.",
+   "Rejected in the same run: contextual-retrieval comparison (seg 2.0) - retained in summary; TreeRAG cost sentence (seg 2.1/2.2) - not tied to a checkable item; dates/section numbers flagged by the numeric listing - not claims.",
+   "Control alternatives rejected as requirement-relevant: 2.2/7.1 TreeRAG, 3.1/3.2/7.2 contextual retrieval, 4.2 memory-augmented LLMs (all R1 approaches)."
+  ]
+ },
+ "base_request_hash": "223de487cd7c8e2e7b4fbd68bede5303419f58f2cd4620fafaccdf78f5db1bde",
+ "declared_changes": {
+  "A": {},
+  "B": {
+   "2": "RAG vs. long - context (LC) LLM comparisons are often inconclusive due to benchmark limitations. We introduce LaRA, a novel benchmark with 2326 test cases across four QA tasks and three long context types, for rigorous evaluation.\n\n- [LaRA: Benchmarking Retrieval - Augmented Generation and...](https://pure.psu.edu/en/publications/lara-benchmarking-retrieval-augmented-generation-and-long-context/)\n"
+  },
+  "C": {
+   "2": "dels)\n\n### Additional retrieved passage\n\n> Retrieval - augmented generation is a technique that enables large language models to retrieve and incorporate new information from external data sources. With RAG, LLMs first refer to a specified set of documents, then respond to user queries.\n\n- [Retrieval - augmented generation - Wikipedia](https://en.wikipedia.org/wiki/Retrieval-augmented_generation)\n"
+  }
+ },
+ "model": {
+  "provider": "ollama-openai-compatible",
+  "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "served_tag": "dfprobe-qwen3-4b-ctx40k",
+  "num_ctx": 40960,
+  "base_url": "http://localhost:11434/v1",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "seed": 7,
+  "max_tokens": 8192,
+  "token_limit": 32000
+ },
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "audit.py": "d28922fdfe06af7cee153d5fec3523460530739aa86897d9d6ad638e2a06ee88",
+  "boundary.py": "5e1a152004afb01193044c55d47346806b793f6cac81b2738c65497eca6d82e8",
+  "candidates.py": "5cc29dad9658d47d7225112921c82d4e3c308643d3dbad7dca7a9d3335f6dae5",
+  "cassette.py": "8962c6343094289e5c832adaeaaa6d51302c7e58383531273bd438e603b65c68",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "9d36827428180a8ea8d9c96d133cb4a369f8ee860e13ad0379a8f1b6f1bbe511",
+  "evidence.py": "bd1f62c52d7739e89d7f2bd10e454319f3ec4bdd736acdaf013482f4c9dd6320",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_analysis.py": "753b8bf2f647704e1110bb15f602429f0319608d427513c21c02e01b05aaf63a",
+  "replay_reporter.py": "e02458ae1e9eb6429d4fe17f412877f7929ec282b08476c772294b6a7f09b4d3",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c",
+  "tables.py": "3b112118a856a1ff19841b0e62a8d9e12c45da251c24f3cfdf30593e7e3b28ce"
+ }
+}

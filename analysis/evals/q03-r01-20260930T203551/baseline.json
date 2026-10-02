@@ -1,0 +1,251 @@
+{
+ "run_id": "q03-r01-20260930T203551",
+ "kind": "baseline",
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "defc6f7fe80c667afbee8f94fb1a24c29016b8623ce0a10b5de25d792f69ca90",
+ "report_chars": 15904,
+ "report_words": 2029,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 7,
+  "urls_in_retrieved_evidence": 0,
+  "fabricated_urls": [
+   "arxiv.org/abs/2305.18272",
+   "arxiv.org/abs/2303.13547",
+   "ieeexplore.ieee.org/document/10234567",
+   "ijcai.org/proceedings/19/papers/045.pdf",
+   "dl.acm.org/doi/10.1145/3580188.3580213",
+   "openreview.net/forum?id=h15k3dk9fm",
+   "arxiv.org/pdf/2305.18272.pdf"
+  ],
+  "provenance_rate": 0.0
+ },
+ "numeric_items": 16,
+ "numeric_items_not_in_evidence": [
+  "32",
+  "0.8",
+  "20",
+  "40%",
+  "5%",
+  "30",
+  "60%",
+  "10%",
+  "40",
+  "70%",
+  "15%",
+  "100",
+  "3%",
+  "4%",
+  "50%",
+  "8%"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Sparse KV-caching retains salient key-value pairs using attention thresholds, offering moderate memory savings. Quantization reduces bit precision (32-bit → 8-bit), achieving high memory savings but introducing noise. Hashing compresses key space via dimensionality reduction.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "PARTIAL",
+    "quote": "Memory Savings: 20–40% reduction in cache size, depending on task complexity and context length.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "PARTIAL",
+    "quote": "Accuracy Impact: Low to moderate (perplexity increase: 1–5%), especially in tasks with high contextual continuity.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "Throughput: Minimal latency increase due to minimal re-computation overhead.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Comparative Performance Trade-offs: Memory Savings, Accuracy Degradation, Throughput Impact, Latency Sensitivity, Use Case Suitability.",
+    "quote_verified": false
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Hashing introduces non-determinism and may fail to preserve key-value relationships critical for context continuity.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "The absence of empirical data from the requested sources prevents a rigorous, data-driven evaluation.",
+    "quote_verified": false
+   }
+  ],
+  "score": 0.5,
+  "score_lenient": 0.7857142857142857
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "Memory Savings: 20–40% reduction in cache size, depending on task complexity and context length.",
+    "claim": "Sparse KV-Caching reduces KV cache size by 20–40%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Impact: Low to moderate (perplexity increase: 1–5%), especially in tasks with high contextual continuity.",
+    "claim": "Sparse KV-Caching increases perplexity by 1–5%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 30–60% reduction in cache size.",
+    "claim": "Quantization reduces KV cache size by 30–60%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Degradation: Moderate (perplexity increase: 3–10%), especially in long-context reasoning or dense semantic tasks.",
+    "claim": "Quantization increases perplexity by 3–10%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 40–70% reduction in key storage.",
+    "claim": "Hashing reduces key storage by 40–70%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Degradation: High (5–15%), due to loss of semantic structure and potential hash collisions.",
+    "claim": "Hashing degrades accuracy by 5–15%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 30–60%, depending on conversation dynamics.",
+    "claim": "Temporal exploitation reduces KV cache size by 30–60%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Degradation: Low (1–3%), as recent tokens are most likely to influence current responses.",
+    "claim": "Temporal exploitation increases perplexity by 1–3%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: Moderate (20–40%), especially in sequential or document-style processing.",
+    "claim": "Differential encoding reduces KV cache size by 20–40%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Impact: Low (1–4%), as differences preserve local context dynamics.",
+    "claim": "Differential encoding increases perplexity by 1–4%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3759,
+   "completion_tokens": 2998,
+   "wall_s": 72.06184005737305,
+   "thinking_chars": 11310
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3556,
+   "completion_tokens": 2399,
+   "wall_s": 57.08351683616638,
+   "thinking_chars": 8779
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 1271,
+   "completion_tokens": 795,
+   "wall_s": 18.735554933547974,
+   "thinking_chars": 2543
+  }
+ ],
+ "eval_wall_s": 148.0574939250946
+}

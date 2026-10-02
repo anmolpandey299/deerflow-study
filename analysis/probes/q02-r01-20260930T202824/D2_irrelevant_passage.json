@@ -1,0 +1,291 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q02-r01-20260930T202824",
+ "variant": "D2_irrelevant_passage",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "ba49b76c61989e53c6a7e49102c1690b91e813eb339d1aab9cb1b8ec922d8e6c",
+  "report_chars": 14722,
+  "report_words": 1899,
+  "fmt": {
+   "checks": {
+    "h1_title": true,
+    "key_citations_before_key_points": true,
+    "key_points_4_to_6_bullets": true,
+    "overview_section": true,
+    "detailed_analysis_section": true,
+    "references_with_urls": true,
+    "markdown_table": true,
+    "no_wrapping_code_fence": true
+   },
+   "score": 1.0
+  },
+  "fact_url": {
+   "report_urls": 3,
+   "urls_in_retrieved_evidence": 3,
+   "fabricated_urls": [],
+   "provenance_rate": 1.0
+  },
+  "numeric_items": 29,
+  "numeric_items_not_in_evidence": [
+   "12",
+   "15%",
+   "10%",
+   "10",
+   "15",
+   "0.38",
+   "0.45",
+   "82%",
+   "85%",
+   "0.42",
+   "0.50",
+   "88%",
+   "91%",
+   "0.44",
+   "0.54",
+   "93%",
+   "95%",
+   "30%",
+   "2B",
+   "512",
+   "5B",
+   "1024",
+   "10B",
+   "4096",
+   "48"
+  ],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "Speculative decoding operates by generating a 'draft' token sequence ahead of the main model’s autoregressive decoding, followed by verification to ensure correctness.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "FULL",
+     "quote": "Draft-Model Sampling offers moderate speedup (2–3×) with low output fidelity, high hallucination rates (12–15%), and minimal deployment complexity, making it suitable only for early-stage or edge-level prototyping.",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "FULL",
+     "quote": "Medusa achieves 3–5× latency reduction through lookahead drafting and n-gram verification, with improved coherence and reduced hallucinations (8–10%), but is constrained by memory access patterns and scalability under high QPS.",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "FULL",
+     "quote": "EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "PARTIAL",
+     "quote": "Speedup Factor | Draft-Model Sampling | 2–3× | Medusa | 3–5× | EAGLE | 2–6×",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "PARTIAL",
+     "quote": "EAGLE demonstrates superior output fidelity due to its dynamic K verification and confidence-based token acceptance, which ensures that only high‑confidence tokens are accepted into the final response, reducing hallucination rates by up to 30% compared to baseline methods.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "FULL",
+     "quote": "All three methods are supported by vLLM, a leading open‑source inference framework. However, configuration complexity increases with method sophistication: Draft‑Model Sampling requires a minimal YAML configuration (`draft_model_name`, `main_model_name`).",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "PARTIAL",
+     "quote": "The magnitude of speedup varies significantly across methods due to differences in draft generation and verification efficiency.",
+     "quote_verified": true
+    }
+   ],
+   "score": 0.8125,
+   "score_lenient": 0.8125
+  },
+  "fact_claims": {
+   "claims_extracted": 10,
+   "claims_checked": 10,
+   "claims": [
+    {
+     "report_quote": "Draft-Model Sampling offers moderate speedup (2–3×) with low output fidelity, high hallucination rates (12–15%), and minimal deployment complexity, making it suitable only for early-stage or edge-level prototyping.",
+     "claim": "Draft-Model Sampling achieves a moderate speedup of 2–3× while producing low output fidelity, high hallucination rates of 12–15%, and requires minimal deployment complexity, making it suitable only for early-stage or edge-level prototyping.",
+     "label": "CONTRADICTED",
+     "evidence_id": "E2",
+     "evidence_url": "https://www.morphllm.com/speculative-decoding",
+     "quote": "Speculative decoding makes LLM inference 2-3x faster with identical output.",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Medusa achieves 3–5× latency reduction through lookahead drafting and n-gram verification, with improved coherence and reduced hallucinations (8–10%), but is constrained by memory access patterns and scalability under high QPS.",
+     "claim": "Medusa reduces latency by 3–5× through lookahead drafting and n-gram verification, improves coherence, and lowers hallucinations to 8–10%, but its performance is limited by memory access patterns and scalability under high QPS.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.",
+     "claim": "EAGLE provides up to 6× faster response times and 3× higher throughput than baseline methods, maintains hallucination rates below 5%, and delivers superior output consistency, though it demands high hardware resources and complex deployment workflows.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "All three methods are supported by vLLM, but EAGLE requires advanced GPU memory configurations (10–15 GB VRAM) and enterprise-grade infrastructure for effective operation.",
+     "claim": "All three speculative decoding methods are supported by vLLM, but EAGLE specifically requires advanced GPU memory configurations of 10–15 GB VRAM and enterprise-grade infrastructure for effective operation.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Draft-Model Sampling | 0.38 | 0.45 | 82% | 85% | 12–15% | Subtle, context-dependent hallucinations",
+     "claim": "Draft-Model Sampling achieves a BLEU-4 score of 0.38, a ROUGE-L score of 0.45, 82% factual accuracy, 85% coherence, and a hallucination rate of 12–15%, with subtle, context-dependent hallucinations.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Medusa | 0.42 | 0.50 | 88% | 91% | 8–10% | Repetition, fragmentation in long-form responses",
+     "claim": "Medusa attains a BLEU-4 score of 0.42, a ROUGE-L score of 0.50, 88% factual accuracy, 91% coherence, and a hallucination rate of 8–10%, with repetition and fragmentation in long-form responses.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "EAGLE | 0.44 | 0.54 | 93% | 95% | ≤5% | Logical inconsistencies, factual errors",
+     "claim": "EAGLE reaches a BLEU-4 score of 0.44, a ROUGE-L score of 0.54, 93% factual accuracy, 95% coherence, and a hallucination rate of ≤5%, with logical inconsistencies and factual errors.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Draft-Model Sampling | 1–2B params | 512 tokens | ≈1–3 GB | Low-end GPU or edge device | vLLM (basic module) | Minimal | Low-traffic environments",
+     "claim": "Draft-Model Sampling uses a 1–2B parameter model, supports a context length of 512 tokens, requires approximately 1–3 GB GPU memory, runs on low-end GPUs or edge devices, is supported by vLLM's basic module, has minimal setup complexity, and is suitable for low-traffic environments.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Medusa | 3–5B params | 1024–2048 tokens | 6–8 GB | High-end GPU (e.g., A100) | vLLM (dedicated plugin) | Moderate | Moderate load; memory bottlenecks at high QPS",
+     "claim": "Medusa employs a 3–5B parameter model, supports a context length of 1024–2048 tokens, requires 6–8 GB GPU memory, runs on high-end GPUs such as the A100, is supported by vLLM's dedicated plugin, has moderate setup complexity, and is suitable for moderate load but experiences memory bottlenecks at high QPS.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "EAGLE | 5–10B params | Up to 4096 tokens | 10–15 GB | HBM, 48 GB+ VRAM (e.g., H100/A100) | vLLM (native extension) | High | High-throughput, distributed environments",
+     "claim": "EAGLE utilizes a 5–10B parameter model, supports a context length of up to 4096 tokens, requires 10–15 GB GPU memory, runs on HBM-equipped GPUs like the H100 or A100 with 48 GB+ VRAM, is supported by vLLM's native extension, has high setup complexity, and is suitable for high-throughput, distributed environments.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    }
+   ],
+   "supported": 0,
+   "contradicted": 1,
+   "unsupported": 10,
+   "score": 0.0
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3689,
+    "completion_tokens": 4027,
+    "wall_s": 109.8532018661499,
+    "thinking_chars": 15646
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 3459,
+    "completion_tokens": 4618,
+    "wall_s": 124.55820322036743,
+    "thinking_chars": 13142
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 2483,
+    "completion_tokens": 2731,
+    "wall_s": 76.98970913887024,
+    "thinking_chars": 10513
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 5,
+   "completeness": 7,
+   "coherence": 8,
+   "relevance": 9,
+   "citation_quality": 4,
+   "writing_quality": 8
+  },
+  "overall_score": 7,
+  "weighted_score": 6.8,
+  "strengths": [
+   "Comprehensive, side‑by‑side comparison across speed, quality, and deployment dimensions",
+   "Clear organization with tables, bullet points, and a logical flow",
+   "Consistent use of metrics (BLEU, ROUGE, hallucination rates) to quantify differences"
+  ],
+  "weaknesses": [
+   "Heavy reliance on non‑peer‑reviewed technical blogs, limiting factual certainty",
+   "Lack of controlled experimental data or independent validation",
+   "Limited discussion of cost, energy consumption, and real‑world deployment constraints"
+  ],
+  "suggestions": [
+   "Incorporate peer‑reviewed papers or benchmark studies to strengthen factual claims",
+   "Provide a brief methodology section describing how the cited metrics were obtained",
+   "Add a cost/energy analysis and discuss trade‑offs for different deployment scenarios"
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 5
+}

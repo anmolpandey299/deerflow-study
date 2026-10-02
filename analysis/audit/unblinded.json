@@ -1,0 +1,662 @@
+{
+ "summary": {
+  "packets_labelled": 21,
+  "labels": 24,
+  "claim_label_totals": {
+   "SUPPORTED": 23,
+   "UNSUPPORTED": 78,
+   "MISATTRIBUTED": 13,
+   "CONTRADICTED": 6
+  },
+  "auditor_overlap": {
+   "P67bd65": [
+    [
+     "labels_auditor1",
+     "STATED_INCORRECTLY",
+     {
+      "UNSUPPORTED": 5
+     }
+    ],
+    [
+     "labels_auditor2",
+     "STATED_INCORRECTLY",
+     {
+      "UNSUPPORTED": 5
+     }
+    ]
+   ],
+   "P7c728a": [
+    [
+     "labels_auditor1",
+     "n/a",
+     {
+      "SUPPORTED": 1,
+      "MISATTRIBUTED": 2,
+      "UNSUPPORTED": 2
+     }
+    ],
+    [
+     "labels_auditor2",
+     "n/a",
+     {
+      "SUPPORTED": 1,
+      "MISATTRIBUTED": 1,
+      "UNSUPPORTED": 3
+     }
+    ]
+   ],
+   "P89afd1": [
+    [
+     "labels_auditor1",
+     "NOT_STATED",
+     {
+      "SUPPORTED": 1,
+      "MISATTRIBUTED": 2,
+      "UNSUPPORTED": 2
+     }
+    ],
+    [
+     "labels_auditor2",
+     "NOT_STATED",
+     {
+      "SUPPORTED": 1,
+      "MISATTRIBUTED": 1,
+      "UNSUPPORTED": 3
+     }
+    ]
+   ]
+  },
+  "audit_vs_p3": {
+   "n": 24,
+   "spearman_supported_share_vs_p3_fact_b": 0.49238060546115126,
+   "mean_audit_supported_share": 0.19166666666666668,
+   "mean_p3_fact_b": 0.1590277777777778
+  },
+  "target_fact_vs_detector": [
+   {
+    "packet": "P03828e",
+    "auditor": "labels_auditor1",
+    "replay": "c05/B-s101.json",
+    "audit": "STATED_INCORRECTLY",
+    "detector": true
+   },
+   {
+    "packet": "P11a122",
+    "auditor": "labels_auditor1",
+    "replay": "c03/A-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "P178718",
+    "auditor": "labels_auditor1",
+    "replay": "c02/C-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "P274011",
+    "auditor": "labels_auditor1",
+    "replay": "c01/C-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "P4ac4e4",
+    "auditor": "labels_auditor1",
+    "replay": "c02/A-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "P54379a",
+    "auditor": "labels_auditor1",
+    "replay": "c05/C-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "P67bd65",
+    "auditor": "labels_auditor1",
+    "replay": "c04/C-s101.json",
+    "audit": "STATED_INCORRECTLY",
+    "detector": false
+   },
+   {
+    "packet": "P89afd1",
+    "auditor": "labels_auditor1",
+    "replay": "c01/A-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "P67bd65",
+    "auditor": "labels_auditor2",
+    "replay": "c04/C-s101.json",
+    "audit": "STATED_INCORRECTLY",
+    "detector": false
+   },
+   {
+    "packet": "P89afd1",
+    "auditor": "labels_auditor2",
+    "replay": "c01/A-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "P8dcdcc",
+    "auditor": "labels_auditor2",
+    "replay": "c04/B-s101.json",
+    "audit": "STATED_INCORRECTLY",
+    "detector": false
+   },
+   {
+    "packet": "Pa4f8a6",
+    "auditor": "labels_auditor2",
+    "replay": "c02/B-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "Pb2ea4d",
+    "auditor": "labels_auditor2",
+    "replay": "c04/A-s101.json",
+    "audit": "STATED_INCORRECTLY",
+    "detector": false
+   },
+   {
+    "packet": "Pc05d7b",
+    "auditor": "labels_auditor2",
+    "replay": "c01/B-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "Pc9f0ab",
+    "auditor": "labels_auditor2",
+    "replay": "c03/C-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "Pd527fd",
+    "auditor": "labels_auditor2",
+    "replay": "c03/B-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   },
+   {
+    "packet": "Pe3b211",
+    "auditor": "labels_auditor2",
+    "replay": "c05/A-s101.json",
+    "audit": "NOT_STATED",
+    "detector": false
+   }
+  ]
+ },
+ "rows": [
+  {
+   "packet": "P03828e",
+   "auditor": "labels_auditor1",
+   "run_id": "q03-r02-20260930T212748",
+   "replay": "c05/B-s101.json",
+   "target_fact": "STATED_INCORRECTLY",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "UNSUPPORTED": 3,
+    "MISATTRIBUTED": 1
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "Despite claims of \"6x memory reduction with zero accuracy loss\" from Google's TurboQuant, this assertion is not independently verified in the provided sources. ... The assertion that INT4 quantization achieves \"zero accuracy loss\" or \"6x memory reduction\" is not substantiated by peer-reviewed evidence. The LinkedIn post appears promotional and lacks validation.",
+   "detector_uses_restored_fact": true,
+   "p3_fact_b": 0.1111111111111111,
+   "p3_checked": 9,
+   "p3_supported": 1,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P11a122",
+   "auditor": "labels_auditor1",
+   "run_id": "q05-r02-20260930T205952",
+   "replay": "c03/A-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 2,
+    "CONTRADICTED": 1,
+    "SUPPORTED": 1,
+    "MISATTRIBUTED": 1
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.0,
+   "p3_checked": 10,
+   "p3_supported": 0,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P178718",
+   "auditor": "labels_auditor1",
+   "run_id": "q04-r02-20260930T205216",
+   "replay": "c02/C-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "UNSUPPORTED": 4
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.2,
+   "p3_checked": 10,
+   "p3_supported": 2,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P2110c6",
+   "auditor": "labels_auditor1",
+   "run_id": "q02-r01-20260930T202824",
+   "replay": "e02/G-s101.json",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 4,
+    "CONTRADICTED": 1
+   },
+   "audit_supported_share": 0.0,
+   "target_fact": "n/a",
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": null,
+   "p3_fact_b": 0.1111111111111111,
+   "p3_checked": 9,
+   "p3_supported": 1,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P274011",
+   "auditor": "labels_auditor1",
+   "run_id": "q01-r03-20260930T204051",
+   "replay": "c01/C-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 2,
+    "MISATTRIBUTED": 1,
+    "UNSUPPORTED": 2
+   },
+   "audit_supported_share": 0.4,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.1111111111111111,
+   "p3_checked": 9,
+   "p3_supported": 1,
+   "p3_contradicted": 1
+  },
+  {
+   "packet": "P337ad0",
+   "auditor": "labels_auditor1",
+   "run_id": "q02-r01-20260930T202824",
+   "replay": "e02/D-s101.json",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 3,
+    "MISATTRIBUTED": 1,
+    "SUPPORTED": 1
+   },
+   "audit_supported_share": 0.2,
+   "target_fact": "n/a",
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": null,
+   "p3_fact_b": 0.0,
+   "p3_checked": 10,
+   "p3_supported": 0,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P4ac4e4",
+   "auditor": "labels_auditor1",
+   "run_id": "q04-r02-20260930T205216",
+   "replay": "c02/A-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "CONTRADICTED": 1,
+    "UNSUPPORTED": 3
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.2,
+   "p3_checked": 5,
+   "p3_supported": 1,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P54379a",
+   "auditor": "labels_auditor1",
+   "run_id": "q03-r02-20260930T212748",
+   "replay": "c05/C-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 2,
+    "UNSUPPORTED": 2,
+    "MISATTRIBUTED": 1
+   },
+   "audit_supported_share": 0.4,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.1,
+   "p3_checked": 10,
+   "p3_supported": 1,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P5c431c",
+   "auditor": "labels_auditor1",
+   "run_id": "q04-r02-20260930T205216",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 2,
+    "UNSUPPORTED": 3
+   },
+   "audit_supported_share": 0.4,
+   "target_fact": "n/a",
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": null,
+   "p3_fact_b": 0.2,
+   "p3_checked": 10,
+   "p3_supported": 2,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P67bd65",
+   "auditor": "labels_auditor1",
+   "run_id": "q06-r02-20260930T210856",
+   "replay": "c04/C-s101.json",
+   "target_fact": "STATED_INCORRECTLY",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 5
+   },
+   "audit_supported_share": 0.0,
+   "target_fact_evidence": "A 2026 study published in Nature Machine Intelligence (DOI: 10.1038/s41467-026-71411-1) demonstrates that retrieval models frequently fail to capture context-specific nuances, especially when the query involves domain-specific jargon or evolving concepts.",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.0,
+   "p3_checked": 10,
+   "p3_supported": 0,
+   "p3_contradicted": 1
+  },
+  {
+   "packet": "P7c728a",
+   "auditor": "labels_auditor1",
+   "run_id": "q01-r03-20260930T204051",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "MISATTRIBUTED": 2,
+    "UNSUPPORTED": 2
+   },
+   "audit_supported_share": 0.2,
+   "target_fact": "n/a",
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": null,
+   "p3_fact_b": 0.5,
+   "p3_checked": 10,
+   "p3_supported": 5,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P89afd1",
+   "auditor": "labels_auditor1",
+   "run_id": "q01-r03-20260930T204051",
+   "replay": "c01/A-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "MISATTRIBUTED": 2,
+    "UNSUPPORTED": 2
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.4,
+   "p3_checked": 10,
+   "p3_supported": 4,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P67bd65",
+   "auditor": "labels_auditor2",
+   "run_id": "q06-r02-20260930T210856",
+   "replay": "c04/C-s101.json",
+   "target_fact": "STATED_INCORRECTLY",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 5
+   },
+   "audit_supported_share": 0.0,
+   "target_fact_evidence": "A 2026 study published in *Nature Machine Intelligence* (DOI: [10.1038/s41467-026-71411-1](https://www.nature.com/articles/s41467-026-71411-1)) demonstrates that retrieval models frequently fail to capture context-specific nuances, especially when the query involves domain-specific jargon or evolving concepts.",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.0,
+   "p3_checked": 10,
+   "p3_supported": 0,
+   "p3_contradicted": 1
+  },
+  {
+   "packet": "P7c728a",
+   "auditor": "labels_auditor2",
+   "run_id": "q01-r03-20260930T204051",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "MISATTRIBUTED": 1,
+    "UNSUPPORTED": 3
+   },
+   "audit_supported_share": 0.2,
+   "target_fact": "n/a",
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": null,
+   "p3_fact_b": 0.5,
+   "p3_checked": 10,
+   "p3_supported": 5,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P89afd1",
+   "auditor": "labels_auditor2",
+   "run_id": "q01-r03-20260930T204051",
+   "replay": "c01/A-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "MISATTRIBUTED": 1,
+    "UNSUPPORTED": 3
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.4,
+   "p3_checked": 10,
+   "p3_supported": 4,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P8dcdcc",
+   "auditor": "labels_auditor2",
+   "run_id": "q06-r02-20260930T210856",
+   "replay": "c04/B-s101.json",
+   "target_fact": "STATED_INCORRECTLY",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 5
+   },
+   "audit_supported_share": 0.0,
+   "target_fact_evidence": "A 2026 study published in *Nature Communications* confirms that even with advanced retrieval models, RAG systems frequently return outdated or irrelevant documents\u2014particularly when context or semantic drift over time is not accounted for.",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.0,
+   "p3_checked": 10,
+   "p3_supported": 0,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "P8e9efa",
+   "auditor": "labels_auditor2",
+   "run_id": "q01-r02-20260930T201622",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 3,
+    "UNSUPPORTED": 2
+   },
+   "audit_supported_share": 0.6,
+   "target_fact": "n/a",
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": null,
+   "p3_fact_b": 0.3333333333333333,
+   "p3_checked": 6,
+   "p3_supported": 2,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "Pa4f8a6",
+   "auditor": "labels_auditor2",
+   "run_id": "q04-r02-20260930T205216",
+   "replay": "c02/B-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "UNSUPPORTED": 4
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "Weights & Biases (W&B) reports on MoE vs. dense LLM architectures.",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.0,
+   "p3_checked": 7,
+   "p3_supported": 0,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "Pb2ea4d",
+   "auditor": "labels_auditor2",
+   "run_id": "q06-r02-20260930T210856",
+   "replay": "c04/A-s101.json",
+   "target_fact": "STATED_INCORRECTLY",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 5
+   },
+   "audit_supported_share": 0.0,
+   "target_fact_evidence": "A 2026 study published in *Nature Machine Intelligence* demonstrates that even with state-of-the-art retrieval models, RAG systems frequently return outdated or irrelevant documents, particularly when context shifts over time or when the query contains subtle semantic variations.",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.0,
+   "p3_checked": 10,
+   "p3_supported": 0,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "Pc05d7b",
+   "auditor": "labels_auditor2",
+   "run_id": "q01-r03-20260930T204051",
+   "replay": "c01/B-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "MISATTRIBUTED": 1,
+    "UNSUPPORTED": 3
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "**LaRA** (benchmarking framework) for evaluation standards",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.125,
+   "p3_checked": 8,
+   "p3_supported": 1,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "Pc9f0ab",
+   "auditor": "labels_auditor2",
+   "run_id": "q05-r02-20260930T205952",
+   "replay": "c03/C-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 4,
+    "CONTRADICTED": 1
+   },
+   "audit_supported_share": 0.0,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.0,
+   "p3_checked": 9,
+   "p3_supported": 0,
+   "p3_contradicted": 1
+  },
+  {
+   "packet": "Pce6edb",
+   "auditor": "labels_auditor2",
+   "run_id": "q02-r01-20260930T202824",
+   "replay": "e02/A-s101.json",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "UNSUPPORTED": 3,
+    "CONTRADICTED": 1
+   },
+   "audit_supported_share": 0.2,
+   "target_fact": "n/a",
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": null,
+   "p3_fact_b": 0.2,
+   "p3_checked": 10,
+   "p3_supported": 2,
+   "p3_contradicted": 1
+  },
+  {
+   "packet": "Pd527fd",
+   "auditor": "labels_auditor2",
+   "run_id": "q05-r02-20260930T205952",
+   "replay": "c03/B-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "UNSUPPORTED": 3,
+    "CONTRADICTED": 1,
+    "SUPPORTED": 1
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.125,
+   "p3_checked": 8,
+   "p3_supported": 1,
+   "p3_contradicted": 0
+  },
+  {
+   "packet": "Pe3b211",
+   "auditor": "labels_auditor2",
+   "run_id": "q03-r02-20260930T212748",
+   "replay": "c05/A-s101.json",
+   "target_fact": "NOT_STATED",
+   "n_claims": 5,
+   "counts": {
+    "SUPPORTED": 1,
+    "UNSUPPORTED": 3,
+    "MISATTRIBUTED": 1
+   },
+   "audit_supported_share": 0.2,
+   "target_fact_evidence": "",
+   "detector_uses_restored_fact": false,
+   "p3_fact_b": 0.2,
+   "p3_checked": 10,
+   "p3_supported": 2,
+   "p3_contradicted": 0
+  }
+ ]
+}

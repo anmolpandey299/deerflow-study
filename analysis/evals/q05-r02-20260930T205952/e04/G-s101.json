@@ -1,0 +1,244 @@
+{
+ "run_id": "q05-r02-20260930T205952",
+ "kind": "replay",
+ "case_id": "e04",
+ "condition": "G",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "b5757558d51208a2fa228d76b6757f2f27baf9792169d5259c6b7d442c67eb7e",
+ "report_chars": 13424,
+ "report_words": 1594,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 6,
+  "urls_in_retrieved_evidence": 5,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/llama-cpp-ai/llama.cpp/main/docs/images/quantization-comparison-diagram.png"
+  ],
+  "provenance_rate": 0.8333333333333334
+ },
+ "numeric_items": 10,
+ "numeric_items_not_in_evidence": [
+  "40%",
+  "1.5",
+  "1.1",
+  "1.3×",
+  "10",
+  "15%"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "GPTQ employs grouped quantization to maintain weight distribution, minimizing quantization error through group-level optimization.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "AWQ introduces activation‑aware scaling to preserve activation values, improving instruction‑following performance.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "SmoothQuant applies a pre‑scaling step to both weights and activations, enabling W8A8 quantization without significant fidelity loss.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "SmoothQuant maintains the highest perplexity scores in both 4‑bit and 8‑bit quantization, particularly in W8A8 configurations.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "GPTQ achieves the fastest token generation speed and lowest model loading time, especially on NVIDIA GPUs, due to optimized low‑bit weight kernels and reduced memory bandwidth.",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "GPTQ and AWQ achieve maximum performance due to mature support for low‑bit quantization kernels. The llmcompressor framework reports up to 3× speedup in token generation on A100 and H100 GPUs.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "SmoothQuant’s W8A8 quantization scheme introduces higher computational overhead due to dual‑precision handling of both weights and activations, whereas GPTQ’s W4A16 focuses on weight‑only optimization.",
+    "quote_verified": false
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "No direct, peer‑reviewed, quantitative benchmark exists for side‑by‑side latency, throughput, or memory bandwidth across all three methods under standardized conditions.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.8125,
+  "score_lenient": 0.9375
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in W8A8 quantization.",
+    "claim": "SmoothQuant retains higher accuracy in perplexity and instruction-following tasks than GPTQ and AWQ when using W8A8 quantization.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ achieves the fastest token generation speed and lowest model loading time, especially on NVIDIA GPUs, due to optimized low-bit weight kernels and reduced memory bandwidth.",
+    "claim": "GPTQ provides the fastest token generation and quickest model loading on NVIDIA GPUs, thanks to optimized low-bit weight kernels and lower memory bandwidth usage.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "AWQ offers a balanced performance with improved instruction-following capabilities and moderate latency, making it suitable for enterprise deployments.",
+    "claim": "AWQ delivers a balanced trade-off between instruction-following performance and latency, making it appropriate for enterprise use.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "All methods show hardware-dependent performance: GPTQ and AWQ benefit most on NVIDIA GPUs, while SmoothQuant's overhead is mitigated on high-bandwidth platforms like TPUs.",
+    "claim": "GPTQ and AWQ perform best on NVIDIA GPUs, whereas SmoothQuant’s overhead is reduced on high-bandwidth platforms such as TPUs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "No direct, peer-reviewed, quantitative benchmark exists for side-by-side latency, throughput, or memory bandwidth across all three methods under standardized conditions.",
+    "claim": "There is no peer-reviewed, side-by-side benchmark comparing latency, throughput, or memory bandwidth for GPTQ, AWQ, and SmoothQuant under standardized conditions.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| SmoothQuant | W8A8 | Highest retention | Consistent, minimal degradation | Superior, especially in long-context tasks |",
+    "claim": "In the SmoothQuant row, W8A8 quantization achieves highest retention, consistent minimal degradation, and superior performance in long-context tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| GPTQ | W4A16 | Moderate degradation | Slight edge over AWQ in some tasks | Moderate, degrades in complex chains |",
+    "claim": "The GPTQ row shows W4A16 quantization causes moderate degradation, a slight edge over AWQ in some tasks, and moderate performance degradation in complex chains.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| AWQ | W4A16 | Moderate degradation | Improved over full-precision | Moderate, stable but limited |",
+    "claim": "The AWQ row indicates W4A16 quantization results in moderate degradation, improvement over full-precision, and moderate, stable but limited performance.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "The `llmcompressor` framework reports up to 3× speedup in token generation on A100 and H100 GPUs.",
+    "claim": "`llmcompressor` reports up to a 3× increase in token generation speed on NVIDIA A100 and H100 GPUs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant, despite enabling high-fidelity performance, introduces higher computational overhead due to its W8A8 quantization scheme.",
+    "claim": "SmoothQuant incurs higher computational overhead because of its W8A8 quantization scheme, despite delivering high-fidelity performance.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3175,
+   "completion_tokens": 1571,
+   "wall_s": 39.70723509788513,
+   "thinking_chars": 5626
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 2956,
+   "completion_tokens": 2925,
+   "wall_s": 85.87809371948242,
+   "thinking_chars": 10410
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4153,
+   "completion_tokens": 2034,
+   "wall_s": 54.046714067459106,
+   "thinking_chars": 8233
+  }
+ ],
+ "eval_wall_s": 179.70731210708618
+}

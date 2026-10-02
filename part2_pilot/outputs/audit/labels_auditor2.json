@@ -1,0 +1,92 @@
+{
+  "P1b91e6": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... Weight-only (e.g., W4A16) quantization reduces memory bandwidth and enables faster inference, while weight-and-activation (e.g., W8A8) quantization preserves more model fidelity but increases computational overhead and latency. ... SmoothQuant incurs a 10–15% higher latency due to its W8A8 scheme, which requires more frequent memory reads and writes during activation computation."
+  },
+  "P1f4915": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... SmoothQuant scales weights prior to quantization, preserving statistical distribution and reducing quantization error. ... SmoothQuant incurs higher computational overhead due to W8A8 quantization, requiring more frequent memory reads and writes during activation handling. This results in a moderate increase in per-token latency."
+  },
+  "P2d0a05": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... SmoothQuant scales weights prior to quantization, preserving statistical distribution and reducing quantization error. ... SmoothQuant incurs higher computational overhead due to W8A8 quantization, requiring more frequent memory reads and writes during activation handling. This results in a moderate increase in per-token latency."
+  },
+  "P3f98f1": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... In contrast, SmoothQuant, while maintaining high accuracy retention, shows a slightly higher latency in token generation due to its W8A8 scheme. ... On high-bandwidth hardware such as TPUs, the performance gap narrows, as these platforms can efficiently handle 8-bit data types with minimal overhead [S4]."
+  },
+  "P61ad5f": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[S1]: Google just figured out how to run LLMs on 6x less memory [https://www.linkedin.com/posts/shashi-kush-6940546k_google-just-figured-out-how-to-run-llms-on-activity-7444262186480492544-pcal] ... The claim of 6× memory reduction by Google (via TurboQuant) is cited in a LinkedIn post but not supported by a peer-reviewed paper or technical report."
+  },
+  "P63b259": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... In contrast, SmoothQuant, while maintaining high accuracy retention, shows a slightly higher latency in token generation due to its W8A8 (8-bit weight and 8-bit activation) quantization scheme. ... On high-bandwidth hardware such as TPUs or specialized AI accelerators, the performance gap narrows, as these platforms can efficiently handle 8-bit data types with minimal overhead."
+  },
+  "P6c5fe7": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... In contrast, SmoothQuant, while maintaining high accuracy, shows a slightly higher latency due to its W8A8 scheme."
+  },
+  "P73144f": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "Despite claims of \"6x memory reduction with zero accuracy loss\" from Google’s TurboQuant, this assertion is not independently verified in the provided sources. The referenced LinkedIn post is promotional and lacks empirical validation. No peer-reviewed study confirms zero accuracy loss in INT4 or sub-4-bit quantization for long-context inference. ... The assertion that INT4 quantization achieves \"zero accuracy loss\" or \"6x memory reduction\" is not substantiated by peer-reviewed evidence. The LinkedIn post appears promotional and lacks validation."
+  },
+  "P7cdd48": {
+    "target_fact": "STATED_CORRECTLY",
+    "attribution": "ATTRIBUTED",
+    "evidence": "The gap between standard inference (16–32 bits) and compressed representations (e.g., 3 bits) is where the bottleneck lies. Google's TurboQuant claims to close this gap without modifying the model, suggesting a novel algorithmic approach to quantization that may involve advanced error modeling or reconstruction during inference."
+  },
+  "P7e70b1": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  },
+  "P8c9e51": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... **SmoothQuant**, while preserving high accuracy, incurs higher computational overhead due to its W8A8 scheme, which requires more frequent memory reads and writes during activation handling."
+  },
+  "P978027": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... SmoothQuant, while maintaining superior semantic quality and stability in long-context reasoning, incurs higher computational overhead due to its W8A8 scheme, which requires more frequent memory reads and writes during activation handling."
+  },
+  "Pa43847": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... In contrast, SmoothQuant’s W8A8 scheme requires more frequent memory reads and writes, increasing computational overhead—especially in models with long context lengths or complex reasoning chains."
+  },
+  "Pad4f23": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  },
+  "Pce8567": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  },
+  "Pd437df": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "The claim that Google’s TurboQuant achieves **6× memory reduction with zero accuracy loss** appears to be a misstatement or oversimplification—TurboQuant does not eliminate the model’s need for high-precision computation; rather, it reduces the memory footprint of the KV cache by optimizing storage and reconstruction, not by eliminating precision entirely."
+  },
+  "Pea26f0": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "Despite claims of \"6x memory reduction with zero accuracy loss\" from Google’s TurboQuant, this assertion is not independently verified in the provided sources. The referenced LinkedIn post is promotional and lacks empirical validation. No peer-reviewed study confirms zero accuracy loss in INT4 or sub-4-bit quantization for long-context inference. ... The assertion that INT4 quantization achieves \"zero accuracy loss\" or \"6x memory reduction\" is not substantiated by peer-reviewed evidence. The LinkedIn post appears promotional and lacks validation."
+  },
+  "Pffc83d": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/) ... In contrast, SmoothQuant’s W8A8 scheme requires more frequent memory reads and writes, increasing computational overhead—especially in models with long context lengths or complex reasoning chains."
+  }
+}

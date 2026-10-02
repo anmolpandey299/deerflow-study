@@ -1,0 +1,168 @@
+{
+ "run_id": "q01-r03-20260930T204051",
+ "funnel": {
+  "researcher_segments": 24,
+  "items": {
+   "in_tool_outputs": 8,
+   "in_observations": 2,
+   "in_reporter_input": 2,
+   "in_report": 1
+  },
+  "urls": {
+   "in_tool_outputs": 21,
+   "in_observations": 15,
+   "in_reporter_input": 15,
+   "in_report": 15
+  },
+  "report_items_total": 1,
+  "report_items_not_in_any_tool_output": [],
+  "crawl_items_cut_by_1000_char_truncation": []
+ },
+ "candidates": [
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "leading long-context retrieval-augmented generation approaches 2025 peer-reviewed papers technical reports"
+   },
+   "seg_id": "1.2",
+   "url": "https://pure.psu.edu/en/publications/lara-benchmarking-retrieval-augmented-generation-and-long-context/",
+   "title": "LaRA: Benchmarking Retrieval - Augmented Generation and...",
+   "text": "Existing RAG vs. long - context (LC) LLM comparisons are often inconclusive due to benchmark limitations. We introduce LaRA, a novel benchmark with 2326 test cases across four QA tasks and three long context types, for rigorous evaluation.",
+   "items": [
+    "2326"
+   ],
+   "missing_from_step_observation": [
+    "2326"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "tool_idx": 2,
+   "tool_seq": 2,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "hierarchical retrieval dense retrieval context-aware embeddings chunking strategies memory-augmented models long-context RAG 2025 technical reports"
+   },
+   "seg_id": "2.0",
+   "url": "https://arxiv.org/abs/2504.19754",
+   "title": "[2504.19754] Reconstructing Context: Evaluating Advanced ... [2507.09935] Enhancing Retrieval Augmented Generation with ... TreeRAG: Unleashing the Power of Hierarchical Storage for ... Hierarchical Document Refinement for Long-context Retrieval ... Optimizing Context Retrieval for RAG via Heading-Aware ... Research on the construction and application of retrieval ... Advanced RAG: Chunking Strategies Compared (2026 Guide)",
+   "text": "Apr 28, 2025 · This study presents a rigorous analysis of late chunking and contextual retrieval , evaluating their effectiveness and efficiency in optimizing RAG systems. Our results indicate that contextual retrieval preserves semantic coherence more effectively but requires greater computational resources. Jul 14, 2025 · This paper proposes a novel framework that enhances RAG by integrating hierarchical text segmentation and clustering to generate more meaningful and semantically coherent chunks . 1 day ago · To address these issues, we propose TreeRAG, which employs Tree- Chunking for chunking and embedding in a tree-like structure , coupled with “root-to-leaves” and “leaf-to-root” retrieve strategy named Bidirectional Traversal Retrieval . 1 day ago · Real-world RAG applications often encounter long - context input scenarios, where redundant information and noise results in higher inference costs and reduced performance. Evaluated on the AWS Documentation Dataset using an LLM-as-a-Judge setup, our approach significantly improves RAG performance across two embedding models , showing the value of structured context in document-based QA. Nov 18, 2025 · Retrieval - Augmented Generation ( RAG ) has emerged as a powerful framework to enhance the factual consistency and timeliness of large language models (LLMs) by retrieving external knowledge. Aug 8, 2026 · This guide compares the five strategies that matter — fixed-size, recursive, semantic, document- aware , and contextual — with code, trade-offs, and a decision guide. Are late chunking and contextual retrieval effective in optimizing Rag systems? Despite their potential, their comparative strengths and limitations remain unclear. This study presents a rigorous analysis of late chunking and contextual retrieval , evaluating their effectiveness and efficiency in optimizing RAG systems. Can hierarchical text segmentation and clustering enhance Rag? However, traditional methods often fail to create chunks that capture sufficient semantic meaning, as they do not account for the underlying textual structure. This paper proposes a novel framework that enhances RAG by integrating hierarchical text segmentation and clustering to generate more meaningful and semantically coherent chunks. Can late chunking and contextual retrieval preserve global context? To overcome these shortcomings, two advanced techniques, late chunking and contextual retrieval , have been introduced, both aiming to preserve global context . Despite their potential, their comparative strengths and limitations remain unclear. Does contextual retrieval preserve semantic coherence? This study presents a rigorous analysis of late chunking and contextual retrieval, evaluating their effectiveness and efficiency in optimizing RAG systems. Our results indicate that contextual retrieval preserves semantic coherence more effectively but requires greater computational resources.",
+   "items": [
+    "28",
+    "14",
+    "18"
+   ],
+   "missing_from_step_observation": [
+    "28",
+    "14",
+    "18"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "tool_idx": 2,
+   "tool_seq": 2,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "hierarchical retrieval dense retrieval context-aware embeddings chunking strategies memory-augmented models long-context RAG 2025 technical reports"
+   },
+   "seg_id": "2.1",
+   "url": "https://arxiv.org/abs/2507.09935",
+   "title": "[2507.09935] Enhancing Retrieval Augmented Generation with ... TreeRAG: Unleashing the Power of Hierarchical Storage for ... Hierarchical Document Refinement for Long-context Retrieval ... Optimizing Context Retrieval for RAG via Heading-Aware ... Research on the construction and application of retrieval ... Advanced RAG: Chunking Strategies Compared (2026 Guide)",
+   "text": "Jul 14, 2025 · This paper proposes a novel framework that enhances RAG by integrating hierarchical text segmentation and clustering to generate more meaningful and semantically coherent chunks . 1 day ago · To address these issues, we propose TreeRAG, which employs Tree- Chunking for chunking and embedding in a tree-like structure , coupled with “root-to-leaves” and “leaf-to-root” retrieve strategy named Bidirectional Traversal Retrieval . 1 day ago · Real-world RAG applications often encounter long - context input scenarios, where redundant information and noise results in higher inference costs and reduced performance. Evaluated on the AWS Documentation Dataset using an LLM-as-a-Judge setup, our approach significantly improves RAG performance across two embedding models , showing the value of structured context in document-based QA. Nov 18, 2025 · Retrieval - Augmented Generation ( RAG ) has emerged as a powerful framework to enhance the factual consistency and timeliness of large language models (LLMs) by retrieving external knowledge. Aug 8, 2026 · This guide compares the five strategies that matter — fixed-size, recursive, semantic, document- aware , and contextual — with code, trade-offs, and a decision guide. Are late chunking and contextual retrieval effective in optimizing Rag systems? Despite their potential, their comparative strengths and limitations remain unclear. This study presents a rigorous analysis of late chunking and contextual retrieval , evaluating their effectiveness and efficiency in optimizing RAG systems. Can hierarchical text segmentation and clustering enhance Rag? However, traditional methods often fail to create chunks that capture sufficient semantic meaning, as they do not account for the underlying textual structure. This paper proposes a novel framework that enhances RAG by integrating hierarchical text segmentation and clustering to generate more meaningful and semantically coherent chunks. Can late chunking and contextual retrieval preserve global context? To overcome these shortcomings, two advanced techniques, late chunking and contextual retrieval , have been introduced, both aiming to preserve global context . Despite their potential, their comparative strengths and limitations remain unclear. Does contextual retrieval preserve semantic coherence? This study presents a rigorous analysis of late chunking and contextual retrieval, evaluating their effectiveness and efficiency in optimizing RAG systems. Our results indicate that contextual retrieval preserves semantic coherence more effectively but requires greater computational resources.",
+   "items": [
+    "14",
+    "18"
+   ],
+   "missing_from_step_observation": [
+    "14",
+    "18"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "memory-augmented models long-context RAG 2025 technical reports peer-reviewed papers"
+   },
+   "seg_id": "4.1",
+   "url": "https://github.com/HaroldChen19/Awesome-AR-Video-Memory",
+   "title": "GitHub - HaroldChen19/Awesome-AR-Video- Memory : The paper list...",
+   "text": "[ 2025 /05] Long - context state-space video world models . [ paper ]. [ 2025 /02] EDELINE: Enhancing Memory in Diffusion-based World Models via Linear-Time Sequence Modeling . [ paper ]. [ 2025 /02] Malt diffusion: Memory - augmented latent transformers for any-length video generation...",
+   "items": [
+    "05",
+    "02"
+   ],
+   "missing_from_step_observation": [
+    "05"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "tool_idx": 5,
+   "tool_seq": 5,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 1,
+   "args": {
+    "query": "performance metrics accuracy latency cost long-context RAG systems 2023-2025 benchmark studies"
+   },
+   "seg_id": "5.2",
+   "url": "https://www.merriam-webster.com/dictionary/performance",
+   "title": "PERFORMANCE Definition & Meaning - Merriam-Webster",
+   "text": "Sep 23, 2026 · The meaning of PERFORMANCE is the execution of an action. How to use performance in a sentence.",
+   "items": [
+    "23"
+   ],
+   "missing_from_step_observation": [
+    "23"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "tool_idx": 7,
+   "tool_seq": 7,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 1,
+   "args": {
+    "query": "TreeRAG Contextual RAG G-MemLLM performance evaluation accuracy BLEU ROUGE factual correctness latency cost 2024-2025"
+   },
+   "seg_id": "7.1",
+   "url": "https://aclanthology.org/2025.findings-acl.20.pdf",
+   "title": "TreeRAG : Unleashing the Power of Hierarchical Storage for Enhanced",
+   "text": "To evaluate the performance of TreeRAG in ad-dressing these challenges, we select the processed Dragonball dataset (Zhu et al., 2024 ) for our exper-iments, conducting tests across its Finance, Law, Medical subsets. 4.2.1 Comparative Experiment on Retrieval Quality.",
+   "items": [
+    "4.2"
+   ],
+   "missing_from_step_observation": [
+    "4.2"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": true
+  }
+ ]
+}

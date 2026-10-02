@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -40 +40 @@
+-The core performance advantage of EAGLE over Medusa lies in its optimized use of GPU compute resources. While Medusa relies on n-gram matching—a computationally expensive and memory-bound operation—it employs a more straightforward verification process. EAGLE, in contrast, leverages dynamic K verification and fine-grained confidence scoring, which allows for more efficient token acceptance and reduces GPU idle time. This results in a more effective utilization of compute units and a higher throughput, especially under sustained, high-QPS workloads.
++Large model online inference typically has two phases: prefill and decode. While Medusa relies on n-gram matching—a computationally expensive and memory-bound operation—it employs a more straightforward verification process. EAGLE, in contrast, leverages dynamic K verification and fine-grained confidence scoring, which allows for more efficient token acceptance and reduces GPU idle time. This results in a more effective utilization of compute units and a higher throughput, especially under sustained, high-QPS workloads.

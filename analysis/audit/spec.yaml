@@ -1,0 +1,71 @@
+seed: 20260930
+items:
+- run_id: q01-r03-20260930T204051
+  replay: c01/A-s101.json
+  target_fact: Existing RAG-vs-long-context comparisons are often inconclusive due to benchmark limitations; the LaRA benchmark
+    (2326 test cases, four QA tasks, three long-context types) was introduced to address this.
+- run_id: q01-r03-20260930T204051
+  replay: c01/B-s101.json
+  target_fact: Existing RAG-vs-long-context comparisons are often inconclusive due to benchmark limitations; the LaRA benchmark
+    (2326 test cases, four QA tasks, three long-context types) was introduced to address this.
+- run_id: q01-r03-20260930T204051
+  replay: c01/C-s101.json
+  target_fact: Existing RAG-vs-long-context comparisons are often inconclusive due to benchmark limitations; the LaRA benchmark
+    (2326 test cases, four QA tasks, three long-context types) was introduced to address this.
+- run_id: q02-r01-20260930T202824
+  replay: e02/A-s101.json
+- run_id: q02-r01-20260930T202824
+  replay: e02/D-s101.json
+- run_id: q02-r01-20260930T202824
+  replay: e02/G-s101.json
+- run_id: q01-r02-20260930T201622
+- run_id: q04-r02-20260930T205216
+- run_id: q01-r03-20260930T204051
+- run_id: q04-r02-20260930T205216
+  replay: c02/A-s101.json
+  target_fact: A W&B report training 600M-parameter MoE, dense and hybrid models says that combining a dense transformer (hybrid
+    MoE+dense) allows good training efficiency and significantly reduces communication overhead.
+- run_id: q04-r02-20260930T205216
+  replay: c02/B-s101.json
+  target_fact: A W&B report training 600M-parameter MoE, dense and hybrid models says that combining a dense transformer (hybrid
+    MoE+dense) allows good training efficiency and significantly reduces communication overhead.
+- run_id: q04-r02-20260930T205216
+  replay: c02/C-s101.json
+  target_fact: A W&B report training 600M-parameter MoE, dense and hybrid models says that combining a dense transformer (hybrid
+    MoE+dense) allows good training efficiency and significantly reduces communication overhead.
+- run_id: q05-r02-20260930T205952
+  replay: c03/A-s101.json
+  target_fact: Using 8-bit integers (INT8) can nearly double the throughput of matrix multiplications compared with 16-bit
+    floating point (FP16).
+- run_id: q05-r02-20260930T205952
+  replay: c03/B-s101.json
+  target_fact: Using 8-bit integers (INT8) can nearly double the throughput of matrix multiplications compared with 16-bit
+    floating point (FP16).
+- run_id: q05-r02-20260930T205952
+  replay: c03/C-s101.json
+  target_fact: Using 8-bit integers (INT8) can nearly double the throughput of matrix multiplications compared with 16-bit
+    floating point (FP16).
+- run_id: q06-r02-20260930T210856
+  replay: c04/A-s101.json
+  target_fact: A 2026 Nature Communications paper reports that Hyper-RAG (hypergraph-based RAG) improves LLM reliability and
+    reduces hallucinations, e.g. for medical diagnostics.
+- run_id: q06-r02-20260930T210856
+  replay: c04/B-s101.json
+  target_fact: A 2026 Nature Communications paper reports that Hyper-RAG (hypergraph-based RAG) improves LLM reliability and
+    reduces hallucinations, e.g. for medical diagnostics.
+- run_id: q06-r02-20260930T210856
+  replay: c04/C-s101.json
+  target_fact: A 2026 Nature Communications paper reports that Hyper-RAG (hypergraph-based RAG) improves LLM reliability and
+    reduces hallucinations, e.g. for medical diagnostics.
+- run_id: q03-r02-20260930T212748
+  replay: c05/A-s101.json
+  target_fact: TurboQuant compresses KV caches down to 3 bits per value, whereas standard inference runs at 16 or 32 bits,
+    without modifying the model.
+- run_id: q03-r02-20260930T212748
+  replay: c05/B-s101.json
+  target_fact: TurboQuant compresses KV caches down to 3 bits per value, whereas standard inference runs at 16 or 32 bits,
+    without modifying the model.
+- run_id: q03-r02-20260930T212748
+  replay: c05/C-s101.json
+  target_fact: TurboQuant compresses KV caches down to 3 bits per value, whereas standard inference runs at 16 or 32 bits,
+    without modifying the model.

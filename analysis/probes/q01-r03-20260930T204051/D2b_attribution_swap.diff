@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -23 +23 @@
+-- Hierarchical chunking and bidirectional traversal (e.g., in TreeRAG) significantly improve semantic coherence and factual consistency in long-context document retrieval.
++- Hierarchical chunking and bidirectional traversal (e.g., in LaRA) significantly improve semantic coherence and factual consistency in long-context document retrieval.

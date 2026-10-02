@@ -1,0 +1,40 @@
+case_id: c03
+kind: H1
+run_id: q05-r02-20260930T205952
+query_id: q05
+step: 0
+repair:
+  seg_id: '1.2'
+  tool_seq: 1
+  tool: web_search
+  title: LLM Quantization Review | Bitter Lesson
+  url: https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/
+  passage: For example, using 8 - bit integers (INT8) can nearly double the throughput of matrix multiplications
+    compared to using 16- bit floating-point numbers (FP16). SmoothQuant (diagram c) scales the weights prior to
+    quantization. AWQ aims to minimize the following loss function
+  requirement_ids:
+  - R5
+  - R7
+  omission_type: omitted (INT8-vs-FP16 throughput figure absent from step-0 summary and report; source kept only
+    as a reference)
+  usage_detect:
+    anchor: INT8
+    any_of:
+    - double
+    - 2x
+    - 2×
+    - twice
+control:
+  seg_id: '0.1'
+  tool_seq: 0
+  tool: web_search
+  title: 'Comparison: GPTQ vs AWQ vs SmoothQuant - apxml.com'
+  url: https://apxml.com/courses/practical-llm-quantization/chapter-3-advanced-ptq-techniques/comparing-advanced-ptq
+  passage: Comparing these methods directly reveals their different strengths. Choosing the right method depends
+    on your specific goals, the model architecture, and the trade-offs you're willing to make between accuracy ,
+    quantization time, and potential inference overhead.
+  rationale: real segment (background search) with no mechanism, number, hardware or caveat content, so it meets
+    no q05 requirement; 263 vs 273 chars; only off-requirement segment within +-25%
+selection_notes:
+- 'Other q05 candidates rejected: seg 9.1 (FP8/NVFP4 engines, tokens per GPU) retained in paraphrase in the step-2
+  summary; seg 3.2 (SmoothQuant W8A8, training-free) retained.'

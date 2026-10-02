@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -18 +18 @@
+-- Hybrid retrieval strategies (e.g., BM25 + dense) achieve superior retrieval precision compared to pure keyword or dense methods, though they still fall short of the ideal "Oracle Context."  
++- The MOST (Maynard Operation Sequence Technique) time standard method is a predetermined motion time system used in industry.  

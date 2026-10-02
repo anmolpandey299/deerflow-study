@@ -1,0 +1,233 @@
+{
+ "run_id": "q06-r02-20260930T210856",
+ "kind": "replay",
+ "case_id": "c04",
+ "condition": "C",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "75380958cc45eefad6ce1de8c31801e2f2612a22f9307df0e543c17ab7158c0f",
+ "report_chars": 19279,
+ "report_words": 2441,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 7,
+  "urls_in_retrieved_evidence": 1,
+  "fabricated_urls": [
+   "microsoft.com/en-us/research/publication/accuracy-of-retrieval-augmented-generation",
+   "microsoft.com/en-us/research/case-study-enterprise-rag-knowledge-management",
+   "gartner.com/en/articles/rag-in-customer-service-bots",
+   "arxiv.org/abs/2603.12345",
+   "ibm.com/ai/rag-audit-report-2026",
+   "via.placeholder.com/800x400?text=rag+system+architecture+with+hallucination+failure+points"
+  ],
+  "provenance_rate": 0.14285714285714285
+ },
+ "numeric_items": 2,
+ "numeric_items_not_in_evidence": [
+  "60%",
+  "40%"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "over 60% of responses to such queries contained hallucinations due to insufficient retrieval coverage.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "RAG systems frequently fail to retrieve relevant documents due to poor similarity matching or outdated embedding models, leading to hallucinations based on non-existent or incorrect information.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "The model does not detect or correct this discrepancy because it operates on a fixed set of sources, often fabricating data relationships or constructing false summaries.",
+    "quote_verified": false
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "PARTIAL",
+    "quote": "RAG + Prompt Engineering, Fine‑Tuning + Human‑in‑the‑Loop + Post‑Hoc Verification, and RAG + Real‑Time Data Integration + Feedback Loops are suggested mitigations beyond vanilla RAG.",
+    "quote_verified": false
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Retrieval‑Augmented Generation (RAG) is a valuable but incomplete solution for reducing hallucinations, and no single technique fully solves hallucinations in LLMs.",
+    "quote_verified": false
+   }
+  ],
+  "score": 0.3333333333333333,
+  "score_lenient": 0.75
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "RAG struggles with complex, multi-faceted, or open-ended queries, with over 60% of such responses containing hallucinations due to insufficient retrieval coverage.",
+    "claim": "Over 60% of RAG responses to complex queries contain hallucinations because retrieval coverage is insufficient.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Industry evaluations show that well-designed prompts can reduce hallucination rates by up to 40% in customer service and technical support.",
+    "claim": "Prompt engineering can cut hallucination rates by up to 40% in customer service and technical support contexts.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "A benchmark study (arXiv:2603.12345) found that over 60% of responses to such queries contained hallucinations due to: insufficient retrieval coverage, lack of integration with external reasoning modules, inability to synthesize information from multiple sources.",
+    "claim": "The arXiv benchmark found that more than 60% of RAG responses to complex queries hallucinate because of insufficient retrieval, missing reasoning integration, and poor multi-source synthesis.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Fine-tuned models outperformed RAG in factual consistency across domains like medicine and finance.",
+    "claim": "Fine‑tuned language models achieve higher factual consistency than RAG in medicine and finance domains.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Microsoft Research has documented that many enterprise RAG implementations inherit the limitations of their underlying databases—such as lack of version control, metadata tagging, or real-time update mechanisms.",
+    "claim": "Microsoft Research reports that enterprise RAG systems often suffer from database issues like missing version control, metadata tagging, and lack of real‑time updates.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "An industry audit of AI support systems (IBM, 2026) found that systems without feedback loops exhibit a 'hallucination cascade'—where incorrect answers are repeated over time, increasing error rates in long-term deployments.",
+    "claim": "IBM’s 2026 audit shows that AI support systems lacking feedback loops experience a hallucination cascade, with errors compounding over time.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG does not eliminate hallucinations; it redirects them into new failure modes within the retrieval and integration pipeline.",
+    "claim": "RAG does not remove hallucinations but shifts them from generation to retrieval and integration failures.",
+    "label": "CONTRADICTED",
+    "evidence_id": "E3",
+    "evidence_url": "https://staff.najah.edu/media/conference/2026/08/05/Razi.pdf",
+    "quote": "Retrieval - Augmented Generation (RAG) can lessen hallucinations.",
+    "quote_verified": false,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG systems frequently fail to retrieve relevant documents due to poor similarity matching or outdated embedding models, leading to hallucinations based on non-existent or incorrect information.",
+    "claim": "RAG systems often produce hallucinations because they retrieve irrelevant or outdated documents due to poor similarity matching or obsolete embeddings.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG systems often retrieve documents that are semantically irrelevant or contextually mismatched.",
+    "claim": "RAG systems frequently pull semantically irrelevant or contextually mismatched documents, contributing to hallucinations.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG systems frequently fail to retrieve relevant documents due to poor similarity matching or outdated embedding models.",
+    "claim": "RAG systems often fail to retrieve relevant documents because of poor similarity matching or outdated embeddings.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 1,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4247,
+   "completion_tokens": 1282,
+   "wall_s": 41.97036600112915,
+   "thinking_chars": 4949
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4048,
+   "completion_tokens": 26528,
+   "wall_s": 775.7643930912018,
+   "thinking_chars": 141757
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 1573,
+   "completion_tokens": 1607,
+   "wall_s": 39.216835021972656,
+   "thinking_chars": 6504
+  }
+ ],
+ "eval_wall_s": 857.100811958313
+}

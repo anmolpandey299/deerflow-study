@@ -1,0 +1,291 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q02-r01-20260930T202824",
+ "variant": "D1s_remove_deployment",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "2f024d8a7c772dbf16be53689050c0605aad93f2c90e24bd7308db54d0c131fd",
+  "report_chars": 7904,
+  "report_words": 1048,
+  "fmt": {
+   "checks": {
+    "h1_title": true,
+    "key_citations_before_key_points": true,
+    "key_points_4_to_6_bullets": false,
+    "overview_section": true,
+    "detailed_analysis_section": true,
+    "references_with_urls": true,
+    "markdown_table": true,
+    "no_wrapping_code_fence": true
+   },
+   "score": 0.875
+  },
+  "fact_url": {
+   "report_urls": 2,
+   "urls_in_retrieved_evidence": 2,
+   "fabricated_urls": [],
+   "provenance_rate": 1.0
+  },
+  "numeric_items": 26,
+  "numeric_items_not_in_evidence": [
+   "0.38",
+   "0.45",
+   "82%",
+   "85%",
+   "12",
+   "15%",
+   "0.42",
+   "0.50",
+   "88%",
+   "91%",
+   "10%",
+   "0.44",
+   "0.54",
+   "93%",
+   "95%",
+   "30%",
+   "2B",
+   "512",
+   "5B",
+   "1024",
+   "10B",
+   "4096"
+  ],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "Speculative decoding reduces per-user latency by enabling parallel draft generation and concurrent verification, thereby minimizing idle time in the inference pipeline.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "FULL",
+     "quote": "Draft-Model Sampling | 2–3× | Moderate | 2–3× | Basic draft generation with simple acceptance/rollback",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "FULL",
+     "quote": "Medusa | 3–5× | High | 3–5× | Lookahead draft with n-gram-based verification",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "FULL",
+     "quote": "EAGLE | 2–6× | 3× baseline | 2–6× | Dynamic K verification and GPU-optimized KV cache management",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "PARTIAL",
+     "quote": "Draft-Model Sampling | 2–3× | Moderate | 2–3× | Basic draft generation with simple acceptance/rollback",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "PARTIAL",
+     "quote": "Output quality is a critical dimension that must be evaluated independently of speed, as speculative decoding introduces new risks of hallucination and inconsistency.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "PARTIAL",
+     "quote": "Draft-Model Sampling requires a minimal YAML configuration (`draft_model_name`, `main_model_name`).",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    }
+   ],
+   "score": 0.6875,
+   "score_lenient": 0.6875
+  },
+  "fact_claims": {
+   "claims_extracted": 10,
+   "claims_checked": 10,
+   "claims": [
+    {
+     "report_quote": "| Draft-Model Sampling | 2–3× | Moderate | 2–3× | Basic draft generation with simple acceptance/rollback |",
+     "claim": "Draft-Model Sampling achieves an average latency reduction of 2–3×.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| Medusa | 3–5× | High | 3–5× | Lookahead draft with n-gram-based verification |",
+     "claim": "Medusa achieves an average latency reduction of 3–5×.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| EAGLE | 2–6× | 3× baseline | 2–6× | Dynamic K verification and GPU-optimized KV cache management |",
+     "claim": "EAGLE achieves an average latency reduction of 2–6×.",
+     "label": "SUPPORTED",
+     "evidence_id": "E4",
+     "evidence_url": "https://dreaming.press/posts/2026-06-22-speculative-decoding-eagle-vs-medusa.html",
+     "quote": "Speculative decoding makes a single LLM response 2–6x faster without changing a token of the output.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "| EAGLE | 2–6× | 3× baseline | 2–6× | Dynamic K verification and GPU-optimized KV cache management |",
+     "claim": "EAGLE achieves a throughput improvement of 3× baseline.",
+     "label": "SUPPORTED",
+     "evidence_id": "E8",
+     "evidence_url": "https://appscale.blog/en/blog/speculative-decoding-production-llm-inference-eagle-medusa-vllm-2026",
+     "quote": "Speculative Decoding in Production LLM Inference 2026: EAGLE-3, Medusa, vLLM, 3× Throughput",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "| EAGLE | 0.44 | 0.54 | 93% | 95% | ≤5% | Logical inconsistencies, factual errors |",
+     "claim": "EAGLE has a hallucination rate of ≤5%.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| EAGLE | 0.44 | 0.54 | 93% | 95% | ≤5% | Logical inconsistencies, factual errors |",
+     "claim": "EAGLE has a factual accuracy of 93%.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| EAGLE | 0.44 | 0.54 | 93% | 95% | ≤5% | Logical inconsistencies, factual errors |",
+     "claim": "EAGLE has a coherence score of 95%.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| Draft-Model Sampling | 1–2B params | 512 tokens | Low-end GPU or edge device | — | Low-traffic environments |",
+     "claim": "Draft-Model Sampling uses a draft model of 1–2B parameters.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| Medusa | 3–5B params | 1024–2048 tokens | High-end GPU (e.g., A100) | — | — |",
+     "claim": "Medusa uses a draft model of 3–5B parameters.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "| EAGLE | 5–10B params | Up to 4096 tokens | — | — | High-throughput, distributed environments |",
+     "claim": "EAGLE uses a draft model of 5–10B parameters.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    }
+   ],
+   "supported": 2,
+   "contradicted": 0,
+   "unsupported": 8,
+   "score": 0.2
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 2312,
+    "completion_tokens": 2065,
+    "wall_s": 48.48857593536377,
+    "thinking_chars": 7723
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 2082,
+    "completion_tokens": 2718,
+    "wall_s": 62.47232007980347,
+    "thinking_chars": 7878
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 2041,
+    "completion_tokens": 1392,
+    "wall_s": 33.16246199607849,
+    "thinking_chars": 4241
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 4,
+   "completeness": 6,
+   "coherence": 7,
+   "relevance": 8,
+   "citation_quality": 3,
+   "writing_quality": 7
+  },
+  "overall_score": 6,
+  "weighted_score": 5.8,
+  "strengths": [
+   "Comprehensive side‑by‑side tables that summarize speed, quality, and hardware requirements",
+   "Clear logical flow from high‑level overview to detailed analysis and summary",
+   "Inclusion of both quantitative metrics (BLEU, ROUGE, hallucination rates) and qualitative observations"
+  ],
+  "weaknesses": [
+   "Reliance on two non‑peer‑reviewed blog posts as the sole cited sources, limiting factual reliability",
+   "Missing or incomplete sections (e.g., Key Points, Overview, Survey Note) that reduce completeness",
+   "Lack of explicit discussion of deployment complexity (e.g., integration effort, monitoring, rollback mechanisms)",
+   "No evidence of controlled experiments or benchmark references to support the reported metrics"
+  ],
+  "suggestions": [
+   "Augment the report with peer‑reviewed papers or official benchmark results that provide the cited metrics",
+   "Fill in the empty sections (Key Points, Overview, Survey Note) to improve completeness and context",
+   "Add a dedicated subsection on deployment complexity, covering configuration, monitoring, and rollback strategies for each method",
+   "Standardize citation formatting (e.g., APA or IEEE) and include DOIs or stable URLs for each source",
+   "Provide a brief discussion of potential biases or limitations in the reported data to enhance transparency"
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 62
+}

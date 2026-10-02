@@ -1,0 +1,87 @@
+{
+ "case_file": "analysis/cases/c05.yaml",
+ "case": {
+  "case_id": "c05",
+  "kind": "H1",
+  "run_id": "q03-r02-20260930T212748",
+  "query_id": "q03",
+  "step": 1,
+  "repair": {
+   "seg_id": "6.1",
+   "tool_seq": 6,
+   "tool": "web_search",
+   "title": "Google just figured out how to run LLMs on 6x less memory .",
+   "url": "https://www.linkedin.com/posts/shashi-kush-6940546k_google-just-figured-out-how-to-run-llms-on-activity-7444262186480492544-pcal",
+   "passage": "It compresses KV caches down to 3 bits per value. Standard inference runs at 16 or 32 bits. The gap between those numbers is where the bottleneck lives, and TurboQuant closes it without touching the model.",
+   "requirement_ids": [
+    "R2",
+    "R1"
+   ],
+   "omission_type": "lost: the researcher exhausted its tool budget (recursion limit 25); DeerFlow's recursion-limit fallback (nodes.py:1007-1077) re-called the model with all tools stripped, the model replied with a tool call written as plain text, and DeerFlow accepted that 104-char string as the step's summary",
+   "usage_detect": {
+    "anchor": "TurboQuant",
+    "any_of": [
+     "3 bits",
+     "3-bit",
+     "3 bit",
+     "16 or 32",
+     "6x",
+     "6×"
+    ]
+   }
+  },
+  "control": {
+   "seg_id": "2.2",
+   "tool_seq": 2,
+   "tool": "web_search",
+   "title": "GitHub - HuangOwen/Awesome- LLM - Compression : Awesome LLM ...",
+   "url": "https://github.com/HuangOwen/Awesome-LLM-Compression",
+   "passage": "Awesome LLM compression research papers and tools to accelerate LLM training and inference .Model Compression Toolkits. KV Cache and Prompt Compression . Training and Fine-Tuning. Analysis and Benchmarking.",
+   "rationale": "real segment (repository description: category headings only) meeting no q03 requirement; 206 vs 205 chars; closest-length off-requirement segment"
+  },
+  "selection_notes": [
+   "Step-1 lost segments: 6.1 TurboQuant (R2, specific figures), 6.0 Kara and 7.2 PackKV/Keyformer (R1 families, already well covered by step 0), 6.2/7.1 generic bandwidth/cost statements, 7.0 evaluation-metric statement.",
+   "R2 is the least-covered requirement among these candidates (baseline has one memory figure, INT8 4x, from step 0); 6.1 chosen."
+  ]
+ },
+ "base_request_hash": "c6fb194770c29434e23b98347860d8cc1e721b32a25a9dc5f8208563c102c222",
+ "declared_changes": {
+  "A": {},
+  "B": {
+   "3": "t compresses KV caches down to 3 bits per value. Standard inference runs at 16 or 32 bits. The gap between those numbers is where the bottleneck lives, and TurboQuant closes it without touching the model.\n\n- [Google just figured out how to run LLMs on 6x less memory .](https://www.linkedin.com/posts/shashi-kush-6940546k_google-just-figured-out-how-to-run-llms-on-activity-7444262186480492544-pcal)\n"
+  },
+  "C": {
+   "3": "g/abs/2508.06297\"}}\n</tool_call>\n\n### Additional retrieved passage\n\n> Awesome LLM compression research papers and tools to accelerate LLM training and inference .Model Compression Toolkits. KV Cache and Prompt Compression . Training and Fine-Tuning. Analysis and Benchmarking.\n\n- [GitHub - HuangOwen/Awesome- LLM - Compression : Awesome LLM ...](https://github.com/HuangOwen/Awesome-LLM-Compression)\n"
+  }
+ },
+ "model": {
+  "provider": "ollama-openai-compatible",
+  "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "served_tag": "dfprobe-qwen3-4b-ctx40k",
+  "num_ctx": 40960,
+  "base_url": "http://localhost:11434/v1",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "seed": 7,
+  "max_tokens": 8192,
+  "token_limit": 32000
+ },
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "audit.py": "86296de277670f6610f46d0926b3cc50733400c6b0c9a6d7dda16272fafed5b9",
+  "boundary.py": "5e1a152004afb01193044c55d47346806b793f6cac81b2738c65497eca6d82e8",
+  "candidates.py": "3cbd9c83703a757823b7f87867ef84e6c5d7b57da3eaea65c5d7a34225fa2fad",
+  "cassette.py": "639e60beeb17e764e061e8304e995bb4d8a56e2e5747080bb2a367f34fbcb52f",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "734b58b68e78cb424c7d47f6f71826de53d51ad8942e2b2b77c74da03bceb8d3",
+  "evidence.py": "71232c176506278dbeb0cb5e44e3218765290437da7064b76f03a59737aa6b25",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_analysis.py": "020db3df9641dbf536d7caafe430b400ad0b0bf0b9550c84a2a3a50162211526",
+  "replay_reporter.py": "e02458ae1e9eb6429d4fe17f412877f7929ec282b08476c772294b6a7f09b4d3",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c",
+  "tables.py": "cde52c9462406f470fe8683ed06aace573a028142a53874c12e7dc5d1dbafca5"
+ }
+}

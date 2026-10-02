@@ -1,0 +1,255 @@
+{
+ "run_id": "q04-r02-20260930T205216",
+ "kind": "replay",
+ "case_id": "e03",
+ "condition": "G",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "be24f0aa614c534e636c1bac017e73ec9cb92ba7367abd0d643a08d0b79f0af2",
+ "report_chars": 19035,
+ "report_words": 2286,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 8,
+  "urls_in_retrieved_evidence": 2,
+  "fabricated_urls": [
+   "wandb.ai/zaiinn440/hybridmoe/reports/inference-performance-mixtral-8x7b-vs-llama-3-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-inference-efficiency",
+   "research.google.com/pubs/pub47774.html",
+   "wandb.ai/zaiinn440/hybridmoe/reports/benchmark-performance-mixtral-8x7b-vs-llama-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-generalization",
+   "wandb.ai/zaiinn440/hybridmoe/reports"
+  ],
+  "provenance_rate": 0.25
+ },
+ "numeric_items": 26,
+ "numeric_items_not_in_evidence": [
+  "60%",
+  "1.3",
+  "1.8",
+  "0.8",
+  "1.2",
+  "15",
+  "25%",
+  "0.9",
+  "78%",
+  "80%",
+  "65%",
+  "5%",
+  "48%",
+  "52%",
+  "12%",
+  "15%",
+  "10%",
+  "7B"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "MoE models partition model parameters across multiple 'experts,' activating only a subset per token—thereby reducing both training and inference costs.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "MoE models activate only a subset of parameters per token, reducing memory bandwidth usage by up to 60%.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "On standard benchmarks like MMLU and GSM8K, MoE models achieve performance close to or slightly below dense models, with notable advantages in domain-specific tasks and robustness.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Mixtral 8x7B (MoE) vs Llama 3 70B (Dense)",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "MoE models exhibit higher per-token latency due to the overhead of routing decisions and expert selection.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "MoE models are more suitable for real-time applications such as chatbots and virtual assistants.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.8571428571428571,
+  "score_lenient": 0.8571428571428571
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "MoE models reduce memory bandwidth usage by up to 60% compared to dense models, enabling efficient deployment on systems with limited memory capacity.",
+    "claim": "MoE models can reduce memory bandwidth usage by up to 60% compared to dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "On standard benchmarks like MMLU and GSM8K, MoE models achieve performance close to or slightly below dense models, with notable advantages in domain-specific tasks and robustness.",
+    "claim": "On MMLU and GSM8K benchmarks, MoE models perform close to or slightly below dense models, with advantages in domain-specific tasks and robustness.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Mixtral 8x7B (MoE) | 1.3–1.8 milliseconds | [Inference Performance of Mixtral 8x7B vs Llama 3 70B on A100 and TPU Systems]",
+    "claim": "Mixtral 8x7B (MoE) processes tokens in 1.3–1.8 ms on A100/TPU, while Llama 3 70B (Dense) processes tokens in 0.8–1.2 ms.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Mixtral 8x7B (MoE) | 1.2 tokens/second/GPU | 30% higher than Llama 3 70B | [Inference Performance of Mixtral 8x7B vs Llama 3 70B on A100 and TPU Systems]",
+    "claim": "Mixtral 8x7B (MoE) achieves 1.2 tokens/second per GPU, which is 30% higher throughput than Llama 3 70B (Dense) at 0.9 tokens/second per GPU.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "MMLU | ~78% | ~80% | Slight deficit | [Benchmark Performance of Mixtral 8x7B vs Llama 70B on MMLU, GSM8K, and HumanEval]",
+    "claim": "Mixtral 8x7B scores about 78% on MMLU, slightly below Llama 70B's 80%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GSM8K | ~65% | ~70% | 5% gap | [Benchmark Performance of Mixtral 8x7B vs Llama 70B on MMLU, GSM8K, and HumanEval]",
+    "claim": "Mixtral 8x7B scores about 65% on GSM8K, 5% lower than Llama 70B's 70%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "HumanEval (Code) | 48% | 52% | 4% deficit | [Benchmark Performance of Mixtral 8x7B vs Llama 70B on MMLU, GSM8K, and HumanEval]",
+    "claim": "Mixtral 8x7B achieves 48% on HumanEval (Code), 4% lower than Llama 70B's 52%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Medical Diagnosis | 12% improvement over dense models on curated medical datasets | [Generalization and Domain Adaptation in MoE Models]",
+    "claim": "In medical diagnosis datasets, MoE models outperform dense models by 12%.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Prompt Injection Attacks | 15% higher resistance | [Robustness and Adversarial Testing of MoE and Dense LLMs]",
+    "claim": "MoE models exhibit 15% higher resistance to prompt injection attacks than dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Customer Service Chatbot | 10% improvement in user satisfaction | Faster responses, better domain handling | [Downstream Task Performance of MoE-Based Chatbots in Real-World Deployments]",
+    "claim": "MoE-based chatbots improve customer service user satisfaction by 10% compared to dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4860,
+   "completion_tokens": 1614,
+   "wall_s": 43.33136010169983,
+   "thinking_chars": 5963
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4662,
+   "completion_tokens": 3840,
+   "wall_s": 93.83034586906433,
+   "thinking_chars": 10342
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2128,
+   "completion_tokens": 1481,
+   "wall_s": 35.70482778549194,
+   "thinking_chars": 5158
+  }
+ ],
+ "eval_wall_s": 172.96467399597168
+}

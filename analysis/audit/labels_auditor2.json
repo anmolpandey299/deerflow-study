@@ -1,0 +1,134 @@
+{
+  "P67bd65": {
+    "claims": [
+      {"claim": "A 2026 study in Nature Machine Intelligence (DOI 10.1038/s41467-026-71411-1) demonstrates that retrieval models frequently fail to capture context-specific nuances, especially for domain-specific jargon or evolving concepts.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Microsoft Research has documented that many enterprise RAG implementations inherit the limitations of their underlying databases (no version control, metadata tagging or real-time updates).", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A Microsoft (2026) enterprise case study found that schema mismatches made the RAG system combine data from different departments (HR and Finance) without proper alignment, producing misleading conclusions.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A benchmark study (arXiv:2603.12345) found that over 60% of RAG responses to complex, multi-faceted or open-ended queries contained hallucinations.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "An IBM (2026) audit of AI support systems found that RAG systems without feedback loops exhibit a 'hallucination cascade', with error rates increasing over time.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "STATED_INCORRECTLY",
+    "target_fact_evidence": "A 2026 study published in *Nature Machine Intelligence* (DOI: [10.1038/s41467-026-71411-1](https://www.nature.com/articles/s41467-026-71411-1)) demonstrates that retrieval models frequently fail to capture context-specific nuances, especially when the query involves domain-specific jargon or evolving concepts."
+  },
+  "P7c728a": {
+    "claims": [
+      {"claim": "TreeRAG builds a tree-based chunking structure and retrieves with 'root-to-leaves' and 'leaf-to-root' (bidirectional traversal) strategies.", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "TreeRAG's hierarchical chunking was evaluated on the AWS Documentation Dataset with an LLM-as-a-judge setup, showing consistent improvements in factual consistency and relevance across multiple embedding models (e.g., BGE-m3, Sentence-BERT).", "label": "MISATTRIBUTED", "passage_id": "P2"},
+      {"claim": "The EncouRAGe (2025) study establishes that LLM-as-a-judge frameworks provide a more meaningful evaluation of factual correctness and relevance than traditional metrics.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "The RAGPerf benchmarking framework confirms that optimized RAG pipelines can achieve sub-second response times for well-structured queries.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "The 'Best Embedding Models for RAG' report finds BGE-m3 offers a favorable accuracy/affordability balance, outperforming OpenAI and Cohere embeddings in cost-efficiency for production pipelines.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "n/a",
+    "target_fact_evidence": ""
+  },
+  "P89afd1": {
+    "claims": [
+      {"claim": "TreeRAG uses tree-structured chunking with a root-to-leaf and leaf-to-root retrieval framework called Bidirectional Traversal Retrieval.", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "A key evaluation of TreeRAG on the AWS Documentation Dataset using an LLM-as-a-judge setup shows consistent improvements in factual consistency and response relevance across two embedding models.", "label": "MISATTRIBUTED", "passage_id": "P2"},
+      {"claim": "The EncouRAGe (2025) study validates that LLM-as-a-judge frameworks are superior for evaluating factual consistency and relevance.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "The RAGPerf benchmarking framework provides evidence that optimized RAG pipelines can achieve sub-second response times for well-structured queries.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A comparative analysis of embedding models shows BGE-m3 outperforms OpenAI and Cohere in cost-efficiency without sacrificing retrieval quality.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "P8dcdcc": {
+    "claims": [
+      {"claim": "A 2026 Nature Communications study confirms that even with advanced retrieval models, RAG systems frequently return outdated or irrelevant documents.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Microsoft Research has highlighted that RAG inherits the limitations of its underlying databases (no version tracking or automatic content refresh), leading to hallucinations.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A Gartner study found that 40% of customer service bot interactions with vague queries resulted in hallucinated responses.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A 2026 benchmark study found that over 60% of RAG responses to complex or open-ended queries contained hallucinations.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "An IBM audit of AI support systems with RAG found that systems without feedback loops exhibited increasing error rates over time.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "STATED_INCORRECTLY",
+    "target_fact_evidence": "A 2026 study published in *Nature Communications* confirms that even with advanced retrieval models, RAG systems frequently return outdated or irrelevant documents—particularly when context or semantic drift over time is not accounted for."
+  },
+  "P8e9efa": {
+    "claims": [
+      {"claim": "Context formatting choices such as delimiters and structural markers significantly shift RAG accuracy and stability even when the semantic content is identical.", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "MiA-RAG is the first framework to treat retrieval and generation as a unified conditioning process, building a holistic (mindscape) representation via hierarchical summarization that conditions both retrieval and generation.", "label": "SUPPORTED", "passage_id": "P5"},
+      {"claim": "MiA-RAG demonstrates superior performance on long-context reasoning tasks such as legal document analysis or scientific literature synthesis.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Hybrid BM25 (+ dense) retrieval achieves the best retrieval results, yet RAG still underperforms the Oracle Context.", "label": "SUPPORTED", "passage_id": "P10"},
+      {"claim": "There is a clear performance trade-off curve in which higher accuracy and coherence directly correlate with higher latency and operational cost.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "n/a",
+    "target_fact_evidence": ""
+  },
+  "Pa4f8a6": {
+    "claims": [
+      {"claim": "Mixtral 8x7B activates ~13B parameters per token and holds ~47B in memory, whereas Llama 70B activates and stores all 70B.", "label": "SUPPORTED", "passage_id": "P5"},
+      {"claim": "MoE models use up to 60% less memory bandwidth (and active compute) than dense models.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "MoE per-token latency is 1.3-1.8 ms versus 0.8-1.2 ms for dense models, yet MoE achieves about 30% higher throughput on 8x A100 systems.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Mixtral 8x7B versus Llama 70B scores: MMLU 78% vs 80%, GSM8K 65% vs 70%, HumanEval 48% vs 52%.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "MoE models achieved a 12% accuracy improvement over dense models on a curated medical dataset.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": "Weights & Biases (W&B) reports on MoE vs. dense LLM architectures."
+  },
+  "Pb2ea4d": {
+    "claims": [
+      {"claim": "A 2026 Nature Machine Intelligence study [1] shows that even with state-of-the-art retrieval models RAG systems frequently return outdated or irrelevant documents, identifying retrieval failure as one of the most common root causes of hallucinations.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Microsoft Research's technical report [2] finds RAG inherits the limitations of its document databases (no version control, real-time updates or metadata tracking) and propagates their inaccuracies.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "An enterprise RAG case study [3] found that schema mismatches led to incorrect data aggregation and false conclusions in internal documentation.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "A 2026 benchmark study [5] found that over 60% of responses to complex questions contained hallucinations.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "An IBM audit [6] found that RAG support systems without feedback loops exhibited increasing error rates over time.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "STATED_INCORRECTLY",
+    "target_fact_evidence": "A 2026 study published in *Nature Machine Intelligence* demonstrates that even with state-of-the-art retrieval models, RAG systems frequently return outdated or irrelevant documents, particularly when context shifts over time or when the query contains subtle semantic variations."
+  },
+  "Pc05d7b": {
+    "claims": [
+      {"claim": "TreeRAG uses a tree-like chunking structure with bidirectional 'root-to-leaves' and 'leaf-to-root' traversal.", "label": "SUPPORTED", "passage_id": "P4"},
+      {"claim": "TreeRAG's evaluation on the AWS Documentation Dataset with an LLM-as-a-judge framework shows significant improvements in factual consistency and response relevance across two embedding models (e.g., BGE-m3, Sentence-BERT).", "label": "MISATTRIBUTED", "passage_id": "P2"},
+      {"claim": "The EncouRAGe (2025) study validates that LLM-as-a-judge frameworks provide a more meaningful and accurate assessment of factual consistency and relevance.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "The theLLMs 'Best Embedding Models for RAG' report identifies BGE-m3 as a cost-effective embedding model balancing accuracy and affordability, with lower cost than OpenAI or Cohere.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "TreeRAG's reduction of redundant queries enables sub-second response times in optimized pipelines.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": "**LaRA** (benchmarking framework) for evaluation standards"
+  },
+  "Pc9f0ab": {
+    "claims": [
+      {"claim": "The arXiv:2211.10438 study directly evaluates GPTQ, AWQ and SmoothQuant on instruction-tuned LLMs from 7B to 405B parameters.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "SmoothQuant (W8A8) shows superior accuracy retention (perplexity, instruction following, reasoning), outperforming GPTQ and AWQ.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "In an llmcompressor benchmark, GPTQ (W4A16) generates tokens 2-3x faster than FP32 with up to 40% faster model loading, AWQ is 1.5-2.5x faster, and SmoothQuant loads 10-15% slower.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "GPTQ's weight-only (W4A16) design leverages optimized INT4 matrix-multiplication kernels on NVIDIA GPUs.", "label": "CONTRADICTED", "passage_id": "P7"},
+      {"claim": "SmoothQuant is not effectively supported on consumer GPUs (RTX 30xx/40xx) or AMD GPUs, and llama.cpp does not support SmoothQuant.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "Pce6edb": {
+    "claims": [
+      {"claim": "Speculative decoding achieves a 2-6x reduction in response time versus standard autoregressive decoding.", "label": "SUPPORTED", "passage_id": "P1"},
+      {"claim": "Per appscale.blog, latency reduction is 2-3x for Draft-Model Sampling, 3-5x for Medusa and 2-6x for EAGLE, with EAGLE giving 3x baseline throughput.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Output quality differs by method: Draft-Model Sampling has a 12-15% hallucination rate (82% factual accuracy), Medusa 8-10%, and EAGLE 5% or less (93% factual accuracy).", "label": "CONTRADICTED", "passage_id": "P1"},
+      {"claim": "A 200-participant user study rated EAGLE responses as significantly more trustworthy than Medusa or Draft-Model Sampling responses.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Per oh-bug.com, EAGLE needs a 5-10B draft model, 10-15 GB GPU memory per instance and HBM GPUs with at least 48 GB VRAM, versus a 1-2B draft and about 1-3 GB for Draft-Model Sampling.", "label": "UNSUPPORTED", "passage_id": "none"}
+    ],
+    "target_fact": "n/a",
+    "target_fact_evidence": ""
+  },
+  "Pd527fd": {
+    "claims": [
+      {"claim": "Per arXiv:2211.10438 ('A Comprehensive Evaluation of Quantized Instruction-Tuned LLMs'), SmoothQuant (W8A8) has superior (highest) perplexity/accuracy retention while GPTQ and AWQ (W4A16) are moderate.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "Per aimastery.page and kiadev.net benchmarks, GPTQ generates tokens 2-3x faster than FP16 with up to 40% faster model loading, while SmoothQuant loads 10-15% slower.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "GPTQ achieves the fastest token generation because of optimized low-bit (INT4) matrix-multiplication kernels in NVIDIA drivers and cuBLAS.", "label": "CONTRADICTED", "passage_id": "P7"},
+      {"claim": "Hardware support is most robust on NVIDIA A100/H100, with limited or no SmoothQuant support on consumer or AMD GPUs.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "SmoothQuant is a training-free method that enables W8A8 quantization with minimal accuracy degradation.", "label": "SUPPORTED", "passage_id": "P2"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  },
+  "Pe3b211": {
+    "claims": [
+      {"claim": "INT8 quantization of the KV cache achieves up to 4x memory reduction with minimal accuracy degradation [2601.04719].", "label": "SUPPORTED", "passage_id": "P3"},
+      {"claim": "Token-level pruning (e.g., RocketKV's permanent eviction stage) offers 2-6x memory savings with low-to-moderate accuracy degradation.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "DynamicKV is a reconstruction-based method with superior semantic fidelity that introduces higher inference latency (latency spikes) from reconstruction overhead.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "ChunkKV achieves 4-8x memory savings while maintaining contextual coherence in long-context reasoning.", "label": "UNSUPPORTED", "passage_id": "none"},
+      {"claim": "ChunkKV's key innovation is using layer uncertainty to allocate per-layer budget sizes.", "label": "MISATTRIBUTED", "passage_id": "P0"}
+    ],
+    "target_fact": "NOT_STATED",
+    "target_fact_evidence": ""
+  }
+}

@@ -1,0 +1,175 @@
+{
+ "judge_model": "gpt-oss:20b",
+ "judge_usage": [
+  {
+   "call": "verify",
+   "prompt_tokens": 2421,
+   "completion_tokens": 219,
+   "wall_s": 8.902949094772339,
+   "thinking_chars": 736
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2436,
+   "completion_tokens": 279,
+   "wall_s": 6.513241767883301,
+   "thinking_chars": 1193
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 3537,
+   "completion_tokens": 322,
+   "wall_s": 11.486526012420654,
+   "thinking_chars": 1140
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 3555,
+   "completion_tokens": 1042,
+   "wall_s": 23.37956976890564,
+   "thinking_chars": 4991
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 1900,
+   "completion_tokens": 203,
+   "wall_s": 6.951233148574829,
+   "thinking_chars": 644
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 1932,
+   "completion_tokens": 710,
+   "wall_s": 15.90742826461792,
+   "thinking_chars": 2700
+  }
+ ],
+ "rows": [
+  {
+   "run_id": "q01-r02-20260930T201622",
+   "variant": "D2_irrelevant_passage",
+   "kind": "D2",
+   "claim": "The MOST (Maynard Operation Sequence Technique) time standard method is a predetermined motion time system used in industry.",
+   "label": "SUPPORTED",
+   "evidence_id": "E2",
+   "quote": "The MOST (Maynard Operation Sequence Technique) time standard method is a predetermined motion time system used in …",
+   "quote_verified": true,
+   "evidence_url": "https://www.industrial-engineered.com/time-standards/engineered-time/most/"
+  },
+  {
+   "run_id": "q01-r02-20260930T201622",
+   "variant": "D2b_attribution_swap",
+   "kind": "D2b",
+   "claim": "RAGPerf (the end-to-end RAG benchmarking framework) introduces a novel cognitive modeling paradigm that mimics human reading patterns, enabling better coherence and reasoning over long, complex documents.",
+   "label": "NOT_FOUND",
+   "evidence_id": "",
+   "quote": "",
+   "quote_verified": false,
+   "evidence_url": null
+  },
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "variant": "D2_irrelevant_passage",
+   "kind": "D2",
+   "claim": "The meaning of PERFORMANCE is the execution of an action.",
+   "label": "SUPPORTED",
+   "evidence_id": "E17",
+   "quote": "The meaning of PERFORMANCE is the execution of an action.",
+   "quote_verified": true,
+   "evidence_url": "https://www.merriam-webster.com/dictionary/performance"
+  },
+  {
+   "run_id": "q01-r03-20260930T204051",
+   "variant": "D2b_attribution_swap",
+   "kind": "D2b",
+   "claim": "Hierarchical chunking and bidirectional traversal (e.g., in LaRA) significantly improve semantic coherence and factual consistency in long-context document retrieval.",
+   "label": "NOT_FOUND",
+   "evidence_id": "",
+   "quote": "",
+   "quote_verified": false,
+   "evidence_url": null
+  },
+  {
+   "run_id": "q02-r01-20260930T202824",
+   "variant": "D2_irrelevant_passage",
+   "kind": "D2",
+   "claim": "Large model online inference typically has two phases: prefill and decode.",
+   "label": "SUPPORTED",
+   "evidence_id": "E6",
+   "quote": "Large model online inference typically has two phases: **prefill** and **decode**.",
+   "quote_verified": true,
+   "evidence_url": "https://www.oh-bug.com/posts/speculative-decoding-in-production-eagle-draft-model/"
+  },
+  {
+   "run_id": "q02-r01-20260930T202824",
+   "variant": "D2b_attribution_swap",
+   "kind": "D2b",
+   "claim": "Medusa delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.",
+   "label": "NOT_FOUND",
+   "evidence_id": "",
+   "quote": "",
+   "quote_verified": false,
+   "evidence_url": null
+  }
+ ],
+ "originals": {
+  "judge_usage": [
+   {
+    "call": "verify",
+    "prompt_tokens": 2435,
+    "completion_tokens": 694,
+    "wall_s": 18.244630813598633,
+    "thinking_chars": 3320
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 3556,
+    "completion_tokens": 1725,
+    "wall_s": 41.915935039520264,
+    "thinking_chars": 8589
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 1933,
+    "completion_tokens": 940,
+    "wall_s": 22.59352707862854,
+    "thinking_chars": 3896
+   }
+  ],
+  "rows": [
+   {
+    "run_id": "q01-r02-20260930T201622",
+    "variant": "D2b_attribution_swap",
+    "kind": "D2b",
+    "claim": "Mindscape-Aware RAG (MiA-RAG) introduces a novel cognitive modeling paradigm that mimics human reading patterns, enabling better coherence and reasoning over long, complex documents.",
+    "label": "SUPPORTED",
+    "evidence_id": "E8",
+    "quote": "MiA-RAG builds a mindscape through hierarchical summarization and conditions both retrieval and generation on this global semantic representation.",
+    "quote_verified": true,
+    "evidence_url": "https://arxiv.org/abs/2512.17220"
+   },
+   {
+    "run_id": "q01-r03-20260930T204051",
+    "variant": "D2b_attribution_swap",
+    "kind": "D2b",
+    "claim": "Hierarchical chunking and bidirectional traversal (e.g., in TreeRAG) significantly improve semantic coherence and factual consistency in long-context document retrieval.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "quote": "",
+    "quote_verified": false,
+    "evidence_url": null
+   },
+   {
+    "run_id": "q02-r01-20260930T202824",
+    "variant": "D2b_attribution_swap",
+    "kind": "D2b",
+    "claim": "EAGLE delivers up to 6× faster response times and 3× higher throughput than baseline methods, with hallucination rates below 5% and superior output consistency, at the cost of high hardware demands and complex deployment workflows.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "quote": "",
+    "quote_verified": false,
+    "evidence_url": null
+   }
+  ]
+ }
+}

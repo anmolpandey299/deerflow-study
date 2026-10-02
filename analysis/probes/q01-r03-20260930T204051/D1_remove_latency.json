@@ -1,0 +1,247 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q01-r03-20260930T204051",
+ "variant": "D1_remove_latency",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "e3ef92e0cb82b508773a15e978536638597ec64b02d39735161af2cffda7cdcc",
+  "report_chars": 16322,
+  "report_words": 1829,
+  "fmt": {
+   "checks": {
+    "h1_title": true,
+    "key_citations_before_key_points": true,
+    "key_points_4_to_6_bullets": false,
+    "overview_section": true,
+    "detailed_analysis_section": true,
+    "references_with_urls": true,
+    "markdown_table": true,
+    "no_wrapping_code_fence": true
+   },
+   "score": 0.875
+  },
+  "fact_url": {
+   "report_urls": 16,
+   "urls_in_retrieved_evidence": 15,
+   "fabricated_urls": [
+    "raw.githubusercontent.com/ai-research/visuals/main/rag-architectures-2025.png"
+   ],
+   "provenance_rate": 0.9375
+  },
+  "numeric_items": 1,
+  "numeric_items_not_in_evidence": [],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "TreeRAG framework exemplifies this innovation by constructing a tree-based chunking structure with two key retrieval strategies: Root-to-leaves and Leaf-to-root.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "FULL",
+     "quote": "The following table synthesizes available performance data across the three leading methodologies.",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "FULL",
+     "quote": "As of 2025, long-context RAG systems have matured into sophisticated, context-sensitive architectures.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "PARTIAL",
+     "quote": "Most performance data is domain-specific or qualitative.",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "FULL",
+     "quote": "TreeRAG emerges as the most balanced and practical choice for real-world, document-based applications where accuracy, speed, and cost are interdependent.",
+     "quote_verified": true
+    }
+   ],
+   "score": 0.5625,
+   "score_lenient": 0.5625
+  },
+  "fact_claims": {
+   "claims_extracted": 8,
+   "claims_checked": 8,
+   "claims": [
+    {
+     "report_quote": "Evaluation on the AWS Documentation Dataset using an LLM-as-a-judge setup demonstrates consistent improvements in factual consistency and relevance across multiple embedding models (e.g., BGE-m3, Sentence-BERT).",
+     "claim": "TreeRAG evaluation on the AWS Documentation Dataset using an LLM-as-a-judge setup shows consistent improvements in factual consistency and relevance across embedding models such as BGE-m3 and Sentence-BERT.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "TreeRAG – ✅ High – Demonstrated strong performance in finance, law, and medical domains via LLM-as-a-judge evaluations.",
+     "claim": "TreeRAG demonstrated strong performance in finance, law, and medical domains according to LLM-as-a-judge evaluations.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "The *Best Embedding Models for RAG* report highlights that **BGE-m3** offers a favorable balance between accuracy and affordability, outperforming models like OpenAI or Cohere in cost-efficiency for production pipelines.",
+     "claim": "BGE-m3 offers a favorable balance between accuracy and affordability, outperforming OpenAI and Cohere models in cost-efficiency for production pipelines.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "The *EncouRAGe* (2025) study establishes that **LLM-as-a-judge** frameworks provide a more meaningful evaluation of factual correctness and relevance.",
+     "claim": "EncouRAGe study shows that LLM-as-a-judge frameworks provide a more meaningful assessment of factual correctness and relevance than traditional retrieval metrics.",
+     "label": "SUPPORTED",
+     "evidence_id": "E24",
+     "evidence_url": "https://arxiv.org/html/2511.04696v1",
+     "quote": "Instead of relying solely on traditional metrics like BLEU (Papineni et al., 2002) or ROUGE (Lin, 2004), they use LLM-based or embedding-based measures to directly evaluate factual correctness, relevance, and consistency of the generated text (Es et al., 2024).",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "TreeRAG is particularly suitable for real-time applications such as customer support, legal research, and medical diagnostics—where speed and accuracy are both critical.",
+     "claim": "TreeRAG is especially suitable for real-time applications like customer support, legal research, and medical diagnostics because it delivers both speed and accuracy.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "TreeRAG emerges as the most balanced and practical choice for real-world, document-based applications where accuracy, speed, and cost are interdependent.",
+     "claim": "TreeRAG is the most balanced and practical choice for real-world, document-based applications where accuracy, speed, and cost must all be considered.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "*Hierarchical chunking ensures that the retrieval process respects the document’s internal structure, enabling more meaningful and contextually grounded responses.*",
+     "claim": "Hierarchical chunking ensures that retrieval respects a document’s internal structure, producing more meaningful and contextually grounded responses.",
+     "label": "SUPPORTED",
+     "evidence_id": "E6",
+     "evidence_url": "https://arxiv.org/abs/2504.19754",
+     "quote": "TreeRAG ... hierarchical text segmentation and clustering to generate more meaningful and semantically coherent chunks.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "Hierarchical chunking and bidirectional traversal improve factual consistency and semantic coherence.",
+     "claim": "Hierarchical chunking and bidirectional traversal improve factual consistency and semantic coherence.",
+     "label": "SUPPORTED",
+     "evidence_id": "E7",
+     "evidence_url": "https://arxiv.org/abs/2507.09935",
+     "quote": "TreeRAG, which employs Tree- Chunking for chunking and embedding in a tree-like structure , coupled with “root-to-leaves” and “leaf-to-root” retrieve strategy named Bidirectional Traversal Retrieval.",
+     "quote_verified": true,
+     "counted_supported": true
+    }
+   ],
+   "supported": 3,
+   "contradicted": 0,
+   "unsupported": 5,
+   "score": 0.375
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 4012,
+    "completion_tokens": 1184,
+    "wall_s": 36.45367479324341,
+    "thinking_chars": 4641
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 3708,
+    "completion_tokens": 3250,
+    "wall_s": 93.84933686256409,
+    "thinking_chars": 13531
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 3758,
+    "completion_tokens": 2859,
+    "wall_s": 84.8308470249176,
+    "thinking_chars": 11689
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 7,
+   "completeness": 8,
+   "coherence": 8,
+   "relevance": 9,
+   "citation_quality": 7,
+   "writing_quality": 8
+  },
+  "overall_score": 8,
+  "weighted_score": 7.8,
+  "strengths": [
+   "Comprehensive coverage of the main architectural approaches (TreeRAG, Contextual RAG, G‑MemLLM) with clear comparative tables.",
+   "Logical structure and use of headings, tables, and block quotes that make the report easy to follow.",
+   "Direct alignment with the research question, including accuracy, latency, and cost considerations."
+  ],
+  "weaknesses": [
+   "Several key claims (e.g., exact cost figures, latency numbers) lack explicit quantitative backing or reference to peer‑reviewed data.",
+   "Citation mix includes informal sources (YouTube, blogs) that reduce overall credibility.",
+   "Limited discussion of multimodal or memory‑driven RAG variants beyond G‑MemLLM, leaving a gap in the landscape."
+  ],
+  "suggestions": [
+   "Add a dedicated section with concrete cost‑performance curves (e.g., per‑token, per‑inference) derived from real deployments or benchmark studies.",
+   "Replace or supplement informal citations with peer‑reviewed papers or industry white papers to strengthen factual accuracy.",
+   "Expand the analysis to cover emerging multimodal RAG systems and provide comparative metrics where available."
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 34
+}

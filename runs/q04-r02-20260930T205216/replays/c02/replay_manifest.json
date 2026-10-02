@@ -1,0 +1,85 @@
+{
+ "case_file": "analysis/cases/c02.yaml",
+ "case": {
+  "case_id": "c02",
+  "kind": "H1",
+  "run_id": "q04-r02-20260930T205216",
+  "query_id": "q04",
+  "step": 0,
+  "repair": {
+   "seg_id": "2.0",
+   "tool_seq": 2,
+   "tool": "web_search",
+   "title": "MoE vs Dense vs Hybrid LLM architectures | hybridMoe – Weights...",
+   "url": "https://wandb.ai/zaiinn440/hybridMoe/reports/MoE-vs-Dense-vs-Hybrid-LLM-architectures--Vmlldzo3NzYwNzAw",
+   "passage": "Train 600M MoE , Dense , Hybrid large langage model architectures. Made by Dave Davies using Weights & Biases.Also combining a dense transformer model allows good training efficiency , significantly reducing the communication overhead.",
+   "requirement_ids": [
+    "R2",
+    "R3"
+   ],
+   "omission_type": "omitted (step-0 summary keeps only the bare reference; report calls the source empty)",
+   "usage_detect": {
+    "anchor": "hybrid",
+    "any_of": [
+     "communication overhead",
+     "training efficiency",
+     "600M"
+    ]
+   }
+  },
+  "control": {
+   "seg_id": "2.2",
+   "tool_seq": 2,
+   "tool": "web_search",
+   "title": "MoE vs Dense at Equal Compute: Mixtral 8x 7 B vs Llama 70 B",
+   "url": "https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b",
+   "passage": "When comparing MoE and dense models , \"equal compute\" has two possible meanings and they point in different directions. Total parameters ( memory footprint): Mixtral 8x 7 B has ~46. 7 B total parameters, Llama 70 B has ~ 70 B .",
+   "type": "C-prime (redundant) fallback",
+   "rationale": "no off-requirement segment within +-25% of 235 chars exists (off-topic segments are 114-133 chars); pre-registered fallback C': redundant passage already paraphrased in the step-0 summary ('equal compute' ambiguity, Mixtral total parameters), closest in length (227)"
+  },
+  "selection_notes": [
+   "Qualifies on all four criteria of protocol section 6; earlier labelled 'weak' in the review log, but the rule has no strength criterion, so it is included.",
+   "Baseline report: 'Hybrid' appears only in citation lines; it states this source 'returned no content'."
+  ]
+ },
+ "base_request_hash": "1dbf842022938da87f9657ee4cc0add1154b13dbc643003585fcba85cf237808",
+ "declared_changes": {
+  "A": {},
+  "B": {
+   "2": "oE , Dense , Hybrid large langage model architectures. Made by Dave Davies using Weights & Biases.Also combining a dense transformer model allows good training efficiency , significantly reducing the communication overhead.\n\n- [MoE vs Dense vs Hybrid LLM architectures | hybridMoe – Weights...](https://wandb.ai/zaiinn440/hybridMoe/reports/MoE-vs-Dense-vs-Hybrid-LLM-architectures--Vmlldzo3NzYwNzAw)\n"
+  },
+  "C": {
+   "2": "ieved passage\n\n> When comparing MoE and dense models , \"equal compute\" has two possible meanings and they point in different directions. Total parameters ( memory footprint): Mixtral 8x 7 B has ~46. 7 B total parameters, Llama 70 B has ~ 70 B .\n\n- [MoE vs Dense at Equal Compute: Mixtral 8x 7 B vs Llama 70 B](https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b)\n"
+  }
+ },
+ "model": {
+  "provider": "ollama-openai-compatible",
+  "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "served_tag": "dfprobe-qwen3-4b-ctx40k",
+  "num_ctx": 40960,
+  "base_url": "http://localhost:11434/v1",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "seed": 7,
+  "max_tokens": 8192,
+  "token_limit": 32000
+ },
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "audit.py": "86296de277670f6610f46d0926b3cc50733400c6b0c9a6d7dda16272fafed5b9",
+  "boundary.py": "5e1a152004afb01193044c55d47346806b793f6cac81b2738c65497eca6d82e8",
+  "candidates.py": "3cbd9c83703a757823b7f87867ef84e6c5d7b57da3eaea65c5d7a34225fa2fad",
+  "cassette.py": "639e60beeb17e764e061e8304e995bb4d8a56e2e5747080bb2a367f34fbcb52f",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "734b58b68e78cb424c7d47f6f71826de53d51ad8942e2b2b77c74da03bceb8d3",
+  "evidence.py": "71232c176506278dbeb0cb5e44e3218765290437da7064b76f03a59737aa6b25",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_analysis.py": "cb249315c854c0717e37e6796a89ec983792c5b43961be4e5bd42441e43e293e",
+  "replay_reporter.py": "e02458ae1e9eb6429d4fe17f412877f7929ec282b08476c772294b6a7f09b4d3",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c",
+  "tables.py": "cde52c9462406f470fe8683ed06aace573a028142a53874c12e7dc5d1dbafca5"
+ }
+}

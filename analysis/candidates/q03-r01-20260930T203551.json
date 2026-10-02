@@ -1,0 +1,123 @@
+{
+ "run_id": "q03-r01-20260930T203551",
+ "funnel": {
+  "researcher_segments": 5,
+  "items": {
+   "in_tool_outputs": 3,
+   "in_observations": 1,
+   "in_reporter_input": 1,
+   "in_report": 0
+  },
+  "urls": {
+   "in_tool_outputs": 3,
+   "in_observations": 0,
+   "in_reporter_input": 0,
+   "in_report": 0
+  },
+  "report_items_total": 16,
+  "report_items_not_in_any_tool_output": [
+   "32",
+   "0.8",
+   "20",
+   "40%",
+   "5%",
+   "30",
+   "60%",
+   "10%",
+   "40",
+   "70%",
+   "15%",
+   "100",
+   "3%",
+   "4%",
+   "50%",
+   "8%"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": [
+   "$16",
+   "000",
+   "0000",
+   "0001",
+   "0003",
+   "0004",
+   "0005",
+   "0006",
+   "0007",
+   "0008",
+   "0009",
+   "10",
+   "10,000",
+   "11",
+   "12",
+   "128,000",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "24",
+   "30",
+   "31",
+   "6.7B",
+   "75%",
+   "7B",
+   "80%",
+   "90"
+  ]
+ },
+ "candidates": [
+  {
+   "run_id": "q03-r01-20260930T203551",
+   "tool_idx": 2,
+   "tool_seq": 2,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://www.emergentmind.com/topics/kv-cache-compression-techniques"
+   },
+   "seg_id": "2.0",
+   "url": "https://www.emergentmind.com/topics/kv-cache-compression-techniques",
+   "title": "KV-Cache Compression Techniques",
+   "text": "# KV-Cache Compression Techniques\n\nUpdated 2 February 2026\n\n* KV-cache compression techniques are algorithmic approaches that reduce memory and compute bottlenecks in autoregressive models by applying quantization, low-rank factorization, token pruning, and cross-layer sharing.\n* Methods such as low-bit quantization and residual vector quantization can achieve up to 98% memory reduction with minimal accuracy loss, demonstrating robust improvements in throughput and efficiency.\n* System-level optimizations like fused kernel design and hardware-aware co-design integrate these techniques into production environments, balancing cache efficiency with low-latency, high-throughput performance.\n\nKey–Value (KV) cache compression techniques are algorithmic strategies and system-level frameworks developed to mitigate the memory, bandwidth, and compute bottlenecks imposed by the exponential growth of [KV cache](https://www.emergentmind.com/topics/key-value-cache-kv-cache) during inference of large",
+   "items": [
+    "98%"
+   ],
+   "missing_from_step_observation": [
+    "98%"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q03-r01-20260930T203551",
+   "tool_idx": 3,
+   "tool_seq": 3,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://github.com/HuangOwen/Awesome-LLM-Compression"
+   },
+   "seg_id": "3.0",
+   "url": "https://github.com/HuangOwen/Awesome-LLM-Compression",
+   "title": "Non-HTML Content",
+   "text": "# Non-HTML Content\n\nThis URL returned content that cannot be parsed as HTML. Raw content: Error: Request to Jina API failed: HTTPSConnectionPool(host='r.jina.ai', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='r.jina.ai', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+   "items": [
+    "443",
+    "61"
+   ],
+   "missing_from_step_observation": [
+    "443"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+case_id: c02
+kind: H1
+run_id: q04-r02-20260930T205216
+query_id: q04
+step: 0
+repair:
+  seg_id: '2.0'
+  tool_seq: 2
+  tool: web_search
+  title: MoE vs Dense vs Hybrid LLM architectures | hybridMoe – Weights...
+  url: https://wandb.ai/zaiinn440/hybridMoe/reports/MoE-vs-Dense-vs-Hybrid-LLM-architectures--Vmlldzo3NzYwNzAw
+  passage: Train 600M MoE , Dense , Hybrid large langage model architectures. Made by Dave Davies using Weights
+    & Biases.Also combining a dense transformer model allows good training efficiency , significantly reducing the
+    communication overhead.
+  requirement_ids:
+  - R2
+  - R3
+  omission_type: omitted (step-0 summary keeps only the bare reference; report calls the source empty)
+  usage_detect:
+    anchor: hybrid
+    any_of:
+    - communication overhead
+    - training efficiency
+    - 600M
+control:
+  seg_id: '2.2'
+  tool_seq: 2
+  tool: web_search
+  title: 'MoE vs Dense at Equal Compute: Mixtral 8x 7 B vs Llama 70 B'
+  url: https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b
+  passage: 'When comparing MoE and dense models , "equal compute" has two possible meanings and they point in different
+    directions. Total parameters ( memory footprint): Mixtral 8x 7 B has ~46. 7 B total parameters, Llama 70 B has
+    ~ 70 B .'
+  type: C-prime (redundant) fallback
+  rationale: 'no off-requirement segment within +-25% of 235 chars exists (off-topic segments are 114-133 chars);
+    pre-registered fallback C'': redundant passage already paraphrased in the step-0 summary (''equal compute''
+    ambiguity, Mixtral total parameters), closest in length (227)'
+selection_notes:
+- Qualifies on all four criteria of protocol section 6; earlier labelled 'weak' in the review log, but the rule
+  has no strength criterion, so it is included.
+- 'Baseline report: ''Hybrid'' appears only in citation lines; it states this source ''returned no content''.'

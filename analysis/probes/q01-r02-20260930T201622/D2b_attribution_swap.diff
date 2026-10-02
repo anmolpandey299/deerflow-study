@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -17 +17 @@
+-- Mindscape-Aware RAG (MiA-RAG) introduces a novel cognitive modeling paradigm that mimics human reading patterns, enabling better coherence and reasoning over long, complex documents.  
++- RAGPerf (the end-to-end RAG benchmarking framework) introduces a novel cognitive modeling paradigm that mimics human reading patterns, enabling better coherence and reasoning over long, complex documents.  

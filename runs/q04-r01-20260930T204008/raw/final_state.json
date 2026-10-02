@@ -1,0 +1,27 @@
+{
+ "messages": [
+  {
+   "type": "human",
+   "data": {
+    "content": "How do mixture-of-experts and dense transformer LLMs compare in training cost, inference efficiency, and model quality?",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "human",
+    "name": null,
+    "id": "0e9dda67-0e23-4e15-a179-e5d6cae7cf38"
+   }
+  }
+ ],
+ "locale": "en-US",
+ "research_topic": "comparison of mixture-of-experts and dense transformer LLMs in training cost, inference efficiency, and model quality",
+ "clarified_research_topic": "comparison of mixture-of-experts and dense transformer LLMs in training cost, inference efficiency, and model quality",
+ "resources": [],
+ "auto_accepted_plan": true,
+ "enable_background_investigation": true,
+ "citations": [],
+ "enable_clarification": false,
+ "clarification_rounds": 0,
+ "clarification_history": [],
+ "is_clarification_complete": true,
+ "goto": "background_investigator"
+}

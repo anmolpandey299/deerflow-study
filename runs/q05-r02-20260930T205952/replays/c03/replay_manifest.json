@@ -1,0 +1,84 @@
+{
+ "case_file": "analysis/cases/c03.yaml",
+ "case": {
+  "case_id": "c03",
+  "kind": "H1",
+  "run_id": "q05-r02-20260930T205952",
+  "query_id": "q05",
+  "step": 0,
+  "repair": {
+   "seg_id": "1.2",
+   "tool_seq": 1,
+   "tool": "web_search",
+   "title": "LLM Quantization Review | Bitter Lesson",
+   "url": "https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/",
+   "passage": "For example, using 8 - bit integers (INT8) can nearly double the throughput of matrix multiplications compared to using 16- bit floating-point numbers (FP16). SmoothQuant (diagram c) scales the weights prior to quantization. AWQ aims to minimize the following loss function",
+   "requirement_ids": [
+    "R5",
+    "R7"
+   ],
+   "omission_type": "omitted (INT8-vs-FP16 throughput figure absent from step-0 summary and report; source kept only as a reference)",
+   "usage_detect": {
+    "anchor": "INT8",
+    "any_of": [
+     "double",
+     "2x",
+     "2×",
+     "twice"
+    ]
+   }
+  },
+  "control": {
+   "seg_id": "0.1",
+   "tool_seq": 0,
+   "tool": "web_search",
+   "title": "Comparison: GPTQ vs AWQ vs SmoothQuant - apxml.com",
+   "url": "https://apxml.com/courses/practical-llm-quantization/chapter-3-advanced-ptq-techniques/comparing-advanced-ptq",
+   "passage": "Comparing these methods directly reveals their different strengths. Choosing the right method depends on your specific goals, the model architecture, and the trade-offs you're willing to make between accuracy , quantization time, and potential inference overhead.",
+   "rationale": "real segment (background search) with no mechanism, number, hardware or caveat content, so it meets no q05 requirement; 263 vs 273 chars; only off-requirement segment within +-25%"
+  },
+  "selection_notes": [
+   "Other q05 candidates rejected: seg 9.1 (FP8/NVFP4 engines, tokens per GPU) retained in paraphrase in the step-2 summary; seg 3.2 (SmoothQuant W8A8, training-free) retained."
+  ]
+ },
+ "base_request_hash": "e8c5f69cc9c4c42e7cf14e6f5e237794d9e62364586bffac61f86fc84c81b100",
+ "declared_changes": {
+  "A": {},
+  "B": {
+   "2": "trieved passage\n\n> For example, using 8 - bit integers (INT8) can nearly double the throughput of matrix multiplications compared to using 16- bit floating-point numbers (FP16). SmoothQuant (diagram c) scales the weights prior to quantization. AWQ aims to minimize the following loss function\n\n- [LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)\n"
+  },
+  "C": {
+   "2": "y reveals their different strengths. Choosing the right method depends on your specific goals, the model architecture, and the trade-offs you're willing to make between accuracy , quantization time, and potential inference overhead.\n\n- [Comparison: GPTQ vs AWQ vs SmoothQuant - apxml.com](https://apxml.com/courses/practical-llm-quantization/chapter-3-advanced-ptq-techniques/comparing-advanced-ptq)\n"
+  }
+ },
+ "model": {
+  "provider": "ollama-openai-compatible",
+  "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "served_tag": "dfprobe-qwen3-4b-ctx40k",
+  "num_ctx": 40960,
+  "base_url": "http://localhost:11434/v1",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "seed": 7,
+  "max_tokens": 8192,
+  "token_limit": 32000
+ },
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "audit.py": "86296de277670f6610f46d0926b3cc50733400c6b0c9a6d7dda16272fafed5b9",
+  "boundary.py": "5e1a152004afb01193044c55d47346806b793f6cac81b2738c65497eca6d82e8",
+  "candidates.py": "3cbd9c83703a757823b7f87867ef84e6c5d7b57da3eaea65c5d7a34225fa2fad",
+  "cassette.py": "639e60beeb17e764e061e8304e995bb4d8a56e2e5747080bb2a367f34fbcb52f",
+  "deerflow_env.py": "f774051f0062c16426e1603e7a89e92b04643f3e53508cd5f35c1286b23e9c63",
+  "evaluate.py": "734b58b68e78cb424c7d47f6f71826de53d51ad8942e2b2b77c74da03bceb8d3",
+  "evidence.py": "71232c176506278dbeb0cb5e44e3218765290437da7064b76f03a59737aa6b25",
+  "manifest.py": "cb4ff45e95b07524337b18a32825a92314fadfc0cb8a744b9896b4cea08a8238",
+  "probes.py": "89e8a774f32c7ff88062e440034b543b5f8b14b5c1d6204efa5ceee84ac4d533",
+  "recording.py": "59c18205785e276a8ffce5bb80fef5a248d057bca803dd4b80216b44848558db",
+  "replay_analysis.py": "020db3df9641dbf536d7caafe430b400ad0b0bf0b9550c84a2a3a50162211526",
+  "replay_reporter.py": "e02458ae1e9eb6429d4fe17f412877f7929ec282b08476c772294b6a7f09b4d3",
+  "run_query.py": "7177330bbd8b7ab3e6d8369f4626815ca0051a4e94162742e13603851ef4ef52",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c",
+  "tables.py": "cde52c9462406f470fe8683ed06aace573a028142a53874c12e7dc5d1dbafca5"
+ }
+}

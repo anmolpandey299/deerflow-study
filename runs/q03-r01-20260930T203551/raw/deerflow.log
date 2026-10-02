@@ -1,0 +1,521 @@
+2026-09-30 20:35:51,839 src.graph.nodes INFO Coordinator talking.
+2026-09-30 20:35:56,846 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:35:56,855 src.graph.nodes INFO Coordinator locale: en-US
+2026-09-30 20:35:56,855 src.graph.nodes INFO Handing off to planner
+2026-09-30 20:35:56,855 src.graph.nodes INFO Handing off to planner
+2026-09-30 20:35:56,855 src.graph.nodes INFO Using research topic for handoff: main approaches to KV-cache compression for long-context LLM inference and their tradeoffs in memory savings, accuracy, and throughput
+2026-09-30 20:35:56,856 src.graph.nodes INFO background investigation node is running.
+2026-09-30 20:35:56,945 ddgs.ddgs INFO Error in engine yandex: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://wt.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=main%20approaches%20to%20KV-cache%20compression%20for%20long-context%20LLM%20inference%20and%20their%20tradeoffs%20in%20memory%20savings%2C%20accuracy%2C%20and%20throughput): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: dns error: failed to lookup address information: nodename nor servname provided, or not known\\n    2: failed to lookup address information: nodename nor servname provided, or not known')")
+2026-09-30 20:35:59,130 primp INFO response: https://yandex.com/search/site/?text=main+approaches+to+KV-cache+compression+for+long-context+LLM+inference+and+their+tradeoffs+in+memory+savings%2C+accuracy%2C+and+throughput&web=1&searchid=5551901 200
+2026-09-30 20:36:00,180 httpx INFO HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/2 200 OK"
+2026-09-30 20:36:00,185 src.graph.nodes INFO Planner generating full plan with locale: en-US
+2026-09-30 20:36:29,813 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:36:29,814 src.graph.nodes INFO Planner response: {
+    "content": "{\n  \"locale\": \"en-US\",\n  \"has_enough_context\": false,\n  \"thought\": \"The user is asking about the main approaches to KV-cache compression for long-context LLM inference, with a focus on the trade-offs between memory savings, accuracy, and throughput. While there are some background snippets mentioning KV cache compression in the context of long-context LLMs—such as INT4 compression in OpenVINO and 'Squeezed Attention'—these provide only fragmented and surface-level information. There is no comprehensive coverage of the full spectrum of compression techniques (e.g., pruning, quantization, reordering, or sparse attention), nor any detailed analysis of their trade-offs across memory savings, accuracy, and throughput. The available results lack depth, specificity, and breadth, and do not address multiple perspectives or comparative performance data. Therefore, a thorough investigation is required to fully answer the query with sufficient depth, volume, and reliable data.\",\n  \"title\": \"Main Approaches to KV-Cache Compression for Long-Context LLM Inference and Their Trade-offs\",\n  \"steps\": [\n    {\n      \"need_search\": true,\n      \"title\": \"Comprehensive Survey of KV-Cache Compression Techniques\",\n      \"description\": \"Collect and summarize all major approaches to KV-cache compression in long-context LLM inference, including but not limited to: quantization (e.g., INT4, INT8), pruning (e.g., sparse KV, selective retention), reordering (e.g., sliding window, block-based), and attention-based compression (e.g., Squeezed Attention, sparse attention). Gather technical descriptions, implementation methods, and references from peer-reviewed papers, industry whitepapers, and technical blogs.\",\n      \"step_type\": \"research\"\n    },\n    {\n      \"need_search\": true,\n      \"title\": \"Quantitative Analysis of Memory Savings, Accuracy, and Throughput Trade-offs\",\n      \"description\": \"Retrieve empirical data and benchmark results for each compression technique, including: average memory reduction percentages, impact on model accuracy (e.g., perplexity, downstream task performance), and observed throughput (tokens per second or inference latency). Compare these metrics across different techniques and model sizes (e.g., 10K vs. 32K tokens), and identify which methods offer the best balance between compression and performance.\",\n      \"step_type\": \"research\"\n    },\n    {\n      \"need_search\": false,\n      \"title\": \"Synthesis and Comparative Evaluation of Compression Methods\",\n      \"description\": \"Analyze the collected data to compare and contrast the performance trade-offs of each approach. Identify patterns in accuracy degradation, memory efficiency, and throughput bottlenecks. Evaluate which methods are most suitable for specific use cases (e.g., real-time chat vs. long document processing), and provide a structured framework for selecting the optimal compression strategy based on application requirements.\",\n      \"step_type\": \"analysis\"\n    }\n  ]\n}",
+    "additional_kwargs": {
+        "refusal": null
+    },
+    "response_metadata": {
+        "token_usage": {
+            "completion_tokens": 600,
+            "prompt_tokens": 3484,
+            "total_tokens": 4084,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+        },
+        "model_provider": "openai",
+        "model_name": "dfprobe-qwen3-4b-ctx40k",
+        "system_fingerprint": "fp_ollama",
+        "id": "chatcmpl-804",
+        "finish_reason": "stop",
+        "logprobs": null
+    },
+    "type": "ai",
+    "id": "lc_run--01a0f3d1-11bd-7c33-8f1d-db527beca5e2-0",
+    "tool_calls": [],
+    "invalid_tool_calls": [],
+    "usage_metadata": {
+        "input_tokens": 3484,
+        "output_tokens": 600,
+        "total_tokens": 4084,
+        "input_token_details": {},
+        "output_token_details": {}
+    }
+}
+2026-09-30 20:36:29,820 src.graph.nodes INFO Research team is collaborating on tasks.
+2026-09-30 20:36:29,821 src.graph.nodes INFO Researcher node is researching.
+2026-09-30 20:36:29,821 src.graph.nodes INFO [researcher_node] Researcher tools count: 2
+2026-09-30 20:36:29,821 src.graph.nodes INFO [researcher_node] enforce_researcher_search=True, enable_web_search=True
+2026-09-30 20:36:29,827 src.agents.agents INFO Agent 'researcher' created successfully
+2026-09-30 20:36:29,827 src.graph.nodes INFO [_execute_agent_step] Executing step: Comprehensive Survey of KV-Cache Compression Techniques, agent: researcher
+2026-09-30 20:36:29,827 src.graph.nodes INFO Recursion limit set to: 25
+2026-09-30 20:36:29,827 src.graph.nodes INFO Agent input: {'messages': [HumanMessage(content='# Research Topic\n\nMain Approaches to KV-Cache Compression for Long-Context LLM Inference and Their Trade-offs\n\n# Current Step\n\n## Title\n\nComprehensive Survey of KV-Cache Compression Techniques\n\n## Description\n\nCollect and summarize all major approaches to KV-cache compression in long-context LLM inference, including but not limited to: quantization (e.g., INT4, INT8), pruning (e.g., sparse KV, selective retention), reordering (e.g., sliding window, block-based), and attention-based compression (e.g., Squeezed Attention, sparse attention). Gather technical descriptions, implementation methods, and references from peer-reviewed papers, industry whitepapers, and technical blogs.\n\n## Locale\n\nen-US', additional_kwargs={}, response_metadata={}), HumanMessage(content='IMPORTANT: DO NOT include inline citations in the text. Instead, track all sources and include a References section at the end using link reference format. Include an empty line between each citation for better readability. Use this format for each reference:\n- [Source Title](URL)\n\n- [Another Source](URL)', additional_kwargs={}, response_metadata={}, name='system')]}
+2026-09-30 20:36:29,828 src.graph.nodes INFO Context compression for researcher: 2 messages, estimated tokens before: ~134, after: ~134
+2026-09-30 20:36:34,997 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:36:35,013 ddgs.ddgs INFO Error in engine yandex: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://wt.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=comprehensive%20survey%20of%20KV-cache%20compression%20techniques%20for%20long-context%20LLM%20inference%20quantization%20pruning%20reordering%20attention-based%20methods): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: dns error: failed to lookup address information: nodename nor servname provided, or not known\\n    2: failed to lookup address information: nodename nor servname provided, or not known')")
+2026-09-30 20:36:36,507 primp INFO response: https://yandex.com/search/site/?text=comprehensive+survey+of+KV-cache+compression+techniques+for+long-context+LLM+inference+quantization+pruning+reordering+attention-based+methods&web=1&searchid=3505028 200
+2026-09-30 20:36:36,958 httpx INFO HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/2 202 Accepted"
+2026-09-30 20:36:43,357 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:36:43,362 src.tools.decorators INFO Tool crawl_tool called with parameters: url=https://www.emergentmind.com/topics/kv-cache-compression-techniques
+2026-09-30 20:36:43,362 src.crawler.crawler INFO Selecting Jina crawler engine
+2026-09-30 20:36:43,362 src.crawler.crawler INFO Crawling URL: https://www.emergentmind.com/topics/kv-cache-compression-techniques using JinaClient
+2026-09-30 20:36:43,362 src.crawler.jina_client WARNING Jina API key is not set. Provide your own key to access a higher rate limit. See https://jina.ai/reader for more information.
+2026-09-30 20:36:46,062 src.tools.decorators INFO Tool crawl_tool returned: {"url": "https://www.emergentmind.com/topics/kv-cache-compression-techniques", "crawled_content": "# KV-Cache Compression Techniques\n\nUpdated 2 February 2026\n\n* KV-cache compression techniques are algorithmic approaches that reduce memory and compute bottlenecks in autoregressive models by applying quantization, low-rank factorization, token pruning, and cross-layer sharing.\n* Methods such as low-bit quantization and residual vector quantization can achieve up to 98% memory reduction with minimal accuracy loss, demonstrating robust improvements in throughput and efficiency.\n* System-level optimizations like fused kernel design and hardware-aware co-design integrate these techniques into production environments, balancing cache efficiency with low-latency, high-throughput performance.\n\nKey–Value (KV) cache compression techniques are algorithmic strategies and system-level frameworks developed to mitigate the memory, bandwidth, and compute bottlenecks imposed by the exponential growth of [KV cache](https://www.emergentmind.com/topics/key-value-cache-kv-cache) during inference of large"}
+2026-09-30 20:36:53,932 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:36:53,936 src.tools.decorators INFO Tool crawl_tool called with parameters: url=https://github.com/HuangOwen/Awesome-LLM-Compression
+2026-09-30 20:36:53,937 src.crawler.crawler INFO Selecting Jina crawler engine
+2026-09-30 20:36:53,937 src.crawler.crawler INFO Crawling URL: https://github.com/HuangOwen/Awesome-LLM-Compression using JinaClient
+2026-09-30 20:36:53,937 src.crawler.jina_client WARNING Jina API key is not set. Provide your own key to access a higher rate limit. See https://jina.ai/reader for more information.
+2026-09-30 20:36:53,971 src.crawler.jina_client ERROR Request to Jina API failed: HTTPSConnectionPool(host='r.jina.ai', port=443): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPSConnection(host='r.jina.ai', port=443): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-09-30 20:36:53,972 src.crawler.crawler WARNING Non-HTML content received from URL https://github.com/HuangOwen/Awesome-LLM-Compression, creating fallback article
+2026-09-30 20:36:53,973 src.tools.decorators INFO Tool crawl_tool returned: {"url": "https://github.com/HuangOwen/Awesome-LLM-Compression", "crawled_content": "# Non-HTML Content\n\nThis URL returned content that cannot be parsed as HTML. Raw content: Error: Request to Jina API failed: HTTPSConnectionPool(host='r.jina.ai', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='r.jina.ai', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"}
+2026-09-30 20:37:02,549 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:37:02,567 ddgs.ddgs INFO Error in engine mojeek: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://wt.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=PyramidInfer%20pyramid%20KV%20cache%20compression%20technique%20for%20high-throughput%20LLM%20inference%20technical%20details%20implementation%20paper): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: dns error: failed to lookup address information: nodename nor servname provided, or not known\\n    2: failed to lookup address information: nodename nor servname provided, or not known')")
+2026-09-30 20:37:02,577 ddgs.ddgs INFO Error in engine duckduckgo: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://www.mojeek.com/search?q=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:02,577 ddgs.ddgs INFO Error in engine duckduckgo: DDGSException("ConnectError: ConnectError('[Errno 61] Connection refused')")
+2026-09-30 20:37:02,642 ddgs.ddgs INFO Error in engine yahoo: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://search.yahoo.com/search;_ylt=kIg0i5CimTMzL75U-tEual7-;_ylu=AjlUHCkCUP_bx3JtepZWNw7vEkoVidUtAECDrcerLtp8Asw?p=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&btf=y): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:02,719 ddgs.ddgs INFO Error in engine brave: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://search.brave.com/search?q=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&source=web&tf=py): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:03,187 ddgs.ddgs INFO Error in engine bing: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://www.bing.com/search?q=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&pq=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&cc=wt&filters=ex1%3A%22ez5_20361_20726%22): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:03,209 ddgs.ddgs INFO Error in engine yandex: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&web=1&searchid=6069583): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:03,222 src.graph.nodes ERROR Error executing researcher agent for step 'Comprehensive Survey of KV-Cache Compression Techniques': RuntimeError: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&web=1&searchid=6069583): client error (Connect)\n\nCaused by:\n    0: client error (Connect)\n    1: tcp connect error: Connection refused (os error 61)\n    2: Connection refused (os error 61)')
+Traceback (most recent call last):
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/graph/nodes.py", line 1206, in _execute_agent_step
+    async for chunk in agent.astream(
+    ...<5 lines>...
+            accumulated_messages = chunk["messages"]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2971, in astream
+    async for _ in runner.atick(
+    ...<13 lines>...
+            yield o
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 137, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 832, in _afunc
+    outputs = await asyncio.gather(*coros)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1163, in _arun_one
+    return await self._execute_tool_async(tool_request, input_type, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1112, in _execute_tool_async
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 424, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 381, in _default_handle_tool_errors
+    raise e
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1069, in _execute_tool_async
+    response = await tool.ainvoke(call_args, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 639, in ainvoke
+    return await self.arun(tool_input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1111, in arun
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1077, in arun
+    response = await coro_with_context(coro, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 788, in _arun
+    return await run_in_executor(None, self._run, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 608, in run_in_executor
+    return await asyncio.get_running_loop().run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 599, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 160, in _run
+    content, artifact = self.cassette.call(self.name, kwargs, live, ctx)
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 86, in call
+    content, artifact = live()
+                        ~~~~^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 152, in live
+    msg = self.inner.invoke(
+        {"type": "tool_call", "name": self.inner.name, "args": kwargs, "id": "live"}
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 629, in invoke
+    return self.run(tool_input, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 981, in run
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 947, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/tools/decorators.py", line 58, in _run
+    result = super()._run(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/tools/ddg_search/tool.py", line 112, in _run
+    raw_results = self.api_wrapper.results(
+        query, self.max_results, source=self.backend
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 146, in results
+    for r in self._ddgs_text(query, max_results=max_results)
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 64, in _ddgs_text
+    ddgs_gen = ddgs.text(
+        query,
+    ...<4 lines>...
+        backend=self.backend,
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 219, in text
+    return self._search("text", query, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 215, in _search
+    raise DDGSException(err or "No results found.")
+ddgs.exceptions.DDGSException: RuntimeError: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&web=1&searchid=6069583): client error (Connect)\n\nCaused by:\n    0: client error (Connect)\n    1: tcp connect error: Connection refused (os error 61)\n    2: Connection refused (os error 61)')
+During task with name 'tools' and id '3962ab73-179a-cc4a-a2cc-de86ae2c4dd7'
+2026-09-30 20:37:03,225 src.graph.nodes ERROR Full traceback:
+Traceback (most recent call last):
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/graph/nodes.py", line 1206, in _execute_agent_step
+    async for chunk in agent.astream(
+    ...<5 lines>...
+            accumulated_messages = chunk["messages"]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2971, in astream
+    async for _ in runner.atick(
+    ...<13 lines>...
+            yield o
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 137, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 832, in _afunc
+    outputs = await asyncio.gather(*coros)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1163, in _arun_one
+    return await self._execute_tool_async(tool_request, input_type, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1112, in _execute_tool_async
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 424, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 381, in _default_handle_tool_errors
+    raise e
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1069, in _execute_tool_async
+    response = await tool.ainvoke(call_args, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 639, in ainvoke
+    return await self.arun(tool_input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1111, in arun
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1077, in arun
+    response = await coro_with_context(coro, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 788, in _arun
+    return await run_in_executor(None, self._run, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 608, in run_in_executor
+    return await asyncio.get_running_loop().run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 599, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 160, in _run
+    content, artifact = self.cassette.call(self.name, kwargs, live, ctx)
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 86, in call
+    content, artifact = live()
+                        ~~~~^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 152, in live
+    msg = self.inner.invoke(
+        {"type": "tool_call", "name": self.inner.name, "args": kwargs, "id": "live"}
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 629, in invoke
+    return self.run(tool_input, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 981, in run
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 947, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/tools/decorators.py", line 58, in _run
+    result = super()._run(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/tools/ddg_search/tool.py", line 112, in _run
+    raw_results = self.api_wrapper.results(
+        query, self.max_results, source=self.backend
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 146, in results
+    for r in self._ddgs_text(query, max_results=max_results)
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 64, in _ddgs_text
+    ddgs_gen = ddgs.text(
+        query,
+    ...<4 lines>...
+        backend=self.backend,
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 219, in text
+    return self._search("text", query, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 215, in _search
+    raise DDGSException(err or "No results found.")
+ddgs.exceptions.DDGSException: RuntimeError: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&web=1&searchid=6069583): client error (Connect)\n\nCaused by:\n    0: client error (Connect)\n    1: tcp connect error: Connection refused (os error 61)\n    2: Connection refused (os error 61)')
+During task with name 'tools' and id '3962ab73-179a-cc4a-a2cc-de86ae2c4dd7'
+
+2026-09-30 20:37:03,226 src.graph.nodes INFO Research team is collaborating on tasks.
+2026-09-30 20:37:03,227 src.graph.nodes INFO Researcher node is researching.
+2026-09-30 20:37:03,227 src.graph.nodes INFO [researcher_node] Researcher tools count: 2
+2026-09-30 20:37:03,227 src.graph.nodes INFO [researcher_node] enforce_researcher_search=True, enable_web_search=True
+2026-09-30 20:37:03,232 src.agents.agents INFO Agent 'researcher' created successfully
+2026-09-30 20:37:03,232 src.graph.nodes INFO [_execute_agent_step] Executing step: Quantitative Analysis of Memory Savings, Accuracy, and Throughput Trade-offs, agent: researcher
+2026-09-30 20:37:03,232 src.graph.nodes INFO Recursion limit set to: 25
+2026-09-30 20:37:03,232 src.graph.nodes INFO Agent input: {'messages': [HumanMessage(content="# Research Topic\n\nMain Approaches to KV-Cache Compression for Long-Context LLM Inference and Their Trade-offs\n\n# Completed Research Steps\n\n## Completed Step 1: Comprehensive Survey of KV-Cache Compression Techniques\n\n<finding>\n[ERROR] Researcher Agent Error\n\nStep: Comprehensive Survey of KV-Cache Compression Techniques\n\nError Details:\nRuntimeError: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&web=1&searchid=6069583): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')\n\nPlease check the logs for more information.\n</finding>\n\n# Current Step\n\n## Title\n\nQuantitative Analysis of Memory Savings, Accuracy, and Throughput Trade-offs\n\n## Description\n\nRetrieve empirical data and benchmark results for each compression technique, including: average memory reduction percentages, impact on model accuracy (e.g., perplexity, downstream task performance), and observed throughput (tokens per second or inference latency). Compare these metrics across different techniques and model sizes (e.g., 10K vs. 32K tokens), and identify which methods offer the best balance between compression and performance.\n\n## Locale\n\nen-US", additional_kwargs={}, response_metadata={}), HumanMessage(content='IMPORTANT: DO NOT include inline citations in the text. Instead, track all sources and include a References section at the end using link reference format. Include an empty line between each citation for better readability. Use this format for each reference:\n- [Source Title](URL)\n\n- [Another Source](URL)', additional_kwargs={}, response_metadata={}, name='system')]}
+2026-09-30 20:37:03,232 src.graph.nodes INFO Context compression for researcher: 2 messages, estimated tokens before: ~206, after: ~206
+2026-09-30 20:37:06,020 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:37:06,039 ddgs.ddgs INFO Error in engine yahoo: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://wt.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=empirical%20data%20benchmark%20results%20KV-Cache%20compression%20memory%20savings%20accuracy%20perplexity%20throughput%20LLM%20inference%202020-2026): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: dns error: failed to lookup address information: nodename nor servname provided, or not known\\n    2: failed to lookup address information: nodename nor servname provided, or not known')")
+2026-09-30 20:37:06,094 ddgs.ddgs INFO Error in engine bing: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://search.yahoo.com/search;_ylt=5e7vByJ4SAIz1p3lDcfBcwOU;_ylu=FPSBv5dpZWIkAB6ujmB3zTUoqadLqqa76gokNShIRZfvMW0?p=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026&btf=y): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:06,162 ddgs.ddgs INFO Error in engine brave: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://www.bing.com/search?q=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026&pq=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026&cc=wt&filters=ex1%3A%22ez5_20361_20726%22): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:06,162 ddgs.ddgs INFO Error in engine brave: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://search.brave.com/search?q=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026&source=web&tf=py): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:06,170 ddgs.ddgs INFO Error in engine duckduckgo: DDGSException("ConnectError: ConnectError('[Errno 61] Connection refused')")
+2026-09-30 20:37:06,184 ddgs.ddgs INFO Error in engine yandex: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026&web=1&searchid=2364640): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:06,189 ddgs.ddgs INFO Error in engine mojeek: DDGSException("RuntimeError: RuntimeError('error sending request for url (https://www.mojeek.com/search?q=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')")
+2026-09-30 20:37:06,198 src.graph.nodes ERROR Error executing researcher agent for step 'Quantitative Analysis of Memory Savings, Accuracy, and Throughput Trade-offs': RuntimeError: RuntimeError('error sending request for url (https://www.mojeek.com/search?q=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026): client error (Connect)\n\nCaused by:\n    0: client error (Connect)\n    1: tcp connect error: Connection refused (os error 61)\n    2: Connection refused (os error 61)')
+Traceback (most recent call last):
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/graph/nodes.py", line 1206, in _execute_agent_step
+    async for chunk in agent.astream(
+    ...<5 lines>...
+            accumulated_messages = chunk["messages"]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2971, in astream
+    async for _ in runner.atick(
+    ...<13 lines>...
+            yield o
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 137, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 832, in _afunc
+    outputs = await asyncio.gather(*coros)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1163, in _arun_one
+    return await self._execute_tool_async(tool_request, input_type, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1112, in _execute_tool_async
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 424, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 381, in _default_handle_tool_errors
+    raise e
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1069, in _execute_tool_async
+    response = await tool.ainvoke(call_args, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 639, in ainvoke
+    return await self.arun(tool_input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1111, in arun
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1077, in arun
+    response = await coro_with_context(coro, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 788, in _arun
+    return await run_in_executor(None, self._run, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 608, in run_in_executor
+    return await asyncio.get_running_loop().run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 599, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 160, in _run
+    content, artifact = self.cassette.call(self.name, kwargs, live, ctx)
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 86, in call
+    content, artifact = live()
+                        ~~~~^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 152, in live
+    msg = self.inner.invoke(
+        {"type": "tool_call", "name": self.inner.name, "args": kwargs, "id": "live"}
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 629, in invoke
+    return self.run(tool_input, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 981, in run
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 947, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/tools/decorators.py", line 58, in _run
+    result = super()._run(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/tools/ddg_search/tool.py", line 112, in _run
+    raw_results = self.api_wrapper.results(
+        query, self.max_results, source=self.backend
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 146, in results
+    for r in self._ddgs_text(query, max_results=max_results)
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 64, in _ddgs_text
+    ddgs_gen = ddgs.text(
+        query,
+    ...<4 lines>...
+        backend=self.backend,
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 219, in text
+    return self._search("text", query, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 215, in _search
+    raise DDGSException(err or "No results found.")
+ddgs.exceptions.DDGSException: RuntimeError: RuntimeError('error sending request for url (https://www.mojeek.com/search?q=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026): client error (Connect)\n\nCaused by:\n    0: client error (Connect)\n    1: tcp connect error: Connection refused (os error 61)\n    2: Connection refused (os error 61)')
+During task with name 'tools' and id '7093ce7e-e303-4740-28a5-daeaaa94cea8'
+2026-09-30 20:37:06,201 src.graph.nodes ERROR Full traceback:
+Traceback (most recent call last):
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/graph/nodes.py", line 1206, in _execute_agent_step
+    async for chunk in agent.astream(
+    ...<5 lines>...
+            accumulated_messages = chunk["messages"]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2971, in astream
+    async for _ in runner.atick(
+    ...<13 lines>...
+            yield o
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 137, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 832, in _afunc
+    outputs = await asyncio.gather(*coros)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1163, in _arun_one
+    return await self._execute_tool_async(tool_request, input_type, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1112, in _execute_tool_async
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 424, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 381, in _default_handle_tool_errors
+    raise e
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/prebuilt/tool_node.py", line 1069, in _execute_tool_async
+    response = await tool.ainvoke(call_args, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 639, in ainvoke
+    return await self.arun(tool_input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1111, in arun
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1077, in arun
+    response = await coro_with_context(coro, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 788, in _arun
+    return await run_in_executor(None, self._run, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 608, in run_in_executor
+    return await asyncio.get_running_loop().run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py", line 599, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 160, in _run
+    content, artifact = self.cassette.call(self.name, kwargs, live, ctx)
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 86, in call
+    content, artifact = live()
+                        ~~~~^^
+  File "/Users/anmol/imperial/t1/boundary_probe/cassette.py", line 152, in live
+    msg = self.inner.invoke(
+        {"type": "tool_call", "name": self.inner.name, "args": kwargs, "id": "live"}
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 629, in invoke
+    return self.run(tool_input, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 981, in run
+    raise error_to_raise
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py", line 947, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/tools/decorators.py", line 58, in _run
+    result = super()._run(*args, **kwargs)
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/tools/ddg_search/tool.py", line 112, in _run
+    raw_results = self.api_wrapper.results(
+        query, self.max_results, source=self.backend
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 146, in results
+    for r in self._ddgs_text(query, max_results=max_results)
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_community/utilities/duckduckgo_search.py", line 64, in _ddgs_text
+    ddgs_gen = ddgs.text(
+        query,
+    ...<4 lines>...
+        backend=self.backend,
+    )
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 219, in text
+    return self._search("text", query, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/ddgs/ddgs.py", line 215, in _search
+    raise DDGSException(err or "No results found.")
+ddgs.exceptions.DDGSException: RuntimeError: RuntimeError('error sending request for url (https://www.mojeek.com/search?q=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026): client error (Connect)\n\nCaused by:\n    0: client error (Connect)\n    1: tcp connect error: Connection refused (os error 61)\n    2: Connection refused (os error 61)')
+During task with name 'tools' and id '7093ce7e-e303-4740-28a5-daeaaa94cea8'
+
+2026-09-30 20:37:06,202 src.graph.nodes INFO Research team is collaborating on tasks.
+2026-09-30 20:37:06,203 src.graph.nodes INFO Analyst node is analyzing.
+2026-09-30 20:37:06,206 src.agents.agents INFO Agent 'analyst' created successfully
+2026-09-30 20:37:06,206 src.graph.nodes INFO [_execute_agent_step] Executing step: Synthesis and Comparative Evaluation of Compression Methods, agent: analyst
+2026-09-30 20:37:06,206 src.graph.nodes INFO Recursion limit set to: 25
+2026-09-30 20:37:06,206 src.graph.nodes INFO Agent input: {'messages': [HumanMessage(content="# Research Topic\n\nMain Approaches to KV-Cache Compression for Long-Context LLM Inference and Their Trade-offs\n\n# Completed Research Steps\n\n## Completed Step 1: Comprehensive Survey of KV-Cache Compression Techniques\n\n<finding>\n[ERROR] Researcher Agent Error\n\nStep: Comprehensive Survey of KV-Cache Compression Techniques\n\nError Details:\nRuntimeError: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=PyramidInfer+pyramid+KV+cache+compression+technique+for+high-throughput+LLM+inference+technical+details+implementation+paper&web=1&searchid=6069583): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')\n\nPlease check the logs for more information.\n</finding>\n\n## Completed Step 2: Quantitative Analysis of Memory Savings, Accuracy, and Throughput Trade-offs\n\n<finding>\n[ERROR] Researcher Agent Error\n\nStep: Quantitative Analysis of Memory Savings, Accuracy, and Throughput Trade-offs\n\nError Details:\nRuntimeError: RuntimeError('error sending request for url (https://www.mojeek.com/search?q=empirical+data+benchmark+results+KV-Cache+compression+memory+savings+accuracy+perplexity+throughput+LLM+inference+2020-2026): client error (Connect)\\n\\nCaused by:\\n    0: client error (Connect)\\n    1: tcp connect error: Connection refused (os error 61)\\n    2: Connection refused (os error 61)')\n\nPlease check the logs for more information.\n</finding>\n\n# Current Step\n\n## Title\n\nSynthesis and Comparative Evaluation of Compression Methods\n\n## Description\n\nAnalyze the collected data to compare and contrast the performance trade-offs of each approach. Identify patterns in accuracy degradation, memory efficiency, and throughput bottlenecks. Evaluate which methods are most suitable for specific use cases (e.g., real-time chat vs. long document processing), and provide a structured framework for selecting the optimal compression strategy based on application requirements.\n\n## Locale\n\nen-US", additional_kwargs={}, response_metadata={})]}
+2026-09-30 20:37:06,206 src.graph.nodes INFO Context compression for analyst: 1 messages, estimated tokens before: ~222, after: ~222
+2026-09-30 20:38:07,306 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:38:07,308 src.graph.nodes INFO Step 'Synthesis and Comparative Evaluation of Compression Methods' execution completed by analyst
+2026-09-30 20:38:07,308 src.citations.extractor INFO [Citations] Starting extraction from 3 messages
+2026-09-30 20:38:07,308 src.citations.extractor INFO [Citations] Extracted 0 unique citations from 3 messages
+2026-09-30 20:38:07,308 src.graph.nodes INFO Research team is collaborating on tasks.
+2026-09-30 20:38:07,309 src.graph.nodes INFO Planner generating full plan with locale: en-US
+2026-09-30 20:38:07,309 src.graph.nodes INFO Reporter write final report
+2026-09-30 20:40:06,285 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"

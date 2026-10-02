@@ -1,0 +1,223 @@
+{
+ "run_id": "q05-r02-20260930T205952",
+ "kind": "replay",
+ "case_id": "c03",
+ "condition": "B",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "6f7db7cf25abccdda7ccc50ba35f5c6ffbb68376e0d2e08f8ed09cd1d217054b",
+ "report_chars": 14966,
+ "report_words": 1667,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 14,
+  "urls_in_retrieved_evidence": 12,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/llama-cpp-ai/llama.cpp/main/docs/perplexity-comparison-diagram.png",
+   "raw.githubusercontent.com/llama-cpp-ai/llama.cpp/main/docs/hardware-support-matrix.png"
+  ],
+  "provenance_rate": 0.8571428571428571
+ },
+ "numeric_items": 8,
+ "numeric_items_not_in_evidence": [
+  "40%",
+  "10",
+  "15%",
+  "40x"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "GPTQ (Grouped Quantization): Divides weights into groups and quantizes them independently, preserving weight distribution and reducing quantization error.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "AWQ (Activation-Aware Weight Quantization): Adjusts activation values during quantization to maintain activation fidelity.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "SmoothQuant: A training‑free method that scales weights before quantization, enabling W8A8 quantization with minimal accuracy degradation.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8‑bit (W8A8) quantization.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "GPTQ achieves the fastest token generation due to optimized low‑bit matrix multiplication kernels (e.g., INT4) in NVIDIA GPU drivers and cuBLAS.",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Hardware support is most robust on NVIDIA A100/H100 GPUs, with limited or no support for SmoothQuant on consumer or AMD GPUs due to higher memory bandwidth and activation handling requirements.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "PARTIAL",
+    "quote": "SmoothQuant incurs higher computational overhead due to W8A8 quantization, requiring more frequent memory reads and writes during activation handling.",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "The arXiv paper (arXiv:2211.10438) does not provide publicly accessible raw performance data or full benchmark tables.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.875,
+  "score_lenient": 0.875
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 8,
+  "claims": [
+   {
+    "report_quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8-bit (W8A8) quantization.",
+    "claim": "SmoothQuant retains higher accuracy in perplexity and instruction-following tasks than GPTQ and AWQ when using 8-bit (W8A8) quantization.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ achieves the fastest token generation speed and lowest model loading time, especially on NVIDIA GPUs, making it ideal for latency-sensitive applications.",
+    "claim": "GPTQ provides the fastest token generation speed and shortest model loading time among the three methods, especially on NVIDIA GPUs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Hardware support is most robust on NVIDIA A100/H100 GPUs, with limited or no support for SmoothQuant on consumer or AMD GPUs due to higher memory bandwidth and activation handling requirements.",
+    "claim": "NVIDIA A100/H100 GPUs offer the strongest hardware support for all three quantization methods, while SmoothQuant has limited or no support on consumer or AMD GPUs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant scales weights prior to quantization, preserving statistical distribution and reducing quantization error.",
+    "claim": "SmoothQuant reduces quantization error by scaling weights before quantization, preserving their statistical distribution.",
+    "label": "SUPPORTED",
+    "evidence_id": "E5",
+    "evidence_url": "https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/",
+    "quote": "SmoothQuant (diagram c) scales the weights prior to quantization.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "GPTQ achieves the fastest token generation due to optimized low-bit matrix multiplication kernels (e.g., INT4) in NVIDIA GPU drivers and cuBLAS.",
+    "claim": "GPTQ achieves the fastest token generation because it uses optimized low-bit matrix multiplication kernels (e.g., INT4) in NVIDIA GPU drivers and cuBLAS.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "AWQ shows a balanced performance, with improved instruction-following capabilities and moderate latency.",
+    "claim": "AWQ delivers balanced performance, improving instruction-following capabilities while maintaining moderate latency.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "SmoothQuant incurs higher computational overhead due to W8A8 quantization, requiring more frequent memory reads and writes during activation handling.",
+    "claim": "SmoothQuant incurs higher computational overhead due to W8A8 quantization, which requires more frequent memory reads and writes during activation handling.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "All three methods are implementable on CPUs, but with significant performance trade-offs, primarily suited for small models and edge use cases.",
+    "claim": "All three quantization methods can run on CPUs, but they suffer significant performance trade-offs and are mainly suitable for small models and edge deployments.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 1,
+  "contradicted": 0,
+  "unsupported": 7,
+  "score": 0.125
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3821,
+   "completion_tokens": 2301,
+   "wall_s": 70.26290082931519,
+   "thinking_chars": 8765
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3602,
+   "completion_tokens": 2385,
+   "wall_s": 66.67578196525574,
+   "thinking_chars": 8587
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4078,
+   "completion_tokens": 1349,
+   "wall_s": 42.890761852264404,
+   "thinking_chars": 5201
+  }
+ ],
+ "eval_wall_s": 179.9257140159607
+}

@@ -1,0 +1,92 @@
+{
+  "P0e8779": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P2f634f": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  },
+  "P3f98f1": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P43562f": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P5c31d4": {
+    "target_fact": "STATED_CORRECTLY",
+    "attribution": "ATTRIBUTED",
+    "evidence": "The claim that \"Google just figured out how to run LLMs on 6x less memory\" (from [S1]) refers to **TurboQuant**, which compresses KV caches to **3 bits per value**—a 5.3× reduction from standard 16–32-bit representations."
+  },
+  "P63628f": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P63b259": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P73144f": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "Despite claims of \"6x memory reduction with zero accuracy loss\" from Google’s TurboQuant, this assertion is not independently verified in the provided sources. The referenced LinkedIn post is promotional and lacks empirical validation. ... The assertion that INT4 quantization achieves \"zero accuracy loss\" or \"6x memory reduction\" is not substantiated by peer-reviewed evidence. The LinkedIn post appears promotional and lacks validation."
+  },
+  "P73df01": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P7ad934": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P80f91e": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  },
+  "P8c9e51": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "P978027": {
+    "target_fact": "SOURCE_ONLY",
+    "attribution": "n/a",
+    "evidence": "[LLM Quantization Review | Bitter Lesson](https://sherlock-dev.netlify.app/posts/2023-10-02-llm-quant/)"
+  },
+  "Pb2133a": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  },
+  "Pbad1f7": {
+    "target_fact": "STATED_CORRECTLY",
+    "attribution": "ATTRIBUTED",
+    "evidence": "The gap between standard inference (16–32 bits) and compressed representations (e.g., 3 bits) is where the bottleneck lies. Google's TurboQuant claims to close this gap without modifying the model, suggesting a novel algorithmic approach to quantization that may involve advanced error modeling or reconstruction during inference."
+  },
+  "Pbf9b44": {
+    "target_fact": "STATED_CORRECTLY",
+    "attribution": "ATTRIBUTED",
+    "evidence": "A LinkedIn post claims Google’s TurboQuant achieves **6× memory reduction** with zero accuracy loss by compressing KV caches to **3 bits per value**. ... **Source**: [S1] Google just figured out how to run LLMs on 6x less memory (https://www.linkedin.com/posts/shashi-kush-6940546k_google-just-figured-out-how-to-run-llms-on-activity-7444262186480492544-pcal) ... Quantization reduces the precision of key-value cache representations by lowering the bit-width of stored values—from standard 16-bit floating-point (FP16) or 32-bit (FP32) to lower bit-widths such as INT8 or INT4."
+  },
+  "Pce8567": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  },
+  "Pd1d37c": {
+    "target_fact": "NOT_STATED",
+    "attribution": "n/a",
+    "evidence": ""
+  }
+}

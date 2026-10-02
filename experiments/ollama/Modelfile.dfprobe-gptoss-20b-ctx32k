@@ -1,0 +1,6 @@
+# Used only by DeerFlow's in-repo LLMJudge (boundary_probe.probes), which calls Ollama
+# through the OpenAI-compatible endpoint; that endpoint does not accept num_ctx, and
+# the server default silently front-truncates long prompts (protocol A2, A12).
+# The P3 judge calls /api/chat with options.num_ctx=32768 and uses gpt-oss:20b directly.
+FROM gpt-oss:20b
+PARAMETER num_ctx 32768

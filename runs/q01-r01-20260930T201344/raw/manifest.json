@@ -1,0 +1,157 @@
+{
+ "manifest_version": 1,
+ "experiment_id": "part1-boundary-v1",
+ "run_id": "q01-r01-20260930T201344",
+ "query_id": "q01",
+ "query_text": "What are the most promising approaches for long-context retrieval-augmented generation in 2025, and how do they compare in terms of accuracy, latency, and cost?",
+ "status": "error",
+ "error": "Traceback (most recent call last):\n  File \"/Users/anmol/imperial/t1/boundary_probe/run_query.py\", line 151, in run\n    async for s in graph.astream(initial_state(cfg, query[\"text\"]),\n    ...<2 lines>...\n        final_state = s\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/main.py\", line 2971, in astream\n    async for _ in runner.atick(\n    ...<13 lines>...\n            yield o\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py\", line 304, in atick\n    await arun_with_retry(\n    ...<15 lines>...\n    )\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py\", line 137, in arun_with_retry\n    return await task.proc.ainvoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py\", line 705, in ainvoke\n    input = await asyncio.create_task(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^\n        step.ainvoke(input, config, **kwargs), context=context\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py\", line 473, in ainvoke\n    ret = await self.afunc(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py\", line 608, in run_in_executor\n    return await asyncio.get_running_loop().run_in_executor(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py\", line 59, in run\n    result = self.fn(*self.args, **self.kwargs)\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/runnables/config.py\", line 599, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/src/graph/nodes.py\", line 259, in background_investigation_node\n    ).invoke(query)\n      ~~~~~~^^^^^^^\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py\", line 629, in invoke\n    return self.run(tool_input, **kwargs)\n           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py\", line 981, in run\n    raise error_to_raise\n  File \"/Users/anmol/imperial/t1/vendor/deer-flow-1x/.venv/lib/python3.13/site-packages/langchain_core/tools/base.py\", line 947, in run\n    response = context.run(self._run, *tool_args, **tool_kwargs)\nTypeError: CassetteTool._run() got multiple values for argument 'run_manager'\nDuring task with name 'background_investigator' and id '9d434d1a-b5ef-f50b-8ec8-65854a635a80'\n",
+ "started_utc": "2026-09-30T19:13:45.306814+00:00",
+ "wall_s": 8.577050924301147,
+ "frozen_prompt_time": "Wed Sep 30 2026 20:13:44 ",
+ "retrieval_snapshot_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "search_provider": "duckduckgo",
+ "crawler": "jina",
+ "summary": {
+  "llm_by_role": {
+   "coordinator": {
+    "calls": 1.0,
+    "prompt_tokens": 0.0,
+    "completion_tokens": 0.0,
+    "model_wall_s": 8.560606956481934,
+    "errors": 0.0,
+    "finish_length": 0.0,
+    "max_prompt_tokens": 0.0
+   }
+  },
+  "tools_by_name": {},
+  "llm_calls": 1,
+  "tool_calls": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "peak_context_tokens": 0,
+  "near_ctx_limit": false
+ },
+ "files_sha256": {
+  "crawl_fulltext.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "deerflow.log": "ae7fc8b4047cf22f0a8db4312d3846cb2daab46dc5966c67fb450a8368c1237f",
+  "final_state.json": "0d9e2f90ef16257f16c3a06d724d410489949e4313cfb3435d88f254303e84bb",
+  "llm_calls.jsonl": "04a9336c0ae0f1b956262511a76cc4e75589a6f3f80e916f8906b60a5044f64d",
+  "report.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "state_snapshots.jsonl": "b587c450ca348ed19baa60f1bbea5357b538994b9de9aee2d32a3200e49e39bb",
+  "tool_calls.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+ },
+ "deerflow": {
+  "repo": "https://github.com/bytedance/deer-flow",
+  "branch": "main-1.x",
+  "commit": "2ab28765803d4d9582aaa8f2f3355137d154e273",
+  "git_status_porcelain": "",
+  "prompt_sha256": {
+   "coordinator": "6ba6063f0adeea0d026475516530d009ab9b2e93dd2b2f156e41410436eab037",
+   "planner": "8d151855e52ea77c6e223af652453b2eb08ff3796b49d176d0ca1b7aa07c5d2d",
+   "researcher": "4562bbc3f36e984aff6c6743ef9b7c892308afc52d83f732a66018716b2faddf",
+   "analyst": "e57e9dd9a5bbd49e5eb3a3800fb8ecfa4b78e0cc90465f31f5c83818068ca9c8",
+   "coder": "a558d02d42d380db1c9e701e0279e0c1022713116fc3ef5303623dd36e08fa9c",
+   "reporter": "7495d7a947c1863f44bb4c98c2442391bb85c979e527014ca939220eeaf2313d",
+   "recursion_fallback": "1c1b0f86d55adf6cd3e0addd45f94fe70d9c6bb1e970cb789a338b00a114b1e9"
+  },
+  "graph_sha256": {
+   "builder.py": "b5410dff160ebfd0c95ac1b4085e085025010d009f4922d77010049f1ca6a74e",
+   "nodes.py": "21f3383b1b04621625b0d9cf48ae902dafe2c47e70ea5b5d947df0a1deea7f44"
+  }
+ },
+ "config": {
+  "experiment_id": "part1-boundary-v1",
+  "deerflow": {
+   "repo": "https://github.com/bytedance/deer-flow",
+   "branch": "main-1.x",
+   "commit": "2ab28765803d4d9582aaa8f2f3355137d154e273",
+   "path": "vendor/deer-flow-1x"
+  },
+  "graph": {
+   "max_plan_iterations": 1,
+   "max_step_num": 3,
+   "max_search_results": 3,
+   "report_style": "academic",
+   "enable_background_investigation": true,
+   "auto_accepted_plan": true,
+   "enable_clarification": false,
+   "locale": "en-US",
+   "outer_recursion_limit": 100
+  },
+  "tools": {
+   "search_api": "duckduckgo",
+   "crawler": "jina"
+  },
+  "model": {
+   "provider": "ollama-openai-compatible",
+   "base_tag": "qwen3:4b-instruct-2507-q4_K_M",
+   "served_tag": "dfprobe-qwen3-4b-ctx40k",
+   "num_ctx": 40960,
+   "base_url": "http://localhost:11434/v1",
+   "temperature": 0.7,
+   "top_p": 0.8,
+   "seed": 7,
+   "max_tokens": 8192,
+   "token_limit": 32000
+  },
+  "replay": {
+   "seeds": [
+    101,
+    102,
+    103
+   ]
+  },
+  "judge": {
+   "name": "P3-proxy-v1",
+   "provider": "ollama-native",
+   "model": "gpt-oss:20b",
+   "fallback_model": "dfprobe-qwen3-4b-ctx40k",
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768,
+   "think": "low",
+   "max_claims": 10
+  }
+ },
+ "deerflow_conf_yaml": "BASIC_MODEL:\n  api_key: ollama\n  base_url: http://localhost:11434/v1\n  max_tokens: 8192\n  model: dfprobe-qwen3-4b-ctx40k\n  seed: 7\n  temperature: 0.7\n  token_limit: 32000\n  top_p: 0.8\n",
+ "model": {
+  "ollama_version": "0.14.2",
+  "tag": "dfprobe-qwen3-4b-ctx40k",
+  "digest": "7d716a276e402c93adce9c43f4e787a179a57ac97cd73b5cbae15cd7f726323e",
+  "parameters": "top_k                          20\ntop_p                          0.8\nnum_ctx                        40960\nrepeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7",
+  "details": {
+   "parent_model": "qwen3:4b-instruct-2507-q4_K_M",
+   "format": "gguf",
+   "family": "qwen3",
+   "families": [
+    "qwen3"
+   ],
+   "parameter_size": "4.0B",
+   "quantization_level": "Q4_K_M"
+  },
+  "modelfile_sha256": "53fbffa858d3917abf1d9d77377baa2774c582960dff546a4f70fc6e8a829e4e"
+ },
+ "packages": {
+  "langchain": "1.1.0",
+  "langchain-core": "1.2.5",
+  "langchain-openai": "1.1.0",
+  "langchain-community": "0.4.1",
+  "langgraph": "1.0.4",
+  "openai": "2.8.1",
+  "ddgs": "9.9.1",
+  "duckduckgo-search": "8.0.0",
+  "httpx": "0.28.1"
+ },
+ "python": "3.13.2",
+ "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+ "probe_code_sha256": {
+  "__init__.py": "45df9135633fa7ea076a50bedecd1053dd076546206b49776cf285f8957616ed",
+  "cassette.py": "4173412ac0e46bc202b3835255e35a605b35ccfa1e876760d6c281faef1603d2",
+  "deerflow_env.py": "da766b7442fb57260113443070caf03b1fe50c5bae9ede5620bf2a6e37beb248",
+  "manifest.py": "6f2428bebf0a911781df9cbc0437cb5100907b2bc318e05d21d136cd818fd8e6",
+  "recording.py": "033078309304e55ee42eaa6a5b0cffc06f78c3bd827367886f30a670db677cf9",
+  "run_query.py": "7b441300d99bcfac98ef6a090eb054cfe4358d59e9f6624575ad53703bd5a768",
+  "settings.py": "9853d9f01630e477b1fecaa5b349d9164d9e5a8d80789d3b32a3df1a96c5138c"
+ }
+}

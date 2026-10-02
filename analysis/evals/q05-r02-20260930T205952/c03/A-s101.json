@@ -1,0 +1,243 @@
+{
+ "run_id": "q05-r02-20260930T205952",
+ "kind": "replay",
+ "case_id": "c03",
+ "condition": "A",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "9029eecd0fdd2b911dffa419acaa050c0c501a06105b9f590940fb1a2c33d74a",
+ "report_chars": 17486,
+ "report_words": 2005,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 13,
+  "urls_in_retrieved_evidence": 12,
+  "fabricated_urls": [
+   "raw.githubusercontent.com/vllm-project/vllm/main/docs/images/vllm-logo.png"
+  ],
+  "provenance_rate": 0.9230769230769231
+ },
+ "numeric_items": 8,
+ "numeric_items_not_in_evidence": [
+  "40%",
+  "1.5",
+  "10",
+  "15%",
+  "40x"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "GPTQ focuses on group-level quantization to preserve statistical distribution and reduce quantization error.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "AWQ introduces activation-aware scaling to maintain activation values during quantization, improving instruction-following performance.",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "SmoothQuant, introduced in the arXiv paper (arXiv:2211.10438), represents a more holistic approach by scaling weights and activations before quantization.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "GPTQ achieves 2–3× faster token generation than FP32, while AWQ achieves 1.5–2× faster, and SmoothQuant incurs higher latency.",
+    "quote_verified": false
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "NVIDIA A100/H100 GPUs provide native support for all three methods, with high memory bandwidth enabling efficient W8A8 operations.",
+    "quote_verified": false
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "GPTQ’s weight-only design reduces memory bandwidth usage, whereas SmoothQuant’s W8A8 scheme preserves both weight and activation fidelity.",
+    "quote_verified": false
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "The report notes significant limitations: no direct comparison between GPTQ and AWQ in accuracy or latency, and benchmarks are model- and hardware-dependent.",
+    "quote_verified": false
+   }
+  ],
+  "score": 0.375,
+  "score_lenient": 0.875
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "SmoothQuant demonstrates superior accuracy retention, particularly in perplexity and instruction-following performance, outperforming both GPTQ and AWQ in 8-bit (W8A8) quantization.",
+    "claim": "SmoothQuant retains higher accuracy than GPTQ and AWQ when using 8-bit W8A8 quantization, especially in perplexity and instruction-following tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "GPTQ achieves the fastest token generation speed and lowest model loading time, especially on NVIDIA GPUs, making it ideal for latency-sensitive applications.",
+    "claim": "GPTQ provides the fastest token generation and lowest model loading time on NVIDIA GPUs, benefiting latency-sensitive use cases.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Hardware support is most robust on NVIDIA A100/H100 GPUs, with limited or no support for SmoothQuant on consumer GPUs and AMD platforms; CPU-based inference is feasible but significantly slower.",
+    "claim": "NVIDIA A100/H100 GPUs offer the strongest hardware support for all three quantization methods, while consumer GPUs and AMD platforms have limited or no support for SmoothQuant, and CPU inference is slower.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| GPTQ        | 2–3× faster than FP32  | Up to 40% faster   | Low                     | Minimal                 |",
+    "claim": "GPTQ achieves 2–3× faster token generation than FP32 and up to 40% faster model loading, with low memory bandwidth usage and minimal computational overhead.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| AWQ         | 1.5–2× faster than FP32| Slight edge over GPTQ | Moderate                | Low                     |",
+    "claim": "AWQ provides 1.5–2× faster token generation than FP32 and a slight speed advantage over GPTQ, with moderate memory bandwidth usage and low computational overhead.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| SmoothQuant | Slightly higher latency| 10–15% slower      | High                    | Moderate to high        |",
+    "claim": "SmoothQuant incurs slightly higher latency and 10–15% slower token generation than FP32, with high memory bandwidth usage and moderate to high computational overhead.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| NVIDIA A100/H100 | Full (optimized) | Full (optimized) | Full (optimized for W8A8) | None |",
+    "claim": "NVIDIA A100/H100 GPUs provide full, optimized support for GPTQ, AWQ, and SmoothQuant, with no limitations.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Consumer GPUs (RTX 30xx/40xx) | Moderate (via driver kernels) | Moderate | Limited (high memory bandwidth required) | Poor activation handling |",
+    "claim": "Consumer GPUs (RTX 30xx/40xx) offer moderate support for GPTQ and AWQ via driver kernels, but limited support for SmoothQuant due to high memory bandwidth requirements and poor activation handling.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| CPUs (x86/ARM) | Yes (via llama.cpp) | Yes (via llama.cpp) | No (current implementation lacks activation scaling) | High latency, low throughput |",
+    "claim": "CPUs support GPTQ and AWQ through llama.cpp, but do not support SmoothQuant, resulting in high latency and low throughput.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "vLLM: Supports all three methods and offers an OpenAI-compatible API, mature Kubernetes tooling, and broad model support. Ideal for enterprise-scale deployments on NVIDIA GPUs.",
+    "claim": "vLLM supports GPTQ, AWQ, and SmoothQuant, providing an OpenAI-compatible API, Kubernetes tooling, and broad model support, making it suitable for enterprise deployments on NVIDIA GPUs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4251,
+   "completion_tokens": 1872,
+   "wall_s": 57.48936605453491,
+   "thinking_chars": 6953
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4032,
+   "completion_tokens": 4046,
+   "wall_s": 109.73454999923706,
+   "thinking_chars": 13611
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4199,
+   "completion_tokens": 4053,
+   "wall_s": 116.01849317550659,
+   "thinking_chars": 15987
+  }
+ ],
+ "eval_wall_s": 283.3550970554352
+}

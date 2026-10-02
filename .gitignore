@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Pinned DeerFlow checkouts are fetched separately (README, "Repeating the model runs").
+vendor/
+
+# Local backups, build output and the assessment evidence archives (distributed separately).
+_local_backups/
+dist/
+review_archive/
+review_archive_part2/
+*.zip
+
+# The assessment brief is not redistributed.
+*Take-Home Task.pdf
+
+.DS_Store
+.idea/
+.vscode/

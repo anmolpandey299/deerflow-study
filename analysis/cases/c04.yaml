@@ -1,0 +1,53 @@
+case_id: c04
+kind: H1
+run_id: q06-r02-20260930T210856
+query_id: q06
+step: 0
+repair:
+  seg_id: '4.2'
+  tool_seq: 4
+  tool: web_search
+  title: 'Hyper-RAG: combating LLM hallucinations using hypergraph ...'
+  url: https://www.nature.com/articles/s41467-026-71411-1
+  passage: Apr 27, 2026 · These results confirm Hyper- RAG ’s effectiveness in enhancing LLM reliability and reducing
+    hallucinations , making it a robust solution for high-stakes applications like medical diagnostics.
+  requirement_ids:
+  - R5
+  - R1
+  omission_type: 'lost: the researcher exhausted its tool budget (recursion limit 25); DeerFlow''s recursion-limit
+    fallback (nodes.py:1007-1077) re-called the model with all tools stripped, the model replied with a tool call
+    written as plain text, and DeerFlow accepted that 122-char string as the step''s summary'
+  usage_detect:
+    anchor: Hyper
+    any_of:
+    - hallucinat
+    - reliab
+control:
+  seg_id: '6.0'
+  tool_seq: 6
+  tool: crawl_tool
+  title: ScienceDirect
+  url: https://www.sciencedirect.com/science/article/pii/S074756322600049X
+  passage: '# ScienceDirect
+
+
+    Are you a robot?
+
+    ----------------
+
+
+    Please confirm you are a human by completing the captcha challenge below.
+
+
+    * **Reference number:** a435deffbfcc3ebd
+
+    * **IP Address:** 34.96.49.58'
+  rationale: real crawl output received in this step (a CAPTCHA page); meets no q06 requirement; 197 vs 206 chars;
+    the only off-requirement segment within +-25% (dictionary segments are 98-135 chars)
+selection_notes:
+- 'Requirement with lowest baseline coverage (experimenter reading): R5 - report mentions only ''external verification''
+  vaguely; no reranking/self-RAG/CRAG/SeaRAG/Hyper-RAG.'
+- 'R5 candidates: 4.0 SeaRAG (named method, functional finding but no comparison) and 4.2 Hyper-RAG (named method
+  with comparative claim: reduces hallucinations). 4.2 chosen as the one clearly meeting criterion (ii).'
+- 'Also lost in the same step (not chosen): 4.1 RAG vs non-RAG 2x2 factorial user study (R1); 1.0/1.2 generic ''RAG
+  lessens hallucinations'' (R1, no specific item); 1.1 ''30-50%'' (subject of the figure ambiguous in the snippet).'

@@ -1,0 +1,270 @@
+{
+ "label": "SYNTHETIC PROBE",
+ "run_id": "q01-r03-20260930T204051",
+ "variant": "D2b_attribution_swap",
+ "evaluator": "P3-proxy-v1",
+ "p3": {
+  "evaluator": "P3-proxy-v1",
+  "report_sha256": "f104418813c746b738bc05803cb3e6e56b6ddea6b6dbe0db35f4945ed83b796e",
+  "report_chars": 19026,
+  "report_words": 2164,
+  "fmt": {
+   "checks": {
+    "h1_title": true,
+    "key_citations_before_key_points": true,
+    "key_points_4_to_6_bullets": true,
+    "overview_section": true,
+    "detailed_analysis_section": true,
+    "references_with_urls": true,
+    "markdown_table": true,
+    "no_wrapping_code_fence": true
+   },
+   "score": 1.0
+  },
+  "fact_url": {
+   "report_urls": 16,
+   "urls_in_retrieved_evidence": 15,
+   "fabricated_urls": [
+    "raw.githubusercontent.com/ai-research/visuals/main/rag-architectures-2025.png"
+   ],
+   "provenance_rate": 0.9375
+  },
+  "numeric_items": 1,
+  "numeric_items_not_in_evidence": [],
+  "judge_model": "gpt-oss:20b",
+  "judge_settings": {
+   "think": "medium",
+   "structured_output": false,
+   "options": {
+    "temperature": 0,
+    "seed": 1,
+    "num_ctx": 32768
+   },
+   "prompt_sha256": {
+    "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+    "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+    "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+   }
+  },
+  "comp": {
+   "labels": [
+    {
+     "id": "R1",
+     "label": "FULL",
+     "quote": "TreeRAG, Contextual RAG, and G-MemLLM represent distinct architectural paradigms: hierarchical chunking, context-aware retrieval, and memory-augmented reasoning.",
+     "quote_verified": true
+    },
+    {
+     "id": "R2",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R3",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R4",
+     "label": "ABSENT",
+     "quote": "",
+     "quote_verified": true
+    },
+    {
+     "id": "R5",
+     "label": "FULL",
+     "quote": "The following table synthesizes available performance data across the three leading methodologies.",
+     "quote_verified": true
+    },
+    {
+     "id": "R6",
+     "label": "FULL",
+     "quote": "As of 2025, long-context RAG systems have matured into sophisticated, context-sensitive architectures.",
+     "quote_verified": true
+    },
+    {
+     "id": "R7",
+     "label": "FULL",
+     "quote": "All cost and latency figures are either inferred from system design or derived from vendor comparisons and technical reports. No comprehensive, end-to-end benchmarking exists for all three methods across all three dimensions.",
+     "quote_verified": true
+    },
+    {
+     "id": "R8",
+     "label": "FULL",
+     "quote": "TreeRAG emerges as the most balanced and practical choice for real-world, document-based applications where accuracy, speed, and cost are interdependent.",
+     "quote_verified": true
+    }
+   ],
+   "score": 0.625,
+   "score_lenient": 0.625
+  },
+  "fact_claims": {
+   "claims_extracted": 10,
+   "claims_checked": 10,
+   "claims": [
+    {
+     "report_quote": "Latency is reduced in hierarchical RAG systems through efficient query traversal, with optimized pipelines achieving sub-second response times for well-structured queries.",
+     "claim": "TreeRAG achieves sub-second response times with optimized pipelines.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Evaluation on the AWS Documentation Dataset using an LLM-as-a-judge setup demonstrates consistent improvements in factual consistency and relevance across multiple embedding models (e.g., BGE-m3, Sentence-BERT).",
+     "claim": "TreeRAG improves factual consistency and relevance on the AWS Documentation Dataset across embedding models such as BGE-m3 and Sentence-BERT.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "The RAGPerf benchmarking framework confirms that optimized RAG pipelines can achieve sub-second response times for well-structured queries.",
+     "claim": "RAGPerf shows that optimized RAG pipelines can deliver sub-second response times for well-structured queries.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "The Best Embedding Models for RAG report highlights that BGE-m3 offers a favorable balance between accuracy and affordability, outperforming models like OpenAI or Cohere in cost-efficiency for production pipelines.",
+     "claim": "BGE-m3 is more cost‑efficient than OpenAI or Cohere while maintaining accuracy, according to the Best Embedding Models for RAG report.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "TreeRAG constructs a tree-based chunking structure with two key retrieval strategies: Root-to-leaves and Leaf-to-root.",
+     "claim": "TreeRAG uses a tree‑based chunking structure with root‑to‑leaves and leaf‑to‑root retrieval strategies.",
+     "label": "SUPPORTED",
+     "evidence_id": "E8",
+     "evidence_url": "https://aclanthology.org/2025.findings-acl.20/",
+     "quote": "TreeRAG, which employs Tree- Chunking for chunking and embedding in a tree-like structure , coupled with “root-to-leaves” and “leaf-to-root” retrieve strategy named Bidirectional Traversal Retrieval.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "TreeRAG’s bidirectional traversal strategy reduces redundant queries and improves retrieval efficiency.",
+     "claim": "TreeRAG’s bidirectional traversal reduces redundant queries and improves retrieval efficiency.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "G-MemLLM uses a gated latent memory mechanism to store and retrieve information over extended sequences, demonstrating superior performance in complex reasoning tasks.",
+     "claim": "G-MemLLM’s gated latent memory enables superior performance in complex reasoning tasks.",
+     "label": "NOT_FOUND",
+     "evidence_id": "",
+     "evidence_url": null,
+     "quote": "",
+     "quote_verified": true,
+     "counted_supported": false
+    },
+    {
+     "report_quote": "Contextual RAG introduces a prompt-driven layer that instructs LLMs (e.g., Claude) to generate concise, chunk-specific context summaries before vectorization.",
+     "claim": "Contextual RAG adds a prompt‑driven layer that generates chunk‑specific context summaries before vectorization.",
+     "label": "SUPPORTED",
+     "evidence_id": "E10",
+     "evidence_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+     "quote": "To implement Contextual Retrieval, we turn to Claude. We’ve written a prompt that instructs the model to provide concise, chunk‑specific context that explains the chunk using the context of the overall document.",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "The EncouRAGe (2025) study establishes that LLM-as-a-judge frameworks provide a more meaningful evaluation of factual correctness and relevance.",
+     "claim": "EncouRAGe shows that LLM‑as‑a‑judge frameworks better evaluate factual correctness and relevance than traditional metrics.",
+     "label": "SUPPORTED",
+     "evidence_id": "E24",
+     "evidence_url": "https://arxiv.org/html/2511.04696v1",
+     "quote": "Instead of relying solely on traditional metrics like BLEU (Papineni et al., 2002) or ROUGE (Lin, 2004), they use LLM-based or embedding-based measures to directly evaluate factual correctness, relevance, and consistency of the generated text (Es et al., 2024).",
+     "quote_verified": true,
+     "counted_supported": true
+    },
+    {
+     "report_quote": "A significant gap exists in standardized, reproducible benchmarks for cost, latency, and accuracy across RAG methodologies.",
+     "claim": "There is a lack of standardized, reproducible benchmarks covering cost, latency, and accuracy for RAG methods.",
+     "label": "SUPPORTED",
+     "evidence_id": "E26",
+     "evidence_url": "https://arxiv.org/abs/2511.09545",
+     "quote": "Second, there is no standardized, reproducible way to ...",
+     "quote_verified": true,
+     "counted_supported": true
+    }
+   ],
+   "supported": 4,
+   "contradicted": 0,
+   "unsupported": 6,
+   "score": 0.4
+  },
+  "judge_usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 4516,
+    "completion_tokens": 1238,
+    "wall_s": 41.118720054626465,
+    "thinking_chars": 4757
+   },
+   {
+    "call": "claims",
+    "prompt_tokens": 4212,
+    "completion_tokens": 2976,
+    "wall_s": 83.83244276046753,
+    "thinking_chars": 11995
+   },
+   {
+    "call": "verify",
+    "prompt_tokens": 3764,
+    "completion_tokens": 2498,
+    "wall_s": 72.55970215797424,
+    "thinking_chars": 9226
+   }
+  ]
+ },
+ "deerflow_llm_judge": {
+  "scores": {
+   "factual_accuracy": 7,
+   "completeness": 8,
+   "coherence": 8,
+   "relevance": 9,
+   "citation_quality": 7,
+   "writing_quality": 7
+  },
+  "overall_score": 8,
+  "weighted_score": 7.7,
+  "strengths": [
+   "Comprehensive coverage of leading RAG architectures and their performance dimensions",
+   "Logical structure with clear headings and a use‑case suitability matrix",
+   "Inclusion of recent, peer‑reviewed papers and industry reports",
+   "Balanced discussion of accuracy, latency, and cost trade‑offs"
+  ],
+  "weaknesses": [
+   "Some key claims (e.g., sub‑second latency, cost figures) are not directly supported by cited sources",
+   "Citation formatting is inconsistent and includes non‑academic references (blog posts, YouTube)",
+   "The conclusion is truncated and lacks a final synthesis",
+   "Quantitative cost data and latency benchmarks are largely inferred rather than empirically reported"
+  ],
+  "suggestions": [
+   "Add explicit inline citations for every quantitative claim, especially latency and cost figures",
+   "Replace or supplement informal sources with peer‑reviewed studies or vendor whitepapers",
+   "Complete the conclusion and provide a concise summary of actionable insights",
+   "Include a table of cost‑performance curves for the main embedding models used in the evaluated pipelines"
+  ],
+  "parse_failed": false
+ },
+ "deerflow_llm_judge_model": "dfprobe-gptoss-20b-ctx32k",
+ "diff_lines": 5
+}

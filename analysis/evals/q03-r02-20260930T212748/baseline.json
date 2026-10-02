@@ -1,0 +1,234 @@
+{
+ "run_id": "q03-r02-20260930T212748",
+ "kind": "baseline",
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "40d05dc86e4d2471cc9b054bf3921268c1ee0052621225c119c4cfb9c81cfcb3",
+ "report_chars": 19493,
+ "report_words": 2531,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 6,
+  "urls_in_retrieved_evidence": 4,
+  "fabricated_urls": [
+   "github.com/treeai-lab/awesome-kv-cache-management",
+   "raw.githubusercontent.com/treeai-lab/awesome-kv-cache-management/main/images/chunkkv-diagram.png"
+  ],
+  "provenance_rate": 0.6666666666666666
+ },
+ "numeric_items": 13,
+ "numeric_items_not_in_evidence": [
+  "5%",
+  "5×",
+  "1024",
+  "256"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Quantization reduces the precision of key-value activations from floating-point (e.g., 32-bit) to lower bit-widths (e.g., INT8 or INT4), significantly shrinking memory footprint.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "INT8 Quantization achieves up to **4× reduction** in KV cache size, as demonstrated in GPU-accelerated implementations [2601.04719].",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "Accuracy Impact: Minimal degradation (≤1%), especially in tasks involving general language understanding and summarization.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "Throughput Impact: High (reduces attention computation volume).",
+    "quote_verified": false
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "The comparative evaluation table shows memory savings, accuracy impact, throughput impact, key limitations, and use case suitability across methods.",
+    "quote_verified": false
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Risk of long-range dependency loss; sensitive to input structure.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "There is a lack of standardized benchmarks comparing the same method across different tasks, hardware, and input lengths.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.7142857142857143,
+  "score_lenient": 0.9285714285714286
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "- INT8 quantization achieves up to 4× memory reduction with minimal accuracy loss, making it the most practical and widely deployable method for long-context LLM inference.",
+    "claim": "INT8 quantization can reduce KV cache memory by up to 4× while keeping accuracy loss below 1%, making it the most practical and widely deployable method for long-context LLM inference.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Theoretical Memory Savings: Up to **8× reduction** in cache size.",
+    "claim": "INT4 quantization can theoretically reduce KV cache memory by up to 8×.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Impact: Significant degradation (≥3–5%), particularly in reasoning and long-range dependency tasks.",
+    "claim": "INT4 quantization typically causes accuracy degradation of 3–5% in reasoning and long-range dependency tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings | 2–5× reduction (variable by pattern)",
+    "claim": "Sparse attention can reduce memory usage by 2–5×.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings | 2–6× (based on input structure and scoring model)",
+    "claim": "Token-level pruning can achieve 2–6× memory savings with low to moderate accuracy impact.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings | 3–5×",
+    "claim": "Structured rank reduction yields 3–5× memory savings with moderate accuracy impact.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings | 3–6× (adaptive)",
+    "claim": "DynamicKV reconstruction-based compression can adaptively achieve 3–6× memory savings with low to moderate accuracy impact.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings | 4–8× (chunk-specific)",
+    "claim": "ChunkKV semantic chunking can achieve 4–8× memory savings with low accuracy impact.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "- No single method dominates across all dimensions; optimal performance depends on the application context, with hybrid strategies (e.g., pruning + quantization) offering the best balance of memory, accuracy, and latency.",
+    "claim": "Hybrid strategies such as pruning plus quantization offer the best balance of memory, accuracy, and latency across different application contexts.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Reconstruction-based methods such as DynamicKV provide adaptive, task-aware compression with superior semantic fidelity, ideal for complex reasoning and multi-turn dialogues.",
+    "claim": "DynamicKV provides adaptive, task-aware compression with superior semantic fidelity, ideal for complex reasoning and multi-turn dialogues.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 0,
+  "contradicted": 0,
+  "unsupported": 10,
+  "score": 0.0
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4392,
+   "completion_tokens": 1250,
+   "wall_s": 33.30017304420471,
+   "thinking_chars": 4611
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4189,
+   "completion_tokens": 3936,
+   "wall_s": 94.14263033866882,
+   "thinking_chars": 16036
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4945,
+   "completion_tokens": 1367,
+   "wall_s": 36.651979207992554,
+   "thinking_chars": 5317
+  }
+ ],
+ "eval_wall_s": 164.27364587783813
+}

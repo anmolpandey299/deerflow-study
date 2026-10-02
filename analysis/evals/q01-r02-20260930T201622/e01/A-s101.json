@@ -1,0 +1,228 @@
+{
+ "run_id": "q01-r02-20260930T201622",
+ "kind": "replay",
+ "case_id": "e01",
+ "condition": "A",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "6d4c920bcda726f8b4a167e004cdbb829a118538e45c91b0960be6d988710153",
+ "report_chars": 15713,
+ "report_words": 1891,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 8,
+  "urls_in_retrieved_evidence": 6,
+  "fabricated_urls": [
+   "arxiv.org/pdf/2512.17220.pdf",
+   "arxiv.org/pdf/2511.04696.pdf"
+  ],
+  "provenance_rate": 0.75
+ },
+ "numeric_items": 2,
+ "numeric_items_not_in_evidence": [],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Hierarchical retrieval organizes information into multiple layers of abstraction—e.g., topic, section, paragraph—enabling focused retrieval at different levels of granularity.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "| Architecture | Accuracy | Latency | Cost | Key Strengths | Key Limitations |",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "In 2025, research has focused on extending RAG capabilities to support long-context reasoning—where models must interpret, synthesize, and reason over extended, complex documents.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "ABSENT",
+    "quote": "",
+    "quote_verified": true
+   },
+   {
+    "id": "R8",
+    "label": "FULL",
+    "quote": "Hybrid BM25 + Dense Retrieval is ideal for structured, well-indexed documents with high-volume, fast-response queries.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.5,
+  "score_lenient": 0.5
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 9,
+  "claims": [
+   {
+    "report_quote": "Hybrid retrieval strategies (e.g., BM25 + dense) outperform pure keyword or dense retrieval in retrieval accuracy, yet still fall short of the theoretical 'Oracle Context' ideal.",
+    "claim": "Hybrid retrieval strategies such as BM25 + dense achieve higher retrieval accuracy than pure keyword or dense retrieval, but they do not reach the theoretical Oracle Context performance.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://arxiv.org/html/2511.04696v1",
+    "quote": "Hybrid BM25 consistently achieves the best results across all four datasets.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "A clear performance trade-off exists between accuracy, latency, and cost: high-accuracy models exhibit longer response times and higher operational expenses.",
+    "claim": "High-accuracy RAG models have longer latency and higher operational costs compared to lower-accuracy models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Hybrid BM25 + Dense Retrieval | High (best retrieval precision) | Medium to High | Medium | Robust to sparse queries; widely deployable; strong retrieval accuracy | Limited semantic understanding; high memory usage in long contexts; still underperforms Oracle Context",
+    "claim": "Hybrid BM25 + Dense Retrieval delivers high retrieval precision, medium to high latency, and medium cost, but its semantic understanding is limited and it still underperforms the Oracle Context.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Mindscape-Aware RAG (MiA-RAG) | High (coherence and reasoning) | High | High | Simulates human cognition; enables structured long-context reasoning | Computationally intensive; requires large training data; limited real-world deployment data",
+    "claim": "Mindscape-Aware RAG (MiA-RAG) achieves high coherence and reasoning, but incurs high latency and cost due to its computational intensity and large training data requirements.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAGPerf evaluates RAG systems across 25,000 QA pairs and over 51,000 documents.",
+    "claim": "The RAGPerf benchmark tests RAG systems on 25,000 question‑answer pairs and more than 51,000 documents.",
+    "label": "SUPPORTED",
+    "evidence_id": "E10",
+    "evidence_url": "https://arxiv.org/html/2511.04696v1",
+    "quote": "including 25k QA pairs and over 51k documents.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "EncouRAGe finds that Hybrid BM25 + dense retrieval achieves the best retrieval performance across four benchmark datasets.",
+    "claim": "EncouRAGe reports that Hybrid BM25 + dense retrieval outperforms other retrieval strategies on four benchmark datasets.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://arxiv.org/html/2511.04696v1",
+    "quote": "Hybrid BM25 consistently achieves the best results across all four datasets.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "MiA-RAG best supports long-context reasoning and coherence; mimics human cognitive processes.",
+    "claim": "MiA-RAG is best suited for long‑context reasoning and coherence because it models human cognitive processes.",
+    "label": "SUPPORTED",
+    "evidence_id": "E8",
+    "evidence_url": "https://arxiv.org/abs/2512.17220",
+    "quote": "MiA-RAG builds a mindscape through hierarchical summarization and conditions both retrieval and generation on this global semantic representation.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "Memory-Augmented Models | Moderate | High | High | Enables persistent context and dialogue continuity | Risk of memory drift; high resource consumption; potential for hallucination",
+    "claim": "Memory‑augmented models provide persistent context and dialogue continuity but suffer from high latency, high cost, memory drift, and hallucination risk.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "RAG systems still underperform relative to Oracle Context due to fragmented retrieval results.",
+    "claim": "RAG systems lag behind the Oracle Context because their retrieval results are fragmented and lack integration.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 4,
+  "contradicted": 0,
+  "unsupported": 5,
+  "score": 0.4444444444444444
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 3715,
+   "completion_tokens": 1061,
+   "wall_s": 30.0754611492157,
+   "thinking_chars": 3941
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 3411,
+   "completion_tokens": 2642,
+   "wall_s": 64.41939306259155,
+   "thinking_chars": 9791
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2655,
+   "completion_tokens": 3064,
+   "wall_s": 73.26424813270569,
+   "thinking_chars": 13945
+  }
+ ],
+ "eval_wall_s": 167.83802008628845
+}

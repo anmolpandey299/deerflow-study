@@ -1,0 +1,14 @@
+[
+ {
+  "tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "prompt_eval_count": 4096,
+  "answer": "There is no vault code stated in the system message. The provided text consists only of repeated paragraphs",
+  "needle_recovered": false
+ },
+ {
+  "tag": "dfprobe-qwen3-4b-ctx40k",
+  "prompt_eval_count": 7501,
+  "answer": "7319-ALPHA",
+  "needle_recovered": true
+ }
+]

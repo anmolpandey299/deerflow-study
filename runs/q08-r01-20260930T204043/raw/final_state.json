@@ -1,0 +1,27 @@
+{
+ "messages": [
+  {
+   "type": "human",
+   "data": {
+    "content": "How do vector databases such as Milvus, Qdrant, Weaviate, and pgvector compare in query latency, scalability, and operational cost for RAG workloads?",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "human",
+    "name": null,
+    "id": "08520768-8545-4697-b364-70d668864ca0"
+   }
+  }
+ ],
+ "locale": "en-US",
+ "research_topic": "comparison of query latency, scalability, and operational cost of vector databases (Milvus, Qdrant, Weaviate, pgvector) for RAG workloads",
+ "clarified_research_topic": "comparison of query latency, scalability, and operational cost of vector databases (Milvus, Qdrant, Weaviate, pgvector) for RAG workloads",
+ "resources": [],
+ "auto_accepted_plan": true,
+ "enable_background_investigation": true,
+ "citations": [],
+ "enable_clarification": false,
+ "clarification_rounds": 0,
+ "clarification_history": [],
+ "is_clarification_complete": true,
+ "goto": "background_investigator"
+}

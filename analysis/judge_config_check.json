@@ -1,0 +1,174 @@
+[
+ {
+  "setting": "format+think_low",
+  "run_id": "q01-r02-20260930T201622",
+  "labels": {
+   "R1": "ABSENT",
+   "R2": "ABSENT",
+   "R3": "ABSENT",
+   "R4": "ABSENT",
+   "R5": "ABSENT",
+   "R6": "ABSENT",
+   "R7": "ABSENT",
+   "R8": "ABSENT"
+  },
+  "unverified_quotes": [],
+  "score": 0.0,
+  "score_lenient": 0.0,
+  "usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3739,
+    "completion_tokens": 119,
+    "wall_s": 6.7871012687683105,
+    "thinking_chars": 43
+   }
+  ]
+ },
+ {
+  "setting": "format+think_low",
+  "run_id": "q01-r03-20260930T204051",
+  "labels": {
+   "R1": "FULL",
+   "R2": "ABSENT",
+   "R3": "ABSENT",
+   "R4": "ABSENT",
+   "R5": "FULL",
+   "R6": "FULL",
+   "R7": "FULL",
+   "R8": "FULL"
+  },
+  "unverified_quotes": [
+   "R1",
+   "R8"
+  ],
+  "score": 0.375,
+  "score_lenient": 0.625,
+  "usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 4778,
+    "completion_tokens": 305,
+    "wall_s": 36.5723237991333,
+    "thinking_chars": 1622
+   }
+  ]
+ },
+ {
+  "setting": "free+think_low",
+  "run_id": "q01-r02-20260930T201622",
+  "labels": {
+   "R1": "FULL",
+   "R2": "PARTIAL",
+   "R3": "PARTIAL",
+   "R4": "PARTIAL",
+   "R5": "FULL",
+   "R6": "FULL",
+   "R7": "PARTIAL",
+   "R8": "FULL"
+  },
+  "unverified_quotes": [
+   "R4",
+   "R7",
+   "R8"
+  ],
+  "score": 0.5,
+  "score_lenient": 0.75,
+  "usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3827,
+    "completion_tokens": 716,
+    "wall_s": 35.720897912979126,
+    "thinking_chars": 2313
+   }
+  ]
+ },
+ {
+  "setting": "free+think_low",
+  "run_id": "q01-r03-20260930T204051",
+  "labels": {
+   "R1": "FULL",
+   "R2": "FULL",
+   "R3": "FULL",
+   "R4": "PARTIAL",
+   "R5": "FULL",
+   "R6": "FULL",
+   "R7": "FULL",
+   "R8": "FULL"
+  },
+  "unverified_quotes": [
+   "R1"
+  ],
+  "score": 0.8125,
+  "score_lenient": 0.9375,
+  "usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 4517,
+    "completion_tokens": 397,
+    "wall_s": 25.209062814712524,
+    "thinking_chars": 62
+   }
+  ]
+ },
+ {
+  "setting": "free+think_medium",
+  "run_id": "q01-r02-20260930T201622",
+  "labels": {
+   "R1": "FULL",
+   "R2": "ABSENT",
+   "R3": "ABSENT",
+   "R4": "ABSENT",
+   "R5": "FULL",
+   "R6": "FULL",
+   "R7": "FULL",
+   "R8": "PARTIAL"
+  },
+  "unverified_quotes": [
+   "R7",
+   "R8"
+  ],
+  "score": 0.375,
+  "score_lenient": 0.5625,
+  "usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 3827,
+    "completion_tokens": 1958,
+    "wall_s": 85.64650702476501,
+    "thinking_chars": 7535
+   }
+  ]
+ },
+ {
+  "setting": "free+think_medium",
+  "run_id": "q01-r03-20260930T204051",
+  "labels": {
+   "R1": "FULL",
+   "R2": "ABSENT",
+   "R3": "FULL",
+   "R4": "ABSENT",
+   "R5": "FULL",
+   "R6": "FULL",
+   "R7": "FULL",
+   "R8": "FULL"
+  },
+  "unverified_quotes": [
+   "R1",
+   "R5",
+   "R6"
+  ],
+  "score": 0.375,
+  "score_lenient": 0.75,
+  "usage": [
+   {
+    "call": "completeness",
+    "prompt_tokens": 4517,
+    "completion_tokens": 2258,
+    "wall_s": 101.43602108955383,
+    "thinking_chars": 8070
+   }
+  ]
+ }
+]

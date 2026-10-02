@@ -1,0 +1,315 @@
+{
+ "run_id": "q08-r02-20260930T212058",
+ "funnel": {
+  "researcher_segments": 10,
+  "items": {
+   "in_tool_outputs": 7,
+   "in_observations": 2,
+   "in_reporter_input": 6,
+   "in_report": 3
+  },
+  "urls": {
+   "in_tool_outputs": 6,
+   "in_observations": 1,
+   "in_reporter_input": 5,
+   "in_report": 4
+  },
+  "report_items_total": 19,
+  "report_items_not_in_any_tool_output": [
+   "50",
+   "10",
+   "20",
+   "100",
+   "5×",
+   "10,000",
+   "15,000",
+   "5,000",
+   "1,000",
+   "50M",
+   "100K",
+   "4.5",
+   "4.8",
+   "10k"
+  ],
+  "crawl_items_cut_by_1000_char_truncation": [
+   "$0.0001",
+   "$0.12",
+   "$0.67",
+   "$1",
+   "$1.53",
+   "$1100",
+   "$12,000",
+   "$280",
+   "$320",
+   "$3k",
+   "$400",
+   "$480",
+   "0.1%",
+   "0.5",
+   "0.8",
+   "0.94",
+   "0.97",
+   "0.99",
+   "01",
+   "03",
+   "1%",
+   "1,000,000",
+   "1.11",
+   "1.12",
+   "1.25",
+   "1.26",
+   "1.5M",
+   "1.6",
+   "10",
+   "10%",
+   "10,000",
+   "100",
+   "100,000",
+   "1000",
+   "100K",
+   "100M",
+   "100x",
+   "102",
+   "105",
+   "10B",
+   "10M",
+   "10x",
+   "11",
+   "11.4x",
+   "115",
+   "11x",
+   "12",
+   "1200",
+   "14",
+   "15",
+   "15%",
+   "150",
+   "1536",
+   "15x",
+   "18",
+   "19",
+   "1B",
+   "1K",
+   "1M",
+   "1x",
+   "2.5",
+   "2.6",
+   "2.7x",
+   "20",
+   "200",
+   "200M",
+   "21",
+   "22",
+   "220",
+   "240",
+   "25%",
+   "2800",
+   "3%",
+   "30.75",
+   "31.07",
+   "32",
+   "320K",
+   "35K",
+   "36.73",
+   "38",
+   "38.71",
+   "39%",
+   "3900",
+   "3x",
+   "40%",
+   "4096",
+   "41.47",
+   "4100",
+   "42",
+   "42K",
+   "45",
+   "471.57",
+   "48%",
+   "5%",
+   "5.5",
+   "50",
+   "50,000,000",
+   "5000",
+   "500M",
+   "50K",
+   "50M",
+   "50x",
+   "52",
+   "5K",
+   "6%",
+   "60",
+   "60.42",
+   "600",
+   "64",
+   "6x",
+   "74.60",
+   "768",
+   "7B",
+   "80%",
+   "8200",
+   "824",
+   "836",
+   "850",
+   "85K",
+   "95%",
+   "99",
+   "99%"
+  ]
+ },
+ "candidates": [
+  {
+   "run_id": "q08-r02-20260930T212058",
+   "tool_idx": 1,
+   "tool_seq": 1,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "peer-reviewed benchmarks Milvus Qdrant Weaviate pgvector p99 query latency throughput recall accuracy 10M to 100M vectors 2025-2026 RAG AI search environments LushBinary DasRoot"
+   },
+   "seg_id": "1.2",
+   "url": "https://devstarsj.github.io/ai/database/2026/04/30/vector-databases-2026-pinecone-weaviate-pgvector-qdrant-comparison/",
+   "title": "Vector Databases in 2026 : Comparing Pinecone, Weaviate , pgvector ...",
+   "text": "30 Apr 2026 in Ai / Database on Vector database, Rag , Pinecone, Weaviate , Pgvector , Qdrant , Ai , Machine learning. Vector Databases in 2026 : Choosing the Right One for Your RAG Pipeline.",
+   "items": [
+    "30"
+   ],
+   "missing_from_step_observation": [
+    "30"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q08-r02-20260930T212058",
+   "tool_idx": 3,
+   "tool_seq": 3,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://devstarsj.github.io/ai/database/2026/04/30/vector-databases-2026-pinecone-weaviate-pgvector-qdrant-comparison/"
+   },
+   "seg_id": "3.0",
+   "url": "https://devstarsj.github.io/ai/database/2026/04/30/vector-databases-2026-pinecone-weaviate-pgvector-qdrant-comparison/",
+   "title": "404: Page not found",
+   "text": "# 404: Page not found\n\nSorry, we've misplaced that URL or it's pointing to something that doesn't exist. [Head back home](/) to try finding it again.",
+   "items": [
+    "404"
+   ],
+   "missing_from_step_observation": [
+    "404"
+   ],
+   "missing_items_in_report": [
+    "404"
+   ],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q08-r02-20260930T212058",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "independent technical reports on Milvus Weaviate Qdrant pgvector p99 latency throughput recall at scale 10M-100M vectors 2025-2026 LushBinary DasRoot"
+   },
+   "seg_id": "4.0",
+   "url": "https://lushbinary.com/blog/vector-database-benchmarks-production-selection-guide-2026/",
+   "title": "Vector Database Benchmarks: Production Selection Guide 2026 - Lushbinary",
+   "text": "Compare Qdrant , Weaviate , Milvus , Pinecone, and pgvector on production benchmarks ( p99 latency , QPS, recall@10), operational readiness (HA, multi-tenancy, RBAC), cost modeling at 10M-100M scale , and enterprise decision framework. Updated July 2026.",
+   "items": [
+    "10M",
+    "100M"
+   ],
+   "missing_from_step_observation": [
+    "10M",
+    "100M"
+   ],
+   "missing_items_in_report": [
+    "100M"
+   ],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q08-r02-20260930T212058",
+   "tool_idx": 4,
+   "tool_seq": 4,
+   "tool": "web_search",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "query": "independent technical reports on Milvus Weaviate Qdrant pgvector p99 latency throughput recall at scale 10M-100M vectors 2025-2026 LushBinary DasRoot"
+   },
+   "seg_id": "4.2",
+   "url": "https://app.ailog.fr/en/blog/guides/vector-database-benchmark-2026",
+   "title": "Vector Database Benchmark 2026: Qdrant vs Pinecone vs Weaviate vs ...",
+   "text": "Comprehensive vector database comparison with real benchmarks: QPS, latency p50/p95/ p99 , recall@10, cost. Qdrant , Pinecone, Weaviate , Milvus tested on 1M and 10M vectors.",
+   "items": [
+    "1M",
+    "10M"
+   ],
+   "missing_from_step_observation": [
+    "1M",
+    "10M"
+   ],
+   "missing_items_in_report": [
+    "1M"
+   ],
+   "url_in_step_observation": true
+  },
+  {
+   "run_id": "q08-r02-20260930T212058",
+   "tool_idx": 5,
+   "tool_seq": 5,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://lushbinary.com/blog/vector-database-benchmarks-production-selection-guide-2026/"
+   },
+   "seg_id": "5.0",
+   "url": "https://lushbinary.com/blog/vector-database-benchmarks-production-selection-guide-2026/",
+   "title": "Vector Database Benchmarks: Production Selection Guide for Enterprise AI (2026)",
+   "text": "# Vector Database Benchmarks: Production Selection Guide for Enterprise AI (2026)\n\n[Back to Blog](/blog/)\n\nAI & AutomationJuly 2, 202614 min read\n\nProduction vector database selection requires more than dev-environment recall scores. This guide covers ANN-Benchmarks methodology, head-to-head p99 latency and QPS comparisons of Qdrant, Weaviate, Milvus, Pinecone, and pgvector at 10M-100M scale, operational readiness (HA, multi-tenancy, RBAC), cost modeling, and a decision framework for enterprise teams.\n\n![Lushbinary](/images/logo-dark.png)\n\nLushbinary\n\nAI & Software Engineering\n\n![Vector Database Benchmarks: Production Selection Guide for Enterprise AI (2026)](/images/blog/vector-database-benchmarks-production-guide.svg)\n\nSubscribe · Newsletter\n\n### Scale Your Vector Infrastructure\n\nGet our production guide to selecting and operating vector databases at enterprise scale.\n\n* New deep-dives on AI agents and cloud architecture\n* Engineering teardowns of shipped products\n* No spam, unsubscr",
+   "items": [
+    "202614",
+    "10M",
+    "100M"
+   ],
+   "missing_from_step_observation": [
+    "202614",
+    "10M",
+    "100M"
+   ],
+   "missing_items_in_report": [
+    "100M"
+   ],
+   "url_in_step_observation": false
+  },
+  {
+   "run_id": "q08-r02-20260930T212058",
+   "tool_idx": 6,
+   "tool_seq": 6,
+   "tool": "crawl_tool",
+   "role": "researcher",
+   "step": 0,
+   "args": {
+    "url": "https://iotdigitaltwinplm.com/vector-database-benchmarks-2026-pinecone-weaviate-qdrant-milvus/"
+   },
+   "seg_id": "6.0",
+   "url": "https://iotdigitaltwinplm.com/vector-database-benchmarks-2026-pinecone-weaviate-qdrant-milvus/",
+   "title": "Vector Database Benchmarks 2026: 4 Ranked by QPS, Recall & Cost - IoT Digital Twin PLM",
+   "text": "# Vector Database Benchmarks 2026: 4 Ranked by QPS, Recall & Cost - IoT Digital Twin PLM\n\nVector Database Benchmarks 2026: Pinecone, Weaviate, Qdrant, and Milvus\n-----------------------------------------------------------------------\n\n*Last updated: June 28, 2026*\n\n**Vector database benchmarks** are only useful if they reflect the workload you actually run. Recall, latency, throughput, and cost trade against each other, and the right choice depends on dataset size, filter complexity, update rate, and how much tail latency your application tolerates. This guide benchmarks Pinecone, Weaviate, Qdrant, and Milvus across those axes and explains how to read the numbers.\n\n**The short answer:** for most retrieval-augmented generation workloads, all four deliver high recall with HNSW indexing; they diverge on filtered search, write-heavy patterns, operational model, and cost at scale. Pick on your access pattern, not a single headline QPS figure.\n\n**What this covers:** the benchmark methodology",
+   "items": [
+    "28"
+   ],
+   "missing_from_step_observation": [
+    "28"
+   ],
+   "missing_items_in_report": [],
+   "url_in_step_observation": false
+  }
+ ]
+}

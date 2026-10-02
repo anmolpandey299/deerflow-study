@@ -1,0 +1,16 @@
+[
+ {
+  "tag": "gpt-oss:20b",
+  "endpoint": "/v1/chat/completions",
+  "prompt_tokens": 4096,
+  "answer": "1234",
+  "needle_recovered": false
+ },
+ {
+  "tag": "dfprobe-gptoss-20b-ctx32k",
+  "endpoint": "/v1/chat/completions",
+  "prompt_tokens": 6831,
+  "answer": "7319-ALPHA",
+  "needle_recovered": true
+ }
+]

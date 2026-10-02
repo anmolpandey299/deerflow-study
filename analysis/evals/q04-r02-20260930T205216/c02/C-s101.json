@@ -1,0 +1,261 @@
+{
+ "run_id": "q04-r02-20260930T205216",
+ "kind": "replay",
+ "case_id": "c02",
+ "condition": "C",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "b9b0131ec335dc6e2e247ff9d222c02f381c0a32897361dca86af8ead675b19f",
+ "report_chars": 18644,
+ "report_words": 2340,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 8,
+  "urls_in_retrieved_evidence": 3,
+  "fabricated_urls": [
+   "wandb.ai/zaiinn440/hybridmoe/reports/inference-performance-mixtral-8x7b-vs-llama-3-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-inference-efficiency",
+   "research.google.com/pubs/pub47774.html",
+   "wandb.ai/zaiinn440/hybridmoe/reports/benchmark-performance-mixtral-8x7b-vs-llama-70b--vmlldzo3nzywnzaw",
+   "generalcompute.com/blog/moe-vs-dense-generalization"
+  ],
+  "provenance_rate": 0.375
+ },
+ "numeric_items": 37,
+ "numeric_items_not_in_evidence": [
+  "60%",
+  "46.7B",
+  "46.7",
+  "18%",
+  "1.0",
+  "7B",
+  "1.3",
+  "1.8",
+  "15%",
+  "0.8",
+  "1.2",
+  "40%",
+  "100%",
+  "0.9",
+  "25%",
+  "15",
+  "78%",
+  "80%",
+  "65%",
+  "5%",
+  "48%",
+  "52%",
+  "12%",
+  "10%",
+  "100B"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "Mixture-of-Experts (MoE) models activate only a subset of parameters per token, significantly reducing memory footprint and active compute cost compared to dense models, which activate all parameters.",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "MoE models use 1.6 × dense FLOPs per token with top‑2 routing, offset by 4× more feed‑forward parameters.",
+    "quote_verified": false
+   },
+   {
+    "id": "R3",
+    "label": "FULL",
+    "quote": "MoE models reduce memory bandwidth consumption by up to 60% compared to dense models due to their sparse activation.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "FULL",
+    "quote": "MMLU: Mixtral 8x7B 78% vs Llama 70B 80%.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "Mixtral 8x7B (MoE) and Llama 70B (Dense).",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "The improved throughput is attributed to reduced memory bottlenecks and better load balancing across devices.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "FULL",
+    "quote": "MoE models offer compelling advantages in training efficiency, inference scalability, and robustness—particularly in constrained or distributed environments.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.8571428571428571,
+  "score_lenient": 1.0
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "| Mixtral 8x7B (MoE) | ~46.7 billion | ~13 billion | ~46.7 B |",
+    "claim": "Mixtral 8x7B (MoE) has approximately 46.7 billion total parameters, activates about 13 billion parameters per token, and has a memory footprint of about 46.7 B.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b",
+    "quote": "Mixtral 8x7B activates roughly 13 billion parameters per token while keeping 47 billion in memory.",
+    "quote_verified": false,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Llama 70B (Dense) | ~70 billion | ~70 billion | ~70 B |",
+    "claim": "Llama 70B (Dense) has approximately 70 billion total parameters, activates all 70 billion parameters per token, and has a memory footprint of about 70 B.",
+    "label": "SUPPORTED",
+    "evidence_id": "E13",
+    "evidence_url": "https://www.generalcompute.com/blog/moe-vs-dense-equal-compute-mixtral-8x7b-vs-llama-70b",
+    "quote": "Llama 70B activates all 70 billion parameters per token and needs all 70 billion in memory.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "This comparison reveals that although Mixtral 8x7B has a smaller total parameter count than Llama 70B, it activates only ~13 billion parameters per token—approximately 18% of the total parameter space—compared to Llama 70B’s full activation of all 70 billion parameters.",
+    "claim": "Mixtral 8x7B activates only about 13 billion parameters per token—roughly 18 % of its total parameter space—while Llama 70B activates all 70 billion parameters per token.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| FLOPs per token (with top-2 routing) | 1.6 × dense | 1.0 × baseline | 1.6× |",
+    "claim": "MoE models use 1.6 times more FLOPs per token than dense models when employing top‑2 routing.",
+    "label": "SUPPORTED",
+    "evidence_id": "E7",
+    "evidence_url": "https://mbrenndoerfer.com/writing/efficiency-frontiers-architectures-hardware-codesign-inference",
+    "quote": "MoE uses 1.6x the FLOPs of dense for this seq_len, but has ~4x more total FF parameters with top-2 routing.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "| Memory Bandwidth Usage | ~40% of dense model | 100% | 60% |",
+    "claim": "MoE models consume up to 60 % less memory bandwidth than dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| 8x A100 GPUs | 1.2 tokens/sec/GPU | 0.9 tokens/sec/GPU | +30% |",
+    "claim": "On 8×A100 GPUs, MoE models achieve a throughput of 1.2 tokens per second per GPU, which is 30 % higher than the 0.9 tokens per second per GPU achieved by dense models.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Mixtral 8x7B (MoE) | 1.3–1.8 ms | +15% to +30% over dense |\n| Llama 3 70B (Dense) | 0.8–1.2 ms | Baseline |",
+    "claim": "Mixtral 8x7B processes tokens in 1.3–1.8 ms, representing a 15–30 % latency increase over dense models that process tokens in 0.8–1.2 ms.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "| Benchmark | Mixtral 8x7B (MoE) | Llama 70B (Dense) | Performance Gap |\n| MMLU | 78% | 80% | -2% |\n| GSM8K | 65% | 70% | -5% |\n| HumanEval (Code) | 48% | 52% | -4% |",
+    "claim": "On standard benchmarks, Mixtral 8x7B scores 78 % on MMLU, 65 % on GSM8K, and 48 % on HumanEval, compared to 80 %, 70 %, and 52 % respectively for Llama 70B, yielding gaps of –2 %, –5 %, and –4 %.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "In medical diagnosis, MoE models achieve a **12% accuracy improvement** over Llama 70B on a curated medical dataset.",
+    "claim": "In medical diagnosis, MoE models achieve a 12 % higher accuracy than Llama 70B on a curated medical dataset.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "A customer service chatbot using MoE models achieved a **10% improvement in user satisfaction** compared to a dense model-based system.",
+    "claim": "A customer‑service chatbot powered by MoE models reports a 10 % higher user satisfaction than one powered by a dense model.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 2,
+  "contradicted": 0,
+  "unsupported": 8,
+  "score": 0.2
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4725,
+   "completion_tokens": 1705,
+   "wall_s": 52.10818290710449,
+   "thinking_chars": 6440
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4527,
+   "completion_tokens": 4650,
+   "wall_s": 132.12348103523254,
+   "thinking_chars": 12654
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 2239,
+   "completion_tokens": 1592,
+   "wall_s": 45.56558012962341,
+   "thinking_chars": 4978
+  }
+ ],
+ "eval_wall_s": 229.93529105186462
+}

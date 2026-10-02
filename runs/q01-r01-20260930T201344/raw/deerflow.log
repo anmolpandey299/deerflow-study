@@ -1,0 +1,7 @@
+2026-09-30 20:13:45,307 src.graph.nodes INFO Coordinator talking.
+2026-09-30 20:13:53,866 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 20:13:53,875 src.graph.nodes INFO Coordinator locale: en-US
+2026-09-30 20:13:53,875 src.graph.nodes INFO Handing off to planner
+2026-09-30 20:13:53,875 src.graph.nodes INFO Handing off to planner
+2026-09-30 20:13:53,876 src.graph.nodes INFO Using research topic for handoff: most promising approaches for long-context retrieval-augmented generation in 2025, and how do they compare in terms of accuracy, latency, and cost
+2026-09-30 20:13:53,877 src.graph.nodes INFO background investigation node is running.

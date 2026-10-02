@@ -1,0 +1,236 @@
+{
+ "run_id": "q03-r02-20260930T212748",
+ "kind": "replay",
+ "case_id": "c05",
+ "condition": "A",
+ "seed": 101,
+ "evaluator": "P3-proxy-v1",
+ "report_sha256": "282daea9beed292d2cd5c2deb1fda35147b34cb1bdad80906060610a82e15430",
+ "report_chars": 18857,
+ "report_words": 2366,
+ "fmt": {
+  "checks": {
+   "h1_title": true,
+   "key_citations_before_key_points": true,
+   "key_points_4_to_6_bullets": true,
+   "overview_section": true,
+   "detailed_analysis_section": true,
+   "references_with_urls": true,
+   "markdown_table": true,
+   "no_wrapping_code_fence": true
+  },
+  "score": 1.0
+ },
+ "fact_url": {
+  "report_urls": 7,
+  "urls_in_retrieved_evidence": 4,
+  "fabricated_urls": [
+   "github.com/treeai-lab/awesome-kv-cache-management",
+   "arxiv.org/abs/2502.14051?utm_source=arxiv&utm_medium=referral&utm_campaign=sparse-attention",
+   "arxiv.org/abs/2508.06297?utm_source=arxiv&utm_medium=referral&utm_campaign=chunkkv"
+  ],
+  "provenance_rate": 0.5714285714285714
+ },
+ "numeric_items": 10,
+ "numeric_items_not_in_evidence": [
+  "5%",
+  "5×"
+ ],
+ "judge_model": "gpt-oss:20b",
+ "judge_settings": {
+  "think": "medium",
+  "structured_output": false,
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "prompt_sha256": {
+   "comp": "bddbddbf0802baf282eb56db9ffdd8708124e62d9bc57ebc0528f2708987deb6",
+   "claims": "10dfdf96e5b6608a2c8c9db6452c6123f832c64b184090d79d57cd0dbeca26c7",
+   "verify": "1ab312ab410e6642599e7dd4f20bd9037bbd1e48a6ec24f9c8e96b730289858e"
+  }
+ },
+ "comp": {
+  "labels": [
+   {
+    "id": "R1",
+    "label": "FULL",
+    "quote": "quantization (INT4/INT8), sparse attention, pruning, structured compression, reconstruction-based methods, and chunk-based compression",
+    "quote_verified": true
+   },
+   {
+    "id": "R2",
+    "label": "FULL",
+    "quote": "INT8 quantization achieves up to 4× memory reduction with minimal accuracy loss",
+    "quote_verified": true
+   },
+   {
+    "id": "R3",
+    "label": "PARTIAL",
+    "quote": "evaluated on benchmarks such as LongBench, Needle-In-A-HayStack, and GSM8K, showing improved performance in summarization and reasoning tasks.",
+    "quote_verified": true
+   },
+   {
+    "id": "R4",
+    "label": "PARTIAL",
+    "quote": "Sparse attention reduces the number of attention computations by selectively focusing on a subset of tokens or positions, thereby reducing both memory and computation load.",
+    "quote_verified": true
+   },
+   {
+    "id": "R5",
+    "label": "FULL",
+    "quote": "INT8 Quantization | Up to 4× | Minimal (≤1%) | Moderate improvement | Subtle degradation in high-precision tasks; limited below 4-bit | High-throughput, scalable inference",
+    "quote_verified": true
+   },
+   {
+    "id": "R6",
+    "label": "FULL",
+    "quote": "Permanent eviction of tokens may result in irreversible information loss, especially in multi-turn conversations or reasoning chains.",
+    "quote_verified": true
+   },
+   {
+    "id": "R7",
+    "label": "PARTIAL",
+    "quote": "There is a lack of standardized benchmarks comparing the same method across different tasks, hardware, and input lengths.",
+    "quote_verified": true
+   }
+  ],
+  "score": 0.7857142857142857,
+  "score_lenient": 0.7857142857142857
+ },
+ "fact_claims": {
+  "claims_extracted": 10,
+  "claims_checked": 10,
+  "claims": [
+   {
+    "report_quote": "INT8 quantization achieves up to 4× memory reduction with minimal accuracy loss, making it the most practical and widely deployable method for long-context inference.",
+    "claim": "INT8 quantization can reduce KV cache memory usage by up to 4× while keeping accuracy loss minimal.",
+    "label": "SUPPORTED",
+    "evidence_id": "E15",
+    "evidence_url": "https://arxiv.org/abs/2601.04719",
+    "quote": "achieving 4 × memory reduction with minimal accuracy degradation.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "Memory Savings: Up to **4× reduction** in KV cache size [2601.04719].",
+    "claim": "The INT8 quantization method achieves a 4× reduction in KV cache size, as reported in paper [2601.04719].",
+    "label": "SUPPORTED",
+    "evidence_id": "E15",
+    "evidence_url": "https://arxiv.org/abs/2601.04719",
+    "quote": "achieving 4 × memory reduction with minimal accuracy degradation.",
+    "quote_verified": true,
+    "counted_supported": true
+   },
+   {
+    "report_quote": "Accuracy Impact: Minimal degradation (≤1%), particularly in tasks with moderate to high semantic fidelity (e.g., summarization, chatbot responses).",
+    "claim": "Using INT8 quantization results in less than or equal to 1% accuracy degradation on tasks such as summarization and chatbot responses.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: Theoretical potential of up to **8× reduction**.",
+    "claim": "INT4 quantization theoretically offers up to an 8× reduction in KV cache memory.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Accuracy Impact: Significant degradation (≥3–5%) due to insufficient precision in representing fine-grained activations; performance is especially unstable in reasoning and long-range dependency tasks.",
+    "claim": "INT4 quantization causes a significant accuracy drop of between 3% and 5% due to low precision.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Pruning removes less relevant tokens from the cache, offering 2–6× memory savings with moderate accuracy degradation, especially in structured input tasks.",
+    "claim": "Pruning can save between 2× and 6× of KV cache memory with only moderate accuracy loss, especially for structured inputs.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 2–6×, based on token relevance scoring.",
+    "claim": "The pruning technique achieves 2× to 6× memory savings by scoring token relevance.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "ChunkKV enables semantic-preserving compression by segmenting sequences into meaningful chunks, achieving 4–8× memory savings while maintaining contextual coherence in long-context reasoning tasks.",
+    "claim": "ChunkKV can compress KV caches by 4× to 8× while preserving contextual coherence in long-context reasoning tasks.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: 4–8×, depending on chunk size and semantic segmentation accuracy.",
+    "claim": "ChunkKV's memory savings range from 4× to 8× depending on chunk size and semantic segmentation accuracy.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   },
+   {
+    "report_quote": "Memory Savings: Variable, typically 2–5×, depending on sparsity pattern and sequence structure.",
+    "claim": "Sparse attention reduces KV cache memory usage by a variable amount, typically between 2× and 5×, depending on sparsity pattern and sequence structure.",
+    "label": "NOT_FOUND",
+    "evidence_id": "",
+    "evidence_url": null,
+    "quote": "",
+    "quote_verified": true,
+    "counted_supported": false
+   }
+  ],
+  "supported": 2,
+  "contradicted": 0,
+  "unsupported": 8,
+  "score": 0.2
+ },
+ "judge_usage": [
+  {
+   "call": "completeness",
+   "prompt_tokens": 4299,
+   "completion_tokens": 2287,
+   "wall_s": 60.28384709358215,
+   "thinking_chars": 7670
+  },
+  {
+   "call": "claims",
+   "prompt_tokens": 4096,
+   "completion_tokens": 3028,
+   "wall_s": 76.01189303398132,
+   "thinking_chars": 11353
+  },
+  {
+   "call": "verify",
+   "prompt_tokens": 4971,
+   "completion_tokens": 957,
+   "wall_s": 30.847075939178467,
+   "thinking_chars": 3103
+  }
+ ],
+ "eval_wall_s": 167.2886860370636
+}
